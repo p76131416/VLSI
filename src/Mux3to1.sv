@@ -1,0 +1,19 @@
+module Mux3to1 (
+    input [31:0] A,
+    input [31:0] B,
+    input [31:0] C,
+    input [1:0] sel,
+
+    output [31:0] D
+);
+
+always_comb begin
+    case (sel)
+        2'd0 : D = C;
+        2'd1 : D = B;
+        2'd2 : D = A;
+        default : D = C;
+    endcase
+end
+
+endmodule
