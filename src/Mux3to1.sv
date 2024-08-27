@@ -4,7 +4,7 @@ module Mux3to1 (
     input [31:0] C,
     input [1:0] sel,
 
-    output [31:0] D
+    output logic [31:0] D
 );
 
 always_comb begin

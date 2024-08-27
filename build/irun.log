@@ -1,0 +1,189 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Aug 27, 2024 at 19:45:50 CST
+irun
+	/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
+	+incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
+	+define+prog0+FSDB
+	-define CYCLE=10.0
+	-define MAX=100000
+	+access+r
+	+nc64bit
+	+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog0
+
+   User defined plus("+") options:
+	+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog0
+
+Recompiling... reason: file '../src/BranchCtrl.sv' is newer than expected.
+	expected: Tue Aug 27 16:42:07 2024
+	actual:   Tue Aug 27 19:45:47 2024
+ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include (No such file or directory).
+file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
+`define CYCLE 10.0 // Cycle time
+                                |
+ncvlog: *W,MACNDF (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,2|32): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define MAX 100000 // Max cycle number
+                                      |
+ncvlog: *W,MACNDF (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+	module worklib.SRAM_wrapper:sv
+		errors: 0, warnings: 0
+	module worklib.BranchCtrl:sv
+		errors: 0, warnings: 0
+module SRAM_wrapper (
+                  |
+ncvlog: *W,RECOME (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/SRAM_wrapper.sv,1|18): recompiling design unit worklib.SRAM_wrapper:sv.
+	First compiled from line 1 of /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/SRAM_wrapper.sv.
+(`include file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/SRAM_wrapper.sv line 1, `include file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/top.sv line 2, file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv line 10)
+	module worklib.SRAM_wrapper:sv
+		errors: 0, warnings: 1
+    $value$plusargs("prog_path=%s", prog_path);
+                  |
+ncvlog: *W,NOSYST (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,39|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,54|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 3
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top_tb
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+.rd_reg1_addr(rd_r1),
+                  |
+ncelab: *W,CUVMPW (../src/CPU.sv,173|18): port sizes differ in port connection (5/32).
+.rd_reg2_addr(rd_r2),
+                  |
+ncelab: *W,CUVMPW (../src/CPU.sv,174|18): port sizes differ in port connection (5/32).
+.w_reg_addr(wb_write_addr),
+                        |
+ncelab: *W,CUVMPW (../src/CPU.sv,175|24): port sizes differ in port connection (5/32).
+.ID_pc_in(ID_pc),
+              |
+ncelab: *W,CUVMPW (../src/CPU.sv,198|14): port sizes differ in port connection (1/32).
+.ALUOp(id_ALUOp),
+              |
+ncelab: *W,CUVMPW (../src/CPU.sv,204|14): port sizes differ in port connection (3/1).
+.ALUOp(exe_ALUOp),
+               |
+ncelab: *W,CUVMPW (../src/CPU.sv,330|15): port sizes differ in port connection (1/3).
+    $readmemh({prog_path, "/main0.hex"}, TOP.IM1.i_SRAM.Memory_byte0);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,42|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main0.hex"}, TOP.DM1.i_SRAM.Memory_byte0); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,43|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main1.hex"}, TOP.IM1.i_SRAM.Memory_byte1);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,44|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main1.hex"}, TOP.DM1.i_SRAM.Memory_byte1); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,45|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main2.hex"}, TOP.IM1.i_SRAM.Memory_byte2);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,46|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main2.hex"}, TOP.DM1.i_SRAM.Memory_byte2); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,47|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main3.hex"}, TOP.IM1.i_SRAM.Memory_byte3);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,48|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main3.hex"}, TOP.DM1.i_SRAM.Memory_byte3); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,49|67): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.BranchCtrl:sv <0x32ddb509>
+			streams:   1, words:   496
+	Building instance specific data structures.
+.ID_pc_in(ID_pc),
+              |
+ncelab: *W,CSINFI (../src/CPU.sv,198|14): implicit wire has no fanin (top_tb.TOP.cpu.ID_pc).
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 30      21
+		Registers:               93      83
+		Scalar wires:           196       -
+		Expanded wires:          86       7
+		Vectored wires:          43       -
+		Always blocks:           21      17
+		Initial blocks:           2       2
+		Cont. assignments:      106      86
+		Pseudo assignments:       4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.top_tb:sv
+Loading snapshot worklib.top_tb:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
+(C) 1996 - 2020 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : End of traversing.
+DM[8192] = xxxxxxxx, expect = fffffff0
+DM[8193] = xxxxxxxx, expect = fffffff8
+DM[8194] = xxxxxxxx, expect = 00000008
+DM[8195] = xxxxxxxx, expect = 00000001
+DM[8196] = xxxxxxxx, expect = 00000001
+DM[8197] = xxxxxxxx, expect = 78787878
+DM[8198] = xxxxxxxx, expect = 000091a2
+DM[8199] = xxxxxxxx, expect = 00000003
+DM[8200] = xxxxxxxx, expect = fefcfefd
+DM[8201] = xxxxxxxx, expect = 10305070
+DM[8202] = xxxxxxxx, expect = cccccccc
+DM[8203] = xxxxxxxx, expect = ffffffcc
+DM[8204] = xxxxxxxx, expect = ffffcccc
+DM[8205] = xxxxxxxx, expect = 000000cc
+DM[8206] = xxxxxxxx, expect = 0000cccc
+DM[8207] = xxxxxxxx, expect = 00000d9d
+DM[8208] = xxxxxxxx, expect = 00000004
+DM[8209] = xxxxxxxx, expect = 00000003
+DM[8210] = xxxxxxxx, expect = 000001a6
+DM[8211] = xxxxxxxx, expect = 00000ec6
+DM[8212] = xxxxxxxx, expect = 2468b7a8
+DM[8213] = xxxxxxxx, expect = 5dbf9f00
+DM[8214] = xxxxxxxx, expect = 00012b38
+DM[8215] = xxxxxxxx, expect = fa2817b7
+DM[8216] = xxxxxxxx, expect = ff000000
+DM[8217] = xxxxxxxx, expect = 12345678
+DM[8218] = xxxxxxxx, expect = 0000f000
+DM[8219] = xxxxxxxx, expect = 00000f00
+DM[8220] = xxxxxxxx, expect = 000000f0
+DM[8221] = xxxxxxxx, expect = 0000000f
+DM[8222] = xxxxxxxx, expect = 56780000
+DM[8223] = xxxxxxxx, expect = 78000000
+DM[8224] = xxxxxxxx, expect = 00005678
+DM[8225] = xxxxxxxx, expect = 00000078
+DM[8226] = xxxxxxxx, expect = 12345678
+DM[8227] = xxxxxxxx, expect = ce780000
+DM[8228] = xxxxxxxx, expect = fffff000
+DM[8229] = xxxxxxxx, expect = fffff000
+DM[8230] = xxxxxxxx, expect = fffff000
+DM[8231] = xxxxxxxx, expect = fffff000
+DM[8232] = xxxxxxxx, expect = fffff000
+DM[8233] = xxxxxxxx, expect = fffff000
+DM[8234] = xxxxxxxx, expect = 1357a064
+DM[8235] = xxxxxxxx, expect = 13578000
+DM[8236] = xxxxxxxx, expect = fffff004
+SIM_END(16383) = xxxxxxxx, expect = ffffffff
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  OOPS!!                **      / X,X  | 
+        **                        **    /_____   | 
+        **  Simulation Failed!!   **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+         Totally has          45 errors                     
+
+
+Simulation complete via $finish(1) at time 1 MS + 0
+../sim/top_tb.sv:107     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Aug 27, 2024 at 19:45:54 CST  (total: 00:00:04)

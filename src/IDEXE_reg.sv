@@ -7,6 +7,8 @@ module IDEXE_reg (
     input [2:0] funct3,
     input [6:0] funct7,
     input [31:0] ID_pc_in,
+    input [4:0] rd_r1_addr,
+    input [4:0] rd_r2_addr,
 
     input Control_flush,
     input ALUOp,
@@ -17,7 +19,7 @@ module IDEXE_reg (
     input MenWrite,
     input MemRead,
     input RegWrite,
-    input Branch
+    input Branch,
 
     output logic [31:0] EXE_pc_out,
     output logic [31:0] EXE_rd_reg1_data,
@@ -25,6 +27,8 @@ module IDEXE_reg (
     output logic [4:0] EXE_write_addr,
     output logic [2:0] EXE_funct3,
     output logic [6:0] EXE_funct7,
+    output logic [4:0] EXE_rd_r1_addr,
+    output logic [4:0] EXE_rd_r2_addr,
 
     output logic EXE_ALUOp,
     output logic EXE_ALUSrc,
@@ -48,7 +52,6 @@ always_ff @( posedge clk or posedge reset) begin
         EXE_ALUOp <= 0;
         EXE_ALUSrc <= 0;
         EXE_PCtoRegSrc <= 0;
-        EXE_Immtype <= 0;
         EXE_RDSrc <= 0;
         EXE_MemtoReg <= 0;
         EXE_MenWrite <= 0;
@@ -65,14 +68,14 @@ always_ff @( posedge clk or posedge reset) begin
             EXE_funct3 <= funct3;
             EXE_funct7 <= funct7;
             EXE_ALUOp <= ALUOp;
-            EXE_ALUSrc <= ALUSrcl;
-            EXE_PCtoRegSrc <= PCtoRegSrcl;
-            EXE_RDSrc <= RDSrcl;
-            EXE_MemtoReg <= MemtoRegl;
-            EXE_MenWrite <= MenWritel;
-            EXE_MemRead <= MemReadl;
-            EXE_RegWrite <= RegWritel;
-            EXE_Branch <= Branchl;
+            EXE_ALUSrc <= ALUSrc;
+            EXE_PCtoRegSrc <= PCtoRegSrc;
+            EXE_RDSrc <= RDSrc;
+            EXE_MemtoReg <= MemtoReg;
+            EXE_MenWrite <= MenWrite;
+            EXE_MemRead <= MemRead;
+            EXE_RegWrite <= RegWrite;
+            EXE_Branch <= Branch;
         end
         else begin
             EXE_pc_out <= 32'h0;
@@ -84,7 +87,6 @@ always_ff @( posedge clk or posedge reset) begin
             EXE_ALUOp <= 0;
             EXE_ALUSrc <= 0;
             EXE_PCtoRegSrc <= 0;
-            EXE_Immtype <= 0;
             EXE_RDSrc <= 0;
             EXE_MemtoReg <= 0;
             EXE_MenWrite <= 0;

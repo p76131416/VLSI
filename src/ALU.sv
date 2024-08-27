@@ -3,28 +3,28 @@ module ALU (
     input [31:0] in2,
     input [3:0] control,
 
-    output [31:0] out,
-    output zero
+    output logic [31:0] out,
+    output logic zero
 );
 
-always_comb begin : 
+always_comb begin
     case (control)
-        4'h0 : out = in1 + in2;
-        4'h1 : out = in1 - in2;
-        4'h2 : out = $unsigned(in1) << in2[4:0];
-        4'h3 : out = ($signed(in1) < $signed(in2)) ? 1 : 0;
-        4'h4 : out = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
-        4'h5 : out = in1 ^ in2;
-        4'h6 : out = $unsigned($unsigned(in1) >> in2[4:0]);
-        4'h7 : out = $signed($signed(in1) >> in2[4:0]);
-        4'h8 : out = in1 | in2;
-        4'h9 : out = in1 & in2;
-        4'h10 : zero = (in1 == in2) ? 1 : 0;
-        4'h11 : zero = (in1 != in2) ? 1 : 0;
-        4'h12 : zero = ($signed(in1) < $signed(in2)) ? 1 : 0;
-        4'h13 : zero = ($signed(in1) >= $signed(in2)) ? 1 : 0;
-        4'h14 : zero = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
-        4'h15 : zero = ($unsigned(in1) >= $unsigned(in2)) ? 1 : 0;
+        4'd0 : out = in1 + in2;
+        4'd1 : out = in1 - in2;
+        4'd2 : out = $unsigned(in1) << in2[4:0];
+        4'd3 : out = ($signed(in1) < $signed(in2)) ? 1 : 0;
+        4'd4 : out = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
+        4'd5 : out = in1 ^ in2;
+        4'd6 : out = $unsigned($unsigned(in1) >> in2[4:0]);
+        4'd7 : out = $signed($signed(in1) >> in2[4:0]);
+        4'd8 : out = in1 | in2;
+        4'd9 : out = in1 & in2;
+        4'd10 : zero = (in1 == in2) ? 1 : 0;
+        4'd11 : zero = (in1 != in2) ? 1 : 0;
+        4'd12 : zero = ($signed(in1) < $signed(in2)) ? 1 : 0;
+        4'd13 : zero = ($signed(in1) >= $signed(in2)) ? 1 : 0;
+        4'd14 : zero = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
+        4'd15 : zero = ($unsigned(in1) >= $unsigned(in2)) ? 1 : 0;
     endcase
 end
     

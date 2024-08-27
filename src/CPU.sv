@@ -2,7 +2,7 @@
 `include "SRAM_wrapper.sv"
 `include "Adder.sv"
 `include "Mux2to1.sv"
-`include "IFID_reg"
+`include "IFID_reg.sv"
 `include "HazardDetectUnit.sv"
 `include "Regfile.sv"
 `include "ImmGen.sv"
@@ -13,93 +13,152 @@
 `include "ALUCtrl.sv"
 `include "ForwardingUnit.sv"
 `include "BranchCtrl.sv"
+`include "EXEMEM_reg.sv"
+`include "MEMWB_reg.sv"
 
 module CPU (
     input clk,
     input rst,
+    input [31:0] IM_instr,
+    input [31:0] DM_DO,
+
+    output [31:0] progcnt_out,
+    output DM_OE,
+    output [3:0] DM_WEB,
+    output [13:0] DM_addr,
+    output [31:0] DM_DI
 );
 
 //IF wire
 wire PC_write_enable;       //PC write or not
 wire [31:0] PC_in;
-wire [31:0] PC_out;
-wire [31:0] instr;
-wire [31:0] instr_fin;
 wire [31:0] pc_4;
 
+wire ifid_flush;
+wire ctrl_flush;
+
+//ID wire 
+wire [31:0] id_pc;
+wire [4:0] rd_r1;
+wire [4:0] rd_r2;
+wire [6:0] op;
+wire [4:0] wr_addr;
+wire [31:0] imm;
+wire [2:0] fun3;
+wire [6:0] fun7;
+wire [31:0] rd_r1_data;
+wire [31:0] rd_r2_data;
+wire [31:0] immedi;
+
+wire [2:0] id_ALUOp;
+wire id_ALUSrc;
+wire id_PCtoRegSrc;
+wire [2:0] id_Immtype;
+wire id_RDSrc;
+wire id_MemtoReg;
+wire id_MenWrite;
+wire id_MemRead;
+wire id_RegWrite;
+wire id_Branch;
+
+//EXE wire
+wire [31:0] exe_pc_out;
+wire [31:0] exe_rd_reg1_data;
+wire [31:0] exe_rd_reg2_data;
+wire [4:0] exe_write_addr;
+wire [2:0] exe_funct3;
+wire [6:0] exe_funct7;
+wire [31:0] alu_out;
+
+wire [4:0] exe_rd_r1_addr;
+wire [4:0] exe_rd_r2_addr;
+
+wire [1:0] exe_branchCtrl;
+
+wire [31:0] pc_imm;
+
+wire exe_ALUOp;
+wire exe_ALUSrc;
+wire exe_PCtoRegSrc;
+wire exe_RDSrc;
+wire exe_MemtoReg;
+wire exe_MenWrite;
+wire exe_MemRead;
+wire exe_RegWrite;
+wire exe_Branch;
+wire exe_zero_flag;
+
+//MEM wire
+wire [31:0] mem_ALU_out;
+wire [4:0] mem_write_addr;
+wire [2:0] mem_funct3;
+wire [31:0] mem_rd_data;
+
+wire mem_RDSrc;
+wire mem_MemtoReg;
+wire [3:0] mem_MenWrite;
+wire mem_MemRead;
+wire mem_RegWrite;
+//WB wire
+wire [4:0] wb_write_addr;
+wire [31:0] wb_write_data;
+
+wire wb_RegWrite;
 
 //IF stage
 
 Program_counter PC(
-    input .clk(clk),
-    input .reset(rst),
-    input .Write_en(PC_write_enable),
-    input [31:0] .pc_in(PC_in),
+.clk(clk),
+.reset(rst),
+.Write_en(PC_write_enable),
+.pc_in(PC_in),
 
-    output logic [31:0] .pc_out(PC_out)
-);
-
-SRAM_wrapper IM(
-    input .CK(~clk),
-    input .CS(1),
-    input .OE(1),
-    input [3:0] .WEB(4'd1111),
-    input [13:0] .A(PC_out[15:2]),
-    input [31:0] .DI(0),
-    output [31:0] .DO(instr)
+.pc_out(progcnt_out)
 );
 
 Adder IF_adder(
-    input [31:0] .in1(32'h4),
-    input [31:0] .in2(PC_out),
+.in1(32'd4),
+.in2(progcnt_out),
 
-    output [31:0] .out(pc_4)
-);
-
-Mux2to1 IF_mux2(
-    input [31:0] .A(instr),
-    input [31:0] .B(0),
-    input .sel(),
-
-    output [31:0] .C(instr_fin)
+.out(pc_4)
 );
 
 Mux3to1 IF_pc_mux3(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input [31:0] .C(pc_4),
-    input [1:0] .sel(),
+.A(alu_out),
+.B(pc_imm),
+.C(pc_4),
+.sel(exe_branchCtrl),
 
-    output [31:0] .D(PC_in)
+.D(PC_in)
 );
 
 IFID_reg IFID_pipe(
-    input .clk(clk),
-    input .reset(rst),
-    input .IFID_flush(),
-    input [31:0] .instruction(instr_fin),
+.clk(clk),
+.reset(rst),
+.IFID_flush(ifid_flush),
+.instruction(IM_instr),
 
-    output logic [31:0] .ID_pc_out(),
-    output logic [4:0] .read_reg1(),
-    output logic [4:0] .read_reg2(),
-    output logic [6:0] .opcode(),
-    output logic [4:0] .write_addr(),
-    output logic [31:0] .immediate(),
-    output logic [2:0] .funct3(),
-    output logic [6:0] .funct7()
+.ID_pc_out(id_pc),
+.read_reg1(rd_r1),
+.read_reg2(rd_r2),
+.opcode(op),
+.write_addr(wr_addr),
+.immediate(imm),
+.funct3(fun3),
+.funct7(fun7)
 );
 
 //IF control
 
 HazardDetectUnit Hazard(
-    input .EXE_MemRead(),
-    input [4:0] .read_reg1_addr(),
-    input [4:0] .read_reg2_addr(),
-    input [4:0] .EXE_write_addr(),
+.EXE_MemRead(exe_MemRead),
+.read_reg1_addr(rd_r1),
+.read_reg2_addr(rd_r2),
+.EXE_write_addr(exe_write_addr),
 
-    output .PC_write_en(PC_write_enable),
-    output .IFID_flush(),
-    output .Control_flush()
+.PC_write_en(PC_write_enable),
+.IFID_flush(ifid_flush),
+.Control_flush(ctrl_flush)
 );
 
 //IF control end
@@ -109,88 +168,85 @@ HazardDetectUnit Hazard(
 //ID stage 
 
 Regfile Regster_file(
-    input .clk(clk),
-    input .reset(rst),
-    input [31:0] .rd_reg1_addr(),
-    input [31:0] .rd_reg2_addr(),
-    input [31:0] .w_reg_addr(),
-    input [31:0] .w_data(),
-    input .RegWrite(),
+.clk(clk),
+.reset(rst),
+.rd_reg1_addr(rd_r1),
+.rd_reg2_addr(rd_r2),
+.w_reg_addr(wb_write_addr),
+.w_data(wb_write_data),
+.RegWrite(wb_RegWrite),
 
-    output [31:0] .rd_reg1_data(),
-    output [31:0] .rd_reg2_data()
+.rd_reg1_data(rd_r1_data),
+.rd_reg2_data(rd_r2_data)
 );
 
 ImmGen Immediate_Generator(
-    input [31:0] .immediate(),
-    input [2:0] .Immtype(),
+.immediate(imm),
+.Immtype(id_Immtype),
 
-    output logic [31:0] .imm()
-);
-
-Mux3to1 ID_mux3(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input [31:0] .C(),
-    input [1:0] .sel(),
-
-    output [31:0] .D()
+.imm(immedi)
 );
 
 IDEXE_reg IDEXE_pipe(
-    input .clk(clk),
-    input .reset(rst),
-    input [31:0] .rd_reg1_data(),
-    input [31:0] .rd_reg2_data(),
-    input [4:0] .write_addr(),
-    input [2:0] .funct3(),
-    input [6:0] .funct7(),
-    input [31:0] .ID_pc_in(),
+.clk(clk),
+.reset(rst),
+.rd_reg1_data(rd_r1_data),
+.rd_reg2_data(rd_r2_data),
+.write_addr(wr_addr),
+.funct3(fun3),
+.funct7(fun7),
+.ID_pc_in(ID_pc),
+.rd_r1_addr(rd_r1),
+.rd_r2_addr(rd_r2),
 
-    input .Control_flush(),
-    input .ALUOp(),
-    input .ALUSrc(),
-    input .PCtoRegSrc(),
-    input .RDSrc(),
-    input .MemtoReg(),
-    input .MenWrite(),
-    input .MemRead(),
-    input .RegWrite(),
-    input .Branch(),
+//signal
+.Control_flush(ctrl_flush),
+.ALUOp(id_ALUOp),
+.ALUSrc(id_ALUSrc),
+.PCtoRegSrc(id_PCtoRegSrc),
+.RDSrc(id_RDSrc),
+.MemtoReg(id_MemtoReg),
+.MenWrite(id_MenWrite),
+.MemRead(id_MemRead),
+.RegWrite(id_RegWrite),
+.Branch(id_Branch),
 
-    output logic [31:0] .EXE_pc_out(),
-    output logic [31:0] .EXE_rd_reg1_data(),
-    output logic [31:0] .EXE_rd_reg2_data(),
-    output logic [4:0] .EXE_write_addr(),
-    output logic [2:0] .EXE_funct3(),
-    output logic [6:0] .EXE_funct7(),
+.EXE_pc_out(exe_pc_out),
+.EXE_rd_reg1_data(exe_rd_reg1_data),
+.EXE_rd_reg2_data(exe_rd_reg2_data),
+.EXE_write_addr(exe_write_addr),
+.EXE_funct3(exe_funct3),
+.EXE_funct7(exe_funct7),
+.EXE_rd_r1_addr(exe_rd_r1_addr),
+.EXE_rd_r2_addr(exe_rd_r2_addr),
 
-    output logic .EXE_ALUOp(),
-    output logic .EXE_ALUSrc(),
-    output logic .EXE_PCtoRegSrc(),
-    output logic .EXE_RDSrc(),
-    output logic .EXE_MemtoReg(),
-    output logic .EXE_MenWrite(),
-    output logic .EXE_MemRead(),
-    output logic .EXE_RegWrite(),
-    output logic .EXE_Branch()
+//signal
+.EXE_ALUOp(exe_ALUOp),
+.EXE_ALUSrc(exe_ALUSrc),
+.EXE_PCtoRegSrc(exe_PCtoRegSrc),
+.EXE_RDSrc(exe_RDSrc),
+.EXE_MemtoReg(exe_MemtoReg),
+.EXE_MenWrite(exe_MenWrite),
+.EXE_MemRead(exe_MemRead),
+.EXE_RegWrite(exe_RegWrite),
+.EXE_Branch(exe_Branch)
 );
 
 //ID control
 
 ControlUnit CtrlUnit(
-    input [6:0] .opcode(),
+.opcode(op),
 
-    output [2:0] .ALUOp(),
-    output .ALUSrc(),
-    output .PCtoRegSrc(),
-    output [2:0] .Immtype(),
-    output .RDSrc(),
-    output .MemtoReg(),
-    output .MenWrite(),
-    output .MemRead(),
-    output .RegWrite(),
-    output .Branch()
+.ALUOp(id_ALUOp),
+.ALUSrc(id_ALUSrc),
+.PCtoRegSrc(id_PCtoRegSrc),
+.Immtype(id_Immtype),
+.RDSrc(id_RDSrc),
+.MemtoReg(id_MemtoReg),
+.MenWrite(id_MenWrite),
+.MemRead(id_MemRead),
+.RegWrite(id_RegWrite),
+.Branch(id_Branch)
 );
 
 //ID control end
@@ -198,91 +254,101 @@ ControlUnit CtrlUnit(
 //ID stage end
 
 //EXE stage
+wire [31:0] exe_pc_4;
+wire [31:0] pc_to_reg;
+
+wire [31:0] alu1;
+wire [31:0] rs2_fin;
+wire [31:0] alu2;
+
+wire [3:0] alu_ctrl;
+wire [1:0] forward_r1_sel;
+wire [1:0] forward_r2_sel;
 
 Adder PC_imm_adder(
-    input [31:0] .in1(),
-    input [31:0] .in2(),
+.in1(exe_pc_out),
+.in2(immedi),
 
-    output [31:0] .out()
+.out(pc_imm)
 );
 
 Adder PC_4_adder(
-    input [31:0] .in1(),
-    input [31:0] .in2(),
+.in1(exe_pc_out),
+.in2(32'h4),
 
-    output [31:0] .out()
+.out(exe_pc_4)
 );
 
 Mux2to1 EXE_PC_mux2(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input .sel(),
+.A(pc_imm),
+.B(exe_pc_4),
+.sel(exe_PCtoRegSrc),
 
-    output [31:0] .C()
+.C(pc_to_reg)
 );
 
 Mux3to1 rs1_mux3(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input [31:0] .C(),
-    input [1:0] .sel(),
+.A(exe_rd_reg1_data),
+.B(mem_ALU_out),
+.C(wb_write_data),
+.sel(forward_r1_sel),
 
-    output [31:0] .D()
+.D(alu1)
 );
 
 Mux3to1 rs2_mux3(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input [31:0] .C(),
-    input [1:0] .sel(),
+.A(exe_rd_reg2_data),
+.B(mem_ALU_out),
+.C(wb_write_data),
+.sel(forward_r2_sel),
 
-    output [31:0] .D()
+.D(rs2_fin)
 );
 
 Mux2to1 imm_mux2(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input .sel(),
+.A(rs2_fin),
+.B(immedi),
+.sel(exe_ALUSrc),
 
-    output [31:0] .C()
+.C(alu2)
 );
 
 ALU alu(
-    input [31:0] .in1(),
-    input [31:0] .in2(),
-    input [3:0] .control(),
+.in1(alu1),
+.in2(alu2),
+.control(alu_ctrl),
 
-    output [31:0] .out(),
-    output .zero()
+.out(alu_out),
+.zero(exe_zero_flag)
 );
 
 //EXE control 
 
-ALUCtrl alu_ctrl(
-    input [2:0] .funct3(),
-    input [6:0] .funct7(),
-    input [2:0] .ALUOp(),
+ALUCtrl alu_contrl(
+.funct3(exe_funct3),
+.funct7(exe_funct7),
+.ALUOp(exe_ALUOp),
 
-    output [3:0] .ALUContrl()
+.ALUContrl(alu_ctrl)
 );
 
 ForwardingUnit Forwarding(
-    input [4:0] .read_reg1_addr(),
-    input [4:0] .read_reg2_addr(),
-    input [4:0] .EXE_write_addr(),
-    input .EXE_MenWrite(),
-    input [4:0] .MEM_write_addr(),
-    input .MEM_RegWrite(),
+.read_reg1_addr(exe_rd_r1_addr),
+.read_reg2_addr(exe_rd_r2_addr),
+.MEM_write_addr(mem_write_addr),
+.MEM_RegWrite(mem_RegWrite),
+.WB_write_addr(wb_write_addr),
+.WB_RegWrite(wb_RegWrite),
 
-    output [1:0] .forwarding_r1_sel()
-    output [1:0] .forwarding_r2_sel()
+.forwarding_r1_sel(forward_r1_sel),
+.forwarding_r2_sel(forward_r2_sel)
 );
 
 BranchCtrl branch_ctrl(
-    input .branch(),
-    input .zero(),
+.branch(exe_Branch),
+.zero(exe_zero_flag),
 
-    output [1:0] .branchCtrl()
+.branchCtrl(exe_branchCtrl)
 );
 
 //EXE control end
@@ -290,35 +356,83 @@ BranchCtrl branch_ctrl(
 //EXE stage end
 
 //MEM stage
+wire [31:0] mem_pc;
+wire [31:0] mem_memory_in;
 
 Mux2to1 mem_mux2(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input .sel(),
+.A(mem_pc),
+.B(mem_ALU_out),
+.sel(mem_RDSrc),
 
-    output [31:0] .C()
+.C(mem_rd_data)
 );
 
-SRAM_wrapper DM(
-    input .CK(clk),
-    input .CS(),
-    input .OE(),
-    input [3:0] .WEB(),
-    input [13:0] .A(),
-    input [31:0] .DI(),
-    output [31:0] .DO()
+assign dm_oe = mem_MemRead;
+assign dm_addr = mem_pc[15:2];
+assign dm_di = mem_memory_in;
+assign dm_web = mem_MenWrite;
+
+EXEMEM_reg EXEMEM_pipe(
+.clk(clk),
+.reset(rst),
+.ALU_out(alu_out),
+.EXE_write_addr(exe_write_addr),
+.EXE_funct3(exe_funct3),
+.EXE_pc(pc_to_reg),
+.EXE_memory_in(rs2_fin),
+
+.EXE_RDSrc(exe_RDSrc),
+.EXE_MemtoReg(exe_MemtoReg),
+.EXE_MenWrite(exe_MenWrite),
+.EXE_MemRead(exe_MemRead),
+.EXE_RegWrite(exe_RegWrite),
+
+.MEM_ALU_out(mem_ALU_out),
+.MEM_write_addr(mem_write_addr),
+.MEM_funct3(mem_funct3),
+.MEM_pc(mem_pc),
+.MEM_memory_in(mem_memory_in),
+
+.MEM_RDSrc(mem_RDSrc),
+.MEM_MemtoReg(mem_MemtoReg),
+.MEM_MenWrite(mem_MenWrite),
+.MEM_MemRead(mem_MemRead),
+.MEM_RegWrite(mem_RegWrite)
 );
 
 //MEM stage end
 
 //WB stage
+wire [31:0] wb_rd_data;
+wire [31:0] wb_data_memory;
+
+wire wb_MemtoReg;
 
 Mux2to1 wb_mux2(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input .sel(),
+.A(wb_rd_data),
+.B(wb_data_memory),
+.sel(wb_MemtoReg),
 
-    output [31:0] .C()
+.C(wb_write_data)
+);
+
+MEMWB_reg MEMWB_pipe(
+.clk(clk),
+.reset(rst),
+.MEM_rd_data(mem_rd_data),
+.MEM_data_memory(DM_DO),
+.MEM_funct3(mem_funct3),
+.MEM_write_addr(mem_write_addr),
+
+.MEM_RegWrite(mem_RegWrite),
+.MEM_MemtoReg(mem_MemtoReg),
+
+.WB_rd_data(wb_rd_data),
+.WB_data_memory(wb_data_memory),
+.WB_write_addr(wb_write_addr),
+
+.WB_RegWrite(wb_RegWrite),
+.WB_MemtoReg(wb_MemtoReg)
 );
 
 //WB stage end

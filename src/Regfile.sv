@@ -24,7 +24,7 @@ always_ff @( posedge clk or posedge reset) begin
     end
 end
 
-assign rd_reg1_data <= register[rd_reg1_addr];
-assign rd_reg2_data <= register[rd_reg2_addr];
+assign rd_reg1_data = register[rd_reg1_addr];
+assign rd_reg2_data = register[rd_reg2_addr];
 
 endmodule

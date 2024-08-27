@@ -1,22 +1,22 @@
 module ControlUnit (
     input [6:0] opcode,
 
-    output [2:0] ALUOp,
-    output ALUSrc,
-    output PCtoRegSrc,
-    output [2:0] Immtype,
-    output RDSrc,
-    output MemtoReg,
-    output MenWrite,
-    output MemRead,
-    output RegWrite,
-    output Branch
+    output logic [2:0] ALUOp,
+    output logic ALUSrc,
+    output logic PCtoRegSrc,
+    output logic [2:0] Immtype,
+    output logic RDSrc,
+    output logic MemtoReg,
+    output logic MenWrite,
+    output logic MemRead,
+    output logic RegWrite,
+    output logic Branch
 );
 
 always_comb begin
     case (opcode)
         7'b0110011: begin   //R-type
-            ALUOp = 3'd0;
+            ALUOp = 3'b000;
             ALUSrc = 1;
             PCtoRegSrc = 0;
             Immtype = 3'd5;
