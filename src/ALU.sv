@@ -24,7 +24,7 @@ always_comb begin
         4'd12 : zero = ($signed(in1) < $signed(in2)) ? 1 : 0;
         4'd13 : zero = ($signed(in1) >= $signed(in2)) ? 1 : 0;
         4'd14 : zero = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
-        4'd15 : zero = ($unsigned(in1) >= $unsigned(in2)) ? 1 : 0;
+        default : zero = ($unsigned(in1) >= $unsigned(in2)) ? 1 : 0;
     endcase
 end
     

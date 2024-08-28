@@ -10,7 +10,7 @@ module ControlUnit (
     output logic MenWrite,
     output logic MemRead,
     output logic RegWrite,
-    output logic Branch
+    output logic [1:0] Branch
 );
 
 always_comb begin
@@ -85,7 +85,7 @@ always_comb begin
             MenWrite = 0;
             MemRead = 0;
             RegWrite = 0;
-            Branch = 1;
+            Branch = 2;
         end
         7'b0010111:begin    //AUIPC
             ALUOp = 3'd6;
@@ -121,7 +121,7 @@ always_comb begin
             MenWrite = 0;
             MemRead = 0;
             RegWrite = 1;
-            Branch = 1;
+            Branch = 3;
         end
         default: begin
             ALUOp = 0;

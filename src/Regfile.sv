@@ -1,9 +1,9 @@
 module Regfile (
     input clk,
     input reset,
-    input [31:0] rd_reg1_addr,
-    input [31:0] rd_reg2_addr,
-    input [31:0] w_reg_addr,
+    input [4:0] rd_reg1_addr,
+    input [4:0] rd_reg2_addr,
+    input [4:0] w_reg_addr,
     input [31:0] w_data,
     input RegWrite,
 

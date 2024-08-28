@@ -31,7 +31,7 @@ CPU cpu(
 );
 
 SRAM_wrapper IM1(
-.CK(~clk),
+.CK(clk),
 .CS(1'b1),
 .OE(1'b1),
 .WEB(4'b1111),
@@ -42,7 +42,7 @@ SRAM_wrapper IM1(
 );
 
 SRAM_wrapper DM1(
-.CK(~clk),
+.CK(clk),
 .CS(1'b1),
 .OE(dm_oe),
 .WEB(dm_web),

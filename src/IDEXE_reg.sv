@@ -11,7 +11,7 @@ module IDEXE_reg (
     input [4:0] rd_r2_addr,
 
     input Control_flush,
-    input ALUOp,
+    input [2:0] ALUOp,
     input ALUSrc,
     input PCtoRegSrc,
     input RDSrc,
@@ -19,7 +19,7 @@ module IDEXE_reg (
     input MenWrite,
     input MemRead,
     input RegWrite,
-    input Branch,
+    input [1:0] Branch,
 
     output logic [31:0] EXE_pc_out,
     output logic [31:0] EXE_rd_reg1_data,
@@ -30,7 +30,7 @@ module IDEXE_reg (
     output logic [4:0] EXE_rd_r1_addr,
     output logic [4:0] EXE_rd_r2_addr,
 
-    output logic EXE_ALUOp,
+    output logic [2:0] EXE_ALUOp,
     output logic EXE_ALUSrc,
     output logic EXE_PCtoRegSrc,
     output logic EXE_RDSrc,
@@ -38,10 +38,10 @@ module IDEXE_reg (
     output logic EXE_MenWrite,
     output logic EXE_MemRead,
     output logic EXE_RegWrite,
-    output logic EXE_Branch
+    output logic [1:0] EXE_Branch
 );
     
-always_ff @( posedge clk or posedge reset) begin
+always_ff @(posedge clk or posedge reset) begin
     if(reset)begin
         EXE_pc_out <= 32'h0;
         EXE_rd_reg1_data <= 32'h0;
@@ -49,7 +49,7 @@ always_ff @( posedge clk or posedge reset) begin
         EXE_write_addr <= 5'd0;
         EXE_funct3 <= 3'd0;
         EXE_funct7 <= 7'd0;
-        EXE_ALUOp <= 0;
+        EXE_ALUOp <= 3'd0;
         EXE_ALUSrc <= 0;
         EXE_PCtoRegSrc <= 0;
         EXE_RDSrc <= 0;
@@ -57,7 +57,7 @@ always_ff @( posedge clk or posedge reset) begin
         EXE_MenWrite <= 0;
         EXE_MemRead <= 0;
         EXE_RegWrite <= 0;
-        EXE_Branch <= 0;
+        EXE_Branch <= 2'd0;
     end
     else begin
         if(!Control_flush) begin
@@ -84,7 +84,7 @@ always_ff @( posedge clk or posedge reset) begin
             EXE_write_addr <= 5'd0;
             EXE_funct3 <= 3'd0;
             EXE_funct7 <= 7'd0;
-            EXE_ALUOp <= 0;
+            EXE_ALUOp <= 3'd0;
             EXE_ALUSrc <= 0;
             EXE_PCtoRegSrc <= 0;
             EXE_RDSrc <= 0;
@@ -92,7 +92,7 @@ always_ff @( posedge clk or posedge reset) begin
             EXE_MenWrite <= 0;
             EXE_MemRead <= 0;
             EXE_RegWrite <= 0;
-            EXE_Branch <= 0;
+            EXE_Branch <= 2'd0;
         end
     end
 end

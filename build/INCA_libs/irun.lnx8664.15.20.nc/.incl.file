@@ -1,7 +1,6 @@
 ./top.sv
 ./CPU.sv
 ./Program_counter.sv
-./SRAM_wrapper.sv
 ./Adder.sv
 ./Mux2to1.sv
 ./IFID_reg.sv
@@ -17,5 +16,6 @@
 ./BranchCtrl.sv
 ./EXEMEM_reg.sv
 ./MEMWB_reg.sv
+./SRAM_wrapper.sv
 ./SRAM/SRAM_rtl.sv
 /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/SRAM/SRAM_rtl.sv

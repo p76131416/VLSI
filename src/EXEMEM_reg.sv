@@ -26,7 +26,7 @@ module EXEMEM_reg (
     output logic MEM_RegWrite
 );
 
-always_ff @( posedge clk or posedge reset ) begin
+always_ff @( posedge clk or posedge reset) begin
     if(reset)begin
         MEM_ALU_out <= 32'h0;
         MEM_write_addr <= 5'd0;

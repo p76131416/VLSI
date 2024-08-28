@@ -38,8 +38,8 @@ always_ff @( posedge clk or posedge reset ) begin
         end
         WB_rd_data <= MEM_rd_data;
         WB_write_addr <= MEM_write_addr;
-        WB_RegWrite <= WB_RegWrite;
-        WB_MemtoReg <= WB_MemtoReg;
+        WB_RegWrite <= MEM_RegWrite;
+        WB_MemtoReg <= MEM_MemtoReg;
     end
 end
 

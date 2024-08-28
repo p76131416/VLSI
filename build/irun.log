@@ -1,5 +1,5 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Aug 27, 2024 at 19:45:50 CST
+TOOL:	irun(64)	15.20-s084: Started on Aug 28, 2024 at 18:10:51 CST
 irun
 	/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
 	+incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
@@ -13,9 +13,9 @@ irun
    User defined plus("+") options:
 	+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog0
 
-Recompiling... reason: file '../src/BranchCtrl.sv' is newer than expected.
-	expected: Tue Aug 27 16:42:07 2024
-	actual:   Tue Aug 27 19:45:47 2024
+Recompiling... reason: file '../src/MEMWB_reg.sv' is newer than expected.
+	expected: Tue Aug 27 17:01:44 2024
+	actual:   Wed Aug 28 18:10:24 2024
 ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include (No such file or directory).
 file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
 `define CYCLE 10.0 // Cycle time
@@ -24,17 +24,8 @@ ncvlog: *W,MACNDF (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_
 `define MAX 100000 // Max cycle number
                                       |
 ncvlog: *W,MACNDF (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
-	module worklib.SRAM_wrapper:sv
+	module worklib.MEMWB_reg:sv
 		errors: 0, warnings: 0
-	module worklib.BranchCtrl:sv
-		errors: 0, warnings: 0
-module SRAM_wrapper (
-                  |
-ncvlog: *W,RECOME (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/SRAM_wrapper.sv,1|18): recompiling design unit worklib.SRAM_wrapper:sv.
-	First compiled from line 1 of /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/SRAM_wrapper.sv.
-(`include file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/SRAM_wrapper.sv line 1, `include file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src/top.sv line 2, file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv line 10)
-	module worklib.SRAM_wrapper:sv
-		errors: 0, warnings: 1
     $value$plusargs("prog_path=%s", prog_path);
                   |
 ncvlog: *W,NOSYST (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,39|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
@@ -48,24 +39,6 @@ ncvlog: *W,NOSYST (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_
 	Top level design units:
 		top_tb
 ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-.rd_reg1_addr(rd_r1),
-                  |
-ncelab: *W,CUVMPW (../src/CPU.sv,173|18): port sizes differ in port connection (5/32).
-.rd_reg2_addr(rd_r2),
-                  |
-ncelab: *W,CUVMPW (../src/CPU.sv,174|18): port sizes differ in port connection (5/32).
-.w_reg_addr(wb_write_addr),
-                        |
-ncelab: *W,CUVMPW (../src/CPU.sv,175|24): port sizes differ in port connection (5/32).
-.ID_pc_in(ID_pc),
-              |
-ncelab: *W,CUVMPW (../src/CPU.sv,198|14): port sizes differ in port connection (1/32).
-.ALUOp(id_ALUOp),
-              |
-ncelab: *W,CUVMPW (../src/CPU.sv,204|14): port sizes differ in port connection (3/1).
-.ALUOp(exe_ALUOp),
-               |
-ncelab: *W,CUVMPW (../src/CPU.sv,330|15): port sizes differ in port connection (1/3).
     $readmemh({prog_path, "/main0.hex"}, TOP.IM1.i_SRAM.Memory_byte0);
                                                                    |
 ncelab: *W,MEMODR (../sim/top_tb.sv,42|67): $readmem default memory order incompatible with IEEE1364.
@@ -92,24 +65,21 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,48|67): $readmem default memory order incomp
 ncelab: *W,MEMODR (../sim/top_tb.sv,49|67): $readmem default memory order incompatible with IEEE1364.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.BranchCtrl:sv <0x32ddb509>
-			streams:   1, words:   496
+		worklib.MEMWB_reg:sv <0x6951bcd2>
+			streams:   5, words:  3027
 	Building instance specific data structures.
-.ID_pc_in(ID_pc),
-              |
-ncelab: *W,CSINFI (../src/CPU.sv,198|14): implicit wire has no fanin (top_tb.TOP.cpu.ID_pc).
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
 		Modules:                 30      21
-		Registers:               93      83
-		Scalar wires:           196       -
-		Expanded wires:          86       7
-		Vectored wires:          43       -
-		Always blocks:           21      17
+		Registers:               96      84
+		Scalar wires:           187       -
+		Expanded wires:         118       6
+		Vectored wires:          50       -
+		Always blocks:           24      18
 		Initial blocks:           2       2
-		Cont. assignments:      106      86
-		Pseudo assignments:       4       4
+		Cont. assignments:      103      85
+		Pseudo assignments:       3       3
 		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.top_tb:sv
 Loading snapshot worklib.top_tb:sv .................... Done
@@ -186,4 +156,4 @@ SIM_END(16383) = xxxxxxxx, expect = ffffffff
 Simulation complete via $finish(1) at time 1 MS + 0
 ../sim/top_tb.sv:107     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Aug 27, 2024 at 19:45:54 CST  (total: 00:00:04)
+TOOL:	irun(64)	15.20-s084: Exiting on Aug 28, 2024 at 18:10:55 CST  (total: 00:00:04)

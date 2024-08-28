@@ -9,10 +9,10 @@ module Mux3to1 (
 
 always_comb begin
     case (sel)
-        2'd0 : D = C;
+        2'd0 : D = A;
         2'd1 : D = B;
-        2'd2 : D = A;
-        default : D = C;
+        2'd2 : D = C;
+        default : D = A;
     endcase
 end
 

@@ -1,5 +1,4 @@
 `include "Program_counter.sv"
-`include "SRAM_wrapper.sv"
 `include "Adder.sv"
 `include "Mux2to1.sv"
 `include "IFID_reg.sv"
@@ -59,7 +58,7 @@ wire id_MemtoReg;
 wire id_MenWrite;
 wire id_MemRead;
 wire id_RegWrite;
-wire id_Branch;
+wire [1:0] id_Branch;
 
 //EXE wire
 wire [31:0] exe_pc_out;
@@ -77,7 +76,7 @@ wire [1:0] exe_branchCtrl;
 
 wire [31:0] pc_imm;
 
-wire exe_ALUOp;
+wire [2:0] exe_ALUOp;
 wire exe_ALUSrc;
 wire exe_PCtoRegSrc;
 wire exe_RDSrc;
@@ -85,7 +84,7 @@ wire exe_MemtoReg;
 wire exe_MenWrite;
 wire exe_MemRead;
 wire exe_RegWrite;
-wire exe_Branch;
+wire [1:0] exe_Branch;
 wire exe_zero_flag;
 
 //MEM wire
@@ -117,16 +116,16 @@ Program_counter PC(
 );
 
 Adder IF_adder(
-.in1(32'd4),
-.in2(progcnt_out),
+.in1(progcnt_out),
+.in2(32'h4),
 
 .out(pc_4)
 );
 
 Mux3to1 IF_pc_mux3(
-.A(alu_out),
+.A(pc_4),
 .B(pc_imm),
-.C(pc_4),
+.C(alu_out),
 .sel(exe_branchCtrl),
 
 .D(PC_in)
@@ -195,7 +194,7 @@ IDEXE_reg IDEXE_pipe(
 .write_addr(wr_addr),
 .funct3(fun3),
 .funct7(fun7),
-.ID_pc_in(ID_pc),
+.ID_pc_in(id_pc),
 .rd_r1_addr(rd_r1),
 .rd_r2_addr(rd_r2),
 
@@ -367,10 +366,10 @@ Mux2to1 mem_mux2(
 .C(mem_rd_data)
 );
 
-assign dm_oe = mem_MemRead;
-assign dm_addr = mem_pc[15:2];
-assign dm_di = mem_memory_in;
-assign dm_web = mem_MenWrite;
+assign DM_OE = mem_MemRead;
+assign DM_addr = mem_pc[15:2];
+assign DM_DI = mem_memory_in;
+assign DM_WEB = mem_MenWrite;
 
 EXEMEM_reg EXEMEM_pipe(
 .clk(clk),
