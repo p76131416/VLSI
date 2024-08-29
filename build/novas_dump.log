@@ -46,9 +46,9 @@ LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd
 SYNTHESIS=/home/nfs_cad/synopsys/synthesis/cur
 SSH_CONNECTION=192.168.102.22 50216 140.116.245.124 22
 MFLAGS=
-FSDB=1
+FSDB=2
 LESSCLOSE=/usr/bin/lesspipe %s %s
-MAKEFLAGS= -- FSDB=1
+MAKEFLAGS= -- FSDB=2
 XDG_SESSION_CLASS=user
 TERM=xterm
 LC_IDENTIFICATION=lzh_TW
@@ -86,7 +86,7 @@ Runtime command line arguments:
 argv[0]=irun
 argv[1]=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
 argv[2]=+incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
-argv[3]=+define+prog0+FSDB
+argv[3]=+define+prog0+FSDB_ALL
 argv[4]=-define
 argv[5]=CYCLE=10.0
 argv[6]=-define
@@ -95,9 +95,9 @@ argv[8]=+access+r
 argv[9]=+nc64bit
 argv[10]=+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog0
 96 profile - 100
-          CPU/Mem usage: 0.050 sys,  0.060 user,  90.74M sys,  0.00M vm
+          CPU/Mem usage: 0.050 sys,  0.070 user,  90.75M sys,  0.00M vm
 97 VC callback profile - scalar:0 vector:0
-98 Wed Aug 28 18:10:54 2024
+98 Thu Aug 29 16:00:27 2024
 99 pliAppInit
 100 FSDB_GATE is disabled.
 101 Enable Parallel Dumping.
@@ -105,52 +105,55 @@ argv[10]=+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/pro
 103 pliEntryInit
 104 LIBSSCORE=found /home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
 105 argv[0]: top.fsdb
-106 argv[0]: 0
-107 argv[1]: (handle)0x3f29cb8 top_tb.TOP
-108 FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
-109 (C) 1996 - 2020 by Synopsys, Inc.
-110 sps_call_fsdbDumpfile at 0 : /home/WangYanTing/VLSI_2022_training/hw1/P76131416/sim/top_tb.sv(86)
-111 argv[0]: top.fsdb
-112 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-113 *Verdi* : Create FSDB file 'top.fsdb'
-114 sps_call_fsdbDumpvars at 0 : /home/WangYanTing/VLSI_2022_training/hw1/P76131416/sim/top_tb.sv(87)
-115 argv[0]: 0
-116 argv[1]: (handle)0x3f29ca8 top_tb.TOP
-117 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
-118 *Verdi* : End of traversing.
-119 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.060 sys,  0.080 user,  178.14M sys,  0.00M vm
-                   incr: 0.000 sys,  0.010 user,  4.23M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  4.23M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.010 user,  4.23M sys,  0.00M vm
+106 argv[0]: +struct
+107 argv[1]: +mda
+108 argv[2]: (handle)0x43dca88 top_tb.TOP
+109 FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
+110 (C) 1996 - 2020 by Synopsys, Inc.
+111 sps_call_fsdbDumpfile at 0 : /home/WangYanTing/VLSI_2022_training/hw1/P76131416/sim/top_tb.sv(89)
+112 argv[0]: top.fsdb
+113 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+114 *Verdi* : Create FSDB file 'top.fsdb'
+115 sps_call_fsdbDumpvars at 0 : /home/WangYanTing/VLSI_2022_training/hw1/P76131416/sim/top_tb.sv(90)
+116 argv[0]: +struct
+117 argv[1]: +mda
+118 argv[2]: (handle)0x43dca68 top_tb.TOP
+119 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+120 *Verdi* : Enable +struct and +mda dumping.
+121 *Verdi* : End of traversing.
+122 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.080 sys,  0.610 user,  200.20M sys,  0.00M vm
+                   incr: 0.020 sys,  0.540 user,  26.28M sys,  0.00M vm
+                   accu: 0.020 sys,  0.540 user,  26.28M sys,  0.00M vm
+              accu incr: 0.020 sys,  0.540 user,  26.28M sys,  0.00M vm
 
-          Count usage: 991 var,  335 idcode,  335 callback
-                 incr: 991 var,  335 idcode,  335 callback
-                 accu: 991 var,  335 idcode,  335 callback
-            accu incr: 991 var,  335 idcode,  335 callback
-120 VC callback profile - scalar:0 vector:0
-121 Wed Aug 28 18:10:54 2024
-122 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.060 sys,  0.080 user,  179.20M sys,  0.00M vm
-                   incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  5.28M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
+          Count usage: 132130 var,  131443 idcode,  131451 callback
+                 incr: 132130 var,  131443 idcode,  131451 callback
+                 accu: 132130 var,  131443 idcode,  131451 callback
+            accu incr: 132130 var,  131443 idcode,  131451 callback
+123 VC callback profile - scalar:0 vector:0
+124 Thu Aug 29 16:00:27 2024
+125 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.090 sys,  0.710 user,  209.71M sys,  0.00M vm
+                   incr: 0.010 sys,  0.100 user,  9.50M sys,  0.00M vm
+                   accu: 0.030 sys,  0.640 user,  35.79M sys,  0.00M vm
+              accu incr: 0.010 sys,  0.100 user,  9.50M sys,  0.00M vm
 
-          Count usage: 991 var,  335 idcode,  335 callback
+          Count usage: 132130 var,  131443 idcode,  131451 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 991 var,  335 idcode,  335 callback
+                 accu: 132130 var,  131443 idcode,  131451 callback
             accu incr: 0 var,  0 idcode,  0 callback
-123 VC callback profile - scalar:234 vector:101
-124 Wed Aug 28 18:10:54 2024
-125 End of simulation at 100000000
-126 VC callback profile - scalar:407513 vector:618822
-127 Wed Aug 28 18:10:54 2024
-128 Begin FSDB profile info:
-129 FSDB Writer : bc1(407513) bcn(618822) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.203750) io wait(0.000000) theadpool wait(0.000000)
+126 VC callback profile - scalar:236 vector:131207
+127 Thu Aug 29 16:00:27 2024
+128 End of simulation at 100000000
+129 VC callback profile - scalar:2704574 vector:5592653
+130 Thu Aug 29 16:00:30 2024
+131 Begin FSDB profile info:
+132 FSDB Writer : bc1(2704574) bcn(5592653) mtf/stf(0/1)
+FSDB Writer elapsed time : flush(1.079420) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-130 End FSDB profile info
-131 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:7 BlockUsed:10
-132                        ProduceTime:0.534211868 ConsumerTime:0.178703578 Buffer:64MB
-133 SimExit
-134 Sim process exit
+133 End FSDB profile info
+134 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:42 BlockUsed:60
+135                        ProduceTime:2.968455210 ConsumerTime:2.014640866 Buffer:64MB
+136 SimExit
+137 Sim process exit

@@ -3,6 +3,8 @@ module IFID_reg (
     input reset,
     input IFID_flush,
     input [31:0] instruction,
+    input [31:0] pc,
+    input IFID_write,
     
     output logic [31:0] ID_pc_out,
     output logic [4:0] read_reg1,
@@ -27,7 +29,7 @@ always_ff @( posedge clk or posedge reset) begin
     end
     else begin
         if(!IFID_flush) begin
-            ID_pc_out <= instruction;
+            ID_pc_out <= pc;
             read_reg1 <= instruction[19:15];
             read_reg2 <= instruction[24:20];
             opcode <= instruction[6:0];

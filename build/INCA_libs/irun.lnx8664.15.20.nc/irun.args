@@ -4,7 +4,7 @@
 //
 /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
 +incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
-+define+prog0+FSDB
++define+prog0+FSDB_ALL
 -define
 CYCLE=10.0
 -define

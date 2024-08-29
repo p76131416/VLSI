@@ -68,6 +68,7 @@ wire [4:0] exe_write_addr;
 wire [2:0] exe_funct3;
 wire [6:0] exe_funct7;
 wire [31:0] alu_out;
+wire [31:0] exe_imm;
 
 wire [4:0] exe_rd_r1_addr;
 wire [4:0] exe_rd_r2_addr;
@@ -136,6 +137,8 @@ IFID_reg IFID_pipe(
 .reset(rst),
 .IFID_flush(ifid_flush),
 .instruction(IM_instr),
+.pc(progcnt_out),
+.IFID_write(),
 
 .ID_pc_out(id_pc),
 .read_reg1(rd_r1),
@@ -154,7 +157,9 @@ HazardDetectUnit Hazard(
 .read_reg1_addr(rd_r1),
 .read_reg2_addr(rd_r2),
 .EXE_write_addr(exe_write_addr),
+.Branch_Ctrl(id_Branch),
 
+.IFID_write(),
 .PC_write_en(PC_write_enable),
 .IFID_flush(ifid_flush),
 .Control_flush(ctrl_flush)
@@ -167,7 +172,7 @@ HazardDetectUnit Hazard(
 //ID stage 
 
 Regfile Regster_file(
-.clk(clk),
+.clk(~clk),
 .reset(rst),
 .rd_reg1_addr(rd_r1),
 .rd_reg2_addr(rd_r2),
@@ -197,7 +202,7 @@ IDEXE_reg IDEXE_pipe(
 .ID_pc_in(id_pc),
 .rd_r1_addr(rd_r1),
 .rd_r2_addr(rd_r2),
-
+.imme(immedi),
 //signal
 .Control_flush(ctrl_flush),
 .ALUOp(id_ALUOp),
@@ -218,6 +223,7 @@ IDEXE_reg IDEXE_pipe(
 .EXE_funct7(exe_funct7),
 .EXE_rd_r1_addr(exe_rd_r1_addr),
 .EXE_rd_r2_addr(exe_rd_r2_addr),
+.EXE_immediate(exe_imm),
 
 //signal
 .EXE_ALUOp(exe_ALUOp),
@@ -266,7 +272,7 @@ wire [1:0] forward_r2_sel;
 
 Adder PC_imm_adder(
 .in1(exe_pc_out),
-.in2(immedi),
+.in2(exe_imm),
 
 .out(pc_imm)
 );
@@ -288,7 +294,7 @@ Mux2to1 EXE_PC_mux2(
 
 Mux3to1 rs1_mux3(
 .A(exe_rd_reg1_data),
-.B(mem_ALU_out),
+.B(mem_rd_data),
 .C(wb_write_data),
 .sel(forward_r1_sel),
 
@@ -297,7 +303,7 @@ Mux3to1 rs1_mux3(
 
 Mux3to1 rs2_mux3(
 .A(exe_rd_reg2_data),
-.B(mem_ALU_out),
+.B(mem_rd_data),
 .C(wb_write_data),
 .sel(forward_r2_sel),
 
@@ -306,7 +312,7 @@ Mux3to1 rs2_mux3(
 
 Mux2to1 imm_mux2(
 .A(rs2_fin),
-.B(immedi),
+.B(exe_imm),
 .sel(exe_ALUSrc),
 
 .C(alu2)

@@ -14,7 +14,7 @@ module Regfile (
 logic [31:0] register [0:31];
 integer i;
 
-always_ff @( posedge clk or posedge reset) begin
+always_ff @(posedge clk or posedge reset) begin
     if(reset)begin
         for(i=0 ; i<32 ; i=i+1)
             register[i] <= 32'h0;

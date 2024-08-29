@@ -5917,3 +5917,3726 @@ wvMoveSelected -win $_nWave1
 wvSetPosition -win $_nWave1 {("IM" 1)}
 wvSetPosition -win $_nWave1 {("IM" 2)}
 wvSelectSignal -win $_nWave1 {( "IM" 4 )} 
+wvResizeWindow -win $_nWave1 145 246 960 332
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "IM" 4 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 4 )} 
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 5475.482232 -snap {("IM" 4)}
+wvSelectSignal -win $_nWave1 {( "IM" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 3 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 4 )} 
+wvSelectSignal -win $_nWave1 {( "Program counter" 3 )} 
+wvSelectSignal -win $_nWave1 {( "Program counter" 4 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 6 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSearchNext -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "Control UNit" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Control UNit" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Control UNit" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Control UNit" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Control UNit" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Control UNit" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Control UNit" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvGoToTime -win $_nWave1 1000
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 6 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 6 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSearchNext -win $_nWave1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 5562.750310 -snap {("Register file" 8)}
+wvSetCursor -win $_nWave1 6546.678232 -snap {("Register file" 8)}
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 6 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 6 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSearchNext -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSearchNext -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvGoToTime -win $_nWave1 1000
+wvSelectSignal -win $_nWave1 {( "Register file" 3 )} 
+wvSetPosition -win $_nWave1 {("Register file" 3)}
+wvSetPosition -win $_nWave1 {("Register file" 1)}
+wvSetPosition -win $_nWave1 {("Register file" 0)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("Register file" 0)}
+wvSetPosition -win $_nWave1 {("Register file" 1)}
+wvSetCursor -win $_nWave1 1375.848073 -snap {("Register file" 1)}
+wvSetCursor -win $_nWave1 2507.974488 -snap {("Register file" 1)}
+wvSetCursor -win $_nWave1 4539.905542 -snap {("Register file" 6)}
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "Register file" 6 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSearchNext -win $_nWave1
+wvSetCursor -win $_nWave1 35464.272950 -snap {("Register file" 8)}
+wvSetCursor -win $_nWave1 36415.573617 -snap {("Register file" 8)}
+wvSetCursor -win $_nWave1 36486.331518 -snap {("Register file" 7)}
+wvSetCursor -win $_nWave1 37437.632186 -snap {("Register file" 7)}
+wvSetCursor -win $_nWave1 35071.173500 -snap {("Register file" 7)}
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSetPosition -win $_nWave1 {("Register file" 8)}
+wvExpandBus -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSetPosition -win $_nWave1 {("Register file" 8)}
+wvCollapseBus -win $_nWave1
+wvSetPosition -win $_nWave1 {("Register file" 8)}
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSetCursor -win $_nWave1 36494.193507 -snap {("Program counter" 3)}
+wvSetCursor -win $_nWave1 35495.720906 -snap {("Register file" 8)}
+wvSelectGroup -win $_nWave1 {Register file}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/Regster_file"
+wvGetSignalClose -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/Regster_file"
+wvSetPosition -win $_nWave1 {("Control UNit" 3)}
+wvSetPosition -win $_nWave1 {("IM" 2)}
+wvSetPosition -win $_nWave1 {("Register file" 4)}
+wvSetPosition -win $_nWave1 {("Register file" 2)}
+wvSetPosition -win $_nWave1 {("Register file" 1)}
+wvSetPosition -win $_nWave1 {("Register file" 0)}
+wvAddSignal -win $_nWave1 "/top_tb/TOP/cpu/Regster_file/register\[0:31\]"
+wvSetPosition -win $_nWave1 {("Register file" 0)}
+wvSetPosition -win $_nWave1 {("Register file" 1)}
+wvSetPosition -win $_nWave1 {("Register file" 1)}
+wvSetPosition -win $_nWave1 {("Register file" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSetPosition -win $_nWave1 {("Register file" 1)}
+wvGetSignalClose -win $_nWave1
+wvScrollUp -win $_nWave1 9
+wvSelectSignal -win $_nWave1 {( "Register file" 1 )} 
+wvSetCursor -win $_nWave1 35967.440245 -snap {("Register file" 1)}
+wvSetCursor -win $_nWave1 35000.415599 -snap {("Register file" 1)}
+wvSetCursor -win $_nWave1 35943.854278 -snap {("Register file" 1)}
+wvSetCursor -win $_nWave1 34921.795709 -snap {("Register file" 2)}
+wvSetCursor -win $_nWave1 35991.026212 -snap {("Register file" 2)}
+wvSelectSignal -win $_nWave1 {( "Register file" 9 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSetCursor -win $_nWave1 34442.214381 -snap {("Register file" 8)}
+wvSetCursor -win $_nWave1 33565.995708 -snap {("Register file" 2)}
+wvSetCursor -win $_nWave1 32370.973382 -snap {("Register file" 2)}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "Program counter" 3 )} 
+wvSelectSignal -win $_nWave1 {( "Program counter" 3 )} 
+wvSelectSignal -win $_nWave1 {( "Program counter" 4 )} 
+wvScrollUp -win $_nWave1 2
+wvSelectSignal -win $_nWave1 {( "IM" 6 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 5 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 6 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 5 )} 
+wvZoom -win $_nWave1 990.610613 1996.945203
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvResizeWindow -win $_nWave1 145 246 960 332
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvSetCursor -win $_nWave1 1397.256830 -snap {("IM" 6)}
+wvSelectSignal -win $_nWave1 {( "IM" 6 )} 
+wvResizeWindow -win $_nWave1 145 246 960 332
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 9 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSearchNext -win $_nWave1
+wvSetCursor -win $_nWave1 33404.920429 -snap {("Register file" 9)}
+wvSetCursor -win $_nWave1 32601.192303 -snap {("Register file" 9)}
+wvSetCursor -win $_nWave1 31301.831833 -snap {("Register file" 9)}
+wvSetCursor -win $_nWave1 30444.521832 -snap {("Register file" 9)}
+wvSetCursor -win $_nWave1 29480.048082 -snap {("Register file" 9)}
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "IM" 5 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 5 )} 
+wvSetRadix -win $_nWave1 -format UDec
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvPanLeft -win $_nWave1
+wvSetCursor -win $_nWave1 897.496407 -snap {("IM" 5)}
+wvSetCursor -win $_nWave1 924.287345 -snap {("IM" 6)}
+wvSetCursor -win $_nWave1 1553.874376 -snap {("IM" 5)}
+wvSetCursor -win $_nWave1 991.264688 -snap {("Program counter" 1)}
+wvSetCursor -win $_nWave1 1460.106095 -snap {("Program counter" 1)}
+wvSelectSignal -win $_nWave1 {( "Register file" 9 )} 
+wvSetCursor -win $_nWave1 4554.459379 -snap {("Register file" 9)}
+wvSetPosition -win $_nWave1 {("Register file" 9)}
+wvSetPosition -win $_nWave1 {("Register file" 8)}
+wvSetPosition -win $_nWave1 {("Register file" 7)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("Register file" 7)}
+wvSetPosition -win $_nWave1 {("Register file" 8)}
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSetCursor -win $_nWave1 32454.560174 -snap {("Register file" 8)}
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSetRadix -win $_nWave1 -format UDec
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU Control" 3 )} 
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvSearchNext -win $_nWave1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 4 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvScrollDown -win $_nWave1 4
+wvScrollDown -win $_nWave1 3
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 32706.215343 -snap {("Control UNit" 2)}
+wvSetCursor -win $_nWave1 34499.927721 -snap {("Register file" 9)}
+wvSelectGroup -win $_nWave1 {ALU}
+wvSelectSignal -win $_nWave1 {( "Register file" 9 )} 
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectGroup -win $_nWave1 {IF/ID}
+wvSelectSignal -win $_nWave1 {( "IF/ID" 1 )} 
+wvSelectSignal -win $_nWave1 {( "IF/ID" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IF/ID" 3 )} 
+wvSelectSignal -win $_nWave1 {( "IF/ID" 4 )} 
+wvSelectSignal -win $_nWave1 {( "IF/ID" 5 )} 
+wvSelectSignal -win $_nWave1 {( "IF/ID" 5 )} 
+wvSetRadix -win $_nWave1 -format UDec
+wvSelectSignal -win $_nWave1 {( "IF/ID" 5 )} 
+wvSetRadix -win $_nWave1 -format Bin
+wvSelectSignal -win $_nWave1 {( "IF/ID" 4 )} 
+wvSelectSignal -win $_nWave1 {( "IF/ID" 4 )} 
+wvSetRadix -win $_nWave1 -format Bin
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 7
+wvSelectSignal -win $_nWave1 {( "Register file" 8 )} 
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 10
+wvScrollDown -win $_nWave1 8
+wvSelectSignal -win $_nWave1 {( "IF/ID" 7 )} 
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvSetCursor -win $_nWave1 33522.756053 -snap {("Control UNit" 1)}
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvGoToTime -win $_nWave1 1000
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvGoToTime -win $_nWave1 0
+wvSetCursor -win $_nWave1 896.856189 -snap {("IM" 6)}
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvSetCursor -win $_nWave1 4738.613297 -snap {("ALU" 4)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 9 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 7 )} 
+wvSelectSignal -win $_nWave1 {( "Control UNit" 4 )} 
+wvSelectGroup -win $_nWave1 {Control UNit}
+wvSelectSignal -win $_nWave1 {( "Control UNit" 1 )} 
+wvGoToTime -win $_nWave1 32500
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 2
+wvScrollDown -win $_nWave1 21
+wvScrollDown -win $_nWave1 5
+wvScrollUp -win $_nWave1 29
+wvScrollDown -win $_nWave1 6
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 4 )} 
+wvScrollUp -win $_nWave1 3
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 4 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 12
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 4 )} 
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 4)}
+wvSetPosition -win $_nWave1 {("ALU" 5)}
+wvSetPosition -win $_nWave1 {("ALU" 4)}
+wvSetPosition -win $_nWave1 {("ALU" 3)}
+wvSetPosition -win $_nWave1 {("ALU" 2)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("ALU" 2)}
+wvSetPosition -win $_nWave1 {("ALU" 3)}
+wvSetPosition -win $_nWave1 {("ALU" 1)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("ALU" 1)}
+wvSetPosition -win $_nWave1 {("ALU" 2)}
+wvScrollDown -win $_nWave1 7
+wvScrollUp -win $_nWave1 3
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 3
+wvSelectGroup -win $_nWave1 {EXE 3 to 1 rs1 mux}
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 2 )} 
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 2 )} 
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 3 )} 
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 4 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 2 )} 
+wvSetPosition -win $_nWave1 {("ALU" 4)}
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 0)}
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 1)}
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 2)}
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 1)}
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 0)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 1)}
+wvSetPosition -win $_nWave1 {("ALU" 3)}
+wvSetPosition -win $_nWave1 {("ALU" 2)}
+wvSetPosition -win $_nWave1 {("ALU" 1)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("ALU" 1)}
+wvSetPosition -win $_nWave1 {("ALU" 2)}
+wvScrollUp -win $_nWave1 21
+wvScrollDown -win $_nWave1 6
+wvScrollDown -win $_nWave1 2
+wvScrollDown -win $_nWave1 13
+wvScrollDown -win $_nWave1 12
+wvScrollUp -win $_nWave1 12
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/Forwarding"
+wvSetPosition -win $_nWave1 {("ALU" 3)}
+wvSetPosition -win $_nWave1 {("ALU" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvSetPosition -win $_nWave1 {("ALU" 3)}
+wvSetPosition -win $_nWave1 {("ALU" 4)}
+wvSetPosition -win $_nWave1 {("ALU" 5)}
+wvSetPosition -win $_nWave1 {("ALU" 4)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("ALU" 4)}
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/alu"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/rs1_mux3"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/rs2_mux3"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/IDEXE_pipe"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/IFID_pipe"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/MEMWB_pipe"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/IDEXE_pipe"
+wvSetPosition -win $_nWave1 {("ALU" 5)}
+wvSetPosition -win $_nWave1 {("ALU" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvSetPosition -win $_nWave1 {("ALU" 5)}
+wvSetPosition -win $_nWave1 {("ALU" 5)}
+wvSetPosition -win $_nWave1 {("ALU" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvSetPosition -win $_nWave1 {("ALU" 5)}
+wvGetSignalClose -win $_nWave1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU" 4 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 4 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 2 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 4 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 5 )} 
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 12
+wvSelectSignal -win $_nWave1 {( "Register file" 3 )} 
+wvSelectSignal -win $_nWave1 {( "Register file" 4 )} 
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 2 )} 
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 1 )} 
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 2 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 6 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 7 )} 
+wvSelectGroup -win $_nWave1 {ALU}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/top_tb"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/DM1"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/CtrlUnit"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/IFID_pipe"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/IF_adder"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/IF_pc_mux3"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/PC_4_adder"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/Regster_file"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/alu"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/IDEXE_pipe"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/MEMWB_pipe"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/Immediate_Generator"
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "ALU" 6 )} 
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "ALU" 6 )} 
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "ALU" 6 )} 
+wvSetPosition -win $_nWave1 {("ALU" 6)}
+wvGetSignalClose -win $_nWave1
+wvScrollUp -win $_nWave1 5
+wvSelectSignal -win $_nWave1 {( "ALU" 6 )} 
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 3
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 33490.557582 -snap {("IM" 5)}
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvSelectGroup -win $_nWave1 {EXE 3 to 1 rs1 mux}
+wvSelectGroup -win $_nWave1 {EXE 3 to 1 rs1 mux}
+wvSelectGroup -win $_nWave1 {IF/ID}
+wvSelectGroup -win $_nWave1 {PC+4}
+wvSelectGroup -win $_nWave1 {IF pc sel}
+wvSelectGroup -win $_nWave1 {DM}
+wvSelectGroup -win $_nWave1 {G14}
+wvSetPosition -win $_nWave1 {("G14" 0)}
+wvSetPosition -win $_nWave1 {("PC+4" 0)}
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 0)}
+wvSetPosition -win $_nWave1 {("ALU" 9)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("ALU" 9)}
+wvSetPosition -win $_nWave1 {("DM" 4)}
+wvSetPosition -win $_nWave1 {("DM" 4)}
+wvSetPosition -win $_nWave1 {("ALU" 9)}
+wvSelectGroup -win $_nWave1 {G14}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/Forwarding"
+wvSetPosition -win $_nWave1 {("ALU" 15)}
+wvSetPosition -win $_nWave1 {("ALU" 15)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvCollapseGroup -win $_nWave1 "G14"
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "EXE 3 to 1 rs1 mux"
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "PC+4"
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF pc sel"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G13" \
+}
+wvSelectSignal -win $_nWave1 {( "ALU" 10 11 12 13 14 15 )} 
+wvSetPosition -win $_nWave1 {("ALU" 15)}
+wvSetPosition -win $_nWave1 {("G14" 5)}
+wvSetPosition -win $_nWave1 {("G14" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "EXE 3 to 1 rs1 mux"
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "PC+4"
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF pc sel"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G13" \
+}
+wvSelectSignal -win $_nWave1 {( "G14" 5 )} 
+wvSetPosition -win $_nWave1 {("G14" 5)}
+wvSetPosition -win $_nWave1 {("G14" 5)}
+wvSetPosition -win $_nWave1 {("G14" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "EXE 3 to 1 rs1 mux"
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"PC+4" \
+{/top_tb/TOP/cpu/IF_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/IF_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_4_adder/out\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "PC+4"
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF pc sel"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G13" \
+}
+wvSelectSignal -win $_nWave1 {( "G14" 5 )} 
+wvSetPosition -win $_nWave1 {("G14" 5)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G14" 1 )} 
+wvSelectSignal -win $_nWave1 {( "G14" 2 )} 
+wvGoToTime -win $_nWave1 33500
+wvSelectSignal -win $_nWave1 {( "G14" 1 )} 
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 5
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "Control UNit" 8 )} 
+wvSelectSignal -win $_nWave1 {( "Control UNit" 3 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 7 )} 
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 4
+wvSelectGroup -win $_nWave1 {G14}
+wvRenameGroup -win $_nWave1 {G14} {Forwarding Unit}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 34544.101235 -snap {("IM" 5)}
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 5
+wvScrollUp -win $_nWave1 13
+wvScrollDown -win $_nWave1 18
+wvSelectGroup -win $_nWave1 {IF pc sel}
+wvSetPosition -win $_nWave1 {("IF pc sel" 0)}
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 0)}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 6)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 6)}
+wvSelectGroup -win $_nWave1 {IF pc sel}
+wvSelectGroup -win $_nWave1 {IF pc sel}
+wvSelectGroup -win $_nWave1 {IF pc sel}
+wvScrollDown -win $_nWave1 5
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 1 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 1 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 5 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 4 )} 
+wvSelectGroup -win $_nWave1 {IF pc sel}
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 2 )} 
+wvSelectGroup -win $_nWave1 {PC+4}
+wvSelectGroup -win $_nWave1 {PC+4}
+wvScrollDown -win $_nWave1 3
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 6)}
+wvScrollDown -win $_nWave1 0
+wvSelectGroup -win $_nWave1 {G13}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/IF_adder"
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/PC_imm_adder"
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 9)}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"Forwarding Unit" \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+{/top_tb/TOP/cpu/PC_imm_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "EXE 3 to 1 rs1 mux"
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G13" \
+}
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 7 8 9 )} 
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 9)}
+wvSetPosition -win $_nWave1 {("G13" 3)}
+wvSetPosition -win $_nWave1 {("G13" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"Forwarding Unit" \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "EXE 3 to 1 rs1 mux"
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G13" \
+{/top_tb/TOP/cpu/PC_imm_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "G13" 1 2 3 )} 
+wvSetPosition -win $_nWave1 {("G13" 3)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G13" 1 )} 
+wvSelectSignal -win $_nWave1 {( "G13" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G13" 2 )} 
+wvSelectGroup -win $_nWave1 {G13}
+wvSetPosition -win $_nWave1 {("G13" 0)}
+wvSelectGroup -win $_nWave1 {G13}
+wvSelectGroup -win $_nWave1 {G13}
+wvSelectGroup -win $_nWave1 {G13}
+wvSelectGroup -win $_nWave1 {G13}
+wvScrollDown -win $_nWave1 0
+wvMoveSelected -win $_nWave1
+wvSelectGroup -win $_nWave1 {G13}
+wvSelectGroup -win $_nWave1 {G13}
+wvRenameGroup -win $_nWave1 {G13} {PC+imm}
+wvScrollDown -win $_nWave1 3
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "PC+imm" 1 )} 
+wvResizeWindow -win $_nWave1 145 246 960 332
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 17
+wvScrollDown -win $_nWave1 4
+wvScrollDown -win $_nWave1 5
+wvSetCursor -win $_nWave1 2994.428798 -snap {("PC+imm" 1)}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "IM" 6 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 6 )} 
+wvSetRadix -win $_nWave1 -format Hex
+wvSelectSignal -win $_nWave1 {( "IM" 6 )} 
+wvSetRadix -win $_nWave1 -format Bin
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvGoToTime -win $_nWave1 34500
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectGroup -win $_nWave1 {EXE 3 to 1 rs1 mux} {IF/ID} {DM} {PC+imm}
+wvSelectGroup -win $_nWave1 {DM}
+wvSelectGroup -win $_nWave1 {PC+imm}
+wvSetPosition -win $_nWave1 {("IF/ID" 0)}
+wvSetPosition -win $_nWave1 {("EXE 3 to 1 rs1 mux" 0)}
+wvSetPosition -win $_nWave1 {("IF pc sel" 5)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("IF pc sel" 5)}
+wvSelectGroup -win $_nWave1 {PC+imm}
+wvSelectGroup -win $_nWave1 {PC+imm}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU" 2 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 7 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 8 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 2 )} 
+wvSelectGroup -win $_nWave1 {EXE 3 to 1 rs1 mux}
+wvScrollDown -win $_nWave1 3
+wvSelectGroup -win $_nWave1 {G14}
+wvSelectGroup -win $_nWave1 {G14}
+wvSelectGroup -win $_nWave1 {PC+imm}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectGroup -win $_nWave1 {ALU}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 6 )} 
+wvSelectGroup -win $_nWave1 {Forwarding Unit}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 0)}
+wvSetPosition -win $_nWave1 {("ALU" 9)}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 0)}
+wvMoveSelected -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/Forwarding"
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 2)}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 2)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"Forwarding Unit" \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+imm" \
+{/top_tb/TOP/cpu/PC_imm_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/out\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "PC+imm"
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "EXE 3 to 1 rs1 mux"
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 1 2 )} 
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 2)}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 2)}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 2)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"Forwarding Unit" \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+imm" \
+{/top_tb/TOP/cpu/PC_imm_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/out\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "PC+imm"
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "EXE 3 to 1 rs1 mux"
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 1 2 )} 
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 2)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 1 )} 
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 2 )} 
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 1 )} 
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 2 )} 
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 1 )} 
+wvSelectSignal -win $_nWave1 {( "Forwarding Unit" 1 2 )} 
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 1)}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 7)}
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 8)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("Forwarding Unit" 8)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 35158.304556 -snap {("Forwarding Unit" 6)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvGoToTime -win $_nWave1 34500
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU" 1 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 2 )} 
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 4
+wvSelectGroup -win $_nWave1 {PC+imm}
+wvSelectGroup -win $_nWave1 {PC+imm}
+wvSelectGroup -win $_nWave1 {PC+imm}
+wvSelectGroup -win $_nWave1 {PC+imm}
+wvSelectSignal -win $_nWave1 {( "PC+imm" 3 )} 
+wvScrollDown -win $_nWave1 3
+wvSelectGroup -win $_nWave1 {EXE 3 to 1 rs1 mux}
+wvSelectGroup -win $_nWave1 {EXE 3 to 1 rs1 mux}
+wvScrollDown -win $_nWave1 4
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 2 )} 
+wvSelectSignal -win $_nWave1 {( "EXE 3 to 1 rs1 mux" 3 )} 
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 4
+wvSelectSignal -win $_nWave1 {( "PC+imm" 3 )} 
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvScrollDown -win $_nWave1 10
+wvSelectGroup -win $_nWave1 {DM}
+wvSelectGroup -win $_nWave1 {DM}
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 4
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "DM" 1 )} 
+wvSelectGroup -win $_nWave1 {DM}
+wvSelectGroup -win $_nWave1 {DM}
+wvSelectGroup -win $_nWave1 {DM}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 3
+wvSelectSignal -win $_nWave1 {( "ALU" 2 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 3 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 1 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 1 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 3 )} 
+wvSelectSignal -win $_nWave1 {( "PC+imm" 2 )} 
+wvSelectSignal -win $_nWave1 {( "ALU" 6 )} 
+wvScrollUp -win $_nWave1 4
+wvSelectSignal -win $_nWave1 {( "ALU" 3 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 3 )} 
+wvSelectSignal -win $_nWave1 {( "PC+imm" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 2 )} 
+wvSelectSignal -win $_nWave1 {( "IF pc sel" 3 )} 
+wvScrollDown -win $_nWave1 5
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 2
+wvSelectSignal -win $_nWave1 {( "PC+imm" 2 )} 
+wvScrollUp -win $_nWave1 6
+wvScrollUp -win $_nWave1 3
+wvScrollUp -win $_nWave1 2
+wvSelectSignal -win $_nWave1 {( "ALU" 7 )} 
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 34513.392602 -snap {("ALU" 3)}
+wvSetCursor -win $_nWave1 35517.837803 -snap {("ALU" 2)}
+wvSetCursor -win $_nWave1 34459.822191 -snap {("ALU" 3)}
+wvSelectSignal -win $_nWave1 {( "ALU" 9 )} 
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSetCursor -win $_nWave1 35504.445200 -snap {("Register file" 9)}
+wvSetCursor -win $_nWave1 36468.712592 -snap {("Register file" 9)}
+wvSetCursor -win $_nWave1 37406.194779 -snap {("Register file" 9)}
+wvSetCursor -win $_nWave1 37419.587382 -snap {("Register file" 9)}
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvSearchPrev -win $_nWave1
+wvSearchPrev -win $_nWave1
+wvSearchPrev -win $_nWave1
+wvSearchPrev -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSetCursor -win $_nWave1 36005.145637 -snap {("Register file" 1)}
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "Register file" 1 )} 
+wvSearchNext -win $_nWave1
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvResizeWindow -win $_nWave1 145 246 960 332
+wvResizeWindow -win $_nWave1 1 31 958 1008
+wvResizeWindow -win $_nWave1 1 31 925 1008
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvGoToTime -win $_nWave1 41000
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvResizeWindow -win $_nWave1 145 246 960 332
+wvResizeWindow -win $_nWave1 1 31 925 1008
+wvResizeWindow -win $_nWave1 1 31 925 1008
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 40475.472222 -snap {("IM" 5)}
+wvSelectSignal -win $_nWave1 {( "IM" 5 )} 
+wvSearchPrev -win $_nWave1
+wvSelectGroup -win $_nWave1 {Control UNit}
+wvSetCursor -win $_nWave1 39503.611111 -snap {("Program counter" 4)}
+wvSelectSignal -win $_nWave1 {( "IM" 6 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 6 )} 
+wvSetRadix -win $_nWave1 -format Hex
+wvSetCursor -win $_nWave1 41467.100000 -snap {("Program counter" 3)}
+wvScrollUp -win $_nWave1 2
+wvSelectGroup -win $_nWave1 {IM}
+wvSetPosition -win $_nWave1 {("IM" 0)}
+wvSetPosition -win $_nWave1 {("IM" 1)}
+wvSetPosition -win $_nWave1 {("IM" 0)}
+wvMoveSelected -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/top_tb/TOP/cpu/Hazard"
+wvSetPosition -win $_nWave1 {("IM" 3)}
+wvSetPosition -win $_nWave1 {("IM" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/Hazard/Control_flush} \
+{/top_tb/TOP/cpu/Hazard/IFID_flush} \
+{/top_tb/TOP/cpu/Hazard/PC_write_en} \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"Forwarding Unit" \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+imm" \
+{/top_tb/TOP/cpu/PC_imm_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "IM" 1 2 3 )} 
+wvSetPosition -win $_nWave1 {("IM" 3)}
+wvSetPosition -win $_nWave1 {("IM" 9)}
+wvSetPosition -win $_nWave1 {("IM" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"IM" \
+{/top_tb/TOP/cpu/rst} \
+{/top_tb/TOP/cpu/IDEXE_pipe/EXE_RegWrite} \
+{/top_tb/TOP/cpu/EXEMEM_pipe/MEM_RegWrite} \
+{/top_tb/TOP/cpu/MEMWB_pipe/WB_RegWrite} \
+{/top_tb/TOP/IM1/A\[13:0\]} \
+{/top_tb/TOP/IM1/DO\[31:0\]} \
+{/top_tb/TOP/cpu/Hazard/Control_flush} \
+{/top_tb/TOP/cpu/Hazard/IFID_flush} \
+{/top_tb/TOP/cpu/Hazard/PC_write_en} \
+}
+wvAddSignal -win $_nWave1 -group {"Program counter" \
+{/top_tb/TOP/cpu/PC/clk} \
+{/top_tb/TOP/cpu/PC/Write_en} \
+{/top_tb/TOP/cpu/PC/pc_in\[31:0\]} \
+{/top_tb/TOP/cpu/PC/pc_out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Register file" \
+{/top_tb/TOP/cpu/Regster_file/register\[0:31\]} \
+{/top_tb/TOP/cpu/Regster_file/clk} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/rd_reg2_data\[31:0\]} \
+{/top_tb/TOP/cpu/Regster_file/RegWrite} \
+{/top_tb/TOP/cpu/Regster_file/w_reg_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Regster_file/w_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Control UNit" \
+{/top_tb/TOP/cpu/IFID_pipe/opcode\[6:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/ALUSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/MemRead} \
+{/top_tb/TOP/cpu/CtrlUnit/MemtoReg} \
+{/top_tb/TOP/cpu/CtrlUnit/MenWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/PCtoRegSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RDSrc} \
+{/top_tb/TOP/cpu/CtrlUnit/RegWrite} \
+{/top_tb/TOP/cpu/CtrlUnit/Immtype\[2:0\]} \
+{/top_tb/TOP/cpu/CtrlUnit/Branch\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU Control" \
+{/top_tb/TOP/cpu/alu_contrl/ALUContrl\[3:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/ALUOp\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/alu_contrl/funct7\[6:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"ALU" \
+{/top_tb/TOP/cpu/alu/control\[3:0\]} \
+{/top_tb/TOP/cpu/forward_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/alu/in1\[31:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+{/top_tb/TOP/cpu/IDEXE_pipe/ALUSrc} \
+{/top_tb/TOP/cpu/Immediate_Generator/imm\[31:0\]} \
+{/top_tb/TOP/cpu/alu/in2\[31:0\]} \
+{/top_tb/TOP/cpu/alu/out\[31:0\]} \
+{/top_tb/TOP/cpu/alu/zero} \
+}
+wvAddSignal -win $_nWave1 -group {"Forwarding Unit" \
+{/top_tb/TOP/cpu/Forwarding/read_reg1_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/read_reg2_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/MEM_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/WB_write_addr\[4:0\]} \
+{/top_tb/TOP/cpu/Forwarding/WB_RegWrite} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r1_sel\[1:0\]} \
+{/top_tb/TOP/cpu/Forwarding/forwarding_r2_sel\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF pc sel" \
+{/top_tb/TOP/cpu/IF_pc_mux3/A\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/B\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/C\[31:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/sel\[1:0\]} \
+{/top_tb/TOP/cpu/IF_pc_mux3/D\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"PC+imm" \
+{/top_tb/TOP/cpu/PC_imm_adder/in1\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/in2\[31:0\]} \
+{/top_tb/TOP/cpu/PC_imm_adder/out\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"EXE 3 to 1 rs1 mux" \
+{/top_tb/TOP/cpu/exe_rd_reg1_data\[31:0\]} \
+{/top_tb/TOP/cpu/mem_ALU_out\[31:0\]} \
+{/top_tb/TOP/cpu/wb_write_data\[31:0\]} \
+{/top_tb/TOP/cpu/alu1\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"IF/ID" \
+{/top_tb/TOP/cpu/IFID_pipe/clk} \
+{/top_tb/TOP/cpu/IFID_pipe/IFID_flush} \
+{/top_tb/TOP/cpu/IFID_pipe/ID_pc_out\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct3\[2:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/funct7\[6:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/instruction\[31:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg1\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/read_reg2\[4:0\]} \
+{/top_tb/TOP/cpu/IFID_pipe/write_addr\[4:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "IF/ID"
+wvAddSignal -win $_nWave1 -group {"DM" \
+{/top_tb/TOP/DM1/A\[13:0\]} \
+{/top_tb/TOP/DM1/DI\[31:0\]} \
+{/top_tb/TOP/DM1/DO\[31:0\]} \
+{/top_tb/TOP/DM1/WEB\[3:0\]} \
+}
+wvCollapseGroup -win $_nWave1 "DM"
+wvAddSignal -win $_nWave1 -group {"G14" \
+}
+wvSelectSignal -win $_nWave1 {( "IM" 7 8 9 )} 
+wvSetPosition -win $_nWave1 {("IM" 9)}
+wvGetSignalClose -win $_nWave1
+wvScrollUp -win $_nWave1 9
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "IM" 7 )} 
+wvSelectSignal -win $_nWave1 {( "IM" 8 )} 
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvScrollDown -win $_nWave1 8
+wvSelectGroup -win $_nWave1 {DM}
+wvScrollDown -win $_nWave1 0
+wvSelectGroup -win $_nWave1 {DM}
+wvScrollDown -win $_nWave1 4
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvSelectSignal -win $_nWave1 {( "DM" 3 )} 
+wvSearchNext -win $_nWave1
+wvGoToTime -win $_nWave1 4250
+wvGoToTime -win $_nWave1 42500
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0

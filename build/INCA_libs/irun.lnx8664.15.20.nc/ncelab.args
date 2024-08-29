@@ -4,7 +4,7 @@
 //
 +prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog0
 +incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
-+define+prog0+FSDB
++define+prog0+FSDB_ALL
 +access+r
 +nc64bit
 -ACCESS

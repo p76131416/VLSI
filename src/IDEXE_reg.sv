@@ -9,6 +9,7 @@ module IDEXE_reg (
     input [31:0] ID_pc_in,
     input [4:0] rd_r1_addr,
     input [4:0] rd_r2_addr,
+    input [31:0] imme,
 
     input Control_flush,
     input [2:0] ALUOp,
@@ -29,6 +30,7 @@ module IDEXE_reg (
     output logic [6:0] EXE_funct7,
     output logic [4:0] EXE_rd_r1_addr,
     output logic [4:0] EXE_rd_r2_addr,
+    output logic [31:0] EXE_immediate,
 
     output logic [2:0] EXE_ALUOp,
     output logic EXE_ALUSrc,
@@ -49,6 +51,9 @@ always_ff @(posedge clk or posedge reset) begin
         EXE_write_addr <= 5'd0;
         EXE_funct3 <= 3'd0;
         EXE_funct7 <= 7'd0;
+        EXE_rd_r1_addr <= 5'd0;
+        EXE_rd_r2_addr <= 5'd0;
+        EXE_immediate <= 32'h0;
         EXE_ALUOp <= 3'd0;
         EXE_ALUSrc <= 0;
         EXE_PCtoRegSrc <= 0;
@@ -67,6 +72,9 @@ always_ff @(posedge clk or posedge reset) begin
             EXE_write_addr <= write_addr;
             EXE_funct3 <= funct3;
             EXE_funct7 <= funct7;
+            EXE_rd_r1_addr <= rd_r1_addr;
+            EXE_rd_r2_addr <= rd_r2_addr;
+            EXE_immediate <= imme; 
             EXE_ALUOp <= ALUOp;
             EXE_ALUSrc <= ALUSrc;
             EXE_PCtoRegSrc <= PCtoRegSrc;
@@ -84,6 +92,9 @@ always_ff @(posedge clk or posedge reset) begin
             EXE_write_addr <= 5'd0;
             EXE_funct3 <= 3'd0;
             EXE_funct7 <= 7'd0;
+            EXE_rd_r1_addr <= 5'd0;
+            EXE_rd_r2_addr <= 5'd0;
+            EXE_immediate <= 32'h0;
             EXE_ALUOp <= 3'd0;
             EXE_ALUSrc <= 0;
             EXE_PCtoRegSrc <= 0;

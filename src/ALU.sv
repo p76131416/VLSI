@@ -9,22 +9,70 @@ module ALU (
 
 always_comb begin
     case (control)
-        4'd0 : out = in1 + in2;
-        4'd1 : out = in1 - in2;
-        4'd2 : out = $unsigned(in1) << in2[4:0];
-        4'd3 : out = ($signed(in1) < $signed(in2)) ? 1 : 0;
-        4'd4 : out = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
-        4'd5 : out = in1 ^ in2;
-        4'd6 : out = $unsigned($unsigned(in1) >> in2[4:0]);
-        4'd7 : out = $signed($signed(in1) >> in2[4:0]);
-        4'd8 : out = in1 | in2;
-        4'd9 : out = in1 & in2;
-        4'd10 : zero = (in1 == in2) ? 1 : 0;
-        4'd11 : zero = (in1 != in2) ? 1 : 0;
-        4'd12 : zero = ($signed(in1) < $signed(in2)) ? 1 : 0;
-        4'd13 : zero = ($signed(in1) >= $signed(in2)) ? 1 : 0;
-        4'd14 : zero = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
-        default : zero = ($unsigned(in1) >= $unsigned(in2)) ? 1 : 0;
+        4'd0 : begin
+            out = in1 + in2;
+            zero = 1'd0;
+        end
+        4'd1 : begin 
+            out = in1 - in2;
+            zero = 1'd0;
+        end
+        4'd2 : begin 
+            out = $unsigned(in1) << in2[4:0];
+            zero = 1'd0;
+        end
+        4'd3 : begin 
+            out = ($signed(in1) < $signed(in2)) ? 1 : 0;
+            zero = 1'd0;
+        end
+        4'd4 : begin 
+            out = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
+            zero = 1'd0;
+        end
+        4'd5 : begin 
+            out = in1 ^ in2;
+            zero = 1'd0;
+        end
+        4'd6 : begin 
+            out = $unsigned($unsigned(in1) >> in2[4:0]);
+            zero = 1'd0;
+        end
+        4'd7 : begin 
+            out = $signed($signed(in1) >> in2[4:0]);
+            zero = 1'd0;
+        end
+        4'd8 : begin 
+            out = in1 | in2;
+            zero = 1'd0;
+        end
+        4'd9 : begin 
+            out = in1 & in2;
+            zero = 1'd0;
+        end
+        4'd10 : begin 
+            zero = (in1 == in2) ? 1 : 0;
+            out = 32'd0;
+        end
+        4'd11 : begin 
+            zero = (in1 != in2) ? 1 : 0;
+            out = 32'd0;
+        end
+        4'd12 : begin 
+            zero = ($signed(in1) < $signed(in2)) ? 1 : 0;
+            out = 32'd0;
+        end
+        4'd13 : begin 
+            zero = ($signed(in1) >= $signed(in2)) ? 1 : 0;
+            out = 32'd0;
+        end
+        4'd14 : begin 
+            zero = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
+            out = 32'd0;
+        end
+        default : begin
+            zero = ($unsigned(in1) >= $unsigned(in2)) ? 1 : 0;
+            out = 32'd0;
+        end
     endcase
 end
     

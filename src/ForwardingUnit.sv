@@ -11,25 +11,20 @@ module ForwardingUnit (
 );
     
 always_comb begin
-    if(MEM_RegWrite & MEM_write_addr != 0 & read_reg1_addr == MEM_write_addr)
+    if(MEM_RegWrite && read_reg1_addr == MEM_write_addr)
         forwarding_r1_sel = 2'd1;
-    else 
-        forwarding_r1_sel = 2'd0;
-    
-    if(MEM_RegWrite & MEM_write_addr != 0 & read_reg2_addr == MEM_write_addr)
-        forwarding_r2_sel = 2'd1;
-    else 
-        forwarding_r2_sel = 2'd0; 
-
-    if(WB_RegWrite & WB_write_addr != 0 & read_reg1_addr == WB_write_addr)
+    else if(WB_RegWrite && read_reg1_addr == WB_write_addr)
         forwarding_r1_sel = 2'd2;
-    else 
+    else
         forwarding_r1_sel = 2'd0;
-    
-    if(WB_RegWrite & WB_write_addr != 0 & read_reg2_addr == WB_write_addr)
+end
+
+always_comb begin
+    if(MEM_RegWrite && read_reg2_addr == MEM_write_addr)
+        forwarding_r2_sel = 2'd1;
+    else if(WB_RegWrite && read_reg2_addr == WB_write_addr)
         forwarding_r2_sel = 2'd2;
     else 
         forwarding_r2_sel = 2'd0;
 end
-
 endmodule
