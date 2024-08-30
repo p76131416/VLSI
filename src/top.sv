@@ -13,7 +13,7 @@ wire [31:0] pc;
 
 wire dm_oe;
 wire [3:0] dm_web;
-wire [13:0] dm_addr;
+wire [31:0] dm_addr;
 wire [31:0] dm_di;
 
 CPU cpu(
@@ -46,7 +46,7 @@ SRAM_wrapper DM1(
 .CS(1'b1),
 .OE(dm_oe),
 .WEB(dm_web),
-.A(dm_addr),
+.A(dm_addr[15:2]),
 .DI(dm_di),
 
 .DO(memory_data)

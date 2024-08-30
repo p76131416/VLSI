@@ -24,7 +24,7 @@ module CPU (
     output [31:0] progcnt_out,
     output DM_OE,
     output [3:0] DM_WEB,
-    output [13:0] DM_addr,
+    output [31:0] DM_addr,
     output [31:0] DM_DI
 );
 
@@ -59,6 +59,7 @@ wire id_MenWrite;
 wire id_MemRead;
 wire id_RegWrite;
 wire [1:0] id_Branch;
+wire IFID_write;
 
 //EXE wire
 wire [31:0] exe_pc_out;
@@ -138,7 +139,7 @@ IFID_reg IFID_pipe(
 .IFID_flush(ifid_flush),
 .instruction(IM_instr),
 .pc(progcnt_out),
-.IFID_write(),
+.IFID_write(IFID_write),
 
 .ID_pc_out(id_pc),
 .read_reg1(rd_r1),
@@ -154,12 +155,12 @@ IFID_reg IFID_pipe(
 
 HazardDetectUnit Hazard(
 .EXE_MemRead(exe_MemRead),
-.read_reg1_addr(rd_r1),
-.read_reg2_addr(rd_r2),
+.read_reg1_addr(exe_rd_r1_addr),
+.read_reg2_addr(exe_rd_r2_addr),
 .EXE_write_addr(exe_write_addr),
-.Branch_Ctrl(id_Branch),
+.Branch_Ctrl(exe_branchCtrl),
 
-.IFID_write(),
+.IFID_write(IFID_write),
 .PC_write_en(PC_write_enable),
 .IFID_flush(ifid_flush),
 .Control_flush(ctrl_flush)
@@ -371,9 +372,8 @@ Mux2to1 mem_mux2(
 
 .C(mem_rd_data)
 );
-
+assign DM_addr = mem_ALU_out;
 assign DM_OE = mem_MemRead;
-assign DM_addr = mem_pc[15:2];
 assign DM_DI = mem_memory_in;
 assign DM_WEB = mem_MenWrite;
 

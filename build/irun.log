@@ -1,5 +1,5 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Aug 29, 2024 at 16:00:24 CST
+TOOL:	irun(64)	15.20-s084: Started on Aug 30, 2024 at 16:41:22 CST
 irun
 	/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
 	+incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
@@ -14,8 +14,8 @@ irun
 	+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog0
 
 Recompiling... reason: file '../src/CPU.sv' is newer than expected.
-	expected: Thu Aug 29 14:58:38 2024
-	actual:   Thu Aug 29 16:00:10 2024
+	expected: Fri Aug 30 16:40:58 2024
+	actual:   Fri Aug 30 16:41:19 2024
 ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include (No such file or directory).
 file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
 `define CYCLE 10.0 // Cycle time
@@ -65,20 +65,20 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,48|67): $readmem default memory order incomp
 ncelab: *W,MEMODR (../sim/top_tb.sv,49|67): $readmem default memory order incompatible with IEEE1364.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.CPU:sv <0x11e77f8b>
-			streams:   5, words:  1009
+		worklib.CPU:sv <0x66c39a31>
+			streams:   5, words:   991
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
 		Modules:                 30      21
-		Registers:               97      85
-		Scalar wires:           190       -
-		Expanded wires:         118       6
+		Registers:               92      80
+		Scalar wires:           191       -
+		Expanded wires:         136       6
 		Vectored wires:          51       -
 		Always blocks:           25      19
 		Initial blocks:           2       2
-		Cont. assignments:      103      85
+		Cont. assignments:      104      92
 		Pseudo assignments:       5       5
 		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.top_tb:sv
@@ -94,52 +94,52 @@ FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
 *Verdi* : Enable +struct and +mda dumping.
 *Verdi* : End of traversing.
-DM[8192] = xxxxxxxx, expect = fffffff0
-DM[8193] = xxxxxxxx, expect = fffffff8
-DM[8194] = xxxxxxxx, expect = 00000008
-DM[8195] = xxxxxxxx, expect = 00000001
-DM[8196] = xxxxxxxx, expect = 00000001
-DM[8197] = xxxxxxxx, expect = 78787878
-DM[8198] = xxxxxxxx, expect = 000091a2
-DM[8199] = xxxxxxxx, expect = 00000003
-DM[8200] = xxxxxxxx, expect = fefcfefd
-DM[8201] = xxxxxxxx, expect = 10305070
-DM[8202] = xxxxxxxx, expect = cccccccc
-DM[8203] = xxxxxxxx, expect = ffffffcc
-DM[8204] = xxxxxxxx, expect = ffffcccc
-DM[8205] = xxxxxxxx, expect = 000000cc
-DM[8206] = xxxxxxxx, expect = 0000cccc
-DM[8207] = xxxxxxxx, expect = 00000d9d
-DM[8208] = xxxxxxxx, expect = 00000004
-DM[8209] = xxxxxxxx, expect = 00000003
-DM[8210] = xxxxxxxx, expect = 000001a6
-DM[8211] = xxxxxxxx, expect = 00000ec6
-DM[8212] = xxxxxxxx, expect = 2468b7a8
-DM[8213] = xxxxxxxx, expect = 5dbf9f00
-DM[8214] = xxxxxxxx, expect = 00012b38
-DM[8215] = xxxxxxxx, expect = fa2817b7
-DM[8216] = xxxxxxxx, expect = ff000000
-DM[8217] = xxxxxxxx, expect = 12345678
-DM[8218] = xxxxxxxx, expect = 0000f000
-DM[8219] = xxxxxxxx, expect = 00000f00
-DM[8220] = xxxxxxxx, expect = 000000f0
-DM[8221] = xxxxxxxx, expect = 0000000f
-DM[8222] = xxxxxxxx, expect = 56780000
-DM[8223] = xxxxxxxx, expect = 78000000
-DM[8224] = xxxxxxxx, expect = 00005678
-DM[8225] = xxxxxxxx, expect = 00000078
-DM[8226] = xxxxxxxx, expect = 12345678
-DM[8227] = xxxxxxxx, expect = ce780000
-DM[8228] = xxxxxxxx, expect = fffff000
-DM[8229] = xxxxxxxx, expect = fffff000
-DM[8230] = xxxxxxxx, expect = fffff000
-DM[8231] = xxxxxxxx, expect = fffff000
-DM[8232] = xxxxxxxx, expect = fffff000
-DM[8233] = xxxxxxxx, expect = fffff000
-DM[8234] = xxxxxxxx, expect = 1357a064
-DM[8235] = xxxxxxxx, expect = 13578000
-DM[8236] = xxxxxxxx, expect = fffff004
-SIM_END(16383) = xxxxxxxx, expect = ffffffff
+DM[8192] = 00000bf8, expect = fffffff0
+DM[8193] = 00000570, expect = fffffff8
+DM[8194] = 0000011a, expect = 00000008
+DM[8195] = 00000000, expect = 00000001
+DM[8196] = 00000000, expect = 00000001
+DM[8197] = 87878780, expect = 78787878
+DM[8198] = 0000048d, expect = 000091a2
+DM[8199] = 0eeeeeee, expect = 00000003
+DM[8200] = fefcff9d, expect = fefcfefd
+DM[8201] = 00000000, expect = 10305070
+DM[8202] = cccccccc, pass
+DM[8203] = ffffffcc, pass
+DM[8204] = ffffcccc, pass
+DM[8205] = 0000cccc, expect = 000000cc
+DM[8206] = 000000cc, expect = 0000cccc
+DM[8207] = 0000142d, expect = 00000d9d
+DM[8208] = 00000003, expect = 00000004
+DM[8209] = 00000003, pass
+DM[8210] = 000004e6, expect = 000001a6
+DM[8211] = 00000ef6, expect = 00000ec6
+DM[8212] = 2469b998, expect = 2468b7a8
+DM[8213] = 5dbf9f00, pass
+DM[8214] = 000006c4, expect = 00012b38
+DM[8215] = 0bb417e8, expect = fa2817b7
+DM[8216] = be7af000, expect = ff000000
+DM[8217] = 1234d6dc, expect = 12345678
+DM[8218] = 0000f0f0, expect = 0000f000
+DM[8219] = 00001018, expect = 00000f00
+DM[8220] = 00000208, expect = 000000f0
+DM[8221] = 00000127, expect = 0000000f
+DM[8222] = 0000d6dc, expect = 56780000
+DM[8223] = 000001dc, expect = 78000000
+DM[8224] = 0000d6dc, expect = 00005678
+DM[8225] = 000001dc, expect = 00000078
+DM[8226] = 1234d6dc, expect = 12345678
+DM[8227] = 00008254, expect = ce780000
+DM[8228] = ffffeffe, expect = fffff000
+DM[8229] = ffffeffc, expect = fffff000
+DM[8230] = ffffeffc, expect = fffff000
+DM[8231] = ffffeffc, expect = fffff000
+DM[8232] = ffffeffe, expect = fffff000
+DM[8233] = ffffeffe, expect = fffff000
+DM[8234] = 1357a064, pass
+DM[8235] = 13578a8c, expect = 13578000
+DM[8236] = fffff000, expect = fffff004
+SIM_END(16383) = 00000b2f, expect = ffffffff
 
 
 
@@ -157,4 +157,4 @@ SIM_END(16383) = xxxxxxxx, expect = ffffffff
 Simulation complete via $finish(1) at time 1 MS + 0
 ../sim/top_tb.sv:107     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Aug 29, 2024 at 16:00:30 CST  (total: 00:00:06)
+TOOL:	irun(64)	15.20-s084: Exiting on Aug 30, 2024 at 16:41:27 CST  (total: 00:00:05)

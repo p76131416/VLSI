@@ -13,8 +13,6 @@ always_ff @(posedge clk or posedge reset) begin
     else begin
         if(Write_en)
             pc_out <= pc_in;
-        else 
-            pc_out <= 32'h0;
     end
 end
 
