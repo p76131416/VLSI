@@ -11,7 +11,7 @@ module Regfile (
     output [31:0] rd_reg2_data
 );
 
-logic [31:0] register [0:31];
+logic [31:0] register [31:0];
 integer i;
 
 always_ff @(posedge clk or posedge reset) begin
@@ -19,7 +19,7 @@ always_ff @(posedge clk or posedge reset) begin
         for(i=0 ; i<32 ; i=i+1)
             register[i] <= 32'h0;
     end 
-    else if(RegWrite) begin
+    else if(RegWrite && (w_reg_addr != 5'd0)) begin
         register[w_reg_addr] <= w_data;
     end
 end

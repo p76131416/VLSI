@@ -16,7 +16,7 @@ module ControlUnit (
 always_comb begin
     case (opcode)
         7'b0110011: begin   //R-type
-            ALUOp = 3'b000;
+            ALUOp = 3'd0;
             ALUSrc = 1;
             PCtoRegSrc = 0;
             Immtype = 3'd5;
@@ -28,7 +28,7 @@ always_comb begin
             Branch = 0;
         end
         7'b0000011:begin    //load
-            ALUOp = 3'd1;
+            ALUOp = 3'd4;
             ALUSrc = 0;
             PCtoRegSrc = 0;
             Immtype = 3'd0;
@@ -40,7 +40,7 @@ always_comb begin
             Branch = 0;
         end
         7'b0010011:begin    //I-type computation
-            ALUOp = 3'd2;
+            ALUOp = 3'd1;
             ALUSrc = 0;
             PCtoRegSrc = 0;
             Immtype = 3'd0;
@@ -52,7 +52,7 @@ always_comb begin
             Branch = 0;
         end
         7'b1100111:begin    //JALR
-            ALUOp = 3'd3;
+            ALUOp = 3'd4;
             ALUSrc = 0;
             PCtoRegSrc = 0;
             Immtype = 3'd0;
@@ -76,7 +76,7 @@ always_comb begin
             Branch = 0;
         end
         7'b1100011:begin    //B-type(BEQ, BNE...)
-            ALUOp = 3'd5;
+            ALUOp = 3'd2;
             ALUSrc = 1;
             PCtoRegSrc = 1;
             Immtype = 3'd2;
@@ -88,7 +88,7 @@ always_comb begin
             Branch = 2;
         end
         7'b0010111:begin    //AUIPC
-            ALUOp = 3'd6;
+            ALUOp = 3'd4;
             ALUSrc = 0;
             PCtoRegSrc = 1;
             Immtype = 3'd3;
@@ -100,7 +100,7 @@ always_comb begin
             Branch = 0;
         end
         7'b0110111:begin    //LUI
-            ALUOp = 3'd6;
+            ALUOp = 3'd3;
             ALUSrc = 0;
             PCtoRegSrc = 0;
             Immtype = 3'd3;
@@ -112,7 +112,7 @@ always_comb begin
             Branch = 0;
         end
         7'b1101111:begin    //JAL
-            ALUOp = 3'd6;
+            ALUOp = 3'd4;
             ALUSrc = 0;
             PCtoRegSrc = 0;
             Immtype = 3'd4;
@@ -124,7 +124,7 @@ always_comb begin
             Branch = 3;
         end
         default: begin
-            ALUOp = 0;
+            ALUOp = 3'd4;
             ALUSrc = 0;
             PCtoRegSrc = 0;
             Immtype = 0;

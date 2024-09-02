@@ -13,7 +13,7 @@
 -INCDIR
 /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
 -DEFINE
-prog0
+prog1
 -DEFINE
 FSDB_ALL
 -DEFINE

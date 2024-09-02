@@ -31,8 +31,8 @@ always_ff @( posedge clk or posedge reset ) begin
                 3'd0 : WB_data_memory <= {{24{MEM_data_memory[7]}}, MEM_data_memory[7:0]}; //LB
                 3'd1 : WB_data_memory <= {{16{MEM_data_memory[15]}}, MEM_data_memory[15:0]}; //LH
                 3'd2 : WB_data_memory <= MEM_data_memory; //LW
-                3'd4 : WB_data_memory <= {{16{1'b0}}, MEM_data_memory[15:0]}; //LHU
-                3'd5 : WB_data_memory <= {{24{1'b0}}, MEM_data_memory[7:0]}; //LBU
+                3'd5 : WB_data_memory <= {{16{1'b0}}, MEM_data_memory[15:0]}; //LHU     //LHU跟LBU funt3文件上是相反的
+                3'd4 : WB_data_memory <= {{24{1'b0}}, MEM_data_memory[7:0]}; //LBU
                 default: WB_data_memory <= MEM_data_memory;
             endcase
         end

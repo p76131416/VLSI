@@ -127,7 +127,7 @@ Adder IF_adder(
 Mux3to1 IF_pc_mux3(
 .A(pc_4),
 .B(pc_imm),
-.C(alu_out),
+.C({alu_out[31:1],1'b0}),
 .sel(exe_branchCtrl),
 
 .D(PC_in)
@@ -155,8 +155,8 @@ IFID_reg IFID_pipe(
 
 HazardDetectUnit Hazard(
 .EXE_MemRead(exe_MemRead),
-.read_reg1_addr(exe_rd_r1_addr),
-.read_reg2_addr(exe_rd_r2_addr),
+.read_reg1_addr(rd_r1),
+.read_reg2_addr(rd_r2),
 .EXE_write_addr(exe_write_addr),
 .Branch_Ctrl(exe_branchCtrl),
 
@@ -267,7 +267,7 @@ wire [31:0] alu1;
 wire [31:0] rs2_fin;
 wire [31:0] alu2;
 
-wire [3:0] alu_ctrl;
+wire [4:0] alu_ctrl;
 wire [1:0] forward_r1_sel;
 wire [1:0] forward_r2_sel;
 

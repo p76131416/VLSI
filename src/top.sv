@@ -1,7 +1,7 @@
 `include "CPU.sv"
 `include "SRAM_wrapper.sv"
 
-module  top (
+module top (
     input clk,
     input rst
 );
