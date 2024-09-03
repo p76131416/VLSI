@@ -1,17 +1,17 @@
-extern long long mul1;
-extern long long mul2;
-extern int _test_start;
-
-typedef unsigned long long int UINT64;
-typedef signed long long int INT64;
-
 int main(void){
-  INT64 mul1_64, mul2_64;
-  mul1_64 = (mul1 << 32) >> 32;
-  mul2_64 = (mul2 << 32) >> 32;
-  INT64 res = mul1_64 * mul2_64;
-  
-  (&_test_start)[0] = res;
-  (&_test_start)[1] = res >> 32;
-  return 0; 
+
+    extern int mul1;
+    extern int mul2;
+    extern int _test_start;
+    long long int a, b, result;
+
+    a = (mul1 > 0) ? mul1 : 0xffffffff00000000 | mul1;
+    b = (mul2 > 0) ? mul2 : 0xffffffff00000000 | mul2;
+
+    result = a * b;
+
+    (&_test_start)[0] = result;
+    (&_test_start)[1] = result >> 32;
+
+    return 0;
 }

@@ -2,16 +2,16 @@
 // File created by:  irun
 // Do not modify this file
 //
-+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog1
++prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog3
 +incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
-+define+prog1+FSDB_ALL
++define+prog3
 +access+r
 +nc64bit
 -MESSAGES
 +EMGRLOG
 irun.log
 -XLSTIME
-1725274191
+1725342646
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
@@ -25,4 +25,4 @@ irun
 -XLVERSION
 "TOOL:	irun(64)	15.20-s084"
 -XLNAME
-./INCA_libs/irun.lnx8664.15.20.nc/caidcpuserver0_691461
+./INCA_libs/irun.lnx8664.15.20.nc/caidcpuserver0_727276

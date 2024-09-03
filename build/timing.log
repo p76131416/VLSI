@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: T-2022.03
+Date   : Tue Sep  3 13:57:29 2024
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: DM1/i_SRAM (rising edge-triggered flip-flop clocked by clk')
+  Endpoint: cpu/MEMWB_pipe/WB_data_memory_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  MEMWB_reg          enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk' (rise edge)                                  7.00       7.00
+  clock network delay (ideal)                             1.00       8.00
+  DM1/i_SRAM/CK (SRAM)                                    0.00       8.00 r
+  DM1/i_SRAM/DO15 (SRAM)                                  5.73      13.73 f
+  DM1/DO[15] (SRAM_wrapper_0)                             0.00      13.73 f
+  cpu/DM_DO[15] (CPU)                                     0.00      13.73 f
+  cpu/MEMWB_pipe/MEM_data_memory[15] (MEMWB_reg)          0.00      13.73 f
+  cpu/MEMWB_pipe/U13/OB (MXL2HF)                          0.20      13.93 r
+  cpu/MEMWB_pipe/U6/O (INV6)                              0.07      14.00 f
+  cpu/MEMWB_pipe/U62/O (AN3)                              0.23      14.23 f
+  cpu/MEMWB_pipe/U56/O (AO12S)                            0.31      14.54 f
+  cpu/MEMWB_pipe/U28/O (AO22)                             0.25      14.79 f
+  cpu/MEMWB_pipe/WB_data_memory_reg_16_/D (QDFFRBS)       0.00      14.79 f
+  data arrival time                                                 14.79
+
+  clock clk (rise edge)                                  14.00      14.00
+  clock network delay (ideal)                             1.00      15.00
+  clock uncertainty                                      -0.10      14.90
+  cpu/MEMWB_pipe/WB_data_memory_reg_16_/CK (QDFFRBS)      0.00      14.90 r
+  library setup time                                     -0.10      14.80
+  data required time                                                14.80
+  --------------------------------------------------------------------------
+  data required time                                                14.80
+  data arrival time                                                -14.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
