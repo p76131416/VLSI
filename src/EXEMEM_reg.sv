@@ -23,7 +23,8 @@ module EXEMEM_reg (
     output logic MEM_MemtoReg,
     output logic [3:0] MEM_MenWrite,
     output logic MEM_MemRead,
-    output logic MEM_RegWrite
+    output logic MEM_RegWrite,
+    output logic DM_cs
 );
 
 always_ff @( posedge clk or posedge reset) begin
@@ -38,8 +39,8 @@ always_ff @( posedge clk or posedge reset) begin
         MEM_MenWrite <= 0;
         MEM_MemRead <= 0;
         MEM_RegWrite <= 0;
-    end
-    else begin
+        DM_cs <= 0;
+    end else begin
         if(EXE_MenWrite)begin                   //store 需要手動將資料移到對應位置
             case(EXE_funct3)
                 3'b000 : begin      //SB
@@ -82,7 +83,8 @@ always_ff @( posedge clk or posedge reset) begin
         end
         else 
             MEM_MenWrite <= 4'b1111;
-        
+
+        DM_cs <= EXE_MemRead | EXE_MenWrite;
         MEM_funct3 <= EXE_funct3;
         MEM_ALU_out <= ALU_out;
         MEM_pc <= EXE_pc;

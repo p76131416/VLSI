@@ -25,7 +25,8 @@ module CPU (
     output DM_OE,
     output [3:0] DM_WEB,
     output [31:0] DM_addr,
-    output [31:0] DM_DI
+    output [31:0] DM_DI,
+    output DM_cs
 );
 
 //IF wire
@@ -402,7 +403,8 @@ EXEMEM_reg EXEMEM_pipe(
 .MEM_MemtoReg(mem_MemtoReg),
 .MEM_MenWrite(mem_MenWrite),
 .MEM_MemRead(mem_MemRead),
-.MEM_RegWrite(mem_RegWrite)
+.MEM_RegWrite(mem_RegWrite),
+.DM_cs(DM_cs)
 );
 
 //MEM stage end

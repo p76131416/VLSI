@@ -6,7 +6,7 @@ module Adder (
 );
 
 always_comb begin
-    out <= in1 + in2;
+    out = in1 + in2;
 end
 
 endmodule

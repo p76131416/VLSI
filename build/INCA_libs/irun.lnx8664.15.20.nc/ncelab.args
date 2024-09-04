@@ -3,10 +3,12 @@
 // Do not modify this file
 //
 +prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog3
-+incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./src+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
-+define+prog3
++incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./syn+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
++define+SYN+prog3+FSDB_ALL
 +access+r
 +nc64bit
+-SDF_FILE
+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./syn/top_syn.sdf
 -ACCESS
 +r
 -MESSAGES

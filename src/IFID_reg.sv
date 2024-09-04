@@ -29,6 +29,7 @@ assign funct7 = instr[31:25];
 always_ff @( posedge clk or posedge reset) begin
     if(reset)begin
         ID_pc_out <= 32'h0;
+        instr <= 32'h0;
     end
     else begin
         if(IFID_write)begin

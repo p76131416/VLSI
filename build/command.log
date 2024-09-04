@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version T-2022.03 for linux64 -- Feb 22, 2022
-#@ # Date:   Tue Sep  3 13:55:40 2024
+#@ # Date:   Wed Sep  4 14:47:13 2024
 #@ # Run by: WangYanTing@caidcpuserver0
 #@ 
 
@@ -8703,5 +8703,4 @@ source -echo -verbose /home/WangYanTing/VLSI_2022_training/hw1/P76131416/build/.
 #@ # -- End source /home/WangYanTing/VLSI_2022_training/hw1/P76131416/build/../script/synthesis.tcl
 
 report_timing
-report_qor
 quit

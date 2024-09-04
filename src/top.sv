@@ -15,6 +15,7 @@ wire dm_oe;
 wire [3:0] dm_web;
 wire [31:0] dm_addr;
 wire [31:0] dm_di;
+wire chip_sel;
 
 CPU cpu(
 .clk(clk),
@@ -27,7 +28,8 @@ CPU cpu(
 .DM_OE(dm_oe),
 .DM_WEB(dm_web),
 .DM_addr(dm_addr),
-.DM_DI(dm_di)
+.DM_DI(dm_di),
+.DM_cs(chip_sel)
 );
 
 SRAM_wrapper IM1(
