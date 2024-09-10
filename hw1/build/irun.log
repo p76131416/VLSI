@@ -1,0 +1,681 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Sep 04, 2024 at 14:51:00 CST
+irun
+	/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
+	-sdf_file /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./syn/top_syn.sdf
+	+incdir+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./syn+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
+	+define+SYN+prog3+FSDB_ALL
+	-define CYCLE=20.0
+	-define MAX=100000
+	+access+r
+	+nc64bit
+	+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog3
+
+   User defined plus("+") options:
+	+prog_path=/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/prog3
+
+ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include (No such file or directory).
+file: /home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv
+`define CYCLE 20.0 // Cycle time
+                                |
+ncvlog: *W,MACNDF (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,2|32): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define MAX 100000 // Max cycle number
+                                      |
+ncvlog: *W,MACNDF (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+    $value$plusargs("prog_path=%s", prog_path);
+                  |
+ncvlog: *W,NOSYST (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,39|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim/top_tb.sv,54|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 3
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+  CPU cpu ( .clk(clk), .rst(rst), .IM_instr(instr), .DM_DO(memory_data), 
+        |
+ncelab: *W,CUVWSP (../syn/top_syn.v,11802|8): 1 output port was not connected:
+ncelab: (../syn/top_syn.v,11556): DM_cs
+
+  DFFRBN WB_write_addr_reg_0_ ( .D(MEM_write_addr[0]), .CK(clk), .RB(n76), .Q(
+                            |
+ncelab: *W,CUVWSP (../syn/top_syn.v,11398|28): 1 output port was not connected:
+ncelab: (/usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/verilog/fsa0m_a_generic_core_21.lib,5144): QB
+
+	Top level design units:
+		AN2B1P
+		AN2P
+		AN3B1
+		AN3B1P
+		AN3B1S
+		AN3B1T
+		AN3B2P
+		AN3B2T
+		AN3P
+		AN3T
+		AN4
+		AN4B1T
+		AN4P
+		AN4T
+		ANTENNA
+		AO112P
+		AO112S
+		AO112T
+		AO12P
+		AO12T
+		AO13
+		AO13P
+		AO13T
+		AO222T
+		AO22T
+		AOI112H
+		AOI112HP
+		AOI112HS
+		AOI112HT
+		AOI12H
+		AOI12HP
+		AOI12HT
+		AOI13HP
+		AOI13HT
+		AOI222H
+		AOI222HP
+		AOI222HS
+		AOI22HP
+		AOI22HT
+		BHD1
+		BUF3CK
+		BUFB1
+		BUFB2
+		BUFB3
+		BUFT1
+		BUFT2
+		BUFT3
+		BUFT4
+		CMPE4
+		CMPE4S
+		DBFRBN
+		DBFRSBN
+		DBHRBN
+		DBHRBS
+		DBZRBN
+		DBZRSBN
+		DELB
+		DELC
+		DFCLRBN
+		DFCRBN
+		DFFN
+		DFFP
+		DFFRBP
+		DFFRBS
+		DFFRBT
+		DFFRSBN
+		DFFS
+		DFFSBN
+		DFTRBN
+		DFTRBS
+		DFZCLRBN
+		DFZCRBN
+		DFZN
+		DFZP
+		DFZRBN
+		DFZRBP
+		DFZRBS
+		DFZRBT
+		DFZRSBN
+		DFZS
+		DFZSBN
+		DFZTRBN
+		DFZTRBS
+		DLHN
+		DLHP
+		DLHRBN
+		DLHRBP
+		DLHRBS
+		DLHS
+		FA1P
+		FA1T
+		FA2
+		FA2P
+		FA2S
+		FA3
+		FA3P
+		FA3S
+		FACS1
+		FACS1P
+		FACS1S
+		FACS2
+		FACS2P
+		FACS2S
+		GCKETF
+		GCKETN
+		GCKETP
+		GCKETT
+		HA1
+		HA1P
+		HA1S
+		HA1T
+		HA2
+		HA2P
+		HA2T
+		HA3
+		HA3P
+		HA3T
+		INV12CK
+		INV3CK
+		INV4CK
+		INVT1
+		INVT2
+		INVT4
+		JKFN
+		JKFRBN
+		JKFRBP
+		JKZN
+		JKZRBN
+		JKZRBP
+		MAO222P
+		MAO222S
+		MAO222T
+		MAOI1
+		MAOI1H
+		MAOI1HP
+		MAOI1HT
+		MAOI1S
+		MOAI1
+		MOAI1HT
+		MULBE
+		MULBEP
+		MULBET
+		MULPA
+		MULPAP
+		MULPAT
+		MUX2F
+		MUX2P
+		MUX3P
+		MUX3T
+		MUX4
+		MUX4P
+		MUX4S
+		MUX4T
+		MUXB2P
+		MUXB2T
+		MUXB4
+		MUXB4P
+		MUXB4S
+		MUXB4T
+		MXL2H
+		MXL2HP
+		MXL2HT
+		MXL3
+		MXL3P
+		MXL3S
+		MXL3T
+		ND3S
+		ND4
+		ND4P
+		ND4S
+		ND4T
+		NR3H
+		NR4
+		NR4P
+		NR4S
+		NR4T
+		OA112P
+		OA112S
+		OA112T
+		OA12T
+		OA13
+		OA13P
+		OA13T
+		OA222P
+		OA222T
+		OA22P
+		OA22S
+		OA22T
+		OAI112H
+		OAI112HP
+		OAI112HT
+		OAI12H
+		OAI12HP
+		OAI12HT
+		OAI13H
+		OAI13HP
+		OAI13HS
+		OAI13HT
+		OAI222H
+		OAI222HP
+		OAI222HT
+		OAI22H
+		OAI22HP
+		OAI22HT
+		OR2B1
+		OR2B1P
+		OR2B1T
+		OR3B1P
+		OR3B1S
+		OR3B1T
+		OR3B2P
+		OR3B2S
+		OR3B2T
+		OR3P
+		OR3T
+		PDI
+		PDIX
+		PUI
+		QDBHN
+		QDBHS
+		QDFFN
+		QDFFP
+		QDFFRSBN
+		QDFFS
+		QDFZN
+		QDFZP
+		QDFZRBN
+		QDFZRBP
+		QDFZRBS
+		QDFZRBT
+		QDFZRSBN
+		QDFZS
+		QDLHN
+		QDLHP
+		QDLHRBN
+		QDLHRBP
+		QDLHRBS
+		QDLHS
+		QDLHSN
+		RAM2
+		RAM2S
+		RAM3
+		RAM3S
+		RAM5
+		RAM5S
+		XNR2HP
+		XNR2HT
+		XNR3
+		XNR3P
+		XNR3S
+		XNR3T
+		XNR4
+		XNR4P
+		XNR4S
+		XNR4T
+		XOR2HT
+		XOR4
+		XOR4P
+		XOR4S
+		XOR4T
+		dffsb_pri
+		pulldown_IO
+		pullup2_down_IO
+		pullup_IO
+		pullup_down_IO
+		pullup_down_IO_IEO
+		pullup_down_IO_PSCN
+		pullup_down_ene_IO
+		pullup_down_keep_IO
+		pullup_down_keep_IO_03us
+		pullup_down_keep_IO_IE
+		pullup_down_keep_IO_IG
+		pullup_inv_IO
+		top_tb
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Reading SDF file from location "/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./syn/top_syn.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     top_syn.sdf.X
+		Log file:              
+		Backannotation scope:  top_tb.TOP
+		Configuration file:    
+		MTM control:           
+		Scale factors:         
+		Scale type:            
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 23626>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 24607>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I2 O)), setting to 0 <../syn/top_syn.sdf, line 27117>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 28772>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 29643>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 32781>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 32790>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 32871>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 32922>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH A1 O)), setting to 0 <../syn/top_syn.sdf, line 33497>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==0)&&(B2==0))&&(B3==0)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33498>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==0)&&(B2==0))&&(B3==1)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33499>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==0)&&(B2==1))&&(B3==0)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33500>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==0)&&(B2==1))&&(B3==1)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33501>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==1)&&(B2==0))&&(B3==0)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33502>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==1)&&(B2==0))&&(B3==1)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33503>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==1)&&(B2==1))&&(B3==0)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33504>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH A1 O)), setting to 0 <../syn/top_syn.sdf, line 33628>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==0)&&(B2==0))&&(B3==0)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33629>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==0)&&(B2==0))&&(B3==1)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33630>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==0)&&(B2==1))&&(B3==0)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33631>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==0)&&(B2==1))&&(B3==1)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33632>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==1)&&(B2==0))&&(B3==0)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33633>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==1)&&(B2==0))&&(B3==1)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33634>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND (((B1==1)&&(B2==1))&&(B3==0)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 33635>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 39984>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((B1==1)&&(B2==1)) (IOPATH A1 O))), setting to 0 <../syn/top_syn.sdf, line 52600>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 56038>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 56047>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 56076>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 56764>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 56840>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 57174>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 57183>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 57218>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57219>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57220>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57221>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 57222>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57223>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57224>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 57325>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57326>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57327>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57328>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 57329>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57330>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57331>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 57418>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57419>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57420>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57421>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 57422>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57423>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57424>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 57593>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 57629>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57630>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57631>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 57632>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 57633>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57634>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57635>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 57636>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58479>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58480>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58481>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58482>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58483>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58484>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58485>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58531>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58532>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58533>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58534>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58535>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58536>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58537>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58595>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58596>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58597>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58598>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58599>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58600>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58601>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58696>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58697>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58698>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58699>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58700>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58701>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58702>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58720>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58721>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58722>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58723>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58724>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58725>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58726>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58772>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58773>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58774>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58775>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58776>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58777>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58778>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58805>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58806>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58807>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58808>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58809>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58810>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58811>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58848>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58849>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58850>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58851>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58852>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58853>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58854>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 58884>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58901>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58902>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58903>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58904>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58905>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58906>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58907>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58925>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58926>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58927>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58928>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58929>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58930>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58931>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58949>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58950>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58951>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58952>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58953>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58954>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58955>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58973>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58974>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58975>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58976>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 58977>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58978>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 58979>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 58997>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58998>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 58999>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59000>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 59001>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59002>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59003>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 59021>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59022>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59023>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59024>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 59025>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59026>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59027>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 59045>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59046>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59047>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59048>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 59049>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59050>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59051>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 59069>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59070>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59071>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59072>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 59073>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59074>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59075>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 59093>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59094>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59095>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59096>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 59097>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59098>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59099>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 59117>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59118>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59119>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59120>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 59121>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59122>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59123>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 59141>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59142>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59143>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 59144>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 59145>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59146>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 59147>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 59927>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 59945>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 60703>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 60742>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 60743>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 60744>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 60745>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 60746>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 60747>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 60748>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 60992>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 60993>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 60994>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 60995>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 60996>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 60997>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 60998>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 61016>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61017>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61018>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61019>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 61020>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 61021>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 61022>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 61040>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61041>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61042>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61043>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 61044>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 61045>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 61046>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B1 O)), setting to 0 <../syn/top_syn.sdf, line 61064>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61065>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61066>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==1)) (IOPATH B1 O))), setting to 0 <../syn/top_syn.sdf, line 61067>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH B2 O)), setting to 0 <../syn/top_syn.sdf, line 61068>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==0)&&(A2==1)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 61069>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((COND ((A1==1)&&(A2==0)) (IOPATH B2 O))), setting to 0 <../syn/top_syn.sdf, line 61070>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 61322>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 61340>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 61555>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 64069>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 64279>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 65617>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67677>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67720>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67786>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67819>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67839>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67882>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67902>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67966>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 67976>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 77098>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 167034>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 167043>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 167052>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I O)), setting to 0 <../syn/top_syn.sdf, line 167070>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 167088>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I2 O)), setting to 0 <../syn/top_syn.sdf, line 167089>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 171314>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 171357>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 171390>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 171400>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 171474>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 171484>.
+ncelab: *W,SDFNDP: Annotation resulted in a negative delay value or pulse limit to specify path or interconnect delay ((IOPATH I1 O)), setting to 0 <../syn/top_syn.sdf, line 171558>.
+	Annotation completed with 0 Errors and 265 Warnings
+	SDF statistics: No. of Pathdelays = 63388  Annotated = 93.62% -- No. of Tchecks = 10798  Annotated = 94.34% 
+				        Total 	   Annotated	  Percentage
+		 Path Delays	       63388	       59346	       93.62
+		       $hold	        1481	        1437	       97.03
+		     $period	           2	           0	        0.00
+		      $width	        4480	        4311	       96.23
+		   $recovery	        1481	        1437	       97.03
+		  $setuphold	        3354	        3002	       89.51
+    $readmemh({prog_path, "/main0.hex"}, TOP.IM1.i_SRAM.Memory_byte0);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,42|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main0.hex"}, TOP.DM1.i_SRAM.Memory_byte0); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,43|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main1.hex"}, TOP.IM1.i_SRAM.Memory_byte1);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,44|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main1.hex"}, TOP.DM1.i_SRAM.Memory_byte1); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,45|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main2.hex"}, TOP.IM1.i_SRAM.Memory_byte2);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,46|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main2.hex"}, TOP.DM1.i_SRAM.Memory_byte2); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,47|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main3.hex"}, TOP.IM1.i_SRAM.Memory_byte3);
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,48|67): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main3.hex"}, TOP.DM1.i_SRAM.Memory_byte3); 
+                                                                   |
+ncelab: *W,MEMODR (../sim/top_tb.sv,49|67): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                  8106     431
+		UDPs:                     1901      11
+		Primitives:              15425      14
+		Timing outputs:           8299     294
+		Registers:                1969     323
+		Scalar wires:             9888       -
+		Expanded wires:             64       2
+		Named events:               47      42
+		Always blocks:             113     104
+		Initial blocks:              9       7
+		Cont. assignments:          12      36
+		Timing checks:           14152    1560
+		Interconnect:            22684    7953
+		Delayed tcheck signals:   4558    1651
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.AN2B1P:lib
+Loading snapshot worklib.AN2B1P:lib .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
+(C) 1996 - 2020 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+
+Done
+
+DM[8192] = 00000003, pass
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  Congratulations !!    **      / O.O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 153140 NS + 4
+../sim/top_tb.sv:76     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 04, 2024 at 14:51:16 CST  (total: 00:00:16)

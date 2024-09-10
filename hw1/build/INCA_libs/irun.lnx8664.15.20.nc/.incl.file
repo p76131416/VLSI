@@ -1,0 +1,6 @@
+./top_syn.v
+./SRAM/SRAM.v
+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./syn/SRAM/SRAM.v
+.//usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/verilog/fsa0m_a_generic_core_21.lib
+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./syn//usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/verilog/fsa0m_a_generic_core_21.lib
+/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim//usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/verilog/fsa0m_a_generic_core_21.lib
