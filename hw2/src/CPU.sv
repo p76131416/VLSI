@@ -18,17 +18,28 @@
 module CPU (
     input clk,
     input rst,
+    
+    //IF out
     input [31:0] IM_instr,
-    input [31:0] DM_DO,
-
     output [31:0] progcnt_out,
+    
+    //MEM out
+    input [31:0] DM_DO,
     output DM_OE,
     output [3:0] DM_WEB,
     output [31:0] DM_addr,
     output [31:0] DM_DI,
-    //output DM_cs
-    //stall undecide
+    output DM_cs
+
+    //stall
+    input IM_stall,
+    input DM_stall
 );
+
+//stall signal
+wire IDEXE_stall;
+wire EXEMEM_stall;
+wire MEMWB_stall;
 
 //IF wire
 wire PC_write_enable;       //PC write or not
@@ -161,11 +172,16 @@ HazardDetectUnit Hazard(
 .read_reg2_addr(rd_r2),
 .EXE_write_addr(exe_write_addr),
 .Branch_Ctrl(exe_branchCtrl),
+.IM_stall(IM_stall),
+.DM_stall(DM_stall),
 
 .IFID_write(IFID_write),
 .PC_write_en(PC_write_enable),
 .IFID_flush(ifid_flush),
-.Control_flush(ctrl_flush)
+.Control_flush(ctrl_flush),
+.IDEXE_stall(IDEXE_stall),
+.EXEMEM_stall(EXEMEM_stall),
+.MEMWB_stall(MEMWB_stall)
 );
 
 //IF control end
@@ -405,7 +421,7 @@ EXEMEM_reg EXEMEM_pipe(
 .MEM_MenWrite(mem_MenWrite),
 .MEM_MemRead(mem_MemRead),
 .MEM_RegWrite(mem_RegWrite),
-//.DM_cs(DM_cs)
+.DM_cs(DM_cs)
 );
 
 //MEM stage end

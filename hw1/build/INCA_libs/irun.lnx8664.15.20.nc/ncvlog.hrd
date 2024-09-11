@@ -3,17 +3,15 @@
 // Do not modify this file
 //
 -INCDIR
-/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./syn
+/home/WangYanTing/VLSI/hw1/./src
 -INCDIR
-/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./include
+/home/WangYanTing/VLSI/hw1/./include
 -INCDIR
-/home/WangYanTing/VLSI_2022_training/hw1/P76131416/./sim
+/home/WangYanTing/VLSI/hw1/./sim
 -DEFINE
-SYN
+prog1
 -DEFINE
-prog3
--DEFINE
-FSDB_ALL
+FSDB
 -DEFINE
 CYCLE=20.0
 -DEFINE
