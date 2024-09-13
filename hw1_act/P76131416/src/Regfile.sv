@@ -12,7 +12,6 @@ module Regfile (//新增signal判斷是不是float, 從Control
 );
 
 logic [31:0] register [31:0];
-logic [31:0] float_register [31:0];
 integer i;
 
 always_ff @(posedge clk or posedge reset) begin

@@ -15,6 +15,10 @@
 `include "EXEMEM_reg.sv"
 `include "MEMWB_reg.sv"
 
+`include "Regfile_f.sv"
+`include "ALU_f.sv"
+
+
 module CPU (
     input clk,
     input rst,
@@ -177,6 +181,20 @@ wire [63:0] w_cycle;
 
 //ID stage 
 
+module Regfile_f (
+    input .clk(~clk),
+    input .reset(rst),
+    input [4:0] .frd_reg1_addr(),
+    input [4:0] .frd_reg2_addr(),
+    input [4:0] .w_freg_addr(),
+    input [31:0] .w_f_data(),
+    input .RegWrite_f(),
+
+    output [31:0] .frd_reg1_data(),
+    output [31:0] .frd_reg2_data()
+);
+
+
 Regfile Regster_file(
 .clk(~clk),
 .reset(rst),
@@ -279,6 +297,25 @@ wire [4:0] alu_ctrl;
 wire [1:0] forward_r1_sel;
 wire [1:0] forward_r2_sel;
 
+Mux3to1 float_1_sel(
+    input [31:0] .A(),
+    input [31:0] .B(),
+    input [31:0] .C(),
+    input [1:0] .sel(),
+
+    output [31:0] .D()
+);
+
+Mux3to1 float_2_sel(
+    input [31:0] .A(),
+    input [31:0] .B(),
+    input [31:0] .C(),
+    input [1:0] .sel(),
+
+    output [31:0] .D()
+);
+
+
 Adder PC_imm_adder(
 .in1(exe_pc_out),
 .in2(exe_imm),
@@ -327,6 +364,14 @@ Mux2to1 imm_mux2(
 .C(alu2)
 );
 
+module ALU_f (
+    input [31:0] .float1(),
+    input [31:0] .float2(),
+    input [1:0] .operand(),
+
+    output [31:0] .float_ans()
+);
+
 ALU alu(
 .in1(alu1),
 .in2(alu2),
@@ -336,6 +381,14 @@ ALU alu(
 
 .out(alu_out),
 .zero(exe_zero_flag)
+);
+
+Mux2to1 f_or_ori(
+    input [31:0] .A(),
+    input [31:0] .B(),
+    input .sel(),
+
+    output [31:0] .C()
 );
 
 //EXE control 
@@ -375,6 +428,14 @@ BranchCtrl branch_ctrl(
 //MEM stage
 wire [31:0] mem_pc;
 wire [31:0] mem_memory_in;
+
+Mux2to1 f_data_in(
+    input [31:0] .A(),
+    input [31:0] .B(),
+    input .sel(),
+
+    output [31:0] .C()
+);
 
 Mux2to1 mem_mux2(
 .A(mem_pc),

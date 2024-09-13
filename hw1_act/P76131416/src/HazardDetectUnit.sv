@@ -1,4 +1,4 @@
-module HazardDetectUnit (//EXE_MemRead改成2bit,加入ID_MemRead看是否相同
+module HazardDetectUnit (               //add float number judgement
     input EXE_MemRead,
     input [4:0] read_reg1_addr,
     input [4:0] read_reg2_addr,

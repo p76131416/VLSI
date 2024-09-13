@@ -1,4 +1,4 @@
-module ForwardingUnit (         //RegWrite改為2bit可行,檢查是否寫到相同register file
+module ForwardingUnit (         //add new float number judgement
     input [4:0] read_reg1_addr,
     input [4:0] read_reg2_addr,
     input [4:0] MEM_write_addr,

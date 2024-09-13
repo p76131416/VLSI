@@ -73,8 +73,8 @@ always_ff @(posedge clk or posedge reset) begin
         cycle <= cycle + 64'd1;
         if(cycle > 64'd1)begin
             case(CSR_type)
-                2'd0 : instr_cnt <= instr_cnt - 64'd1;      //jump stall
-                2'd1 : instr_cnt <= instr_cnt;              //load-use stall
+                2'd0 : instr_cnt <= instr_cnt - 64'd1;          //jump stall
+                2'd1 : instr_cnt <= instr_cnt;                  //load-use stall
                 default : instr_cnt <= instr_cnt + 64'd1;
             endcase
         end
