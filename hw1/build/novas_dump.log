@@ -44,7 +44,7 @@ LANG=en_US.UTF-8
 LC_PAPER=lzh_TW
 LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 SYNTHESIS=/home/nfs_cad/synopsys/synthesis/cur
-SSH_CONNECTION=192.168.102.22 52177 140.116.245.124 22
+SSH_CONNECTION=192.168.102.22 52340 140.116.245.124 22
 MFLAGS=
 FSDB=1
 LESSCLOSE=/usr/bin/lesspipe %s %s
@@ -62,11 +62,11 @@ PAGER=less
 MAKELEVEL=1
 LC_TELEPHONE=lzh_TW
 LC_MEASUREMENT=lzh_TW
-XDG_SESSION_ID=3931
+XDG_SESSION_ID=4073
 LM_LICENSE_FILE=1717@lstc:1717@lstn:1717@lshc:26585@lshc:26585@lstc:26585@lstn:5280@lstn:5280@lshc:5280@lstc
 LD_LIBRARY_PATH=/usr/cad/cadence/INNOVUS/cur/tools/lib:/home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/lib:/usr/cad/cadence/INCISIV/cur/tools/lib/64bit:/usr/cad/cadence/INCISIV/cur/tools/lib:
 XDG_RUNTIME_DIR=/run/user/1000104
-SSH_CLIENT=192.168.102.22 52177 22
+SSH_CLIENT=192.168.102.22 52340 22
 LC_TIME=lzh_TW
 XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
 MGC_HOME=/home/nfs_cad/mentor/calibre/cur
@@ -97,7 +97,7 @@ argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog1
 96 profile - 100
           CPU/Mem usage: 0.070 sys,  0.050 user,  91.10M sys,  0.00M vm
 97 VC callback profile - scalar:0 vector:0
-98 Wed Sep 11 13:37:15 2024
+98 Thu Sep 12 16:49:10 2024
 99 pliAppInit
 100 FSDB_GATE is disabled.
 101 Enable Parallel Dumping.
@@ -106,7 +106,7 @@ argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog1
 104 LIBSSCORE=found /home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
 105 argv[0]: top.fsdb
 106 argv[0]: 0
-107 argv[1]: (handle)0x5166e88 top_tb.TOP
+107 argv[1]: (handle)0x3b2b998 top_tb.TOP
 108 FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
 109 (C) 1996 - 2020 by Synopsys, Inc.
 110 sps_call_fsdbDumpfile at 0 : /home/WangYanTing/VLSI/hw1/sim/top_tb.sv(86)
@@ -115,42 +115,42 @@ argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog1
 113 *Verdi* : Create FSDB file 'top.fsdb'
 114 sps_call_fsdbDumpvars at 0 : /home/WangYanTing/VLSI/hw1/sim/top_tb.sv(87)
 115 argv[0]: 0
-116 argv[1]: (handle)0x5166e78 top_tb.TOP
+116 argv[1]: (handle)0x3b2b988 top_tb.TOP
 117 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
 118 *Verdi* : End of traversing.
 119 fsdbDumpvars traverse var: profile - 
           CPU/Mem usage: 0.080 sys,  0.070 user,  178.50M sys,  0.00M vm
-                   incr: 0.000 sys,  0.010 user,  4.22M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  4.22M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.010 user,  4.22M sys,  0.00M vm
+                   incr: 0.010 sys,  0.020 user,  4.22M sys,  0.00M vm
+                   accu: 0.010 sys,  0.020 user,  4.22M sys,  0.00M vm
+              accu incr: 0.010 sys,  0.020 user,  4.22M sys,  0.00M vm
 
-          Count usage: 1070 var,  356 idcode,  356 callback
-                 incr: 1070 var,  356 idcode,  356 callback
-                 accu: 1070 var,  356 idcode,  356 callback
-            accu incr: 1070 var,  356 idcode,  356 callback
+          Count usage: 1070 var,  355 idcode,  355 callback
+                 incr: 1070 var,  355 idcode,  355 callback
+                 accu: 1070 var,  355 idcode,  355 callback
+            accu incr: 1070 var,  355 idcode,  355 callback
 120 VC callback profile - scalar:0 vector:0
-121 Wed Sep 11 13:37:15 2024
+121 Thu Sep 12 16:49:10 2024
 122 fsdbDumpvars: profile - 
           CPU/Mem usage: 0.080 sys,  0.070 user,  179.55M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  5.28M sys,  0.00M vm
+                   accu: 0.010 sys,  0.020 user,  5.28M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
 
-          Count usage: 1070 var,  356 idcode,  356 callback
+          Count usage: 1070 var,  355 idcode,  355 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 1070 var,  356 idcode,  356 callback
+                 accu: 1070 var,  355 idcode,  355 callback
             accu incr: 0 var,  0 idcode,  0 callback
-123 VC callback profile - scalar:258 vector:98
-124 Wed Sep 11 13:37:15 2024
-125 End of simulation at 64082000
-126 VC callback profile - scalar:1790266 vector:2014421
-127 Wed Sep 11 13:37:15 2024
+123 VC callback profile - scalar:257 vector:98
+124 Thu Sep 12 16:49:10 2024
+125 End of simulation at 200000000
+126 VC callback profile - scalar:3437711 vector:4770839
+127 Thu Sep 12 16:49:13 2024
 128 Begin FSDB profile info:
-129 FSDB Writer : bc1(1790266) bcn(2014421) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.516001) io wait(0.000000) theadpool wait(0.000000)
+129 FSDB Writer : bc1(3437711) bcn(4770839) mtf/stf(0/1)
+FSDB Writer elapsed time : flush(0.920349) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 130 End FSDB profile info
-131 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:24 BlockUsed:27
-132                        ProduceTime:1.309868236 ConsumerTime:0.582066505 Buffer:64MB
+131 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:53 BlockUsed:58
+132                        ProduceTime:1.797196593 ConsumerTime:2.024551136 Buffer:64MB
 133 SimExit
 134 Sim process exit

@@ -4,16 +4,11 @@ module HazardDetectUnit (
     input [4:0] read_reg2_addr,
     input [4:0] EXE_write_addr,
     input [1:0] Branch_Ctrl,
-    input IM_stall,
-    input DM_stall,
 
     output logic IFID_write,            //solve   remind load-use hazard
     output logic PC_write_en,
     output logic IFID_flush,
-    output logic Control_flush,
-    output IDEXE_stall,
-    output EXEMEM_stall,
-    output MEMWB_stall
+    output logic Control_flush
 );
 
 always_comb begin

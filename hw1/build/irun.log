@@ -1,5 +1,5 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 11, 2024 at 13:37:12 CST
+TOOL:	irun(64)	15.20-s084: Started on Sep 12, 2024 at 16:49:07 CST
 irun
 	/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv
 	+incdir+/home/WangYanTing/VLSI/hw1/./src+/home/WangYanTing/VLSI/hw1/./include+/home/WangYanTing/VLSI/hw1/./sim
@@ -13,9 +13,9 @@ irun
    User defined plus("+") options:
 	+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog1
 
-Recompiling... reason: file '../src/ALU.sv' is newer than expected.
-	expected: Tue Sep 10 20:47:15 2024
-	actual:   Wed Sep 11 13:33:14 2024
+Recompiling... reason: file '../src/CPU.sv' is newer than expected.
+	expected: Thu Sep 12 16:43:31 2024
+	actual:   Thu Sep 12 16:49:05 2024
 ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI/hw1/./include (No such file or directory).
 file: /home/WangYanTing/VLSI/hw1/./sim/top_tb.sv
 `define CYCLE 20.0 // Cycle time
@@ -24,45 +24,7 @@ ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv,2|32): The text ma
 `define MAX 100000 // Max cycle number
                                       |
 ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
-	module worklib.Program_counter:sv
-		errors: 0, warnings: 0
-	module worklib.Adder:sv
-		errors: 0, warnings: 0
-	module worklib.Mux2to1:sv
-		errors: 0, warnings: 0
-	module worklib.IFID_reg:sv
-		errors: 0, warnings: 0
-	module worklib.HazardDetectUnit:sv
-		errors: 0, warnings: 0
-	module worklib.Regfile:sv
-		errors: 0, warnings: 0
-	module worklib.ImmGen:sv
-		errors: 0, warnings: 0
-	module worklib.ControlUnit:sv
-		errors: 0, warnings: 0
-	module worklib.Mux3to1:sv
-		errors: 0, warnings: 0
-	module worklib.IDEXE_reg:sv
-		errors: 0, warnings: 0
-	module worklib.ALU:sv
-		errors: 0, warnings: 0
-	module worklib.ALUCtrl:sv
-		errors: 0, warnings: 0
-	module worklib.ForwardingUnit:sv
-		errors: 0, warnings: 0
-	module worklib.BranchCtrl:sv
-		errors: 0, warnings: 0
-	module worklib.EXEMEM_reg:sv
-		errors: 0, warnings: 0
-	module worklib.MEMWB_reg:sv
-		errors: 0, warnings: 0
 	module worklib.CPU:sv
-		errors: 0, warnings: 0
-	module worklib.SRAM_wrapper:sv
-		errors: 0, warnings: 0
-	module worklib.top:sv
-		errors: 0, warnings: 0
-	module worklib.SRAM:sv
 		errors: 0, warnings: 0
     $value$plusargs("prog_path=%s", prog_path);
                   |
@@ -70,8 +32,6 @@ ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv,39|18): System fun
       $fscanf(gf, "%h\n", GOLDEN[num]);
             |
 ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv,54|12): System function '$fscanf' invoked as a task. Return value will be ignored.
-	module worklib.top_tb:sv
-		errors: 0, warnings: 2
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 3
 		Caching library 'worklib' ....... Done
@@ -105,67 +65,21 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,48|67): $readmem default memory order incomp
 ncelab: *W,MEMODR (../sim/top_tb.sv,49|67): $readmem default memory order incompatible with IEEE1364.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.ALU:sv <0x2b6422fc>
-			streams:   1, words:  5857
-		worklib.ALUCtrl:sv <0x21490173>
-			streams:   1, words:  2954
-		worklib.Adder:sv <0x336df1a9>
-			streams:   1, words:   283
-		worklib.Adder:sv <0x4d15b90f>
-			streams:   1, words:   221
-		worklib.BranchCtrl:sv <0x4db70e89>
-			streams:   1, words:   986
-		worklib.CPU:sv <0x6898c30b>
-			streams:   6, words:  1114
-		worklib.ControlUnit:sv <0x1db03dc8>
-			streams:   1, words: 11840
-		worklib.EXEMEM_reg:sv <0x2d43f6fa>
-			streams:   6, words:  5345
-		worklib.ForwardingUnit:sv <0x018bc0d9>
-			streams:   2, words:  1251
-		worklib.HazardDetectUnit:sv <0x2e1bff0b>
-			streams:   1, words:  1517
-		worklib.IDEXE_reg:sv <0x0016a5b6>
-			streams:   4, words:  7241
-		worklib.IFID_reg:sv <0x0007aa74>
-			streams:   4, words:  1969
-		worklib.ImmGen:sv <0x42025b84>
-			streams:   1, words:  2240
-		worklib.MEMWB_reg:sv <0x6cb6edf0>
-			streams:   5, words:  3027
-		worklib.Mux2to1:sv <0x2c6ae757>
-			streams:   1, words:   234
-		worklib.Mux2to1:sv <0x7ff0bcd3>
-			streams:   1, words:   234
-		worklib.Mux3to1:sv <0x0f033f1b>
-			streams:   1, words:   322
-		worklib.Mux3to1:sv <0x3aee8948>
-			streams:   1, words:   322
-		worklib.Program_counter:sv <0x18993d37>
-			streams:   2, words:   535
-		worklib.Regfile:sv <0x5968fa12>
-			streams:   5, words:  9897
-		worklib.SRAM:sv <0x32cbbbe3>
-			streams:  61, words: 19862
-		worklib.SRAM:sv <0x798a72ea>
-			streams:  61, words: 20478
-		worklib.top:sv <0x325d7fe8>
-			streams:   3, words:   597
-		worklib.top_tb:sv <0x4ad995dd>
-			streams:   4, words: 32150
+		worklib.CPU:sv <0x49a3d680>
+			streams:   5, words:   988
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
 		Modules:                 30      21
 		Registers:               93      81
-		Scalar wires:           192       -
+		Scalar wires:           191       -
 		Expanded wires:         136       6
 		Vectored wires:          52       -
 		Always blocks:           25      19
 		Initial blocks:           2       2
 		Cont. assignments:      104      92
-		Pseudo assignments:       6       6
+		Pseudo assignments:       5       5
 		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.top_tb:sv
 Loading snapshot worklib.top_tb:sv .................... Done
@@ -179,55 +93,54 @@ FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
 *Verdi* : Create FSDB file 'top.fsdb'
 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
 *Verdi* : End of traversing.
-
-Done
-
-DM[8192] = 8649ecbe, pass
-DM[8193] = 891356b5, pass
-DM[8194] = 9ef8965a, pass
-DM[8195] = a5adad14, pass
-DM[8196] = ac1c9aa9, pass
-DM[8197] = b1327c91, pass
-DM[8198] = c2c287dc, pass
-DM[8199] = c5707a3d, pass
-DM[8200] = d6186134, pass
-DM[8201] = db2764d5, pass
-DM[8202] = e611dbc0, pass
-DM[8203] = e912d024, pass
-DM[8204] = e93d369e, pass
-DM[8205] = f06cb80b, pass
-DM[8206] = f1929166, pass
-DM[8207] = fe884149, pass
-DM[8208] = 02cd65b5, pass
-DM[8209] = 16c5d5af, pass
-DM[8210] = 1e0bf7e8, pass
-DM[8211] = 3ac18e4f, pass
-DM[8212] = 3dfce9a2, pass
-DM[8213] = 423b1f26, pass
-DM[8214] = 42e38aa1, pass
-DM[8215] = 43eb84d8, pass
-DM[8216] = 4b57f8af, pass
-DM[8217] = 4c9f24fa, pass
-DM[8218] = 5d50f3a8, pass
-DM[8219] = 608dc931, pass
-DM[8220] = 66290483, pass
-DM[8221] = 73902c5d, pass
-DM[8222] = 7a27c66f, pass
-DM[8223] = 7b1ed6e1, pass
+DM[8192] = 00000000, expect = 8649ecbe
+DM[8193] = 00000000, expect = 891356b5
+DM[8194] = 00000000, expect = 9ef8965a
+DM[8195] = 00000000, expect = a5adad14
+DM[8196] = 00000000, expect = ac1c9aa9
+DM[8197] = 00000000, expect = b1327c91
+DM[8198] = 00000000, expect = c2c287dc
+DM[8199] = 00000000, expect = c5707a3d
+DM[8200] = 00000000, expect = d6186134
+DM[8201] = 00000000, expect = db2764d5
+DM[8202] = 00000000, expect = e611dbc0
+DM[8203] = 00000000, expect = e912d024
+DM[8204] = 00000000, expect = e93d369e
+DM[8205] = 00000000, expect = f06cb80b
+DM[8206] = 00000000, expect = f1929166
+DM[8207] = 00000000, expect = fe884149
+DM[8208] = 00000000, expect = 02cd65b5
+DM[8209] = 00000000, expect = 16c5d5af
+DM[8210] = 00000000, expect = 1e0bf7e8
+DM[8211] = 00000000, expect = 3ac18e4f
+DM[8212] = 00000000, expect = 3dfce9a2
+DM[8213] = 00000000, expect = 423b1f26
+DM[8214] = 00000000, expect = 42e38aa1
+DM[8215] = 00000000, expect = 43eb84d8
+DM[8216] = 00000000, expect = 4b57f8af
+DM[8217] = 00000000, expect = 4c9f24fa
+DM[8218] = 00000000, expect = 5d50f3a8
+DM[8219] = 00000000, expect = 608dc931
+DM[8220] = 00000000, expect = 66290483
+DM[8221] = 00000000, expect = 73902c5d
+DM[8222] = 00000000, expect = 7a27c66f
+DM[8223] = 00000000, expect = 7b1ed6e1
+SIM_END(16383) = xxxxxxxx, expect = ffffffff
 
 
 
 
         ****************************               
         **                        **       |__||  
-        **  Congratulations !!    **      / O.O  | 
+        **  OOPS!!                **      / X,X  | 
         **                        **    /_____   | 
-        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **  Simulation Failed!!   **   /^ ^ ^ \  |
         **                        **  |^ ^ ^ ^ |w| 
         ****************************   \m___m__|_|
+         Totally has          32 errors                     
 
 
-Simulation complete via $finish(1) at time 640820 NS + 3
-../sim/top_tb.sv:76     $finish;
+Simulation complete via $finish(1) at time 2 MS + 0
+../sim/top_tb.sv:107     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 11, 2024 at 13:37:16 CST  (total: 00:00:04)
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 12, 2024 at 16:49:13 CST  (total: 00:00:06)
