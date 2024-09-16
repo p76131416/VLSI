@@ -34,6 +34,10 @@
 /home/WangYanTing/VLSI/hw1_act/P76131416/src/EXEMEM_reg.sv
 /home/WangYanTing/VLSI/hw1_act/P76131416/./src/MEMWB_reg.sv
 /home/WangYanTing/VLSI/hw1_act/P76131416/src/MEMWB_reg.sv
+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/Regfile_f.sv
+/home/WangYanTing/VLSI/hw1_act/P76131416/src/Regfile_f.sv
+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/ALU_f.sv
+/home/WangYanTing/VLSI/hw1_act/P76131416/src/ALU_f.sv
 /home/WangYanTing/VLSI/hw1_act/P76131416/./src/SRAM_wrapper.sv
 /home/WangYanTing/VLSI/hw1_act/P76131416/src/SRAM_wrapper.sv
 /home/WangYanTing/VLSI/hw1_act/P76131416/./sim//SRAM/TS1N16ADFPCLLLVTA512X45M4SWSHOD.sv

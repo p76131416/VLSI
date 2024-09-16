@@ -1,4 +1,4 @@
-module Regfile (//新增signal判斷是不是float, 從Control
+module Regfile (
     input clk,
     input reset,
     input [4:0] rd_reg1_addr,

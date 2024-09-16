@@ -1,20 +1,26 @@
-module MEMWB_reg (
+module MEMWB_reg (//float control signal not yet
     input clk,
     input reset,
     input [31:0] MEM_rd_data,
     input [31:0] MEM_data_memory,
     input [2:0] MEM_funct3,
     input [4:0] MEM_write_addr,
+    input [4:0] MEM_f_write_addr,
 
     input MEM_RegWrite,
     input MEM_MemtoReg,
+    input MEM_f_RegWrite,
+    input MEM_is_float,
 
     output logic [31:0] WB_rd_data,
     output logic [31:0] WB_data_memory,
     output logic [4:0] WB_write_addr,
+    output logic [4:0] WB_f_write_addr,
 
     output logic WB_RegWrite,
-    output logic WB_MemtoReg
+    output logic WB_MemtoReg,
+    output logic WB_f_RegWrite,
+    output logic WB_is_float
 );
 
 always_ff @( posedge clk or posedge reset ) begin
@@ -22,8 +28,11 @@ always_ff @( posedge clk or posedge reset ) begin
         WB_rd_data <= 32'h0;
         WB_data_memory <= 32'h0;
         WB_write_addr <= 5'd0;
+        WB_f_write_addr <= 5'd0;
         WB_RegWrite <= 0;
         WB_MemtoReg <= 0;
+        WB_f_RegWrite <= 0;
+        WB_is_float <= 0;
     end
     else begin
         if(MEM_RegWrite & !MEM_MemtoReg)begin
@@ -38,8 +47,11 @@ always_ff @( posedge clk or posedge reset ) begin
         end
         WB_rd_data <= MEM_rd_data;
         WB_write_addr <= MEM_write_addr;
+        WB_f_write_addr <= MEM_f_write_addr;
         WB_RegWrite <= MEM_RegWrite;
+        WB_f_RegWrite <= MEM_f_RegWrite;
         WB_MemtoReg <= MEM_MemtoReg;
+        WB_is_float <= MEM_is_float;
     end
 end
 

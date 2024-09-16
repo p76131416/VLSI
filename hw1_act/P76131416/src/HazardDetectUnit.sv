@@ -3,7 +3,10 @@ module HazardDetectUnit (               //add float number judgement
     input [4:0] read_reg1_addr,
     input [4:0] read_reg2_addr,
     input [4:0] EXE_write_addr,
+    input [4:0] EXE_f_write_addr,
     input [1:0] Branch_Ctrl,
+    input ID_is_float,
+    input EXE_is_float,
 
     output logic IFID_write,            //solve   remind load-use hazard
     output logic PC_write_en,
@@ -20,7 +23,7 @@ always_comb begin
         IFID_write = 1;
         CSR_type = 2'd0;
     end
-    else if(EXE_MemRead && ((read_reg1_addr == EXE_write_addr) || (read_reg2_addr == EXE_write_addr)))begin       //load-use stall one cycle (there're forwarding)
+    else if((EXE_MemRead && ((read_reg1_addr == EXE_write_addr) || (read_reg2_addr == EXE_write_addr))) || (EXE_MemRead && ((read_reg1_addr == EXE_f_write_addr) || (read_reg2_addr == EXE_f_write_addr)) && (ID_is_float & EXE_is_float)))begin       //load-use stall one cycle (there're forwarding)
         PC_write_en = 0;
         IFID_flush = 0;
         Control_flush = 1;

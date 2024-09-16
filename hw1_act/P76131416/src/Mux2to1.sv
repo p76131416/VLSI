@@ -7,5 +7,5 @@ module Mux2to1 (
 );
 
 assign C = sel ? A : B;
-    
+
 endmodule

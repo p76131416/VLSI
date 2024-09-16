@@ -97,9 +97,9 @@ argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
 argv[11]=+rdcycle=1
 argv[12]=+notimingcheck
 98 profile - 100
-          CPU/Mem usage: 0.080 sys,  0.030 user,  92.98M sys,  0.00M vm
+          CPU/Mem usage: 0.050 sys,  0.060 user,  93.13M sys,  0.00M vm
 99 VC callback profile - scalar:0 vector:0
-100 Fri Sep 13 15:40:32 2024
+100 Mon Sep 16 21:05:45 2024
 101 pliAppInit
 102 FSDB_GATE is disabled.
 103 Enable Parallel Dumping.
@@ -109,7 +109,7 @@ argv[12]=+notimingcheck
 107 argv[0]: top.fsdb
 108 argv[0]: +struct
 109 argv[1]: +mda
-110 argv[2]: (handle)0x523e3d8 top_tb.TOP
+110 argv[2]: (handle)0x4c01068 top_tb.TOP
 111 FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
 112 (C) 1996 - 2020 by Synopsys, Inc.
 113 sps_call_fsdbDumpfile at 0 : /home/WangYanTing/VLSI/hw1_act/P76131416/sim/top_tb.sv(113)
@@ -119,44 +119,44 @@ argv[12]=+notimingcheck
 117 sps_call_fsdbDumpvars at 0 : /home/WangYanTing/VLSI/hw1_act/P76131416/sim/top_tb.sv(114)
 118 argv[0]: +struct
 119 argv[1]: +mda
-120 argv[2]: (handle)0x523e3b8 top_tb.TOP
+120 argv[2]: (handle)0x4c01048 top_tb.TOP
 121 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
 122 *Verdi* : Enable +struct and +mda dumping.
 123 Cell instance `top_tb.TOP.IM1.i_SRAM'.
 124 *Verdi* : End of traversing.
 125 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.120 sys,  0.650 user,  202.96M sys,  0.00M vm
-                   incr: 0.030 sys,  0.610 user,  26.76M sys,  0.00M vm
-                   accu: 0.030 sys,  0.610 user,  26.76M sys,  0.00M vm
-              accu incr: 0.030 sys,  0.610 user,  26.76M sys,  0.00M vm
+          CPU/Mem usage: 0.090 sys,  0.690 user,  203.17M sys,  0.00M vm
+                   incr: 0.030 sys,  0.620 user,  26.82M sys,  0.00M vm
+                   accu: 0.030 sys,  0.620 user,  26.82M sys,  0.00M vm
+              accu incr: 0.030 sys,  0.620 user,  26.82M sys,  0.00M vm
 
-          Count usage: 132984 var,  132007 idcode,  132015 callback
-                 incr: 132984 var,  132007 idcode,  132015 callback
-                 accu: 132984 var,  132007 idcode,  132015 callback
-            accu incr: 132984 var,  132007 idcode,  132015 callback
+          Count usage: 133110 var,  132079 idcode,  132087 callback
+                 incr: 133110 var,  132079 idcode,  132087 callback
+                 accu: 133110 var,  132079 idcode,  132087 callback
+            accu incr: 133110 var,  132079 idcode,  132087 callback
 126 VC callback profile - scalar:0 vector:0
-127 Fri Sep 13 15:40:33 2024
+127 Mon Sep 16 21:05:46 2024
 128 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.130 sys,  1.060 user,  212.45M sys,  0.00M vm
-                   incr: 0.010 sys,  0.410 user,  9.49M sys,  0.00M vm
-                   accu: 0.040 sys,  1.020 user,  36.25M sys,  0.00M vm
-              accu incr: 0.010 sys,  0.410 user,  9.49M sys,  0.00M vm
+          CPU/Mem usage: 0.090 sys,  1.100 user,  212.66M sys,  0.00M vm
+                   incr: 0.000 sys,  0.410 user,  9.49M sys,  0.00M vm
+                   accu: 0.030 sys,  1.030 user,  36.30M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.410 user,  9.49M sys,  0.00M vm
 
-          Count usage: 132984 var,  132007 idcode,  132015 callback
+          Count usage: 133110 var,  132079 idcode,  132087 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 132984 var,  132007 idcode,  132015 callback
+                 accu: 133110 var,  132079 idcode,  132087 callback
             accu incr: 0 var,  0 idcode,  0 callback
-129 VC callback profile - scalar:739 vector:131268
-130 Fri Sep 13 15:40:33 2024
-131 End of simulation at 1000000000
-132 VC callback profile - scalar:11224794 vector:6598680
-133 Fri Sep 13 15:40:38 2024
+129 VC callback profile - scalar:766 vector:131313
+130 Mon Sep 16 21:05:47 2024
+131 End of simulation at 74110000
+132 VC callback profile - scalar:1029626 vector:716326
+133 Mon Sep 16 21:05:47 2024
 134 Begin FSDB profile info:
-135 FSDB Writer : bc1(11224794) bcn(6598680) mtf/stf(0/1)
-FSDB Writer elapsed time : flush(1.645190) io wait(0.000000) theadpool wait(0.000000)
+135 FSDB Writer : bc1(1029626) bcn(716326) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.303491) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 136 End FSDB profile info
-137 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:63 BlockUsed:112
-138                        ProduceTime:6.363195323 ConsumerTime:3.490183580 Buffer:64MB
+137 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:9 BlockUsed:12
+138                        ProduceTime:1.904038029 ConsumerTime:0.261064768 Buffer:64MB
 139 SimExit
 140 Sim process exit

@@ -3,6 +3,7 @@ module EXEMEM_reg (
     input reset,
     input [31:0] ALU_out,
     input [4:0] EXE_write_addr,
+    input [4:0] EXE_f_write_addr,
     input [2:0] EXE_funct3,
     input [31:0] EXE_pc,
     input [31:0] EXE_memory_in,
@@ -12,9 +13,12 @@ module EXEMEM_reg (
     input EXE_MenWrite,
     input EXE_MemRead,
     input EXE_RegWrite,
+    input EXE_f_RegWrite,
+    input EXE_is_float,
 
     output logic [31:0] MEM_ALU_out,
     output logic [4:0] MEM_write_addr,
+    output logic [4:0] MEM_f_write_addr,
     output logic [2:0] MEM_funct3,
     output logic [31:0] MEM_pc,
     output logic [31:0] MEM_memory_in,
@@ -23,13 +27,16 @@ module EXEMEM_reg (
     output logic MEM_MemtoReg,
     output logic [31:0] MEM_MemWrite,
     output logic MEM_MemRead,
-    output logic MEM_RegWrite
+    output logic MEM_RegWrite,
+    output logic MEM_f_RegWrite,
+    output logic MEM_is_float
 );
 
 always_ff @( posedge clk or posedge reset) begin
     if(reset)begin
         MEM_ALU_out <= 32'h0;
         MEM_write_addr <= 5'd0;
+        MEM_f_write_addr <= 5'd0;
         MEM_funct3 <= 3'd0;
         MEM_pc <= 32'd0;
         MEM_memory_in <= 32'd0;
@@ -38,6 +45,8 @@ always_ff @( posedge clk or posedge reset) begin
         MEM_MemWrite <= 32'd0;
         MEM_MemRead <= 0;
         MEM_RegWrite <= 0;
+        MEM_f_RegWrite <= 0;
+        MEM_is_float <= 0;
     end else begin
         if(EXE_MenWrite)begin                   //store 需要手動將資料移到對應位置
             case(EXE_funct3)
@@ -86,10 +95,13 @@ always_ff @( posedge clk or posedge reset) begin
         MEM_ALU_out <= ALU_out;
         MEM_pc <= EXE_pc;
         MEM_write_addr <= EXE_write_addr;
+        MEM_f_write_addr <= EXE_f_write_addr;
         MEM_RDSrc <= EXE_RDSrc;
         MEM_MemtoReg <= EXE_MemtoReg;
         MEM_MemRead <= EXE_MemRead;
         MEM_RegWrite <= EXE_RegWrite;
+        MEM_f_RegWrite <= EXE_f_RegWrite;
+        MEM_is_float <= EXE_is_float;
     end
 end
 

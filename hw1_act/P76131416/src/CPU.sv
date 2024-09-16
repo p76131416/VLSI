@@ -50,8 +50,11 @@ wire [4:0] wr_addr;
 wire [31:0] imm;
 wire [2:0] fun3;
 wire [6:0] fun7;
+wire is_float;
 wire [31:0] rd_r1_data;
 wire [31:0] rd_r2_data;
+wire [31:0] frd_r1_data;
+wire [31:0] frd_r2_data;
 wire [31:0] immedi;
 
 wire [2:0] id_ALUOp;
@@ -63,6 +66,9 @@ wire id_MemtoReg;
 wire id_MenWrite;
 wire id_MemRead;
 wire id_RegWrite;
+wire id_f_RegWrite;
+wire id_ALUSel_f;
+wire id_store_into;
 wire [1:0] id_Branch;
 wire IFID_write;
 
@@ -70,16 +76,24 @@ wire IFID_write;
 wire [31:0] exe_pc_out;
 wire [31:0] exe_rd_reg1_data;
 wire [31:0] exe_rd_reg2_data;
+wire [31:0] exe_frd1_data;
+wire [31:0] exe_frd2_data;
 wire [4:0] exe_write_addr;
+wire [4:0] exe_f_write_addr;
 wire [2:0] exe_funct3;
 wire [6:0] exe_funct7;
 wire [31:0] alu_out;
+wire [31:0] falu_out;
 wire [31:0] exe_imm;
 
 wire [4:0] exe_rd_r1_addr;
 wire [4:0] exe_rd_r2_addr;
+wire [4:0] exe_frd1_addr;
+wire [4:0] exe_frd2_addr;
 
 wire [1:0] exe_branchCtrl;
+wire exe_is_float;
+wire exe_store_into;
 
 wire [31:0] pc_imm;
 
@@ -91,12 +105,15 @@ wire exe_MemtoReg;
 wire exe_MenWrite;
 wire exe_MemRead;
 wire exe_RegWrite;
+wire exe_f_RegWrite;
+wire exe_ALUSel_f;
 wire [1:0] exe_Branch;
 wire exe_zero_flag;
 
 //MEM wire
 wire [31:0] mem_ALU_out;
 wire [4:0] mem_write_addr;
+wire [4:0] mem_f_write_addr;
 wire [2:0] mem_funct3;
 wire [31:0] mem_rd_data;
 
@@ -105,11 +122,16 @@ wire mem_MemtoReg;
 wire [31:0] mem_MemWrite;
 wire mem_MemRead;
 wire mem_RegWrite;
+wire mem_f_RegWrite;
+wire mem_is_float;
 //WB wire
 wire [4:0] wb_write_addr;
+wire [4:0] wb_f_write_addr;
 wire [31:0] wb_write_data;
 
 wire wb_RegWrite;
+wire wb_f_RegWrite;
+wire wb_is_float;
 
 //IF stage
 
@@ -153,7 +175,8 @@ IFID_reg IFID_pipe(
 .write_addr(wr_addr),
 .immediate(imm),
 .funct3(fun3),
-.funct7(fun7)
+.funct7(fun7),
+.is_float(is_float)
 );
 
 //IF control
@@ -163,7 +186,10 @@ HazardDetectUnit Hazard(
 .read_reg1_addr(rd_r1),
 .read_reg2_addr(rd_r2),
 .EXE_write_addr(exe_write_addr),
+.EXE_f_write_addr(exe_f_write_addr),
 .Branch_Ctrl(exe_branchCtrl),
+.ID_is_float(is_float),
+.EXE_is_float(exe_is_float),
 
 .IFID_write(IFID_write),
 .PC_write_en(PC_write_enable),
@@ -181,17 +207,17 @@ wire [63:0] w_cycle;
 
 //ID stage 
 
-module Regfile_f (
-    input .clk(~clk),
-    input .reset(rst),
-    input [4:0] .frd_reg1_addr(),
-    input [4:0] .frd_reg2_addr(),
-    input [4:0] .w_freg_addr(),
-    input [31:0] .w_f_data(),
-    input .RegWrite_f(),
+Regfile_f Register_file_float(
+.clk(~clk),
+.reset(rst),
+.frd_reg1_addr(rd_r1),
+.frd_reg2_addr(rd_r2),
+.w_freg_addr(wb_f_write_addr),
+.w_f_data(wb_write_data),
+.RegWrite_f(wb_f_RegWrite),
 
-    output [31:0] .frd_reg1_data(),
-    output [31:0] .frd_reg2_data()
+.frd_reg1_data(frd_r1_data),
+.frd_reg2_data(frd_r2_data)
 );
 
 
@@ -220,7 +246,10 @@ IDEXE_reg IDEXE_pipe(
 .reset(rst),
 .rd_reg1_data(rd_r1_data),
 .rd_reg2_data(rd_r2_data),
+.frd1_data(frd_r1_data),
+.frd2_data(frd_r2_data),
 .write_addr(wr_addr),
+.f_write_addr(wr_addr),
 .funct3(fun3),
 .funct7(fun7),
 .ID_pc_in(id_pc),
@@ -237,17 +266,26 @@ IDEXE_reg IDEXE_pipe(
 .MenWrite(id_MenWrite),
 .MemRead(id_MemRead),
 .RegWrite(id_RegWrite),
+.RegWrite_f(id_f_RegWrite),
+.ALUSel_f(id_ALUSel_f),
 .Branch(id_Branch),
 .CSR_type(w_csr_type),
+.is_float(is_float),
+.Memoryin_f(id_store_into),
 
 .EXE_pc_out(exe_pc_out),
 .EXE_rd_reg1_data(exe_rd_reg1_data),
 .EXE_rd_reg2_data(exe_rd_reg2_data),
+.EXE_frd1_data(exe_frd1_data),
+.EXE_frd2_data(exe_frd2_data),
 .EXE_write_addr(exe_write_addr),
+.EXE_f_write_addr(exe_f_write_addr),
 .EXE_funct3(exe_funct3),
 .EXE_funct7(exe_funct7),
 .EXE_rd_r1_addr(exe_rd_r1_addr),
 .EXE_rd_r2_addr(exe_rd_r2_addr),
+.EXE_frd1_addr(exe_frd1_addr),
+.EXE_frd2_addr(exe_frd2_addr),
 .EXE_immediate(exe_imm),
 .instr_cnt(w_instr_cnt),
 .cycle(w_cycle),
@@ -261,7 +299,11 @@ IDEXE_reg IDEXE_pipe(
 .EXE_MenWrite(exe_MenWrite),
 .EXE_MemRead(exe_MemRead),
 .EXE_RegWrite(exe_RegWrite),
-.EXE_Branch(exe_Branch)
+.EXE_f_RegWrite(exe_f_RegWrite),
+.EXE_ALUSel_f(exe_ALUSel_f),
+.EXE_Branch(exe_Branch),
+.EXE_Memoryin_f(exe_store_into),
+.EXE_is_float(exe_is_float)
 );
 
 //ID control
@@ -278,7 +320,10 @@ ControlUnit CtrlUnit(
 .MenWrite(id_MenWrite),
 .MemRead(id_MemRead),
 .RegWrite(id_RegWrite),
-.Branch(id_Branch)
+.Branch(id_Branch),
+.RegWrite_f(id_f_RegWrite),
+.ALUSel_f(id_ALUSel_f),
+.Memoryin_f(id_store_into)
 );
 
 //ID control end
@@ -292,27 +337,34 @@ wire [31:0] pc_to_reg;
 wire [31:0] alu1;
 wire [31:0] rs2_fin;
 wire [31:0] alu2;
+wire [31:0] falu1;
+wire [31:0] falu2;
+wire [31:0] final_alu;
+wire [31:0] exe_memory_in;
 
 wire [4:0] alu_ctrl;
+wire [1:0] falu_ctrl;
 wire [1:0] forward_r1_sel;
 wire [1:0] forward_r2_sel;
+wire [1:0] forward_fr1_sel;
+wire [1:0] forward_fr2_sel;
 
-Mux3to1 float_1_sel(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input [31:0] .C(),
-    input [1:0] .sel(),
+Mux3to1 float_1_sel(            //forwarding
+.A(frd_r1_data),
+.B(mem_rd_data),
+.C(wb_write_data),
+.sel(forward_fr1_sel),
 
-    output [31:0] .D()
+.D(falu1)
 );
 
-Mux3to1 float_2_sel(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input [31:0] .C(),
-    input [1:0] .sel(),
+Mux3to1 float_2_sel(            //forwarding
+.A(frd_r2_data),
+.B(mem_rd_data),
+.C(wb_write_data),
+.sel(forward_fr2_sel),
 
-    output [31:0] .D()
+.D(falu2)
 );
 
 
@@ -364,12 +416,20 @@ Mux2to1 imm_mux2(
 .C(alu2)
 );
 
-module ALU_f (
-    input [31:0] .float1(),
-    input [31:0] .float2(),
-    input [1:0] .operand(),
+Mux2to1 f_data_in(                  //for store : select which data to store into memeory
+.A(rs2_fin),
+.B(falu2),
+.sel(exe_store_into),
 
-    output [31:0] .float_ans()
+.C(exe_memory_in)
+);
+
+ALU_f alu_f(
+.float1(falu1),
+.float2(falu2),
+.operand(falu_ctrl),
+
+.float_ans(falu_out)
 );
 
 ALU alu(
@@ -383,12 +443,12 @@ ALU alu(
 .zero(exe_zero_flag)
 );
 
-Mux2to1 f_or_ori(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input .sel(),
+Mux2to1 alu_or_aluf(
+.A(alu_out),
+.B(falu_out),
+.sel(exe_ALUSel_f),
 
-    output [31:0] .C()
+.C(final_alu)
 );
 
 //EXE control 
@@ -399,7 +459,8 @@ ALUCtrl alu_contrl(
 .ALUOp(exe_ALUOp),
 .CSRimm({exe_funct7,exe_write_addr}),
 
-.ALUContrl(alu_ctrl)
+.ALUContrl(alu_ctrl),
+.FALUControl(falu_ctrl)
 );
 
 ForwardingUnit Forwarding(
@@ -411,7 +472,20 @@ ForwardingUnit Forwarding(
 .WB_RegWrite(wb_RegWrite),
 
 .forwarding_r1_sel(forward_r1_sel),
-.forwarding_r2_sel(forward_r2_sel)
+.forwarding_r2_sel(forward_r2_sel),
+
+.frd1_addr(exe_frd1_addr),
+.frd2_addr(exe_frd2_addr),
+.MEM_f_write_addr(mem_f_write_addr),
+.MEM_f_RegWrite(mem_f_RegWrite),
+.WB_f_write_addr(wb_f_write_addr),
+.WB_f_RegWrite(wb_f_RegWrite),
+.EXE_is_float(exe_is_float),
+.MEM_is_float(mem_is_float),
+.WB_is_float(wb_is_float),
+
+.forwarding_fr1_sel(forward_fr1_sel),
+.forwarding_fr2_sel(forward_fr2_sel)
 );
 
 BranchCtrl branch_ctrl(
@@ -429,14 +503,6 @@ BranchCtrl branch_ctrl(
 wire [31:0] mem_pc;
 wire [31:0] mem_memory_in;
 
-Mux2to1 f_data_in(
-    input [31:0] .A(),
-    input [31:0] .B(),
-    input .sel(),
-
-    output [31:0] .C()
-);
-
 Mux2to1 mem_mux2(
 .A(mem_pc),
 .B(mem_ALU_out),
@@ -444,28 +510,33 @@ Mux2to1 mem_mux2(
 
 .C(mem_rd_data)
 );
+
 assign DM_addr = mem_ALU_out;
 assign DM_WEB = mem_MemRead;
 assign DM_DI = mem_memory_in;
-assign DM_BWEB = mem_MemWrite;  //mem_Memwrite改成32bit
+assign DM_BWEB = mem_MemWrite;
 
 EXEMEM_reg EXEMEM_pipe(
 .clk(clk),
 .reset(rst),
-.ALU_out(alu_out),
+.ALU_out(final_alu),
 .EXE_write_addr(exe_write_addr),
+.EXE_f_write_addr(exe_f_write_addr),
 .EXE_funct3(exe_funct3),
 .EXE_pc(pc_to_reg),
-.EXE_memory_in(rs2_fin),
+.EXE_memory_in(exe_memory_in),
 
 .EXE_RDSrc(exe_RDSrc),
 .EXE_MemtoReg(exe_MemtoReg),
 .EXE_MenWrite(exe_MenWrite),
 .EXE_MemRead(exe_MemRead),
 .EXE_RegWrite(exe_RegWrite),
+.EXE_f_RegWrite(exe_f_RegWrite),
+.EXE_is_float(exe_is_float),
 
 .MEM_ALU_out(mem_ALU_out),
 .MEM_write_addr(mem_write_addr),
+.MEM_f_write_addr(mem_f_write_addr),
 .MEM_funct3(mem_funct3),
 .MEM_pc(mem_pc),
 .MEM_memory_in(mem_memory_in),
@@ -474,7 +545,9 @@ EXEMEM_reg EXEMEM_pipe(
 .MEM_MemtoReg(mem_MemtoReg),
 .MEM_MemWrite(mem_MemWrite),
 .MEM_MemRead(mem_MemRead),
-.MEM_RegWrite(mem_RegWrite)
+.MEM_RegWrite(mem_RegWrite),
+.MEM_f_RegWrite(mem_f_RegWrite),
+.MEM_is_float(mem_is_float)
 );
 
 //MEM stage end
@@ -500,16 +573,21 @@ MEMWB_reg MEMWB_pipe(
 .MEM_data_memory(DM_DO),
 .MEM_funct3(mem_funct3),
 .MEM_write_addr(mem_write_addr),
+.MEM_f_write_addr(mem_f_write_addr),
 
 .MEM_RegWrite(mem_RegWrite),
 .MEM_MemtoReg(mem_MemtoReg),
+.MEM_is_float(mem_is_float),
 
 .WB_rd_data(wb_rd_data),
 .WB_data_memory(wb_data_memory),
 .WB_write_addr(wb_write_addr),
+.WB_f_write_addr(wb_f_write_addr),
 
 .WB_RegWrite(wb_RegWrite),
-.WB_MemtoReg(wb_MemtoReg)
+.WB_MemtoReg(wb_MemtoReg),
+.WB_f_RegWrite(wb_f_RegWrite),
+.WB_is_float(wb_is_float)
 );
 
 //WB stage end

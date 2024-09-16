@@ -4,10 +4,13 @@ module ALUCtrl (
     input [2:0] ALUOp,
     input [11:0] CSRimm,
 
-    output logic [4:0] ALUContrl
+    output logic [4:0] ALUContrl,
+    output logic [1:0] FALUControl
 );
 
 always_comb begin
+    FALUControl = 2'd2;
+    ALUContrl = 5'b00000;
     case (ALUOp)
         3'd0 : begin                    //R-type
             case(funct7) 
@@ -79,6 +82,12 @@ always_comb begin
                 12'b110000000010 : ALUContrl = 5'b10110;
                 12'b110010000000 : ALUContrl = 5'b10111;
                 default : ALUContrl = 5'b11000;
+            endcase
+        end
+        3'd5 : begin                //float add and sub
+            case(funct7)
+                7'b0000000 : FALUControl = 2'd0;
+                7'b0000100 : FALUControl = 2'd1;
             endcase
         end
         default :                 //load and store (only +)

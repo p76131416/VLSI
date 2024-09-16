@@ -3,12 +3,17 @@ module IDEXE_reg (
     input reset,
     input [31:0] rd_reg1_data,
     input [31:0] rd_reg2_data,
+    input [31:0] frd1_data,
+    input [31:0] frd2_data,
     input [4:0] write_addr,
+    input [4:0] f_write_addr,
     input [2:0] funct3,
     input [6:0] funct7,
     input [31:0] ID_pc_in,
     input [4:0] rd_r1_addr,
     input [4:0] rd_r2_addr,
+    input [4:0] frd1_addr,
+    input [4:0] frd2_addr,
     input [31:0] imme,
 
     input Control_flush,
@@ -20,17 +25,26 @@ module IDEXE_reg (
     input MenWrite,
     input MemRead,
     input RegWrite,
+    input RegWrite_f,
+    input ALUSel_f,
     input [1:0] Branch,
     input [1:0] CSR_type,
+    input is_float,
+    input Memoryin_f,
 
     output logic [31:0] EXE_pc_out,
     output logic [31:0] EXE_rd_reg1_data,
     output logic [31:0] EXE_rd_reg2_data,
+    output logic [31:0] EXE_frd1_data,
+    output logic [31:0] EXE_frd2_data,
     output logic [4:0] EXE_write_addr,
+    output logic [4:0] EXE_f_write_addr,
     output logic [2:0] EXE_funct3,
     output logic [6:0] EXE_funct7,
     output logic [4:0] EXE_rd_r1_addr,
     output logic [4:0] EXE_rd_r2_addr,
+    output logic [4:0] EXE_frd1_addr,
+    output logic [4:0] EXE_frd2_addr,
     output logic [31:0] EXE_immediate,
     output logic [64:0] instr_cnt,
     output logic [64:0] cycle,
@@ -43,7 +57,11 @@ module IDEXE_reg (
     output logic EXE_MenWrite,
     output logic EXE_MemRead,
     output logic EXE_RegWrite,
-    output logic [1:0] EXE_Branch
+    output logic EXE_f_RegWrite,
+    output logic EXE_ALUSel_f,
+    output logic [1:0] EXE_Branch,
+    output logic EXE_Memoryin_f,
+    output logic EXE_is_float
 );
 
 always_ff @(posedge clk or posedge reset) begin
@@ -51,11 +69,16 @@ always_ff @(posedge clk or posedge reset) begin
         EXE_pc_out <= 32'h0;
         EXE_rd_reg1_data <= 32'h0;
         EXE_rd_reg2_data <= 32'h0;
+        EXE_frd1_data <= 32'h0;
+        EXE_frd2_data <= 32'h0;
         EXE_write_addr <= 5'd0;
+        EXE_f_write_addr <= 5'd0;
         EXE_funct3 <= 3'd0;
         EXE_funct7 <= 7'd0;
         EXE_rd_r1_addr <= 5'd0;
         EXE_rd_r2_addr <= 5'd0;
+        EXE_frd1_addr <= 5'd0;
+        EXE_frd2_addr <= 5'd0;
         EXE_immediate <= 32'h0;
         EXE_ALUOp <= 3'd0;
         EXE_ALUSrc <= 0;
@@ -65,9 +88,13 @@ always_ff @(posedge clk or posedge reset) begin
         EXE_MenWrite <= 0;
         EXE_MemRead <= 0;
         EXE_RegWrite <= 0;
+        EXE_f_RegWrite <= 0;
+        EXE_ALUSel_f <= 0;
         EXE_Branch <= 2'd0;
         cycle <= 64'd0;
         instr_cnt <= 64'd0;
+        EXE_is_float <= 0;
+        EXE_Memoryin_f <= 0;
     end
     else begin
         cycle <= cycle + 64'd1;
@@ -82,11 +109,16 @@ always_ff @(posedge clk or posedge reset) begin
             EXE_pc_out <= ID_pc_in;
             EXE_rd_reg1_data <= rd_reg1_data;
             EXE_rd_reg2_data <= rd_reg2_data;
+            EXE_frd1_data <= frd1_data;
+            EXE_frd2_data <= frd2_data;
             EXE_write_addr <= write_addr;
+            EXE_f_write_addr <= f_write_addr;
             EXE_funct3 <= funct3;
             EXE_funct7 <= funct7;
             EXE_rd_r1_addr <= rd_r1_addr;
             EXE_rd_r2_addr <= rd_r2_addr;
+            EXE_frd1_addr <= frd1_addr;
+            EXE_frd2_addr <= frd2_addr;
             EXE_immediate <= imme; 
             EXE_ALUOp <= ALUOp;
             EXE_ALUSrc <= ALUSrc;
@@ -96,17 +128,26 @@ always_ff @(posedge clk or posedge reset) begin
             EXE_MenWrite <= MenWrite;
             EXE_MemRead <= MemRead;
             EXE_RegWrite <= RegWrite;
+            EXE_f_RegWrite <= RegWrite_f;
+            EXE_ALUSel_f <= ALUSel_f;
             EXE_Branch <= Branch;
+            EXE_is_float <= is_float;
+            EXE_Memoryin_f <= Memoryin_f;
         end
         else begin
             EXE_pc_out <= 32'h0;
             EXE_rd_reg1_data <= 32'h0;
             EXE_rd_reg2_data <= 32'h0;
+            EXE_frd1_data <= 32'h0;
+            EXE_frd2_data <= 32'h0;
             EXE_write_addr <= 5'd0;
+            EXE_f_write_addr <= 5'd0;
             EXE_funct3 <= 3'd0;
             EXE_funct7 <= 7'd0;
             EXE_rd_r1_addr <= 5'd0;
             EXE_rd_r2_addr <= 5'd0;
+            EXE_frd1_addr <= 5'd0;
+            EXE_frd2_addr <= 5'd0;
             EXE_immediate <= 32'h0;
             EXE_ALUOp <= 3'd0;
             EXE_ALUSrc <= 0;
@@ -116,7 +157,11 @@ always_ff @(posedge clk or posedge reset) begin
             EXE_MenWrite <= 0;
             EXE_MemRead <= 0;
             EXE_RegWrite <= 0;
+            EXE_f_RegWrite <= 0;
+            EXE_ALUSel_f <= 0;
             EXE_Branch <= 2'd0;
+            EXE_is_float <= 0;
+            EXE_Memoryin_f <= 0;
         end
     end
 end

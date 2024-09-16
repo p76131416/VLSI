@@ -16,6 +16,8 @@
 ./BranchCtrl.sv
 ./EXEMEM_reg.sv
 ./MEMWB_reg.sv
+./Regfile_f.sv
+./ALU_f.sv
 ./SRAM_wrapper.sv
 .//SRAM/TS1N16ADFPCLLLVTA512X45M4SWSHOD.sv
 /home/WangYanTing/VLSI/hw1_act/P76131416/./src//SRAM/TS1N16ADFPCLLLVTA512X45M4SWSHOD.sv
