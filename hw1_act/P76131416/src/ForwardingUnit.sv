@@ -42,18 +42,18 @@ always_comb begin
 end
 
 always_comb begin
-    if(MEM_f_RegWrite && frd1_addr == MEM_f_write_addr && MEM_is_float == EXE_is_float)
+    if(MEM_f_RegWrite && frd1_addr == MEM_f_write_addr && (EXE_is_float & MEM_is_float))
         forwarding_fr1_sel = 2'd1;
-    else if(WB_f_RegWrite && frd2_addr == MEM_f_write_addr && WB_is_float == EXE_is_float)
+    else if(WB_f_RegWrite && frd1_addr == MEM_f_write_addr && (EXE_is_float & WB_is_float))
         forwarding_fr1_sel = 2'd2;
     else
         forwarding_fr1_sel = 2'd0;
 end
 
 always_comb begin
-    if(MEM_f_RegWrite && frd1_addr == MEM_f_write_addr && MEM_is_float == EXE_is_float)
+    if(MEM_f_RegWrite && frd2_addr == MEM_f_write_addr && (EXE_is_float & MEM_is_float))
         forwarding_fr2_sel = 2'd1;
-    else if(WB_f_RegWrite && frd2_addr == MEM_f_write_addr && WB_is_float == EXE_is_float)
+    else if(WB_f_RegWrite && frd2_addr == MEM_f_write_addr && (EXE_is_float & WB_is_float))
         forwarding_fr2_sel = 2'd2;
     else
         forwarding_fr2_sel = 2'd0;

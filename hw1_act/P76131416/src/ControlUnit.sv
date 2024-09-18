@@ -180,10 +180,10 @@ always_comb begin
             RegWrite = 0;
             Branch = 0;
             RegWrite_f = 1;
-            ALUSel_f = 1;
+            ALUSel_f = 0;
             Memoryin_f = 1;
         end
-        7'b01000111:begin   //FSW
+        7'b0100111:begin   //FSW
             ALUOp = 3'd6;
             ALUSrc = 0;
             PCtoRegSrc = 0;
@@ -195,7 +195,7 @@ always_comb begin
             RegWrite = 0;
             Branch = 0;
             RegWrite_f = 0;
-            ALUSel_f = 1;
+            ALUSel_f = 0;
             Memoryin_f = 0;
         end
         7'b1010011:begin    //FADD.S and FSUB.S
@@ -225,7 +225,7 @@ always_comb begin
             RegWrite = 0;
             Branch = 0;
             RegWrite_f = 0;
-            ALUSel_f = 0;
+            ALUSel_f = 1;
             Memoryin_f = 1;
         end
     endcase

@@ -2,6 +2,7 @@ module EXEMEM_reg (
     input clk,
     input reset,
     input [31:0] ALU_out,
+    input [31:0] EXE_R_ALUout,
     input [4:0] EXE_write_addr,
     input [4:0] EXE_f_write_addr,
     input [2:0] EXE_funct3,
@@ -17,6 +18,7 @@ module EXEMEM_reg (
     input EXE_is_float,
 
     output logic [31:0] MEM_ALU_out,
+    output logic [31:0] MEM_R_ALUout,
     output logic [4:0] MEM_write_addr,
     output logic [4:0] MEM_f_write_addr,
     output logic [2:0] MEM_funct3,
@@ -35,6 +37,7 @@ module EXEMEM_reg (
 always_ff @( posedge clk or posedge reset) begin
     if(reset)begin
         MEM_ALU_out <= 32'h0;
+        MEM_R_ALUout <= 32'h0;
         MEM_write_addr <= 5'd0;
         MEM_f_write_addr <= 5'd0;
         MEM_funct3 <= 3'd0;
@@ -82,7 +85,7 @@ always_ff @( posedge clk or posedge reset) begin
                         end
                     endcase
                 end
-                default : begin      //SW
+                default : begin      //SW FSW
                     MEM_MemWrite <= 32'b00000000000000000000000000000000;
                     MEM_memory_in <= EXE_memory_in;
                 end
@@ -93,6 +96,7 @@ always_ff @( posedge clk or posedge reset) begin
 
         MEM_funct3 <= EXE_funct3;
         MEM_ALU_out <= ALU_out;
+        MEM_R_ALUout <= EXE_R_ALUout;
         MEM_pc <= EXE_pc;
         MEM_write_addr <= EXE_write_addr;
         MEM_f_write_addr <= EXE_f_write_addr;

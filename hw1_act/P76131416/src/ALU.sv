@@ -2,8 +2,8 @@ module ALU (
     input [31:0] in1,
     input [31:0] in2,
     input [4:0] control,
-    input [64:0] instr_cnt,
-    input [64:0] cycle,
+    input [63:0] instr_cnt,
+    input [63:0] cycle,
 
     output logic [31:0] out,
     output logic zero

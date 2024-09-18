@@ -255,6 +255,8 @@ IDEXE_reg IDEXE_pipe(
 .ID_pc_in(id_pc),
 .rd_r1_addr(rd_r1),
 .rd_r2_addr(rd_r2),
+.frd1_addr(rd_r1),
+.frd2_addr(rd_r2),
 .imme(immedi),
 //signal
 .Control_flush(ctrl_flush),
@@ -350,7 +352,7 @@ wire [1:0] forward_fr1_sel;
 wire [1:0] forward_fr2_sel;
 
 Mux3to1 float_1_sel(            //forwarding
-.A(frd_r1_data),
+.A(exe_frd1_data),
 .B(mem_rd_data),
 .C(wb_write_data),
 .sel(forward_fr1_sel),
@@ -359,7 +361,7 @@ Mux3to1 float_1_sel(            //forwarding
 );
 
 Mux3to1 float_2_sel(            //forwarding
-.A(frd_r2_data),
+.A(exe_frd2_data),
 .B(mem_rd_data),
 .C(wb_write_data),
 .sel(forward_fr2_sel),
@@ -425,8 +427,8 @@ Mux2to1 f_data_in(                  //for store : select which data to store int
 );
 
 ALU_f alu_f(
-.float1(falu1),
-.float2(falu2),
+.float1(exe_frd1_data),
+.float2(exe_frd2_data),
 .operand(falu_ctrl),
 
 .float_ans(falu_out)
@@ -502,10 +504,11 @@ BranchCtrl branch_ctrl(
 //MEM stage
 wire [31:0] mem_pc;
 wire [31:0] mem_memory_in;
+wire [31:0] mem_R_aluout;
 
 Mux2to1 mem_mux2(
 .A(mem_pc),
-.B(mem_ALU_out),
+.B(mem_R_aluout),
 .sel(mem_RDSrc),
 
 .C(mem_rd_data)
@@ -519,7 +522,8 @@ assign DM_BWEB = mem_MemWrite;
 EXEMEM_reg EXEMEM_pipe(
 .clk(clk),
 .reset(rst),
-.ALU_out(final_alu),
+.ALU_out(alu_out),                      //for address
+.EXE_R_ALUout(final_alu),
 .EXE_write_addr(exe_write_addr),
 .EXE_f_write_addr(exe_f_write_addr),
 .EXE_funct3(exe_funct3),
@@ -534,7 +538,8 @@ EXEMEM_reg EXEMEM_pipe(
 .EXE_f_RegWrite(exe_f_RegWrite),
 .EXE_is_float(exe_is_float),
 
-.MEM_ALU_out(mem_ALU_out),
+.MEM_ALU_out(mem_ALU_out),              //for address
+.MEM_R_ALUout(mem_R_aluout),
 .MEM_write_addr(mem_write_addr),
 .MEM_f_write_addr(mem_f_write_addr),
 .MEM_funct3(mem_funct3),
@@ -576,6 +581,7 @@ MEMWB_reg MEMWB_pipe(
 .MEM_f_write_addr(mem_f_write_addr),
 
 .MEM_RegWrite(mem_RegWrite),
+.MEM_f_RegWrite(mem_f_RegWrite),
 .MEM_MemtoReg(mem_MemtoReg),
 .MEM_is_float(mem_is_float),
 

@@ -46,8 +46,8 @@ module IDEXE_reg (
     output logic [4:0] EXE_frd1_addr,
     output logic [4:0] EXE_frd2_addr,
     output logic [31:0] EXE_immediate,
-    output logic [64:0] instr_cnt,
-    output logic [64:0] cycle,
+    output logic [63:0] instr_cnt,
+    output logic [63:0] cycle,
 
     output logic [2:0] EXE_ALUOp,
     output logic EXE_ALUSrc,
