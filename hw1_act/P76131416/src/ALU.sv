@@ -111,7 +111,7 @@ always_comb begin
         end
         5'd23 : begin
             zero = 1'd0;
-            out = cycle[64:32];
+            out = cycle[63:32];
         end
         default : begin
             zero = 1'd0;

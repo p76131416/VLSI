@@ -159,7 +159,7 @@ always_comb begin
             PCtoRegSrc = 0;
             Immtype = 0;
             RDSrc = 0;
-            MemtoReg = 0;
+            MemtoReg = 1;
             MenWrite = 0;
             MemRead = 0;
             RegWrite = 1;

@@ -427,8 +427,8 @@ Mux2to1 f_data_in(                  //for store : select which data to store int
 );
 
 ALU_f alu_f(
-.float1(exe_frd1_data),
-.float2(exe_frd2_data),
+.float1(falu1),
+.float2(falu2),
 .operand(falu_ctrl),
 
 .float_ans(falu_out)
@@ -459,7 +459,7 @@ ALUCtrl alu_contrl(
 .funct3(exe_funct3),
 .funct7(exe_funct7),
 .ALUOp(exe_ALUOp),
-.CSRimm({exe_funct7,exe_write_addr}),
+.CSRimm({exe_funct7,exe_rd_r2_addr}),
 
 .ALUContrl(alu_ctrl),
 .FALUControl(falu_ctrl)

@@ -158,10 +158,10 @@ always_ff @(posedge clk or posedge reset) begin
             EXE_MemRead <= 0;
             EXE_RegWrite <= 0;
             EXE_f_RegWrite <= 0;
-            EXE_ALUSel_f <= 0;
+            EXE_ALUSel_f <= 1;
             EXE_Branch <= 2'd0;
             EXE_is_float <= 0;
-            EXE_Memoryin_f <= 0;
+            EXE_Memoryin_f <= 1;
         end
     end
 end

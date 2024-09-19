@@ -1,24 +1,21 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 18, 2024 at 21:46:57 CST
+TOOL:	irun(64)	15.20-s084: Started on Sep 19, 2024 at 18:27:29 CST
 irun
 	/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
 	+incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
-	+define+prog0+FSDB_ALL
+	+define+prog3+FSDB_ALL
 	-define CYCLE=10.0
 	-define MAX=100000
 	+access+r
 	+nc64bit
-	+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
+	+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog3
 	+rdcycle=1
 	+notimingcheck
 
    User defined plus("+") options:
-	+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
+	+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog3
 	+rdcycle=1
 
-Recompiling... reason: file '../src/ALU_f.sv' is newer than expected.
-	expected: Wed Sep 18 21:25:23 2024
-	actual:   Wed Sep 18 21:46:53 2024
 ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI (No such file or directory).
 file: /home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
 `define CYCLE 10.0 // Cycle time
@@ -27,8 +24,6 @@ ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,2|32
 `define MAX 100000 // Max cycle number
                                       |
 ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
-	module worklib.ALU_f:sv
-		errors: 0, warnings: 0
     $value$plusargs("prog_path=%s", prog_path);
                   |
 ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,43|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
@@ -59,9 +54,6 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,49|52): $readmem default memory order incomp
                                                     |
 ncelab: *W,MEMODR (../sim/top_tb.sv,50|52): $readmem default memory order incompatible with IEEE1364.
 	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.ALU_f:sv <0x0b542f63>
-			streams:   2, words:  9504
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -69,7 +61,7 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,50|52): $readmem default memory order incomp
 		Modules:                36      23
 		Primitives:            242       2
 		Timing outputs:         66      65
-		Registers:             418     270
+		Registers:             422     274
 		Scalar wires:          159       -
 		Expanded wires:        264      12
 		Vectored wires:         80       -
@@ -92,79 +84,26 @@ FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
 *Verdi* : Enable +struct and +mda dumping.
 *Verdi* : End of traversing.
-DM[8192] = fffffff0, pass
-DM[8193] = fffffff8, pass
-DM[8194] = 00000008, pass
-DM[8195] = 00000001, pass
-DM[8196] = 00000001, pass
-DM[8197] = 78787878, pass
-DM[8198] = 000091a2, pass
-DM[8199] = 00000003, pass
-DM[8200] = fefcfefd, pass
-DM[8201] = 10305070, pass
-DM[8202] = 8bfd6700, pass
-DM[8203] = 00000000, pass
-DM[8204] = 10200ffc, pass
-DM[8205] = f2a93e0c, pass
-DM[8206] = cccccccc, pass
-DM[8207] = ffffffcc, pass
-DM[8208] = ffffcccc, pass
-DM[8209] = 000000cc, pass
-DM[8210] = 0000cccc, pass
-DM[8211] = 00000d9d, pass
-DM[8212] = 00000004, pass
-DM[8213] = 00000003, pass
-DM[8214] = 000001a6, pass
-DM[8215] = 00000ec6, pass
-DM[8216] = 2468b7a8, pass
-DM[8217] = 5dbf9f00, pass
-DM[8218] = 00012b38, pass
-DM[8219] = fa2817b7, pass
-DM[8220] = ff000000, pass
-DM[8221] = 12345678, pass
-DM[8222] = 0000f000, pass
-DM[8223] = 00000f00, pass
-DM[8224] = 000000f0, pass
-DM[8225] = 0000000f, pass
-DM[8226] = 56780000, pass
-DM[8227] = 78000000, pass
-DM[8228] = 00005678, pass
-DM[8229] = 00000078, pass
-DM[8230] = 12345678, pass
-DM[8231] = ce780000, pass
-DM[8232] = fffff000, pass
-DM[8233] = fffff000, pass
-DM[8234] = fffff000, pass
-DM[8235] = fffff000, pass
-DM[8236] = fffff000, pass
-DM[8237] = fffff000, pass
-DM[8238] = 1357a274, pass
-DM[8239] = 13578000, pass
-DM[8240] = fffff004, pass
-DM[8241] = 40bb3276, pass
-DM[8242] = be3aa25e, pass
-DM[8243] = 40b55d64, expect = 40b55d63
-DM[8244] = c1330794, expect = c213a0c4
-DM[8245] = c1885067, expect = 40c10789
-DM[8246] = be3aa200, expect = 404c5a18
-DM[8247] = 00000000, pass
-DM[8248] = 00000000, expect = 000013fb
-SIM_END(16383) = xxxxxxxx, expect = ffffffff
+
+Done
+
+DM[8192] = 00000003, pass
+your total cycle is 0.000000 
+your total cycle is 0.000000 
 
 
 
 
         ****************************               
         **                        **       |__||  
-        **  OOPS!!                **      / X,X  | 
+        **  Congratulations !!    **      / O.O  | 
         **                        **    /_____   | 
-        **  Simulation Failed!!   **   /^ ^ ^ \  |
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
         **                        **  |^ ^ ^ ^ |w| 
         ****************************   \m___m__|_|
-         Totally has          57 errors                     
 
 
-Simulation complete via $finish(1) at time 1 MS + 0
-../sim/top_tb.sv:131     $finish;
+Simulation complete via $finish(1) at time 76570 NS + 2
+../sim/top_tb.sv:94     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 18, 2024 at 21:47:06 CST  (total: 00:00:09)
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 19, 2024 at 18:27:33 CST  (total: 00:00:04)
