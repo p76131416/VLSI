@@ -37,6 +37,7 @@ always_comb begin                           //make f1_swap >= f2_swap
         if(float1[22:0] > float2[22:0])begin
             f1_swap = float1;
             f2_swap = float2;
+            swap_flag = 1'b0;
         end
         else 
             {f1_swap, f2_swap, swap_flag} = (float1[22:0] < float2[22:0]) ? {float2, float1, 1'b1}: {float1, float2, 1'b0};
@@ -44,6 +45,13 @@ always_comb begin                           //make f1_swap >= f2_swap
 end
 
 always_comb begin
+    temp_m = 24'd0;
+    carry = 1'b0;
+    G_bit = 1'b0;
+    R_bit = 1'b0;
+    S_bit = 1'b0;
+    sign = 1'b0;
+    man = 23'b0;
     f1_m = {1'b1, f1_swap[22:0]};
     f2_m = {1'b1, f2_swap[22:0]};
     f1_exp = f1_swap[30:23];
@@ -52,14 +60,14 @@ always_comb begin
     f2_sign = f2_swap[31];
     exp_diff = f1_exp - f2_exp;
     
-    if(exp_diff >= 3)
-        {G_bit, R_bit, S_bit} = f2_m[(exp_diff-1)-:3];
-    else if(exp_diff == 2) begin
+    if(exp_diff >= 8'd3)
+        {G_bit, R_bit, S_bit} = f2_m[(exp_diff - 8'd1)-: 3 ];
+    else if(exp_diff == 8'd2) begin
         G_bit = f2_m[1];
         R_bit = f2_m[0];
         S_bit = 1'b0;
     end
-    else if(exp_diff == 1)begin
+    else if(exp_diff == 8'd1)begin
         G_bit = f2_m[0];
         R_bit = 1'b0;
         S_bit = 1'b0;
@@ -70,21 +78,25 @@ always_comb begin
     end
 
     f2_temp_m = f2_m >> exp_diff;
-    f2_temp_m = (G_bit & (R_bit | S_bit | f2_temp_m[0])) ? f2_temp_m + 1 : f2_temp_m;
+    f2_temp_m = (G_bit & (R_bit | S_bit | f2_temp_m[0])) ? f2_temp_m + 24'd1 : f2_temp_m;
 
     exp = f1_exp;
     case (operand)
         2'd0 : begin        //add
             if(f1_sign ^ f2_sign)begin                          //different sign
-                {carry, temp_m} = f1_m - f2_temp_m;
+                {carry, temp_m} = {1'b0, f1_m} - {1'b0, f2_temp_m};                             //unequal length
                 if(carry)begin
                     temp_m  = temp_m >> 1;
-                    exp = exp + 1;
+                    exp = exp + 8'd1;
                 end
                 else begin
-                    for(i=0 ; temp_m[23] != 1'b1&&i<24 ; i=i+1)begin
-                        temp_m = temp_m << 1;
-                        exp = exp - 1;
+                    for(i=0 ; i<24 ; i=i+1)begin          //only can have i<24, need to fixed 
+                        if(temp_m[23] != 1'b1)begin
+                            temp_m = {temp_m[22:0], 1'b0};
+                            // temp_m = temp_m << 1;                                   //sign bit will be lost
+                            exp = exp - 8'd1;
+                        end
+                        
                     end
                 end
                 sign = f1_sign;
@@ -95,12 +107,15 @@ always_comb begin
                 {carry, temp_m} = f1_m + f2_temp_m;
                 if(carry)begin
                     temp_m  = temp_m >> 1;
-                    exp = exp + 1;
+                    exp = exp + 8'd1;
                 end
                 else begin
-                    for(i=0 ; temp_m[23] != 1'b1&&i<24 ; i=i+1)begin
-                        temp_m = temp_m << 1;
-                        exp = exp - 1;
+                    for(i=0 ; temp_m[23] != 1'b1 && i<24 ; i=i+1)begin
+                        if(temp_m[23] != 1'b1)begin
+                            temp_m = {temp_m[22:0], 1'b0};
+                            // temp_m = temp_m << 1;
+                            exp = exp - 8'd1;
+                        end
                     end
                 end
                 sign = f1_sign;
@@ -113,12 +128,15 @@ always_comb begin
                 {carry, temp_m} = f1_m + f2_temp_m;
                 if(carry)begin
                     temp_m  = temp_m >> 1;
-                    exp = exp + 1;
+                    exp = exp + 8'd1;
                 end
                 else begin
-                    for(i=0 ; temp_m[23] != 1'b1 && i<24 ; i=i+1)begin
-                        temp_m = temp_m << 1;
-                        exp = exp - 1;
+                    for(i=0 ; i<24 ; i=i+1)begin
+                        if(temp_m[23] != 1'b1)begin
+                            temp_m = {temp_m[22:0], 1'b0};
+                            // temp_m = temp_m << 1;
+                            exp = exp - 8'd1;
+                        end
                     end
                 end
                 sign = swap_flag ? ~f1_sign : f1_sign;
@@ -126,15 +144,18 @@ always_comb begin
                 float_ans = {sign, exp, man};
             end
             else begin
-                {carry, temp_m} = f1_m - f2_temp_m;
+                {carry, temp_m} = {1'b0, f1_m} - {1'b0, f2_temp_m};                             //unequal length
                 if(carry)begin
                     temp_m  = temp_m >> 1;
-                    exp = exp + 1;
+                    exp = exp + 8'd1;
                 end
                 else begin
-                    for(i=0 ; temp_m[23] != 1'b1 && i<24 ; i=i+1)begin
-                        temp_m = temp_m << 1;
-                        exp = exp - 1;
+                    for(i=0 ; i<24 ; i=i+1)begin
+                        if(temp_m[23] != 1'b1)begin
+                            temp_m = {temp_m[22:0], 1'b0};
+                            // temp_m = temp_m << 1;
+                            exp = exp - 8'd1;
+                        end
                     end
                 end
                 sign = swap_flag ? ~f1_sign : f1_sign;

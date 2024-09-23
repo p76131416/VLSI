@@ -494,7 +494,7 @@ BranchCtrl branch_ctrl(
 .branch(exe_Branch),
 .zero(exe_zero_flag),
 
-.branchCtrl(exe_branchCtrl)
+.bCtrl(exe_branchCtrl)
 );
 
 //EXE control end

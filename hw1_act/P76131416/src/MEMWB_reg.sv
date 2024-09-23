@@ -29,10 +29,10 @@ always_ff @( posedge clk or posedge reset ) begin
         WB_data_memory <= 32'h0;
         WB_write_addr <= 5'd0;
         WB_f_write_addr <= 5'd0;
-        WB_RegWrite <= 0;
-        WB_MemtoReg <= 0;
-        WB_f_RegWrite <= 0;
-        WB_is_float <= 0;
+        WB_RegWrite <= 1'b0;
+        WB_MemtoReg <= 1'b0;
+        WB_f_RegWrite <= 1'b0;
+        WB_is_float <= 1'b0;
     end
     else begin
         if((MEM_f_RegWrite | MEM_RegWrite) & !MEM_MemtoReg)begin

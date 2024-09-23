@@ -81,20 +81,20 @@ always_ff @(posedge clk or posedge reset) begin
         EXE_frd2_addr <= 5'd0;
         EXE_immediate <= 32'h0;
         EXE_ALUOp <= 3'd0;
-        EXE_ALUSrc <= 0;
-        EXE_PCtoRegSrc <= 0;
-        EXE_RDSrc <= 0;
-        EXE_MemtoReg <= 0;
-        EXE_MenWrite <= 0;
-        EXE_MemRead <= 0;
-        EXE_RegWrite <= 0;
-        EXE_f_RegWrite <= 0;
-        EXE_ALUSel_f <= 0;
+        EXE_ALUSrc <= 1'b0;
+        EXE_PCtoRegSrc <= 1'b0;
+        EXE_RDSrc <= 1'b0;
+        EXE_MemtoReg <= 1'b0;
+        EXE_MenWrite <= 1'b0;
+        EXE_MemRead <= 1'b0;
+        EXE_RegWrite <= 1'b0;
+        EXE_f_RegWrite <= 1'b0;
+        EXE_ALUSel_f <= 1'b0;
         EXE_Branch <= 2'd0;
         cycle <= 64'd0;
         instr_cnt <= 64'd0;
-        EXE_is_float <= 0;
-        EXE_Memoryin_f <= 0;
+        EXE_is_float <= 1'b0;
+        EXE_Memoryin_f <= 1'b0;
     end
     else begin
         cycle <= cycle + 64'd1;
@@ -150,18 +150,18 @@ always_ff @(posedge clk or posedge reset) begin
             EXE_frd2_addr <= 5'd0;
             EXE_immediate <= 32'h0;
             EXE_ALUOp <= 3'd0;
-            EXE_ALUSrc <= 0;
-            EXE_PCtoRegSrc <= 0;
-            EXE_RDSrc <= 0;
-            EXE_MemtoReg <= 0;
-            EXE_MenWrite <= 0;
-            EXE_MemRead <= 0;
-            EXE_RegWrite <= 0;
-            EXE_f_RegWrite <= 0;
-            EXE_ALUSel_f <= 1;
+            EXE_ALUSrc <= 1'b0;
+            EXE_PCtoRegSrc <= 1'b0;
+            EXE_RDSrc <= 1'b0;
+            EXE_MemtoReg <= 1'b0;
+            EXE_MenWrite <= 1'b0;
+            EXE_MemRead <= 1'b0;
+            EXE_RegWrite <= 1'b0;
+            EXE_f_RegWrite <= 1'b0;
+            EXE_ALUSel_f <= 1'b1;
             EXE_Branch <= 2'd0;
-            EXE_is_float <= 0;
-            EXE_Memoryin_f <= 1;
+            EXE_is_float <= 1'b0;
+            EXE_Memoryin_f <= 1'b1;
         end
     end
 end

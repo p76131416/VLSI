@@ -1,0 +1,1045 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version O-2018.06 for linux64 - May 21, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#   Read in top module
+#read_file -autoread -top CHIP {../src/ ../include}
+read_file -format sverilog {../src/top.sv}
+Loading db file '/home/user2/avsd24/avsd24130/P76131416/sim/SRAM/SRAM_ss0p72v0p72vm40c_100a.db'
+Loading db file '/home/user2/avsd24/avsd24130/P76131416/sim/SRAM/SRAM_ff0p88v0p88v125c_100a.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+  Loading link library 'SRAM_ss0p72v0p72vm40c_100a'
+  Loading link library 'SRAM_ff0p88v0p88v125c_100a'
+  Loading link library 'gtech'
+Loading sverilog file '/home/user2/avsd24/avsd24130/P76131416/src/top.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
+Compiling source file /home/user2/avsd24/avsd24130/P76131416/src/top.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/CPU.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/Program_counter.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/Adder.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/Mux2to1.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/IFID_reg.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/HazardDetectUnit.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/Regfile.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/ImmGen.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/ControlUnit.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/Mux3to1.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/IDEXE_reg.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/ALUCtrl.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/ForwardingUnit.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/BranchCtrl.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/EXEMEM_reg.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/MEMWB_reg.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/Regfile_f.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/ALU_f.sv
+Opening include file /home/user2/avsd24/avsd24130/P76131416/src/SRAM_wrapper.sv
+
+Inferred memory devices in process
+	in routine Program_counter line 10 in file
+		'/home/user2/avsd24/avsd24130/P76131416/src/Program_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pc_out_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/IFID_reg.sv:29: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine IFID_reg line 31 in file
+		'/home/user2/avsd24/avsd24130/P76131416/src/IFID_reg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      instr_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ID_pc_out_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Regfile line 17 in file
+		'/home/user2/avsd24/avsd24130/P76131416/src/Regfile.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    register_reg     | Flip-flop | 1024  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    Regfile/27    |   32   |   32    |      5       |
+|    Regfile/28    |   32   |   32    |      5       |
+======================================================
+
+Statistics for case statements in always block at line 8 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/ImmGen.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            9             |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 19 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/ControlUnit.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 10 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/Mux3to1.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            11            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 67 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/IDEXE_reg.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           102            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine IDEXE_reg line 67 in file
+		'/home/user2/avsd24/avsd24130/P76131416/src/IDEXE_reg.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|  EXE_Memoryin_f_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    EXE_pc_out_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| EXE_rd_reg1_data_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| EXE_rd_reg2_data_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  EXE_frd1_data_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  EXE_frd2_data_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  EXE_write_addr_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| EXE_f_write_addr_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    EXE_funct3_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    EXE_funct7_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  EXE_rd_r1_addr_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  EXE_rd_r2_addr_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  EXE_frd1_addr_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  EXE_frd2_addr_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  EXE_immediate_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    EXE_ALUOp_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    EXE_ALUSrc_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  EXE_PCtoRegSrc_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    EXE_RDSrc_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   EXE_MemtoReg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   EXE_MenWrite_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   EXE_MemRead_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   EXE_RegWrite_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  EXE_f_RegWrite_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   EXE_ALUSel_f_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    EXE_Branch_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cycle_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    instr_cnt_reg     | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   EXE_is_float_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:29: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:33: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:45: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:57: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:61: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:65: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:69: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:73: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:77: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:91: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU.sv:96: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 14 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/ALU.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            15            |    auto/auto     |
+===============================================
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALUCtrl.sv:18: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALUCtrl.sv:48: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 11 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/ALUCtrl.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            14            |    auto/auto     |
+|            16            |     no/auto      |
+|            18            |    auto/auto     |
+|            31            |    auto/auto     |
+|            38            |    auto/auto     |
+|            48            |    auto/auto     |
+|            66            |    auto/auto     |
+|            80            |    auto/auto     |
+|            88            |    auto/auto     |
+===============================================
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/BranchCtrl.sv:9: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 37 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/EXEMEM_reg.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            55            |    auto/auto     |
+|            57            |    auto/auto     |
+|            77            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine EXEMEM_reg line 37 in file
+		'/home/user2/avsd24/avsd24130/P76131416/src/EXEMEM_reg.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|   MEM_is_float_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   MEM_ALU_out_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   MEM_R_ALUout_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  MEM_write_addr_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| MEM_f_write_addr_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    MEM_funct3_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      MEM_pc_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  MEM_memory_in_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    MEM_RDSrc_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   MEM_MemtoReg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   MEM_MemWrite_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   MEM_MemRead_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   MEM_RegWrite_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  MEM_f_RegWrite_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Statistics for case statements in always block at line 26 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/MEMWB_reg.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine MEMWB_reg line 26 in file
+		'/home/user2/avsd24/avsd24130/P76131416/src/MEMWB_reg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   WB_is_float_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   WB_rd_data_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| WB_data_memory_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  WB_write_addr_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| WB_f_write_addr_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   WB_RegWrite_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   WB_MemtoReg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  WB_f_RegWrite_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Regfile_f line 17 in file
+		'/home/user2/avsd24/avsd24130/P76131416/src/Regfile_f.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| float_register_reg  | Flip-flop | 1024  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   Regfile_f/27   |   32   |   32    |      5       |
+|   Regfile_f/28   |   32   |   32    |      5       |
+======================================================
+
+Statistics for case statements in always block at line 46 in file
+	'/home/user2/avsd24/avsd24130/P76131416/src/ALU_f.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            76            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ALU_f line 25 in file
+		'/home/user2/avsd24/avsd24130/P76131416/src/ALU_f.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|    swap_flag_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/user2/avsd24/avsd24130/P76131416/src/ALU_f.sv:25: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Current design is now '/home/user2/avsd24/avsd24130/P76131416/src/Program_counter.db:Program_counter'
+Loaded 21 designs.
+Current design is 'Program_counter'.
+Program_counter Adder Mux2to1 IFID_reg HazardDetectUnit Regfile ImmGen ControlUnit Mux3to1 IDEXE_reg ALU ALUCtrl ForwardingUnit BranchCtrl EXEMEM_reg MEMWB_reg Regfile_f ALU_f CPU SRAM_wrapper top
+# SET POWER INTENT and ENVIRONMENT ###################################
+current_design top
+Current design is 'top'.
+{top}
+link
+Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
+
+  Linking design 'top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (21 designs)              /home/user2/avsd24/avsd24130/P76131416/src/top.db, etc
+  SRAM_ss0p72v0p72vm40c_100a (library) /home/user2/avsd24/avsd24130/P76131416/sim/SRAM/SRAM_ss0p72v0p72vm40c_100a.db
+  SRAM_ff0p88v0p88v125c_100a (library) /home/user2/avsd24/avsd24130/P76131416/sim/SRAM/SRAM_ff0p88v0p88v125c_100a.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb
+
+1
+#   Set Design Environment
+set_host_options -max_core 8
+1
+source ../script/DC.sdc
+Error: Can't find the specified library 'N16ADFP_StdCellss0p72vm40c' in memory. (UID-131)
+Error: Cannot find operating condition ss0p72vm40c in library N16ADFP_StdCellss0p72vm40c. (UID-1220)
+Error: Cannot find the specified driving cell in memory.   (UID-993)
+Error: Cannot find the specified driving cell in memory.   (UID-993)
+Warning: No output ports on design 'top'. (UID-17)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+Warning: No output ports on design 'top'. (UID-17)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+Error: Can't find the specified library 'N16ADFP_StdCellss0p72vm40c' in memory. (UID-131)
+Error: Wire load 'ZeroWireload' not found. (UID-40)
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+Warning: In the design IFID_reg, net 'read_reg1[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[30]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[29]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[28]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[27]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[26]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[25]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design ImmGen, net 'imm[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg1[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'read_reg2[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'opcode[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'write_addr[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[30]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[29]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[28]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[27]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[26]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[25]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design IFID_reg, net 'immediate[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design ImmGen, net 'immediate[31]' is connecting multiple ports. (UCN-1)
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06
+Date:        Mon Sep 23 17:17:01 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     37
+    Unconnected ports (LINT-28)                                     4
+    Feedthrough (LINT-29)                                           1
+    Shorted outputs (LINT-31)                                      32
+
+Cells                                                             188
+    Cells do not drive (LINT-1)                                    30
+    Connected to power or ground (LINT-32)                        132
+    Nets connected to multiple pins on same cell (LINT-33)         26
+
+Designs                                                             1
+    Design has no outputs ports (LINT-25)                           1
+
+Nets                                                              132
+    Unloaded nets (LINT-2)                                        132
+--------------------------------------------------------------------------------
+
+Warning: In design 'IDEXE_reg', cell 'C1521' does not drive any nets. (LINT-1)
+Warning: In design 'IDEXE_reg', cell 'C1522' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'B_209' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'B_210' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'B_211' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'C4045' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'C4123' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'C4205' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'C4287' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'C4370' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'C4371' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'C4372' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_f', cell 'C4373' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_25' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_26' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_27' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_28' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_29' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_30' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_31' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_32' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_33' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_34' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_35' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_36' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_37' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_38' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_39' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_40' does not drive any nets. (LINT-1)
+Warning: In design 'ALU', cell 'B_41' does not drive any nets. (LINT-1)
+Warning: In design 'top', net 'dm_addr[0]' driven by pin 'cpu/DM_addr[0]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[1]' driven by pin 'cpu/DM_addr[1]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[16]' driven by pin 'cpu/DM_addr[16]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[17]' driven by pin 'cpu/DM_addr[17]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[18]' driven by pin 'cpu/DM_addr[18]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[19]' driven by pin 'cpu/DM_addr[19]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[20]' driven by pin 'cpu/DM_addr[20]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[21]' driven by pin 'cpu/DM_addr[21]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[22]' driven by pin 'cpu/DM_addr[22]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[23]' driven by pin 'cpu/DM_addr[23]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[24]' driven by pin 'cpu/DM_addr[24]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[25]' driven by pin 'cpu/DM_addr[25]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[26]' driven by pin 'cpu/DM_addr[26]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[27]' driven by pin 'cpu/DM_addr[27]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[28]' driven by pin 'cpu/DM_addr[28]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[29]' driven by pin 'cpu/DM_addr[29]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[30]' driven by pin 'cpu/DM_addr[30]' has no loads. (LINT-2)
+Warning: In design 'top', net 'dm_addr[31]' driven by pin 'cpu/DM_addr[31]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[0]' driven by pin 'cpu/progcnt_out[0]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[1]' driven by pin 'cpu/progcnt_out[1]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[16]' driven by pin 'cpu/progcnt_out[16]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[17]' driven by pin 'cpu/progcnt_out[17]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[18]' driven by pin 'cpu/progcnt_out[18]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[19]' driven by pin 'cpu/progcnt_out[19]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[20]' driven by pin 'cpu/progcnt_out[20]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[21]' driven by pin 'cpu/progcnt_out[21]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[22]' driven by pin 'cpu/progcnt_out[22]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[23]' driven by pin 'cpu/progcnt_out[23]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[24]' driven by pin 'cpu/progcnt_out[24]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[25]' driven by pin 'cpu/progcnt_out[25]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[26]' driven by pin 'cpu/progcnt_out[26]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[27]' driven by pin 'cpu/progcnt_out[27]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[28]' driven by pin 'cpu/progcnt_out[28]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[29]' driven by pin 'cpu/progcnt_out[29]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[30]' driven by pin 'cpu/progcnt_out[30]' has no loads. (LINT-2)
+Warning: In design 'top', net 'pc[31]' driven by pin 'cpu/progcnt_out[31]' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_96' driven by pin 'cpu/alu/mult_101/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_95' driven by pin 'cpu/alu/mult_101/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_94' driven by pin 'cpu/alu/mult_101/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_93' driven by pin 'cpu/alu/mult_101/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_92' driven by pin 'cpu/alu/mult_101/Z_4' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_91' driven by pin 'cpu/alu/mult_101/Z_5' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_90' driven by pin 'cpu/alu/mult_101/Z_6' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_89' driven by pin 'cpu/alu/mult_101/Z_7' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_88' driven by pin 'cpu/alu/mult_101/Z_8' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_87' driven by pin 'cpu/alu/mult_101/Z_9' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_86' driven by pin 'cpu/alu/mult_101/Z_10' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_85' driven by pin 'cpu/alu/mult_101/Z_11' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_84' driven by pin 'cpu/alu/mult_101/Z_12' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_83' driven by pin 'cpu/alu/mult_101/Z_13' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_82' driven by pin 'cpu/alu/mult_101/Z_14' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_81' driven by pin 'cpu/alu/mult_101/Z_15' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_80' driven by pin 'cpu/alu/mult_101/Z_16' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_79' driven by pin 'cpu/alu/mult_101/Z_17' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_78' driven by pin 'cpu/alu/mult_101/Z_18' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_77' driven by pin 'cpu/alu/mult_101/Z_19' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_76' driven by pin 'cpu/alu/mult_101/Z_20' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_75' driven by pin 'cpu/alu/mult_101/Z_21' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_74' driven by pin 'cpu/alu/mult_101/Z_22' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_73' driven by pin 'cpu/alu/mult_101/Z_23' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_72' driven by pin 'cpu/alu/mult_101/Z_24' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_71' driven by pin 'cpu/alu/mult_101/Z_25' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_70' driven by pin 'cpu/alu/mult_101/Z_26' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_69' driven by pin 'cpu/alu/mult_101/Z_27' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_68' driven by pin 'cpu/alu/mult_101/Z_28' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_67' driven by pin 'cpu/alu/mult_101/Z_29' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_66' driven by pin 'cpu/alu/mult_101/Z_30' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_65' driven by pin 'cpu/alu/mult_101/Z_31' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_64' driven by pin 'cpu/alu/mult_96/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_63' driven by pin 'cpu/alu/mult_96/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_62' driven by pin 'cpu/alu/mult_96/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_61' driven by pin 'cpu/alu/mult_96/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_60' driven by pin 'cpu/alu/mult_96/Z_4' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_59' driven by pin 'cpu/alu/mult_96/Z_5' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_58' driven by pin 'cpu/alu/mult_96/Z_6' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_57' driven by pin 'cpu/alu/mult_96/Z_7' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_56' driven by pin 'cpu/alu/mult_96/Z_8' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_55' driven by pin 'cpu/alu/mult_96/Z_9' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_54' driven by pin 'cpu/alu/mult_96/Z_10' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_53' driven by pin 'cpu/alu/mult_96/Z_11' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_52' driven by pin 'cpu/alu/mult_96/Z_12' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_51' driven by pin 'cpu/alu/mult_96/Z_13' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_50' driven by pin 'cpu/alu/mult_96/Z_14' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_49' driven by pin 'cpu/alu/mult_96/Z_15' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_48' driven by pin 'cpu/alu/mult_96/Z_16' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_47' driven by pin 'cpu/alu/mult_96/Z_17' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_46' driven by pin 'cpu/alu/mult_96/Z_18' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_45' driven by pin 'cpu/alu/mult_96/Z_19' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_44' driven by pin 'cpu/alu/mult_96/Z_20' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_43' driven by pin 'cpu/alu/mult_96/Z_21' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_42' driven by pin 'cpu/alu/mult_96/Z_22' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_41' driven by pin 'cpu/alu/mult_96/Z_23' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_40' driven by pin 'cpu/alu/mult_96/Z_24' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_39' driven by pin 'cpu/alu/mult_96/Z_25' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_38' driven by pin 'cpu/alu/mult_96/Z_26' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_37' driven by pin 'cpu/alu/mult_96/Z_27' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_36' driven by pin 'cpu/alu/mult_96/Z_28' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_35' driven by pin 'cpu/alu/mult_96/Z_29' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_34' driven by pin 'cpu/alu/mult_96/Z_30' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_33' driven by pin 'cpu/alu/mult_96/Z_31' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_32' driven by pin 'cpu/alu/mult_91/Z_0' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_31' driven by pin 'cpu/alu/mult_91/Z_1' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_30' driven by pin 'cpu/alu/mult_91/Z_2' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_29' driven by pin 'cpu/alu/mult_91/Z_3' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_28' driven by pin 'cpu/alu/mult_91/Z_4' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_27' driven by pin 'cpu/alu/mult_91/Z_5' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_26' driven by pin 'cpu/alu/mult_91/Z_6' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_25' driven by pin 'cpu/alu/mult_91/Z_7' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_24' driven by pin 'cpu/alu/mult_91/Z_8' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_23' driven by pin 'cpu/alu/mult_91/Z_9' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_22' driven by pin 'cpu/alu/mult_91/Z_10' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_21' driven by pin 'cpu/alu/mult_91/Z_11' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_20' driven by pin 'cpu/alu/mult_91/Z_12' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_19' driven by pin 'cpu/alu/mult_91/Z_13' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_18' driven by pin 'cpu/alu/mult_91/Z_14' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_17' driven by pin 'cpu/alu/mult_91/Z_15' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_16' driven by pin 'cpu/alu/mult_91/Z_16' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_15' driven by pin 'cpu/alu/mult_91/Z_17' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_14' driven by pin 'cpu/alu/mult_91/Z_18' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_13' driven by pin 'cpu/alu/mult_91/Z_19' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_12' driven by pin 'cpu/alu/mult_91/Z_20' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_11' driven by pin 'cpu/alu/mult_91/Z_21' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_10' driven by pin 'cpu/alu/mult_91/Z_22' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_9' driven by pin 'cpu/alu/mult_91/Z_23' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_8' driven by pin 'cpu/alu/mult_91/Z_24' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_7' driven by pin 'cpu/alu/mult_91/Z_25' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_6' driven by pin 'cpu/alu/mult_91/Z_26' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_5' driven by pin 'cpu/alu/mult_91/Z_27' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_4' driven by pin 'cpu/alu/mult_91/Z_28' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_3' driven by pin 'cpu/alu/mult_91/Z_29' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_2' driven by pin 'cpu/alu/mult_91/Z_30' has no loads. (LINT-2)
+Warning: In design 'top', net 'cpu/alu/SYNOPSYS_UNCONNECTED_1' driven by pin 'cpu/alu/mult_91/Z_31' has no loads. (LINT-2)
+Warning: Design 'top' does not have any output ports. (LINT-25)
+Warning: In design 'SRAM_wrapper', port 'RST' is not connected to any nets. (LINT-28)
+Warning: In design 'ForwardingUnit', port 'EXE_is_float' is not connected to any nets. (LINT-28)
+Warning: In design 'ForwardingUnit', port 'MEM_is_float' is not connected to any nets. (LINT-28)
+Warning: In design 'ForwardingUnit', port 'WB_is_float' is not connected to any nets. (LINT-28)
+Warning: In design 'ImmGen', input port 'immediate[31]' is connected directly to output port 'imm[31]'. (LINT-29)
+Warning: In design 'IFID_reg', output port 'read_reg1[4]' is connected directly to output port 'immediate[19]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg1[3]' is connected directly to output port 'immediate[18]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg1[2]' is connected directly to output port 'immediate[17]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg1[1]' is connected directly to output port 'immediate[16]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg1[0]' is connected directly to output port 'immediate[15]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg2[4]' is connected directly to output port 'immediate[24]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg2[3]' is connected directly to output port 'immediate[23]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg2[2]' is connected directly to output port 'immediate[22]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg2[1]' is connected directly to output port 'immediate[21]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'read_reg2[0]' is connected directly to output port 'immediate[20]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'opcode[6]' is connected directly to output port 'immediate[6]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'opcode[5]' is connected directly to output port 'immediate[5]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'opcode[4]' is connected directly to output port 'immediate[4]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'opcode[3]' is connected directly to output port 'immediate[3]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'opcode[2]' is connected directly to output port 'immediate[2]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'opcode[1]' is connected directly to output port 'immediate[1]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'opcode[0]' is connected directly to output port 'immediate[0]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'write_addr[4]' is connected directly to output port 'immediate[11]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'write_addr[3]' is connected directly to output port 'immediate[10]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'write_addr[2]' is connected directly to output port 'immediate[9]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'write_addr[1]' is connected directly to output port 'immediate[8]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'write_addr[0]' is connected directly to output port 'immediate[7]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[31]' is connected directly to output port 'funct7[6]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[30]' is connected directly to output port 'funct7[5]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[29]' is connected directly to output port 'funct7[4]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[28]' is connected directly to output port 'funct7[3]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[27]' is connected directly to output port 'funct7[2]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[26]' is connected directly to output port 'funct7[1]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[25]' is connected directly to output port 'funct7[0]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[14]' is connected directly to output port 'funct3[2]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[13]' is connected directly to output port 'funct3[1]'. (LINT-31)
+Warning: In design 'IFID_reg', output port 'immediate[12]' is connected directly to output port 'funct3[0]'. (LINT-31)
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CEB' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'WEB' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[31]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[30]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[29]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[28]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[27]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[26]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[25]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[24]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[23]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[22]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[21]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[20]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[19]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[18]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[17]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[16]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[15]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[14]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[13]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[12]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[11]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[10]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[9]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[8]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[7]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[6]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[5]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[4]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[3]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[2]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[1]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'BWEB[0]' is connected to logic 1. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[31]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[30]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[29]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[28]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[27]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[26]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[25]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[24]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[23]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[22]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[21]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[20]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[19]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[18]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[17]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[16]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[15]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[14]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[13]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[12]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[11]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[10]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[9]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[8]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[7]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[6]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[5]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[4]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[3]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[2]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[1]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'IM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DI[0]' is connected to logic 0. 
+Warning: In design 'top', a pin on submodule 'DM1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CEB' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[31]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[30]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[29]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[28]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[27]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[26]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[25]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[24]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[23]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[22]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[21]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[20]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[19]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[18]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[17]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[16]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[15]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[14]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[13]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[12]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[11]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[10]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[9]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[8]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[7]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[6]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[5]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[4]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[3]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[2]' is connected to logic 1. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[1]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[0]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'IF_pc_mux3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'C[0]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[31]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[30]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[29]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[28]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[27]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[26]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[25]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[24]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[23]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[22]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[21]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[20]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[19]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[18]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[17]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[16]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[15]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[14]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[13]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[12]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[11]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[10]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[9]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[8]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[7]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[6]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[5]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[4]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[3]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[2]' is connected to logic 1. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[1]' is connected to logic 0. 
+Warning: In design 'CPU', a pin on submodule 'PC_4_adder' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in2[0]' is connected to logic 0. 
+Warning: In design 'top', the same net is connected to more than one pin on submodule 'IM1'. (LINT-33)
+   Net 'n_Logic0_' is connected to pins 'CEB', 'DI[31]'', 'DI[30]', 'DI[29]', 'DI[28]', 'DI[27]', 'DI[26]', 'DI[25]', 'DI[24]', 'DI[23]', 'DI[22]', 'DI[21]', 'DI[20]', 'DI[19]', 'DI[18]', 'DI[17]', 'DI[16]', 'DI[15]', 'DI[14]', 'DI[13]', 'DI[12]', 'DI[11]', 'DI[10]', 'DI[9]', 'DI[8]', 'DI[7]', 'DI[6]', 'DI[5]', 'DI[4]', 'DI[3]', 'DI[2]', 'DI[1]', 'DI[0]'.
+Warning: In design 'top', the same net is connected to more than one pin on submodule 'IM1'. (LINT-33)
+   Net 'n_Logic1_' is connected to pins 'WEB', 'BWEB[31]'', 'BWEB[30]', 'BWEB[29]', 'BWEB[28]', 'BWEB[27]', 'BWEB[26]', 'BWEB[25]', 'BWEB[24]', 'BWEB[23]', 'BWEB[22]', 'BWEB[21]', 'BWEB[20]', 'BWEB[19]', 'BWEB[18]', 'BWEB[17]', 'BWEB[16]', 'BWEB[15]', 'BWEB[14]', 'BWEB[13]', 'BWEB[12]', 'BWEB[11]', 'BWEB[10]', 'BWEB[9]', 'BWEB[8]', 'BWEB[7]', 'BWEB[6]', 'BWEB[5]', 'BWEB[4]', 'BWEB[3]', 'BWEB[2]', 'BWEB[1]', 'BWEB[0]'.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IF_adder'. (LINT-33)
+   Net 'n_Logic0_' is connected to pins 'in2[31]', 'in2[30]'', 'in2[29]', 'in2[28]', 'in2[27]', 'in2[26]', 'in2[25]', 'in2[24]', 'in2[23]', 'in2[22]', 'in2[21]', 'in2[20]', 'in2[19]', 'in2[18]', 'in2[17]', 'in2[16]', 'in2[15]', 'in2[14]', 'in2[13]', 'in2[12]', 'in2[11]', 'in2[10]', 'in2[9]', 'in2[8]', 'in2[7]', 'in2[6]', 'in2[5]', 'in2[4]', 'in2[3]', 'in2[1]', 'in2[0]'.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'wr_addr[4]' is connected to pins 'write_addr[4]', 'f_write_addr[4]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'wr_addr[3]' is connected to pins 'write_addr[3]', 'f_write_addr[3]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'wr_addr[2]' is connected to pins 'write_addr[2]', 'f_write_addr[2]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'wr_addr[1]' is connected to pins 'write_addr[1]', 'f_write_addr[1]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'wr_addr[0]' is connected to pins 'write_addr[0]', 'f_write_addr[0]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r1[4]' is connected to pins 'rd_r1_addr[4]', 'frd1_addr[4]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r1[3]' is connected to pins 'rd_r1_addr[3]', 'frd1_addr[3]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r1[2]' is connected to pins 'rd_r1_addr[2]', 'frd1_addr[2]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r1[1]' is connected to pins 'rd_r1_addr[1]', 'frd1_addr[1]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r1[0]' is connected to pins 'rd_r1_addr[0]', 'frd1_addr[0]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r2[4]' is connected to pins 'rd_r2_addr[4]', 'frd2_addr[4]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r2[3]' is connected to pins 'rd_r2_addr[3]', 'frd2_addr[3]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r2[2]' is connected to pins 'rd_r2_addr[2]', 'frd2_addr[2]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r2[1]' is connected to pins 'rd_r2_addr[1]', 'frd2_addr[1]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'IDEXE_pipe'. (LINT-33)
+   Net 'rd_r2[0]' is connected to pins 'rd_r2_addr[0]', 'frd2_addr[0]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'PC_4_adder'. (LINT-33)
+   Net 'n_Logic0_' is connected to pins 'in2[31]', 'in2[30]'', 'in2[29]', 'in2[28]', 'in2[27]', 'in2[26]', 'in2[25]', 'in2[24]', 'in2[23]', 'in2[22]', 'in2[21]', 'in2[20]', 'in2[19]', 'in2[18]', 'in2[17]', 'in2[16]', 'in2[15]', 'in2[14]', 'in2[13]', 'in2[12]', 'in2[11]', 'in2[10]', 'in2[9]', 'in2[8]', 'in2[7]', 'in2[6]', 'in2[5]', 'in2[4]', 'in2[3]', 'in2[1]', 'in2[0]'.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'alu_contrl'. (LINT-33)
+   Net 'exe_funct7[6]' is connected to pins 'funct7[6]', 'CSRimm[11]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'alu_contrl'. (LINT-33)
+   Net 'exe_funct7[5]' is connected to pins 'funct7[5]', 'CSRimm[10]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'alu_contrl'. (LINT-33)
+   Net 'exe_funct7[4]' is connected to pins 'funct7[4]', 'CSRimm[9]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'alu_contrl'. (LINT-33)
+   Net 'exe_funct7[3]' is connected to pins 'funct7[3]', 'CSRimm[8]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'alu_contrl'. (LINT-33)
+   Net 'exe_funct7[2]' is connected to pins 'funct7[2]', 'CSRimm[7]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'alu_contrl'. (LINT-33)
+   Net 'exe_funct7[1]' is connected to pins 'funct7[1]', 'CSRimm[6]''.
+Warning: In design 'CPU', the same net is connected to more than one pin on submodule 'alu_contrl'. (LINT-33)
+   Net 'exe_funct7[0]' is connected to pins 'funct7[0]', 'CSRimm[5]''.
+1
+uniquify
+Information: Uniquified 3 instances of design 'Adder'. (OPT-1056)
+Information: Uniquified 6 instances of design 'Mux2to1'. (OPT-1056)
+Information: Uniquified 5 instances of design 'Mux3to1'. (OPT-1056)
+Information: Uniquified 2 instances of design 'SRAM_wrapper'. (OPT-1056)
+Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
+1
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_max_area 0
+1
+#   Synthesize circuit
+compile -map_effort high -area_effort high
+Error: Could not read the following target libraries:
+N16ADFP_StdCellss0p72vm40c.db N16ADFP_StdCellff0p88v125c.db N16ADFP_StdIOss0p72v1p62v125c.db N16ADFP_StdIOff0p88v1p98vm40c.db 
+ (UIO-3)
+0
+#compile -map_effort high -area_effort high -inc
+#   Create Report
+#timing report(setup time)
+report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 4 -sort_by group > ../syn/timing_max_rpt.txt
+#timing report(hold time)
+report_timing -path full -delay min -nworst 1 -max_paths 1 -significant_digits 4 -sort_by group > ../syn/timing_min_rpt.txt
+#area report
+report_area -nosplit > ../syn/area_rpt.txt
+#report power
+report_power -analysis_effort low > ../syn/power_rpt.txt
+#   Save syntheized file
+write -hierarchy -format verilog -output {../syn/top_syn.v}
+Writing verilog file '/home/user2/avsd24/avsd24130/P76131416/syn/top_syn.v'.
+Warning: Module Mux3to1_4 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Module IFID_reg contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module HazardDetectUnit contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Regfile_f contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Regfile contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module ImmGen contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module IDEXE_reg contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module ControlUnit contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux2to1_5 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module ALU_f contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module ALU contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module ALUCtrl contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module ForwardingUnit contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module BranchCtrl contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module EXEMEM_reg contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module MEMWB_reg contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux2to1_0 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux2to1_1 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux2to1_2 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux2to1_3 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux2to1_4 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux3to1_0 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux3to1_1 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux3to1_2 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+Warning: Module Mux3to1_3 contains unmapped components.  The output netlist might not be read back into the system. (VO-12)
+1
+#write_sdf -version 1.0 -context verilog {../syn/top_syn.sdf}
+write_sdf -version 3.0 -context verilog {../syn/top_syn.sdf}
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/user2/avsd24/avsd24130/P76131416/syn/top_syn.sdf'. (WT-3)
+Warning: Design contains black-box components.  These cells will have no timing information. (WT-7)
+1
+1
+dc_shell> gui_start
+dc_shell> Current design is 'top'.
+4.1
+Current design is 'top'.
+dc_shell> compile -exact_map
+Error: Could not read the following target libraries:
+N16ADFP_StdCellss0p72vm40c.db N16ADFP_StdCellff0p88v125c.db N16ADFP_StdIOss0p72v1p62v125c.db N16ADFP_StdIOff0p88v1p98vm40c.db 
+ (UIO-3)
+0
+dc_shell> link
+Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
+Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
+
+  Linking design 'top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (33 designs)              /home/user2/avsd24/avsd24130/P76131416/src/top.db, etc
+  SRAM_ss0p72v0p72vm40c_100a (library)
+                              /home/user2/avsd24/avsd24130/P76131416/sim/SRAM/SRAM_ss0p72v0p72vm40c_100a.db
+  SRAM_ff0p88v0p88v125c_100a (library)
+                              /home/user2/avsd24/avsd24130/P76131416/sim/SRAM/SRAM_ff0p88v0p88v125c_100a.db
+  dw_foundation.sldb (library)
+                              /usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb
+
+dc_shell> compile -exact_map
+Error: Could not read the following target libraries:
+N16ADFP_StdCellss0p72vm40c.db N16ADFP_StdCellff0p88v125c.db N16ADFP_StdIOss0p72v1p62v125c.db N16ADFP_StdIOff0p88v1p98vm40c.db 
+ (UIO-3)
+0
+dc_shell> dc_shell> quit
+
+Thank you...

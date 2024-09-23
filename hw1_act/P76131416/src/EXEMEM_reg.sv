@@ -43,13 +43,13 @@ always_ff @( posedge clk or posedge reset) begin
         MEM_funct3 <= 3'd0;
         MEM_pc <= 32'd0;
         MEM_memory_in <= 32'd0;
-        MEM_RDSrc <= 0;
-        MEM_MemtoReg <= 0;
+        MEM_RDSrc <= 1'b0;
+        MEM_MemtoReg <= 1'b0;
         MEM_MemWrite <= 32'd0;
-        MEM_MemRead <= 0;
-        MEM_RegWrite <= 0;
-        MEM_f_RegWrite <= 0;
-        MEM_is_float <= 0;
+        MEM_MemRead <= 1'b0;
+        MEM_RegWrite <= 1'b0;
+        MEM_f_RegWrite <= 1'b0;
+        MEM_is_float <= 1'b0;
     end else begin
         if(EXE_MenWrite)begin                   //store 需要手動將資料移到對應位置
             case(EXE_funct3)
@@ -61,15 +61,18 @@ always_ff @( posedge clk or posedge reset) begin
                         end
                         2'd1 : begin
                             MEM_MemWrite <= 32'b11111111111111110000000011111111;
-                            MEM_memory_in <= EXE_memory_in << 8;            //move data
+                            MEM_memory_in <= {16'b0 ,EXE_memory_in[7:0] ,8'b0};
+                            // MEM_memory_in <= EXE_memory_in << 8;            //move data             ,sign bit could be lost,w
                         end
                         2'd2 : begin
                             MEM_MemWrite <= 32'b11111111000000001111111111111111;
-                            MEM_memory_in <= EXE_memory_in << 16;
+                            MEM_memory_in <= {8'b0, EXE_memory_in[7:0], 16'b0};
+                            // MEM_memory_in <= EXE_memory_in << 16;           //sign bit could be lost,w
                         end
                         default : begin
                             MEM_MemWrite <= 32'b00000000111111111111111111111111;
-                            MEM_memory_in <= EXE_memory_in << 24;
+                            MEM_memory_in <= {EXE_memory_in[7:0], 24'b0};
+                            // MEM_memory_in <= EXE_memory_in << 24;           //sign bit could be lost,w
                         end
                     endcase
                 end
@@ -81,7 +84,8 @@ always_ff @( posedge clk or posedge reset) begin
                         end
                         default : begin
                             MEM_MemWrite <= 32'b00000000000000001111111111111111;
-                            MEM_memory_in <= EXE_memory_in << 16;
+                            MEM_memory_in <= {EXE_memory_in[15:0], 16'b0};
+                            // MEM_memory_in <= EXE_memory_in << 16;           //sign bit could be lost,w
                         end
                     endcase
                 end

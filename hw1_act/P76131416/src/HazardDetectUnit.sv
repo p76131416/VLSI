@@ -17,24 +17,24 @@ module HazardDetectUnit (               //add float number judgement
 
 always_comb begin
     if(Branch_Ctrl != 2'd0)begin           //branch not equ to pc+4, stall two cycles
-        PC_write_en = 1;
-        IFID_flush = 1;
-        Control_flush = 1;
-        IFID_write = 1;
+        PC_write_en = 1'b1;
+        IFID_flush = 1'b1;
+        Control_flush = 1'b1;
+        IFID_write = 1'b1;
         CSR_type = 2'd0;
     end
     else if((EXE_MemRead && ((read_reg1_addr == EXE_write_addr) || (read_reg2_addr == EXE_write_addr))) || (EXE_MemRead && ((read_reg1_addr == EXE_f_write_addr) || (read_reg2_addr == EXE_f_write_addr)) && (ID_is_float & EXE_is_float)))begin       //load-use stall one cycle (there're forwarding)
-        PC_write_en = 0;
-        IFID_flush = 0;
-        Control_flush = 1;
-        IFID_write = 0;
+        PC_write_en = 1'b0;
+        IFID_flush = 1'b0;
+        Control_flush = 1'b1;
+        IFID_write = 1'b0;
         CSR_type = 2'd1;
     end
     else begin
-        IFID_write = 1;
-        PC_write_en = 1;
-        IFID_flush = 0;
-        Control_flush = 0;
+        IFID_write = 1'b1;
+        PC_write_en = 1'b1;
+        IFID_flush = 1'b0;
+        Control_flush = 1'b0;
         CSR_type = 2'd2;
     end
 end

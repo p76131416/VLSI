@@ -12,6 +12,7 @@ module ALU (
 logic [63:0] mul;
 
 always_comb begin
+    mul = 64'd0;
     case (control)
         5'd0 : begin
             out = in1 + in2;
@@ -26,11 +27,11 @@ always_comb begin
             zero = 1'd0;
         end
         5'd3 : begin 
-            out = ($signed(in1) < $signed(in2)) ? 1 : 0;
+            out = ($signed(in1) < $signed(in2)) ? 1'b1 : 1'b0;
             zero = 1'd0;
         end
         5'd4 : begin 
-            out = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
+            out = ($unsigned(in1) < $unsigned(in2)) ? 1'b1 : 1'b0;
             zero = 1'd0;
         end
         5'd5 : begin 
@@ -54,27 +55,27 @@ always_comb begin
             zero = 1'd0;
         end
         5'd10 : begin 
-            zero = (in1 == in2) ? 1 : 0;
+            zero = (in1 == in2) ? 1'b1 : 1'b0;
             out = 32'd0;
         end
         5'd11 : begin 
-            zero = (in1 != in2) ? 1 : 0;
+            zero = (in1 != in2) ? 1'b1 : 1'b0;
             out = 32'd0;
         end
         5'd12 : begin 
-            zero = ($signed(in1) < $signed(in2)) ? 1 : 0;
+            zero = ($signed(in1) < $signed(in2)) ? 1'b1 : 1'b0;
             out = 32'd0;
         end
         5'd13 : begin 
-            zero = ($signed(in1) >= $signed(in2)) ? 1 : 0;
+            zero = ($signed(in1) >= $signed(in2)) ? 1'b1 : 1'b0;
             out = 32'd0;
         end
         5'd14 : begin 
-            zero = ($unsigned(in1) < $unsigned(in2)) ? 1 : 0;
+            zero = ($unsigned(in1) < $unsigned(in2)) ? 1'b1 : 1'b0;
             out = 32'd0;
         end
         5'd15 : begin
-            zero = ($unsigned(in1) >= $unsigned(in2)) ? 1 : 0;
+            zero = ($unsigned(in1) >= $unsigned(in2)) ? 1'b1 : 1'b0;
             out = 32'd0;
         end
         5'd16 : begin
@@ -88,17 +89,17 @@ always_comb begin
         end
         5'd18 : begin
             zero = 1'd0;
-            mul = $signed(in1)*$signed(in2);
+            mul = $signed(in1)*$signed(in2);                //unequal length
             out = mul[63:32];
         end
         5'd19 : begin
             zero = 1'd0;
-            mul = $signed(in1)*$signed({1'b0,in2});
+            mul = $signed(in1)*$signed({32'b0,in2});       //unequal length
             out = mul[63:32];
         end
         5'd20 : begin
             zero = 1'd0;
-            mul = $unsigned(in1)*$unsigned(in2);
+            mul = $unsigned({32'd0, in1})*$unsigned({32'd0, in2});            //unequal length
             out = mul[63:32];
         end
         5'd21 : begin

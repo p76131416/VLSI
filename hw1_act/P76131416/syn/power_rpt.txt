@@ -1,0 +1,54 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : top
+Version: O-2018.06
+Date   : Mon Sep 23 17:17:08 2024
+****************************************
+
+
+Library(s) Used:
+
+    gtech (File: /usr/cad/synopsys/synthesis/cur/libraries/syn/gtech.db)
+    SRAM_ss0p72v0p72vm40c_100a (File: /home/user2/avsd24/avsd24130/P76131416/sim/SRAM/SRAM_ss0p72v0p72vm40c_100a.db)
+
+
+Operating Conditions: ssgnp0p72v0p72vm40c   Library: SRAM_ss0p72v0p72vm40c_100a
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.72 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  = 590.9103 uW  (100%)
+  Net Switching Power  = 227.6137 nW    (0%)
+                         ---------
+Total Dynamic Power    = 591.1379 uW  (100%)
+
+Cell Leakage Power     = 772.3019 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.5909            0.0000            0.7723            0.5917  (  99.96%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000        2.2761e-04            0.0000        2.2761e-04  (   0.04%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+--------------------------------------------------------------------------------------------------
+Total              0.5909 mW     2.2761e-04 mW         0.7723 uW         0.5919 mW
+1

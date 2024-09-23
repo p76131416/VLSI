@@ -33,7 +33,6 @@ PWD=/home/WangYanTing/VLSI/hw1_act/P76131416/build
 LOGNAME=WangYanTing
 XDG_SESSION_TYPE=tty
 MANPATH=:/home/nfs_cad/synopsys/synthesis/cur/doc/syn/man
-MAKEOVERRIDES=${-*-command-variables-*-}
 MGC_TMPDIR=/tmp
 OA_HOME=/usr/cad/cadence/INNOVUS/cur/oa
 MOTD_SHOWN=pam
@@ -46,9 +45,8 @@ LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd
 SYNTHESIS=/home/nfs_cad/synopsys/synthesis/cur
 SSH_CONNECTION=192.168.102.22 59278 140.116.245.124 22
 MFLAGS=
-FSDB=2
 LESSCLOSE=/usr/bin/lesspipe %s %s
-MAKEFLAGS= -- FSDB=2
+MAKEFLAGS=
 XDG_SESSION_CLASS=user
 TERM=xterm
 LC_IDENTIFICATION=lzh_TW
@@ -86,77 +84,24 @@ Runtime command line arguments:
 argv[0]=irun
 argv[1]=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
 argv[2]=+incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
-argv[3]=+define+prog3+FSDB_ALL
+argv[3]=+define+prog0
 argv[4]=-define
 argv[5]=CYCLE=10.0
 argv[6]=-define
 argv[7]=MAX=100000
 argv[8]=+access+r
 argv[9]=+nc64bit
-argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog3
+argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
 argv[11]=+rdcycle=1
 argv[12]=+notimingcheck
-98 profile - 100
-          CPU/Mem usage: 0.050 sys,  0.050 user,  93.13M sys,  0.00M vm
-99 VC callback profile - scalar:0 vector:0
-100 Thu Sep 19 18:27:31 2024
-101 pliAppInit
-102 FSDB_GATE is disabled.
-103 Enable Parallel Dumping.
-104 pliAppMiscSet: New Sim Round
-105 pliEntryInit
-106 LIBSSCORE=found /home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
-107 argv[0]: top.fsdb
-108 argv[0]: +struct
-109 argv[1]: +mda
-110 argv[2]: (handle)0x3ebf4f8 top_tb.TOP
-111 FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
-112 (C) 1996 - 2020 by Synopsys, Inc.
-113 sps_call_fsdbDumpfile at 0 : /home/WangYanTing/VLSI/hw1_act/P76131416/sim/top_tb.sv(113)
-114 argv[0]: top.fsdb
-115 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-116 *Verdi* : Create FSDB file 'top.fsdb'
-117 sps_call_fsdbDumpvars at 0 : /home/WangYanTing/VLSI/hw1_act/P76131416/sim/top_tb.sv(114)
-118 argv[0]: +struct
-119 argv[1]: +mda
-120 argv[2]: (handle)0x3ebf4d8 top_tb.TOP
-121 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
-122 *Verdi* : Enable +struct and +mda dumping.
-123 Cell instance `top_tb.TOP.IM1.i_SRAM'.
-124 *Verdi* : End of traversing.
-125 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.100 sys,  0.670 user,  203.15M sys,  0.00M vm
-                   incr: 0.040 sys,  0.610 user,  26.84M sys,  0.00M vm
-                   accu: 0.040 sys,  0.610 user,  26.84M sys,  0.00M vm
-              accu incr: 0.040 sys,  0.610 user,  26.84M sys,  0.00M vm
-
-          Count usage: 132863 var,  131956 idcode,  131964 callback
-                 incr: 132863 var,  131956 idcode,  131964 callback
-                 accu: 132863 var,  131956 idcode,  131964 callback
-            accu incr: 132863 var,  131956 idcode,  131964 callback
-126 VC callback profile - scalar:0 vector:0
-127 Thu Sep 19 18:27:32 2024
-128 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.110 sys,  1.070 user,  212.57M sys,  0.00M vm
-                   incr: 0.010 sys,  0.400 user,  9.42M sys,  0.00M vm
-                   accu: 0.050 sys,  1.010 user,  36.26M sys,  0.00M vm
-              accu incr: 0.010 sys,  0.400 user,  9.42M sys,  0.00M vm
-
-          Count usage: 132863 var,  131956 idcode,  131964 callback
-                 incr: 0 var,  0 idcode,  0 callback
-                 accu: 132863 var,  131956 idcode,  131964 callback
-            accu incr: 0 var,  0 idcode,  0 callback
-129 VC callback profile - scalar:641 vector:131315
-130 Thu Sep 19 18:27:32 2024
-131 End of simulation at 76570000
-132 VC callback profile - scalar:1020979 vector:775693
-133 Thu Sep 19 18:27:32 2024
-134 Begin FSDB profile info:
-135 FSDB Writer : bc1(1020979) bcn(775693) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.288659) io wait(0.000000) theadpool wait(0.000000)
-FSDB Writer cpu time : MT Compression : 0
-136 End FSDB profile info
-137 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:9 BlockUsed:12
-138                        ProduceTime:1.871218270 ConsumerTime:0.283371049 Buffer:64MB
-139 SimExit
-140 Sim process exit
+96 profile - 100
+          CPU/Mem usage: 0.080 sys,  0.030 user,  93.13M sys,  0.00M vm
+97 VC callback profile - scalar:0 vector:0
+98 Mon Sep 23 21:28:05 2024
+99 pliAppInit
+100 FSDB_GATE is disabled.
+101 Enable Parallel Dumping.
+102 pliAppMiscSet: New Sim Round
+103 pliEntryInit
+104 LIBSSCORE=found /home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
+105 Sim process exit

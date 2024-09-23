@@ -2,10 +2,10 @@
 // File created by:  irun
 // Do not modify this file
 //
-+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog3
++prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
 +rdcycle=1
 +incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
-+define+prog3+FSDB_ALL
++define+prog0
 +access+r
 +nc64bit
 +notimingcheck

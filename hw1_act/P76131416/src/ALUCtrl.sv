@@ -24,7 +24,6 @@ always_comb begin
                         3'b101 : ALUContrl = 5'b00110;
                         3'b110 : ALUContrl = 5'b01000;
                         3'b111 : ALUContrl = 5'b01001;
-                        default : ALUContrl = 5'b00000;
                     endcase
                 end
                 7'b0100000 : begin
@@ -52,14 +51,13 @@ always_comb begin
                 3'b011 : ALUContrl = 5'b00100;
                 3'b100 : ALUContrl = 5'b00101;
                 3'b101 : begin
-                    if(!funct7)
-                        ALUContrl = 5'b00110;
-                    else
+                    if(funct7 == 7'b0100000)
                         ALUContrl = 5'b00111;
+                    else
+                        ALUContrl = 5'b00110;
                 end
                 3'b110 : ALUContrl = 5'b01000;
                 3'b111 : ALUContrl = 5'b01001;
-                default: ALUContrl = 5'b00000;
             endcase
         end
         3'd2 : begin                //B-type
@@ -70,7 +68,6 @@ always_comb begin
                 3'b101 : ALUContrl = 5'b01101;
                 3'b110 : ALUContrl = 5'b01110;
                 3'b111 : ALUContrl = 5'b01111;
-                default: ALUContrl = 5'b00000;
             endcase
         end
         3'd3 : begin                //LUI
