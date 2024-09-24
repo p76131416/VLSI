@@ -21,6 +21,8 @@ module IDEXE_reg (
     input MemRead,
     input RegWrite,
     input [1:0] Branch,
+    input im_stall,
+    input dm_stall,
 
     output logic [31:0] EXE_pc_out,
     output logic [31:0] EXE_rd_reg1_data,

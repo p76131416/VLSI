@@ -12,6 +12,8 @@ module EXEMEM_reg (
     input EXE_MenWrite,
     input EXE_MemRead,
     input EXE_RegWrite,
+    input im_stall,
+    input dm_stall,
 
     output logic [31:0] MEM_ALU_out,
     output logic [4:0] MEM_write_addr,
@@ -21,7 +23,8 @@ module EXEMEM_reg (
 
     output logic MEM_RDSrc,
     output logic MEM_MemtoReg,
-    output logic [3:0] MEM_MenWrite,
+    output logic [3:0] MEM_MenWrite_type,
+    output logic MEM_MemWrite,
     output logic MEM_MemRead,
     output logic MEM_RegWrite,
     //output logic DM_cs
@@ -36,29 +39,31 @@ always_ff @( posedge clk or posedge reset) begin
         MEM_memory_in <= 32'd0;
         MEM_RDSrc <= 0;
         MEM_MemtoReg <= 0;
-        MEM_MenWrite <= 0;
+        MEM_MenWrite_type <= 0;
         MEM_MemRead <= 0;
         MEM_RegWrite <= 0;
+        MEM_MemWrite <= 0;
         //DM_cs <= 0;
     end else begin
         if(EXE_MenWrite)begin                   //store 需要手動將資料移到對應位置
+            MEM_MemWrite <= 1'b1;
             case(EXE_funct3)
                 3'b000 : begin      //SB
                     case(ALU_out[1:0])
                         2'd0 : begin
-                            MEM_MenWrite <= 4'b1110;
+                            MEM_MenWrite_type <= 4'b1110;
                             MEM_memory_in <= EXE_memory_in;
                         end
                         2'd1 : begin
-                            MEM_MenWrite <= 4'b1101;
+                            MEM_MenWrite_type <= 4'b1101;
                             MEM_memory_in <= EXE_memory_in << 8;            //move data
                         end
                         2'd2 : begin
-                            MEM_MenWrite <= 4'b1011;
+                            MEM_MenWrite_type <= 4'b1011;
                             MEM_memory_in <= EXE_memory_in << 16;
                         end
                         default : begin
-                            MEM_MenWrite <= 4'b0111;
+                            MEM_MenWrite_type <= 4'b0111;
                             MEM_memory_in <= EXE_memory_in << 24;
                         end
                     endcase
@@ -66,23 +71,25 @@ always_ff @( posedge clk or posedge reset) begin
                 3'b001 : begin      //SH
                     case (ALU_out[1])
                         1'd0 : begin
-                            MEM_MenWrite <= 4'b1100;
+                            MEM_MenWrite_type <= 4'b1100;
                             MEM_memory_in <= EXE_memory_in;
                         end
                         default : begin
-                            MEM_MenWrite <= 4'b0011;
+                            MEM_MenWrite_type <= 4'b0011;
                             MEM_memory_in <= EXE_memory_in << 16;
                         end
                     endcase
                 end
                 default : begin      //SW
-                    MEM_MenWrite <= 4'b0000;
+                    MEM_MenWrite_type <= 4'b0000;
                     MEM_memory_in <= EXE_memory_in;
                 end
             endcase
         end
-        else 
-            MEM_MenWrite <= 4'b1111;
+        else begin
+            MEM_MenWrite_type <= 4'b1111;
+            MEM_MemWrite <= 1'b0;
+        end
 
         //DM_cs <= EXE_MemRead | EXE_MenWrite;
         MEM_funct3 <= EXE_funct3;

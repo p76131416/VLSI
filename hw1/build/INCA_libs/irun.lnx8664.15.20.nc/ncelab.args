@@ -2,9 +2,9 @@
 // File created by:  irun
 // Do not modify this file
 //
-+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog1
++prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog3
 +incdir+/home/WangYanTing/VLSI/hw1/./src+/home/WangYanTing/VLSI/hw1/./include+/home/WangYanTing/VLSI/hw1/./sim
-+define+prog1+FSDB
++define+prog3
 +access+r
 +nc64bit
 -ACCESS

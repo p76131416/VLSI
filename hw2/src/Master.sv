@@ -4,6 +4,17 @@ module Master (
     input                                   clk          ,
     input                                   reset        ,
 
+    //from cpu
+    input logic                             READ         ;
+    input logic                             WRITE        ;
+    input logic [`AXI_STRB_BITS-1:0]        WRITE_TYPE   ;
+    input logic [`AXI_ADDR_BITS-1:0]        ADDR_IN      ;
+    input logic [`AXI_DATA_BITS-1:0]        DATA_IN      ;
+
+    //to cpu
+    output logic [`AXI_DATA_BITS-1:0]       DATA_OUT     ;
+    output logic                            STALL        ;
+
     // Read address
     output logic [`AXI_IDS_BITS-1:0]        ARID         ,
     output logic [`AXI_ADDR_BITS-1:0]       ARADDR       ,
@@ -41,5 +52,7 @@ module Master (
     input logic                             BVALID       ,
     output logic                            BREADY       
 );
-    
+
+
+
 endmodule

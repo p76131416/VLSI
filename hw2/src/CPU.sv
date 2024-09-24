@@ -25,21 +25,17 @@ module CPU (
     
     //MEM out
     input [31:0] DM_DO,
-    output DM_OE,
+    output Read,
+    output Write,
     output [3:0] DM_WEB,
     output [31:0] DM_addr,
     output [31:0] DM_DI,
-    output DM_cs
+    output DM_cs,
 
     //stall
     input IM_stall,
     input DM_stall
 );
-
-//stall signal
-wire IDEXE_stall;
-wire EXEMEM_stall;
-wire MEMWB_stall;
 
 //IF wire
 wire PC_write_enable;       //PC write or not
@@ -126,6 +122,8 @@ Program_counter PC(
 .reset(rst),
 .Write_en(PC_write_enable),
 .pc_in(PC_in),
+.im_stall(IM_stall),
+.dm_stall(DM_stall),
 
 .pc_out(progcnt_out)
 );
@@ -153,6 +151,8 @@ IFID_reg IFID_pipe(
 .instruction(IM_instr),
 .pc(progcnt_out),
 .IFID_write(IFID_write),
+.im_stall(IM_stall),
+.dm_stall(DM_stall),
 
 .ID_pc_out(id_pc),
 .read_reg1(rd_r1),
@@ -171,17 +171,12 @@ HazardDetectUnit Hazard(
 .read_reg1_addr(rd_r1),
 .read_reg2_addr(rd_r2),
 .EXE_write_addr(exe_write_addr),
-.Branch_Ctrl(exe_branchCtrl),
-.IM_stall(IM_stall),
-.DM_stall(DM_stall),
+.Branch_Ctrl(exe_branchCtrl)
 
 .IFID_write(IFID_write),
 .PC_write_en(PC_write_enable),
 .IFID_flush(ifid_flush),
-.Control_flush(ctrl_flush),
-.IDEXE_stall(IDEXE_stall),
-.EXEMEM_stall(EXEMEM_stall),
-.MEMWB_stall(MEMWB_stall)
+.Control_flush(ctrl_flush)
 );
 
 //IF control end
@@ -233,6 +228,8 @@ IDEXE_reg IDEXE_pipe(
 .MemRead(id_MemRead),
 .RegWrite(id_RegWrite),
 .Branch(id_Branch),
+.im_stall(IM_stall),
+.dm_stall(DM_stall),
 
 .EXE_pc_out(exe_pc_out),
 .EXE_rd_reg1_data(exe_rd_reg1_data),
@@ -391,7 +388,7 @@ Mux2to1 mem_mux2(
 .C(mem_rd_data)
 );
 assign DM_addr = mem_ALU_out;
-assign DM_OE = mem_MemRead;
+assign Read = mem_MemRead;
 assign DM_DI = mem_memory_in;
 assign DM_WEB = mem_MenWrite;
 
@@ -409,6 +406,8 @@ EXEMEM_reg EXEMEM_pipe(
 .EXE_MenWrite(exe_MenWrite),
 .EXE_MemRead(exe_MemRead),
 .EXE_RegWrite(exe_RegWrite),
+.im_stall(IM_stall),
+.dm_stall(DM_stall),
 
 .MEM_ALU_out(mem_ALU_out),
 .MEM_write_addr(mem_write_addr),
@@ -418,7 +417,8 @@ EXEMEM_reg EXEMEM_pipe(
 
 .MEM_RDSrc(mem_RDSrc),
 .MEM_MemtoReg(mem_MemtoReg),
-.MEM_MenWrite(mem_MenWrite),
+.MEM_MenWrite_type(mem_MenWrite),
+.MEM_MemWrite(Write),
 .MEM_MemRead(mem_MemRead),
 .MEM_RegWrite(mem_RegWrite),
 .DM_cs(DM_cs)
@@ -450,6 +450,8 @@ MEMWB_reg MEMWB_pipe(
 
 .MEM_RegWrite(mem_RegWrite),
 .MEM_MemtoReg(mem_MemtoReg),
+.im_stall(IM_stall),
+.dm_stall(DM_stall),
 
 .WB_rd_data(wb_rd_data),
 .WB_data_memory(wb_data_memory),

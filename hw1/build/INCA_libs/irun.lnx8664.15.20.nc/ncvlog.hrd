@@ -9,9 +9,7 @@
 -INCDIR
 /home/WangYanTing/VLSI/hw1/./sim
 -DEFINE
-prog1
--DEFINE
-FSDB
+prog3
 -DEFINE
 CYCLE=20.0
 -DEFINE

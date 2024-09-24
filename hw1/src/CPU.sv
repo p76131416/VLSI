@@ -1,5 +1,4 @@
 `include "Program_counter.sv"
-`include "Adder.sv"
 `include "Mux2to1.sv"
 `include "IFID_reg.sv"
 `include "HazardDetectUnit.sv"
@@ -32,7 +31,7 @@ module CPU (
 //IF wire
 wire PC_write_enable;       //PC write or not
 wire [31:0] PC_in;
-wire [31:0] pc_4;
+// wire [31:0] pc_4;
 
 wire ifid_flush;
 wire ctrl_flush;
@@ -77,7 +76,7 @@ wire [4:0] exe_rd_r2_addr;
 
 wire [1:0] exe_branchCtrl;
 
-wire [31:0] pc_imm;
+// wire [31:0] pc_imm;
 
 wire [2:0] exe_ALUOp;
 wire exe_ALUSrc;
@@ -118,16 +117,16 @@ Program_counter PC(
 .pc_out(progcnt_out)
 );
 
-Adder IF_adder(
-.in1(progcnt_out),
-.in2(32'h4),
+// Adder IF_adder(
+// .in1(progcnt_out),
+// .in2(32'h4),
 
-.out(pc_4)
-);
+// .out(pc_4)
+// );
 
 Mux3to1 IF_pc_mux3(
-.A(pc_4),
-.B(pc_imm),
+.A(progcnt_out + 32'h4),
+.B(exe_pc_out + exe_imm),
 .C({alu_out[31:1],1'b0}),
 .sel(exe_branchCtrl),
 
@@ -261,38 +260,40 @@ ControlUnit CtrlUnit(
 //ID stage end
 
 //EXE stage
-wire [31:0] exe_pc_4;
-wire [31:0] pc_to_reg;
+// wire [31:0] exe_pc_4;
+// wire [31:0] pc_to_reg;
 
 wire [31:0] alu1;
 wire [31:0] rs2_fin;
-wire [31:0] alu2;
+// wire [31:0] alu2;
 
 wire [4:0] alu_ctrl;
 wire [1:0] forward_r1_sel;
 wire [1:0] forward_r2_sel;
 
-Adder PC_imm_adder(
-.in1(exe_pc_out),
-.in2(exe_imm),
+// Adder PC_imm_adder(
+// .in1(exe_pc_out),
+// .in2(exe_imm),
 
-.out(pc_imm)
-);
+// .out(pc_imm)
+// );
 
-Adder PC_4_adder(
-.in1(exe_pc_out),
-.in2(32'h4),
+// Adder PC_4_adder(
+// .in1(exe_pc_out),
+// .in2(32'h4),
 
-.out(exe_pc_4)
-);
+// .out(exe_pc_4)
+// );
 
-Mux2to1 EXE_PC_mux2(
-.A(pc_imm),
-.B(exe_pc_4),
-.sel(exe_PCtoRegSrc),
+// Mux2to1 EXE_PC_mux2(
+// // .A(pc_imm),
+// .A(exe_pc_out + exe_imm),
+// // .B(exe_pc_4),
+// .B(exe_pc_out + 32'h4),
+// .sel(exe_PCtoRegSrc),
 
-.C(pc_to_reg)
-);
+// .C(pc_to_reg)
+// );
 
 Mux3to1 rs1_mux3(
 .A(exe_rd_reg1_data),
@@ -312,17 +313,18 @@ Mux3to1 rs2_mux3(
 .D(rs2_fin)
 );
 
-Mux2to1 imm_mux2(
-.A(rs2_fin),
-.B(exe_imm),
-.sel(exe_ALUSrc),
+// Mux2to1 imm_mux2(
+// .A(rs2_fin),
+// .B(exe_imm),
+// .sel(exe_ALUSrc),
 
-.C(alu2)
-);
+// .C(alu2)
+// );
 
 ALU alu(
 .in1(alu1),
-.in2(alu2),
+// .in2(alu2),
+.in2((exe_ALUSrc) ? rs2_fin : exe_imm),
 .control(alu_ctrl),
 
 .out(alu_out),
@@ -373,6 +375,7 @@ Mux2to1 mem_mux2(
 
 .C(mem_rd_data)
 );
+
 assign DM_addr = mem_ALU_out;
 assign DM_OE = mem_MemRead;
 assign DM_DI = mem_memory_in;
@@ -384,7 +387,8 @@ EXEMEM_reg EXEMEM_pipe(
 .ALU_out(alu_out),
 .EXE_write_addr(exe_write_addr),
 .EXE_funct3(exe_funct3),
-.EXE_pc(pc_to_reg),
+// .EXE_pc(pc_to_reg),
+.EXE_pc((exe_PCtoRegSrc) ? exe_pc_out + exe_imm : exe_pc_out + 32'h4 ),
 .EXE_memory_in(rs2_fin),
 
 .EXE_RDSrc(exe_RDSrc),

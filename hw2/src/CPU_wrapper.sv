@@ -85,97 +85,140 @@ module CPU_wrapper (
     output logic                            RREADY_M1
 );
 
-CPU cpu(
+logic w_read, w_write, w_im_stall, w_dm_stall;
+logic [`AXI_STRB_BITS-1:0] w_write_type;
+logic [`AXI_ADDR_BITS-1:0] w_addr, w_im_addr;
+logic [`AXI_DATA_BITS-1:0] w_data_in, w_data_out, w_im_data_out;
 
+CPU cpu(
+    .clk(clk),
+    .rst(rst),
+
+    //IF out
+    .IM_instr(w_im_data_out),
+    .progcnt_out(w_im_addr),
+    
+    //MEM out
+    input [31:0] .DM_DO(w_data_out),
+    output .DM_OE(),
+    output [3:0] .DM_WEB(w_write_type),
+    output [31:0] .DM_addr(w_addr),
+    output [31:0] .DM_DI(w_data_in),
+
+    //stall
+    .IM_stall(w_im_stall),
+    .DM_stall(w_dm_stall)
 );
 
-Master M0(
-    .clk(clk)       ,
-    .reset(rst)     ,
+Master M0(                          //IM
+    .clk(clk)                   ,
+    .reset(rst)                 ,
 
+    //from cpu
+    .READ(1'b1)                 ,
+    .WRITE(1'b0)                ,
+    .WRITE_TYPE(4'hf)           ,
+    .ADDR_IN(w_im_addr)         ,
+    .DATA_IN(32'b0)             ,
+
+    //to cpu
+    .DATA_OUT(w_im_data_out)    ,
+    .STALL(w_im_stall)          ,
+    
     // Read address
-    .ARID()         ,
-    .ARADDR()       ,
-    .ARLEN()        ,
-    .ARSIZE()       ,
-    .ARBURST()      ,
-    .ARVALID()      ,
-    .ARREADY()      ,
+    .ARID(ARID_M0)              ,
+    .ARADDR(ARADDR_M0)          ,
+    .ARLEN(ARLEN_M0)            ,
+    .ARSIZE(ARSIZE_M0)          ,
+    .ARBURST(ARBURST_M0)        ,
+    .ARVALID(ARVALID_M0)        ,
+    .ARREADY(ARREADY_M0)        ,
 
     // Read data
-    .RID()          ,
-    .RDATA()        ,
-    .RRESP()        ,
-    .RLAST()        ,
-    .RVALID()       ,
-    .RREADY()       ,
+    .RID(RID_M0)                ,
+    .RDATA(RDATA_M0)            ,
+    .RRESP(RRESP_M0)            ,
+    .RLAST(RLAST_M0)            ,
+    .RVALID(RVALID_M0)          ,
+    .RREADY(RREADY_M0)          ,
 
     //Write address
-    .AWID()         ,
-    .AWADDR()       ,
-    .AWLEN()        ,
-    .AWSIZE()       ,
-    .AWBURST()      ,
-    .AWVALID()      ,
-    .AWREADY()      ,
+    .AWID(AWID_M0)              ,
+    .AWADDR(AWADDR_M0)          ,
+    .AWLEN(AWLEN_M0)            ,
+    .AWSIZE(AWSIZE_M0)          ,
+    .AWBURST(AWBURST_M0)        ,
+    .AWVALID(AWVALID_M0)        ,
+    .AWREADY(AWREADY_M0)        ,
 
     // Write data
-    .WDATA()        ,
-    .WSTRB()        ,
-    .WLAST()        ,
-    .WVALID()       ,
-    .WREADY()       ,
+    .WDATA(WDATA_M0)            ,
+    .WSTRB(WSTRB_M0)            ,
+    .WLAST(WLAST_M0)            ,
+    .WVALID(WVALID_M0)          ,
+    .WREADY(WREADY_M0)          ,
 
     // Write Response
-    .BID()          ,
-    .BRESP()        ,
-    .BVALID()       ,
-    .BREADY()       
+    .BID(BID_M0)                ,
+    .BRESP(BRESP_M0)            ,
+    .BVALID(BVALID_M0)          ,
+    .BREADY(BREAD)       
 );
     
 
-Master M1(
-    .clk(clk)       ,
-    .reset(rst)     ,
+Master M1(                          //DM
+    .clk(clk)                   ,
+    .reset(rst)                 ,
+
+    //from cpu
+    .READ(w_read)               ,
+    .WRITE(w_write)             ,
+    .WRITE_TYPE(w_write_type)   ,
+    .ADDR_IN(w_addr)            ,
+    .DATA_IN(w_data_in)         ,
+
+    //to cpu
+    .DATA_OUT(w_data_out)       ,
+    .STALL(w_dm_stall)          ,
 
     // Read address
-    .ARID()         ,
-    .ARADDR()       ,
-    .ARLEN()        ,
-    .ARSIZE()       ,
-    .ARBURST()      ,
-    .ARVALID()      ,
-    .ARREADY()      ,
+    .ARID(ARID_M1)              ,
+    .ARADDR(ARADDR_M1)          ,
+    .ARLEN(ARLEN_M1)            ,
+    .ARSIZE(ARSIZE_M1)          ,
+    .ARBURST(ARBURST_M1)        ,
+    .ARVALID(ARVALID_M1)        ,
+    .ARREADY(ARREADY_M1)        ,
 
     // Read data
-    .RID()          ,
-    .RDATA()        ,
-    .RRESP()        ,
-    .RLAST()        ,
-    .RVALID()       ,
-    .RREADY()       ,
+    .RID(RID_M1)                ,
+    .RDATA(RDATA_M1)            ,
+    .RRESP(RRESP_M1)            ,
+    .RLAST(RLAST_M1)            ,
+    .RVALID(RVALID_M1)          ,
+    .RREADY(RREADY_M1)          ,
 
     //Write address
-    .AWID()         ,
-    .AWADDR()       ,
-    .AWLEN()        ,
-    .AWSIZE()       ,
-    .AWBURST()      ,
-    .AWVALID()      ,
-    .AWREADY()      ,
+    .AWID(AWID_M1)              ,
+    .AWADDR(AWADDR_M1)          ,
+    .AWLEN(AWLEN_M1)            ,
+    .AWSIZE(AWSIZE_M1)          ,
+    .AWBURST(AWBURST_M1)        ,
+    .AWVALID(AWVALID_M1)        ,
+    .AWREADY(AWREADY_M1)        ,
 
     // Write data
-    .WDATA()        ,
-    .WSTRB()        ,
-    .WLAST()        ,
-    .WVALID()       ,
-    .WREADY()       ,
+    .WDATA(WDATA_M1)            ,
+    .WSTRB(WSTRB_M1)            ,
+    .WLAST(WLAST_M1)            ,
+    .WVALID(WVALID_M1)          ,
+    .WREADY(WREADY_M1)          ,
 
     // Write Response
-    .BID()          ,
-    .BRESP()        ,
-    .BVALID()       ,
-    .BREADY()       
+    .BID(BID_M1)                ,
+    .BRESP(BRESP_M1)            ,
+    .BVALID(BVALID_M1)          ,
+    .BREADY(BREADY_M1)       
 );
 
 

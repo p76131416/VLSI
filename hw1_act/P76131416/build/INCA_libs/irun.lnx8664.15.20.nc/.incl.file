@@ -1,7 +1,6 @@
 ./top.sv
 ./CPU.sv
 ./Program_counter.sv
-./Adder.sv
 ./Mux2to1.sv
 ./IFID_reg.sv
 ./HazardDetectUnit.sv

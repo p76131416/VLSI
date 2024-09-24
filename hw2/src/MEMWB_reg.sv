@@ -8,6 +8,8 @@ module MEMWB_reg (
 
     input MEM_RegWrite,
     input MEM_MemtoReg,
+    input im_stall,
+    input dm_stall,
 
     output logic [31:0] WB_rd_data,
     output logic [31:0] WB_data_memory,

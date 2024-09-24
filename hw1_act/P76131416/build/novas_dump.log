@@ -95,9 +95,9 @@ argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog6
 argv[11]=+rdcycle=1
 argv[12]=+notimingcheck
 96 profile - 100
-          CPU/Mem usage: 0.050 sys,  0.050 user,  93.13M sys,  0.00M vm
+          CPU/Mem usage: 0.060 sys,  0.050 user,  93.08M sys,  0.00M vm
 97 VC callback profile - scalar:0 vector:0
-98 Tue Sep 24 13:12:32 2024
+98 Tue Sep 24 21:35:31 2024
 99 pliAppInit
 100 FSDB_GATE is disabled.
 101 Enable Parallel Dumping.

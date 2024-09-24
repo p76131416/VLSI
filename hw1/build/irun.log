@@ -1,21 +1,18 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 12, 2024 at 16:49:07 CST
+TOOL:	irun(64)	15.20-s084: Started on Sep 24, 2024 at 18:14:41 CST
 irun
 	/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv
 	+incdir+/home/WangYanTing/VLSI/hw1/./src+/home/WangYanTing/VLSI/hw1/./include+/home/WangYanTing/VLSI/hw1/./sim
-	+define+prog1+FSDB
+	+define+prog3
 	-define CYCLE=20.0
 	-define MAX=100000
 	+access+r
 	+nc64bit
-	+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog1
+	+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog3
 
    User defined plus("+") options:
-	+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog1
+	+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog3
 
-Recompiling... reason: file '../src/CPU.sv' is newer than expected.
-	expected: Thu Sep 12 16:43:31 2024
-	actual:   Thu Sep 12 16:49:05 2024
 ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI/hw1/./include (No such file or directory).
 file: /home/WangYanTing/VLSI/hw1/./sim/top_tb.sv
 `define CYCLE 20.0 // Cycle time
@@ -24,8 +21,6 @@ ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv,2|32): The text ma
 `define MAX 100000 // Max cycle number
                                       |
 ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
-	module worklib.CPU:sv
-		errors: 0, warnings: 0
     $value$plusargs("prog_path=%s", prog_path);
                   |
 ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv,39|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
@@ -64,22 +59,19 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,48|67): $readmem default memory order incomp
                                                                    |
 ncelab: *W,MEMODR (../sim/top_tb.sv,49|67): $readmem default memory order incompatible with IEEE1364.
 	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.CPU:sv <0x49a3d680>
-			streams:   5, words:   988
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
-		Modules:                 30      21
-		Registers:               93      81
-		Scalar wires:           191       -
+		Modules:                 25      20
+		Registers:               90      80
+		Scalar wires:           192       -
 		Expanded wires:         136       6
-		Vectored wires:          52       -
-		Always blocks:           25      19
+		Vectored wires:          49       -
+		Always blocks:           22      18
 		Initial blocks:           2       2
-		Cont. assignments:      104      92
-		Pseudo assignments:       5       5
+		Cont. assignments:      102      92
+		Pseudo assignments:       9       9
 		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.top_tb:sv
 Loading snapshot worklib.top_tb:sv .................... Done
@@ -87,60 +79,24 @@ ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 *Verdi* Loading libsscore_ius152.so
 ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
 ncsim> run
-FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
-(C) 1996 - 2020 by Synopsys, Inc.
-*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-*Verdi* : Create FSDB file 'top.fsdb'
-*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
-*Verdi* : End of traversing.
-DM[8192] = 00000000, expect = 8649ecbe
-DM[8193] = 00000000, expect = 891356b5
-DM[8194] = 00000000, expect = 9ef8965a
-DM[8195] = 00000000, expect = a5adad14
-DM[8196] = 00000000, expect = ac1c9aa9
-DM[8197] = 00000000, expect = b1327c91
-DM[8198] = 00000000, expect = c2c287dc
-DM[8199] = 00000000, expect = c5707a3d
-DM[8200] = 00000000, expect = d6186134
-DM[8201] = 00000000, expect = db2764d5
-DM[8202] = 00000000, expect = e611dbc0
-DM[8203] = 00000000, expect = e912d024
-DM[8204] = 00000000, expect = e93d369e
-DM[8205] = 00000000, expect = f06cb80b
-DM[8206] = 00000000, expect = f1929166
-DM[8207] = 00000000, expect = fe884149
-DM[8208] = 00000000, expect = 02cd65b5
-DM[8209] = 00000000, expect = 16c5d5af
-DM[8210] = 00000000, expect = 1e0bf7e8
-DM[8211] = 00000000, expect = 3ac18e4f
-DM[8212] = 00000000, expect = 3dfce9a2
-DM[8213] = 00000000, expect = 423b1f26
-DM[8214] = 00000000, expect = 42e38aa1
-DM[8215] = 00000000, expect = 43eb84d8
-DM[8216] = 00000000, expect = 4b57f8af
-DM[8217] = 00000000, expect = 4c9f24fa
-DM[8218] = 00000000, expect = 5d50f3a8
-DM[8219] = 00000000, expect = 608dc931
-DM[8220] = 00000000, expect = 66290483
-DM[8221] = 00000000, expect = 73902c5d
-DM[8222] = 00000000, expect = 7a27c66f
-DM[8223] = 00000000, expect = 7b1ed6e1
-SIM_END(16383) = xxxxxxxx, expect = ffffffff
+
+Done
+
+DM[8192] = 00000003, pass
 
 
 
 
         ****************************               
         **                        **       |__||  
-        **  OOPS!!                **      / X,X  | 
+        **  Congratulations !!    **      / O.O  | 
         **                        **    /_____   | 
-        **  Simulation Failed!!   **   /^ ^ ^ \  |
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
         **                        **  |^ ^ ^ ^ |w| 
         ****************************   \m___m__|_|
-         Totally has          32 errors                     
 
 
-Simulation complete via $finish(1) at time 2 MS + 0
-../sim/top_tb.sv:107     $finish;
+Simulation complete via $finish(1) at time 153140 NS + 3
+../sim/top_tb.sv:76     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 12, 2024 at 16:49:13 CST  (total: 00:00:06)
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 24, 2024 at 18:14:43 CST  (total: 00:00:02)

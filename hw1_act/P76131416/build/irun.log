@@ -1,5 +1,5 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 24, 2024 at 13:12:31 CST
+TOOL:	irun(64)	15.20-s084: Started on Sep 24, 2024 at 21:35:30 CST
 irun
 	/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
 	+incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
@@ -58,17 +58,17 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,50|52): $readmem default memory order incomp
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                36      23
+		Modules:                29      22
 		Primitives:            242       2
 		Timing outputs:         66      65
-		Registers:             424     276
-		Scalar wires:          159       -
+		Registers:             414     268
+		Scalar wires:          155       -
 		Expanded wires:        228      12
-		Vectored wires:         82       -
-		Always blocks:         209     113
+		Vectored wires:         74       -
+		Always blocks:         206     112
 		Initial blocks:          4       3
-		Cont. assignments:      56      42
-		Pseudo assignments:     11      10
+		Cont. assignments:      52      41
+		Pseudo assignments:     16      15
 		Timing checks:         752       -
 		Simulation timescale:  1ps
 	Writing initial simulation snapshot: worklib.top_tb:sv
@@ -100,4 +100,4 @@ your total cycle is 0.000000
 Simulation complete via $finish(1) at time 66390 NS + 2
 ../sim/top_tb.sv:94     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 24, 2024 at 13:12:32 CST  (total: 00:00:01)
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 24, 2024 at 21:35:32 CST  (total: 00:00:02)

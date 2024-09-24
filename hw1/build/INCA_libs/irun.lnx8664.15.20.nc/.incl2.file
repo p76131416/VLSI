@@ -4,8 +4,6 @@
 /home/WangYanTing/VLSI/hw1/src/CPU.sv
 /home/WangYanTing/VLSI/hw1/./src/Program_counter.sv
 /home/WangYanTing/VLSI/hw1/src/Program_counter.sv
-/home/WangYanTing/VLSI/hw1/./src/Adder.sv
-/home/WangYanTing/VLSI/hw1/src/Adder.sv
 /home/WangYanTing/VLSI/hw1/./src/Mux2to1.sv
 /home/WangYanTing/VLSI/hw1/src/Mux2to1.sv
 /home/WangYanTing/VLSI/hw1/./src/IFID_reg.sv

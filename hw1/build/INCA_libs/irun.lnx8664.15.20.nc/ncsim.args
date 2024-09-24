@@ -2,16 +2,16 @@
 // File created by:  irun
 // Do not modify this file
 //
-+prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog1
++prog_path=/home/WangYanTing/VLSI/hw1/./sim/prog3
 +incdir+/home/WangYanTing/VLSI/hw1/./src+/home/WangYanTing/VLSI/hw1/./include+/home/WangYanTing/VLSI/hw1/./sim
-+define+prog1+FSDB
++define+prog3
 +access+r
 +nc64bit
 -MESSAGES
 +EMGRLOG
 irun.log
 -XLSTIME
-1726130947
+1727172881
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
