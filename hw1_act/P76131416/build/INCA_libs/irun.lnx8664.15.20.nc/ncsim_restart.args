@@ -2,10 +2,10 @@
 // File created by:  irun
 // Do not modify this file
 //
-+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
++prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog6
 +rdcycle=1
 +incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
-+define+prog0
++define+prog6
 +access+r
 +nc64bit
 +notimingcheck
@@ -13,7 +13,7 @@
 +EMGRLOG
 irun.log
 -XLSTIME
-1727098083
+1727154751
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
@@ -27,4 +27,4 @@ irun
 -XLVERSION
 "TOOL:	irun(64)	15.20-s084"
 -XLNAME
-./INCA_libs/irun.lnx8664.15.20.nc/caidcpuserver0_1526329
+./INCA_libs/irun.lnx8664.15.20.nc/caidcpuserver0_1898362

@@ -84,20 +84,20 @@ Runtime command line arguments:
 argv[0]=irun
 argv[1]=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
 argv[2]=+incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
-argv[3]=+define+prog0
+argv[3]=+define+prog6
 argv[4]=-define
 argv[5]=CYCLE=10.0
 argv[6]=-define
 argv[7]=MAX=100000
 argv[8]=+access+r
 argv[9]=+nc64bit
-argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
+argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog6
 argv[11]=+rdcycle=1
 argv[12]=+notimingcheck
 96 profile - 100
-          CPU/Mem usage: 0.080 sys,  0.030 user,  93.13M sys,  0.00M vm
+          CPU/Mem usage: 0.050 sys,  0.050 user,  93.13M sys,  0.00M vm
 97 VC callback profile - scalar:0 vector:0
-98 Mon Sep 23 21:28:05 2024
+98 Tue Sep 24 13:12:32 2024
 99 pliAppInit
 100 FSDB_GATE is disabled.
 101 Enable Parallel Dumping.
