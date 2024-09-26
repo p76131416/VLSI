@@ -3,31 +3,29 @@
 Report : area
 Design : top
 Version: O-2018.06
-Date   : Mon Sep 23 17:17:06 2024
+Date   : Thu Sep 26 18:20:15 2024
 ****************************************
 
 Library(s) Used:
 
-    gtech (File: /usr/cad/synopsys/synthesis/cur/libraries/syn/gtech.db)
+    N16ADFP_StdCellss0p72vm40c (File: /usr/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db)
     SRAM_ss0p72v0p72vm40c_100a (File: /home/user2/avsd24/avsd24130/P76131416/sim/SRAM/SRAM_ss0p72v0p72vm40c_100a.db)
 
-Number of ports:                        13414
-Number of nets:                         40386
-Number of cells:                        19853
-Number of combinational cells:          16333
-Number of sequential cells:              3184
+Number of ports:                         5950
+Number of nets:                         28218
+Number of cells:                        21264
+Number of combinational cells:          18462
+Number of sequential cells:              2745
 Number of macros/black boxes:               2
-Number of buf/inv:                       1989
-Number of references:                       4
+Number of buf/inv:                       2532
+Number of references:                       7
 
-Combinational area:                  0.000000
-Buf/Inv area:                        0.000000
-Noncombinational area:               0.000000
+Combinational area:               7323.177768
+Buf/Inv area:                      474.491531
+Noncombinational area:            3130.617714
 Macro/Black Box area:             9082.750000
-Net Interconnect area:      undefined  (No wire load specified)
+Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                  9082.750000
+Total cell area:                 19536.545482
 Total area:                 undefined
-
-Information: This design contains unmapped logic. (RPT-7)
 1

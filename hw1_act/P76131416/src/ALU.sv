@@ -9,7 +9,7 @@ module ALU (
     output logic zero
 );
 
-logic [63:0] mul, s_in1, s_in2;
+logic [63:0] mul;
 
 always_comb begin
     mul = 64'd0;
@@ -89,23 +89,17 @@ always_comb begin
         end
         5'd18 : begin
             zero = 1'd0;
-            s_in1 = (in1[31]) ? ({32'b0, in1} ^ 64'hffffffff) + 64'd1 : {32'b0, in1};
-            s_in2 = (in2[31]) ? ({32'b0, in2} ^ 64'hffffffff) + 64'd1 : {32'b0, in2};
-            mul = s_in1*s_in2;
-            // mul = $signed(in1)*$signed(in2);                //unequal length, 
+            mul = $signed(in1)*$signed(in2);                //unequal length
             out = mul[63:32];
         end
         5'd19 : begin
             zero = 1'd0;
-            // s_in1 = (in1[31] == 1'b1) ? ({32'b0, in1} ^ 64'hffffffff) + 64'd1 : {32'b0, in1};
-            // s_in2 = {32'b0,in2};
-            // mul = s_in1*s_in2;
-            mul = $signed(in1)*$signed({32'b0,in2});       //unequal length, 
+            mul = $signed({in1})*$signed({1'b0,in2});       //unequal length
             out = mul[63:32];
         end
         5'd20 : begin
             zero = 1'd0;
-            mul = $unsigned({32'd0, in1})*$unsigned({32'd0, in2});            //unequal length, fixed
+            mul = $unsigned(in1)*$unsigned(in2);            //unequal length
             out = mul[63:32];
         end
         5'd21 : begin

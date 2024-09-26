@@ -6,9 +6,9 @@ module ALU_f (                      //There will be (positive + negative)
     output logic [31:0] float_ans
 );
 
-reg [31:0] f1_swap, f2_swap, x;
+reg [31:0] f1_swap, f2_swap, x, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10;
 reg [23:0] f1_m, f2_m;
-reg [7:0] f1_exp, f2_exp;
+reg [7:0] f1_exp, f2_exp, x11;
 reg f1_sign, f2_sign;
 
 reg [7:0] exp_diff;
@@ -46,6 +46,18 @@ end
 
 always_comb begin
     temp_m = 24'd0;
+    x = 32'd0;
+    x1 = 32'd0;
+    x2 = 32'd0;
+    x3 = 32'd0;
+    x4 = 32'd0;
+    x5 = 32'd0;
+    x6 = 32'd0;
+    x7 = 32'd0;
+    x8 = 32'd0;
+    x9 = 32'd0;
+    x10 = 32'd0;
+    x11 = 24'd0;
     carry = 1'b0;
     G_bit = 1'b0;
     R_bit = 1'b0;
@@ -93,31 +105,27 @@ always_comb begin
             if(carry)begin
                 temp_m  = temp_m >> 1;
                 exp = exp + 8'd1;
+                sign = f1_sign;
+                man = temp_m[22:0];
+                float_ans = {sign, exp, man};
             end
             else begin
-                for(i=0 ; i<24 ; i=i+1)begin
-                    if(temp_m[23] != 1'b1)begin
-                        temp_m = {temp_m[22:0], 1'b0};
-                        // temp_m = temp_m << 1;
-                        exp = exp - 8'd1;
-                    end
-                end
-                // x = {8'b0, temp_m};
-                // x = x | (x >> 1);
-                // x = x | (x >> 2);
-                // x = x | (x >> 4);
-                // x = x | (x >> 8);
-                // x = x | (x >> 16);
-                // x = x - ((x >> 1) & 32'h55555555);
-                // x = ((x >> 2) & 32'h33333333) + (x & 32'h33333333);
-                // x = ((x >> 4) + x) & 32'h0f0f0f0f;
-                // x = x + (x >> 8);
-                // x = x + (x >> 16);
-                // x = 32'd23 - (x & 32'h7fffffff);
+                x = {8'b0, temp_m};
+                x1 = x | (x >> 1);
+                x2 = x1 | (x1 >> 2);
+                x3 = x2 | (x2 >> 4);
+                x4 = x3 | (x3 >> 8);
+                x5 = x4 | (x4 >> 16);
+                x6 = x5 - ((x5 >> 1) & 32'h55555555);
+                x7 = ((x6 >> 2) & 32'h33333333) + (x6 & 32'h33333333);
+                x8 = ((x7 >> 4) + x7) & 32'h0f0f0f0f;
+                x9 = x8 + (x8 >> 8);
+                x10 = x9 + (x9 >> 16);
+                x11 = (8'd24 - (x10[7:0] & 8'h7f));
+                sign = f1_sign;
+                man = temp_m[22:0] << x11; 
+                float_ans = {sign, exp-x11, man};
             end
-            sign = f1_sign;
-            man = temp_m[22:0];
-            float_ans = {sign, exp, man};
 
         end
         2'd1 : begin        //sub
@@ -131,23 +139,101 @@ always_comb begin
             if(carry)begin
                 temp_m  = temp_m >> 1;
                 exp = exp + 8'd1;
+                sign = swap_flag ? ~f1_sign : f1_sign;
+                man = temp_m[22:0]; 
+                float_ans = {sign, exp, man};
             end
             else begin
-                for(i=0 ; i<24 ; i=i+1)begin
-                    if(temp_m[23] != 1'b1)begin
-                        temp_m = {temp_m[22:0], 1'b0};
-                        // temp_m = temp_m << 1;
-                        exp = exp - 8'd1;
-                    end
-                end
+                x = {8'b0, temp_m};
+                x1 = x | (x >> 1);
+                x2 = x1 | (x1 >> 2);
+                x3 = x2 | (x2 >> 4);
+                x4 = x3 | (x3 >> 8);
+                x5 = x4 | (x4 >> 16);
+                x6 = x5 - ((x5 >> 1) & 32'h55555555);
+                x7 = ((x6 >> 2) & 32'h33333333) + (x6 & 32'h33333333);
+                x8 = ((x7 >> 4) + x7) & 32'h0f0f0f0f;
+                x9 = x8 + (x8 >> 8);
+                x10 = x9 + (x9 >> 16);
+                x11 = (8'd24 - (x10[7:0] & 8'h7f));
+                sign = swap_flag ? ~f1_sign : f1_sign;
+                man = temp_m[22:0] << x11; 
+                float_ans = {sign, exp-x11, man};
             end
-            sign = swap_flag ? ~f1_sign : f1_sign;
-            man = temp_m[22:0];
-            float_ans = {sign, exp, man};
-
         end  
         default : float_ans = 32'd0;        //do nothing
     endcase
+    // case (operand)
+    //     2'd0 : begin        //add
+    //         if(f1_sign ^ f2_sign)begin                          //different sign
+    //             {carry, temp_m} = f1_m - f2_temp_m;                             //unequal length
+    //             if(carry)begin
+    //                 temp_m  = temp_m >> 1;
+    //                 exp = exp + 8'd1;
+    //             end
+    //             else begin
+    //                 for(i=0 ; temp_m[23] != 1'b1 && i<24 ; i=i+1)begin          //only can have i<24, need to fixed 
+    //                     temp_m = temp_m << 1;                                   //sign bit will be lost
+    //                     exp = exp - 8'd1;
+    //                 end
+    //             end
+    //             sign = f1_sign;
+    //             man = temp_m[22:0];
+    //             float_ans = {sign, exp, man};
+    //         end 
+    //         else begin                                          //f1, f2 have the same sign
+    //             {carry, temp_m} = f1_m + f2_temp_m;
+    //             if(carry)begin
+    //                 temp_m  = temp_m >> 1;
+    //                 exp = exp + 8'd1;
+    //             end
+    //             else begin
+    //                 for(i=0 ; temp_m[23] != 1'b1 && i<24 ; i=i+1)begin
+    //                     temp_m = temp_m << 1;
+    //                     exp = exp - 8'd1;
+    //                 end
+    //             end
+    //             sign = f1_sign;
+    //             man = temp_m[22:0];
+    //             float_ans = {sign, exp, man};
+    //         end
+    //     end
+    //     2'd1 : begin        //sub
+    //         if(f1_sign ^ f2_sign)begin
+    //             {carry, temp_m} = f1_m + f2_temp_m;
+    //             if(carry)begin
+    //                 temp_m  = temp_m >> 1;
+    //                 exp = exp + 8'd1;
+    //             end
+    //             else begin
+    //                 for(i=0 ; temp_m[23] != 1'b1 && i<24 ; i=i+1)begin
+    //                     temp_m = temp_m << 1;
+    //                     exp = exp - 8'd1;
+    //                 end
+    //             end
+    //             sign = swap_flag ? ~f1_sign : f1_sign;
+    //             man = temp_m[22:0];
+    //             float_ans = {sign, exp, man};
+    //         end
+    //         else begin
+    //             {carry, temp_m} = f1_m - f2_temp_m;                             //unequal length
+    //             if(carry)begin
+    //                 temp_m  = temp_m >> 1;
+    //                 exp = exp + 8'd1;
+    //             end
+    //             else begin
+    //                 for(i=0 ; temp_m[23] != 1'b1 && i<24 ; i=i+1)begin
+    //                     temp_m = temp_m << 1;
+    //                     exp = exp - 8'd1;
+    //                 end
+    //             end
+    //             sign = swap_flag ? ~f1_sign : f1_sign;
+    //             man = temp_m[22:0];
+    //             float_ans = {sign, exp, man};
+    //         end
+    //     end  
+    //     default : float_ans = 32'd0;        //do nothing
+    // endcase
 end
 
 endmodule

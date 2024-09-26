@@ -9,14 +9,12 @@ module top (
 wire [31:0] instr;
 wire [31:0] memory_data;
 
-wire [31:0] pc;         //don't drive any object
+wire [31:0] pc;         //dont drive any object
 
 wire dm_web;
 wire [31:0] dm_bweb;
-wire [31:0] dm_addr;    //don't drive any object
+wire [31:0] dm_addr;    //dont drive any object
 wire [31:0] dm_di;
-wire [13:0] im_inaddr;
-wire [13:0] dm_inaddr;
 
 CPU cpu(
 .clk(clk),
@@ -32,16 +30,13 @@ CPU cpu(
 .DM_DI(dm_di)
 );
 
-assign im_inaddr = pc[15:2];
-assign dm_inaddr = dm_addr[15:2];
-
 SRAM_wrapper IM1(
 .CLK(~clk),
 .RST(rst),
 .CEB(1'b0),
 .WEB(1'b1),
 .BWEB(32'b11111111111111111111111111111111),
-.A(im_inaddr),
+.A(pc[15:2]),
 .DI(32'b0),
 
 .DO(instr)
@@ -53,7 +48,7 @@ SRAM_wrapper DM1(
 .CEB(1'b0),
 .WEB(dm_web),
 .BWEB(dm_bweb),
-.A(dm_inaddr),
+.A(dm_addr[15:2]),
 .DI(dm_di),
 
 .DO(memory_data)

@@ -1,115 +1,6 @@
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Error: Could not read the following target libraries:
-N16ADFP_StdCellss0p72vm40c.db N16ADFP_StdCellff0p88v125c.db N16ADFP_StdIOss0p72v1p62v125c.db N16ADFP_StdIOff0p88v1p98vm40c.db 
- (UIO-3)
-Information: Checking out the license 'DesignWare'. (SEC-104)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Information: The cache entry '/home/user2/avsd24/avsd24130/synopsys_cache_O-2018.06/DW01/DW_rightsh/astr/24/8/generic_5019/8167_8167/mapped.ddc'
-	has been corrupted, so it is being removed. (DWSC-18)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Information: The cache entry '/home/user2/avsd24/avsd24130/synopsys_cache_O-2018.06/DW01/DW_leftsh/astr/32/5/generic_5019/8167_8167/mapped.ddc'
-	has been corrupted, so it is being removed. (DWSC-18)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Information: The cache entry '/home/user2/avsd24/avsd24130/synopsys_cache_O-2018.06/DW01/DW_rightsh/astr/32/5/generic_5019/8167_8167/mapped.ddc'
-	has been corrupted, so it is being removed. (DWSC-18)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Information: The cache entry '/home/user2/avsd24/avsd24130/synopsys_cache_O-2018.06/DW02/DW02_mult/apparch/32/32/generic_5019/8167_8167/mapped.ddc'
-	has been corrupted, so it is being removed. (DWSC-18)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
-Information: The cache entry '/home/user2/avsd24/avsd24130/synopsys_cache_O-2018.06/DW02/DW02_mult/apparch/32/33/generic_5019/8167_8167/mapped.ddc'
-	has been corrupted, so it is being removed. (DWSC-18)
-Warning: Can't read link_library file 'N16ADFP_StdCellss0p72vm40c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdCellff0p88v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOss0p72v1p62v125c.db'. (UID-3)
-Warning: Can't read link_library file 'N16ADFP_StdIOff0p88v1p98vm40c.db'. (UID-3)
+Warning: The trip points for the library named SRAM_ss0p72v0p72vm40c_100a differ from those in the library named N16ADFP_StdCellss0p72vm40c. (TIM-164)
 Information: Updating design information... (UID-85)
-Warning: Design 'top' contains 7 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
  
 ****************************************
 Report : timing
@@ -119,44 +10,58 @@ Report : timing
         -sort_by group
 Design : top
 Version: O-2018.06
-Date   : Mon Sep 23 17:17:06 2024
+Date   : Thu Sep 26 18:20:15 2024
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
 
-Operating Conditions: ssgnp0p72v0p72vm40c   Library: SRAM_ss0p72v0p72vm40c_100a
-Wire Load Model Mode: top
+Operating Conditions: ss0p72vm40c   Library: N16ADFP_StdCellss0p72vm40c
+Wire Load Model Mode: segmented
 
-  Startpoint: IM1/i_SRAM (rising edge-triggered flip-flop clocked by clk')
-  Endpoint: cpu/IFID_pipe/instr_reg_0_
+  Startpoint: DM1/i_SRAM (rising edge-triggered flip-flop clocked by clk')
+  Endpoint: cpu/MEMWB_pipe/WB_data_memory_reg_25_
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
 
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SRAM_wrapper_0     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  top                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  SRAM_wrapper_1     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  MEMWB_reg          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  CPU                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  clock clk' (rise edge)                                5.0000     5.0000
-  clock network delay (ideal)                           0.2000     5.2000
-  IM1/i_SRAM/CLK (TS1N16ADFPCLLLVTA512X45M4SWSHOD)      0.0000     5.2000 r
-  IM1/i_SRAM/Q[0] (TS1N16ADFPCLLLVTA512X45M4SWSHOD)     0.4644     5.6644 r
-  IM1/DO[0] (SRAM_wrapper_1)                            0.0000     5.6644 r
-  cpu/IM_instr[0] (CPU)                                 0.0000     5.6644 r
-  cpu/IFID_pipe/instruction[0] (IFID_reg)               0.0000     5.6644 r
-  cpu/IFID_pipe/C347/Z_0 (*SELECT_OP_2.32_2.1_32)       0.0000     5.6644 r
-  cpu/IFID_pipe/instr_reg_0_/next_state (**SEQGEN**)    0.0000     5.6644 r
-  data arrival time                                                5.6644
+  clock clk' (rise edge)                                0.5000     0.5000
+  clock network delay (ideal)                           0.2000     0.7000
+  DM1/i_SRAM/CLK (TS1N16ADFPCLLLVTA512X45M4SWSHOD)      0.0000     0.7000 r
+  DM1/i_SRAM/Q[15] (TS1N16ADFPCLLLVTA512X45M4SWSHOD)    0.4664     1.1664 r
+  DM1/DO[15] (SRAM_wrapper_0)                           0.0000     1.1664 r
+  cpu/DM_DO[15] (CPU)                                   0.0000     1.1664 r
+  cpu/MEMWB_pipe/MEM_data_memory[15] (MEMWB_reg)        0.0000     1.1664 r
+  cpu/MEMWB_pipe/U35/ZN (INVD4BWP16P90LVT)              0.0074     1.1738 f
+  cpu/MEMWB_pipe/U28/ZN (AOI211D4BWP16P90LVT)           0.0124     1.1862 r
+  cpu/MEMWB_pipe/U44/ZN (IND2D4BWP16P90LVT)             0.0099     1.1961 f
+  cpu/MEMWB_pipe/U67/ZN (IOA21D1BWP16P90LVT)            0.0065     1.2026 r
+  cpu/MEMWB_pipe/U45/Z (CKMUX2D1BWP16P90LVT)            0.0134     1.2160 r
+  cpu/MEMWB_pipe/WB_data_memory_reg_25_/D (DFCNQD2BWP16P90LVT)
+                                                        0.0000     1.2160 r
+  data arrival time                                                1.2160
 
-  clock clk (rise edge)                                10.0000    10.0000
-  clock network delay (ideal)                           0.2000    10.2000
-  clock uncertainty                                    -0.0200    10.1800
-  cpu/IFID_pipe/instr_reg_0_/clocked_on (**SEQGEN**)    0.0000    10.1800 r
-  library setup time                                    0.0000    10.1800
-  data required time                                              10.1800
+  clock clk (rise edge)                                 1.0000     1.0000
+  clock network delay (ideal)                           0.2000     1.2000
+  clock uncertainty                                    -0.0200     1.1800
+  cpu/MEMWB_pipe/WB_data_memory_reg_25_/CP (DFCNQD2BWP16P90LVT)
+                                                        0.0000     1.1800 r
+  library setup time                                   -0.0043     1.1757
+  data required time                                               1.1757
   --------------------------------------------------------------------------
-  data required time                                              10.1800
-  data arrival time                                               -5.6644
+  data required time                                               1.1757
+  data arrival time                                               -1.2160
   --------------------------------------------------------------------------
-  slack (MET)                                                      4.5156
+  slack (VIOLATED)                                                -0.0403
 
 
 1
