@@ -1,0 +1,215 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Sep 27, 2024 at 21:34:59 CST
+irun
+	/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
+	+incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
+	+define+prog0
+	-define CYCLE=1.0
+	-define MAX=100000
+	+access+r
+	+nc64bit
+	+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
+	+rdcycle=1
+	+notimingcheck
+
+   User defined plus("+") options:
+	+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
+	+rdcycle=1
+
+ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI (No such file or directory).
+file: /home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
+`define CYCLE 1.0 // Cycle time
+                               |
+ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,2|31): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+`define MAX 100000 // Max cycle number
+                                      |
+ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
+	module worklib.ForwardingUnit:sv
+		errors: 0, warnings: 0
+    $value$plusargs("prog_path=%s", prog_path);
+                  |
+ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,43|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+	$value$plusargs("rdcycle=%s", rdcycle);
+	              |
+ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,44|15): System function '$value$plusargs' invoked as a task. Return value will be ignored.
+      $fscanf(gf, "%h\n", GOLDEN[num]);
+            |
+ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,63|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+ncvlog: *W,SPDUSD: Include directory /home/WangYanTing/VLSI/hw1_act/P76131416/./include given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 4
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top_tb
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	$readmemh({prog_path, "/main0.hex"}, Memory_byte0);
+	                                                |
+ncelab: *W,MEMODR (../sim/top_tb.sv,47|49): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main1.hex"}, Memory_byte1); 
+                                                    |
+ncelab: *W,MEMODR (../sim/top_tb.sv,48|52): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main2.hex"}, Memory_byte2);
+                                                    |
+ncelab: *W,MEMODR (../sim/top_tb.sv,49|52): $readmem default memory order incompatible with IEEE1364.
+    $readmemh({prog_path, "/main3.hex"}, Memory_byte3); 
+                                                    |
+ncelab: *W,MEMODR (../sim/top_tb.sv,50|52): $readmem default memory order incompatible with IEEE1364.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ALU:sv <0x555cb559>
+			streams:   1, words:  9225
+		worklib.ALUCtrl:sv <0x59e7ebb5>
+			streams:   1, words:  3799
+		worklib.ALU_f:sv <0x15ea7027>
+			streams:   2, words: 15258
+		worklib.Adder:sv <0x336df1a9>
+			streams:   1, words:   283
+		worklib.Adder:sv <0x4d15b90f>
+			streams:   1, words:   221
+		worklib.BranchCtrl:sv <0x4db70e89>
+			streams:   1, words:   853
+		worklib.CPU:sv <0x3418d9f2>
+			streams:   7, words:  1275
+		worklib.ControlUnit:sv <0x35a57e84>
+			streams:   1, words: 20795
+		worklib.EXEMEM_reg:sv <0x39f7ab1a>
+			streams:   6, words:  6062
+		worklib.ForwardingUnit:sv <0x4c93fdef>
+			streams:   4, words:  2520
+		worklib.HazardDetectUnit:sv <0x13580af8>
+			streams:   1, words:  2064
+		worklib.IDEXE_reg:sv <0x152807d4>
+			streams:   7, words: 12615
+		worklib.IFID_reg:sv <0x63853681>
+			streams:   4, words:  2371
+		worklib.ImmGen:sv <0x42025b84>
+			streams:   1, words:  2240
+		worklib.MEMWB_reg:sv <0x77dceb4e>
+			streams:   5, words:  3778
+		worklib.Mux2to1:sv <0x2c6ae757>
+			streams:   1, words:   234
+		worklib.Mux2to1:sv <0x7ff0bcd3>
+			streams:   1, words:   234
+		worklib.Mux3to1:sv <0x0f033f1b>
+			streams:   1, words:   322
+		worklib.Mux3to1:sv <0x3aee8948>
+			streams:   1, words:   322
+		worklib.Program_counter:sv <0x18993d37>
+			streams:   2, words:   535
+		worklib.Regfile:sv <0x5968fa12>
+			streams:   5, words:  9897
+		worklib.Regfile_f:sv <0x17e17950>
+			streams:   5, words:  9861
+		worklib.SRAM_wrapper:sv <0x2ee46843>
+			streams:   1, words:   236
+		worklib.TS1N16ADFPCLLLVTA512X45M4SWSHOD:sv <0x5a5b2004>
+			streams: 122, words: 124081
+		worklib.TS1N16ADFPCLLLVTA512X45M4SWSHOD:sv <0x5f9e68cd>
+			streams: 122, words: 122457
+		worklib.top:sv <0x570e7bd6>
+			streams:   3, words:   597
+		worklib.top_tb:sv <0x04464726>
+			streams:   8, words: 32517
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                36      23
+		Primitives:            242       2
+		Timing outputs:         66      65
+		Registers:             434     286
+		Scalar wires:          159       -
+		Expanded wires:        264      12
+		Vectored wires:         80       -
+		Always blocks:         209     113
+		Initial blocks:          4       3
+		Cont. assignments:      54      40
+		Pseudo assignments:     11      10
+		Timing checks:         752       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.top_tb:sv
+Loading snapshot worklib.top_tb:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+
+Done
+
+DM[8192] = fffffff0, pass
+DM[8193] = fffffff8, pass
+DM[8194] = 00000008, pass
+DM[8195] = 00000001, pass
+DM[8196] = 00000001, pass
+DM[8197] = 78787878, pass
+DM[8198] = 000091a2, pass
+DM[8199] = 00000003, pass
+DM[8200] = fefcfefd, pass
+DM[8201] = 10305070, pass
+DM[8202] = 8bfd6700, pass
+DM[8203] = 00000000, pass
+DM[8204] = 10200ffc, pass
+DM[8205] = f2a93e0c, pass
+DM[8206] = cccccccc, pass
+DM[8207] = ffffffcc, pass
+DM[8208] = ffffcccc, pass
+DM[8209] = 000000cc, pass
+DM[8210] = 0000cccc, pass
+DM[8211] = 00000d9d, pass
+DM[8212] = 00000004, pass
+DM[8213] = 00000003, pass
+DM[8214] = 000001a6, pass
+DM[8215] = 00000ec6, pass
+DM[8216] = 2468b7a8, pass
+DM[8217] = 5dbf9f00, pass
+DM[8218] = 00012b38, pass
+DM[8219] = fa2817b7, pass
+DM[8220] = ff000000, pass
+DM[8221] = 12345678, pass
+DM[8222] = 0000f000, pass
+DM[8223] = 00000f00, pass
+DM[8224] = 000000f0, pass
+DM[8225] = 0000000f, pass
+DM[8226] = 56780000, pass
+DM[8227] = 78000000, pass
+DM[8228] = 00005678, pass
+DM[8229] = 00000078, pass
+DM[8230] = 12345678, pass
+DM[8231] = ce780000, pass
+DM[8232] = fffff000, pass
+DM[8233] = fffff000, pass
+DM[8234] = fffff000, pass
+DM[8235] = fffff000, pass
+DM[8236] = fffff000, pass
+DM[8237] = fffff000, pass
+DM[8238] = 1357a274, pass
+DM[8239] = 13578000, pass
+DM[8240] = fffff004, pass
+DM[8241] = 40bb3276, pass
+DM[8242] = be3aa25e, pass
+DM[8243] = 40b55d63, pass
+DM[8244] = c213a0c4, pass
+DM[8245] = 40c10789, pass
+DM[8246] = 404c5a18, pass
+DM[8247] = 00000000, pass
+DM[8248] = 000013fb, pass
+your total cycle is 0.000000 
+your total cycle is 7394.000000 
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  Congratulations !!    **      / O.O  | 
+        **                        **    /_____   | 
+        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+
+
+Simulation complete via $finish(1) at time 7411 NS + 2
+../sim/top_tb.sv:94     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 27, 2024 at 21:35:02 CST  (total: 00:00:03)

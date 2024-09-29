@@ -27,7 +27,13 @@ always_ff @( posedge clk or posedge reset ) begin
         WB_RegWrite <= 0;
         WB_MemtoReg <= 0;
     end
-    else begin
+    else if(im_stall | dm_stall) begin
+        WB_rd_data <= WB_rd_data;
+        WB_data_memory <= WB_data_memory;
+        WB_write_addr <= WB_write_addr;
+        WB_RegWrite <= WB_RegWrite;
+        WB_MemtoReg <= WB_MemtoReg;
+    end else begin
         if(MEM_RegWrite & !MEM_MemtoReg)begin
             case (MEM_funct3)
                 3'd0 : WB_data_memory <= {{24{MEM_data_memory[7]}}, MEM_data_memory[7:0]}; //LB

@@ -1,5 +1,5 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 24, 2024 at 18:14:41 CST
+TOOL:	irun(64)	15.20-s084: Started on Sep 28, 2024 at 14:24:26 CST
 irun
 	/home/WangYanTing/VLSI/hw1/./sim/top_tb.sv
 	+incdir+/home/WangYanTing/VLSI/hw1/./src+/home/WangYanTing/VLSI/hw1/./include+/home/WangYanTing/VLSI/hw1/./sim
@@ -64,13 +64,13 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,49|67): $readmem default memory order incomp
 	Design hierarchy summary:
 		                  Instances  Unique
 		Modules:                 25      20
-		Registers:               90      80
+		Registers:               76      66
 		Scalar wires:           192       -
 		Expanded wires:         136       6
 		Vectored wires:          49       -
 		Always blocks:           22      18
 		Initial blocks:           2       2
-		Cont. assignments:      102      92
+		Cont. assignments:      112     106
 		Pseudo assignments:       9       9
 		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.top_tb:sv
@@ -79,24 +79,23 @@ ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 *Verdi* Loading libsscore_ius152.so
 ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
 ncsim> run
-
-Done
-
-DM[8192] = 00000003, pass
+DM[8192] = xxxxxxxx, expect = 00000003
+SIM_END(16383) = xxxxxxxx, expect = ffffffff
 
 
 
 
         ****************************               
         **                        **       |__||  
-        **  Congratulations !!    **      / O.O  | 
+        **  OOPS!!                **      / X,X  | 
         **                        **    /_____   | 
-        **  Simulation PASS!!     **   /^ ^ ^ \  |
+        **  Simulation Failed!!   **   /^ ^ ^ \  |
         **                        **  |^ ^ ^ ^ |w| 
         ****************************   \m___m__|_|
+         Totally has           1 errors                     
 
 
-Simulation complete via $finish(1) at time 153140 NS + 3
-../sim/top_tb.sv:76     $finish;
+Simulation complete via $finish(1) at time 2 MS + 0
+../sim/top_tb.sv:107     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 24, 2024 at 18:14:43 CST  (total: 00:00:02)
+TOOL:	irun(64)	15.20-s084: Exiting on Sep 28, 2024 at 14:24:27 CST  (total: 00:00:01)

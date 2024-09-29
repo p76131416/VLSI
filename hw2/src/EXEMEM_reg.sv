@@ -44,6 +44,21 @@ always_ff @( posedge clk or posedge reset) begin
         MEM_RegWrite <= 0;
         MEM_MemWrite <= 0;
         //DM_cs <= 0;
+    end else if(im_stall & !dm_stall) begin
+        MEM_MemRead <= 0;
+        MEM_MemWrite <= 0;
+    end else if(im_stall | dm_stall) begin
+        MEM_ALU_out <= MEM_ALU_out;
+        MEM_write_addr <= MEM_write_addr;
+        MEM_funct3 <= MEM_funct3;
+        MEM_pc <= MEM_pc;
+        MEM_memory_in <= MEM_memory_in;
+        MEM_RDSrc <= MEM_RDSrc;
+        MEM_MemtoReg <= MEM_MemtoReg;
+        MEM_MenWrite_type <= MEM_MenWrite_type;
+        MEM_MemWrite <= MEM_MemWrite;
+        MEM_MemRead <= MEM_MemRead;
+        MEM_RegWrite <= MEM_RegWrite;
     end else begin
         if(EXE_MenWrite)begin                   //store 需要手動將資料移到對應位置
             MEM_MemWrite <= 1'b1;

@@ -5,27 +5,27 @@ module CPU_wrapper (
     input                                   clk            ,
     input                                   rst            ,
 
-    //WRITE ADDRESS
-    output logic [`AXI_ID_BITS-1:0]         AWID_M0        ,
-    output logic [`AXI_ADDR_BITS-1:0]       AWADDR_M0      ,
-    output logic [`AXI_LEN_BITS-1:0]        AWLEN_M0       ,
-    output logic [`AXI_SIZE_BITS-1:0]       AWSIZE_M0      ,
-    output logic [1:0]                      AWBURST_M0     ,
-    output logic                            AWVALID_M0     ,
-    input                                   AWREADY_M0     ,
+    // //WRITE ADDRESS
+    // output logic [`AXI_ID_BITS-1:0]         AWID_M0        ,
+    // output logic [`AXI_ADDR_BITS-1:0]       AWADDR_M0      ,
+    // output logic [`AXI_LEN_BITS-1:0]        AWLEN_M0       ,
+    // output logic [`AXI_SIZE_BITS-1:0]       AWSIZE_M0      ,
+    // output logic [1:0]                      AWBURST_M0     ,
+    // output logic                            AWVALID_M0     ,
+    // input                                   AWREADY_M0     ,
 
-    //WRITE DATA
-    output logic [`AXI_DATA_BITS-1:0]       WDATA_M0       ,
-    output logic [`AXI_STRB_BITS-1:0]       WSTRB_M0       ,
-    output logic                            WLAST_M0       ,
-    output logic                            WVALID_M0      ,
-    input                                   WREADY_M0      ,
+    // //WRITE DATA
+    // output logic [`AXI_DATA_BITS-1:0]       WDATA_M0       ,
+    // output logic [`AXI_STRB_BITS-1:0]       WSTRB_M0       ,
+    // output logic                            WLAST_M0       ,
+    // output logic                            WVALID_M0      ,
+    // input                                   WREADY_M0      ,
 
-    //WRITE RESPONSE
-    input [`AXI_ID_BITS-1:0]                BID_M0         ,
-    input [1:0]                             BRESP_M0       ,
-    input                                   BVALID_M0      ,
-    output logic                            BREADY_M0      ,
+    // //WRITE RESPONSE
+    // input [`AXI_ID_BITS-1:0]                BID_M0         ,
+    // input [1:0]                             BRESP_M0       ,
+    // input                                   BVALID_M0      ,
+    // output logic                            BREADY_M0      ,
 
     //READ ADDRESS0
     output logic [`AXI_ID_BITS-1:0]         ARID_M0        ,
@@ -84,6 +84,28 @@ module CPU_wrapper (
     input                                   RVALID_M1      ,
     output logic                            RREADY_M1
 );
+
+//WRITE ADDRESS
+logic [`AXI_ID_BITS-1:0]         AWID_M0        ,
+logic [`AXI_ADDR_BITS-1:0]       AWADDR_M0      ,
+logic [`AXI_LEN_BITS-1:0]        AWLEN_M0       ,
+logic [`AXI_SIZE_BITS-1:0]       AWSIZE_M0      ,
+logic [1:0]                      AWBURST_M0     ,
+logic                            AWVALID_M0     ,
+logic                            AWREADY_M0     ,
+
+//WRITE DATA
+logic [`AXI_DATA_BITS-1:0]       WDATA_M0       ,
+logic [`AXI_STRB_BITS-1:0]       WSTRB_M0       ,
+logic                            WLAST_M0       ,
+logic                            WVALID_M0      ,
+logic                            WREADY_M0      ,
+
+//WRITE RESPONSE
+logic [`AXI_ID_BITS-1:0]         BID_M0         ,
+logic [1:0]                      BRESP_M0       ,
+logic                            BVALID_M0      ,
+logic                            BREADY_M0      ,
 
 logic w_read, w_write, w_im_stall, w_dm_stall;
 logic [`AXI_STRB_BITS-1:0] w_write_type;

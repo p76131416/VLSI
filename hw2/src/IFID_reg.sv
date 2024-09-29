@@ -5,8 +5,6 @@ module IFID_reg (
     input [31:0] instruction,
     input [31:0] pc,
     input IFID_write,
-    input im_stall,
-    input dm_stall,
     
     output logic [31:0] ID_pc_out,
     output  [4:0] read_reg1,
