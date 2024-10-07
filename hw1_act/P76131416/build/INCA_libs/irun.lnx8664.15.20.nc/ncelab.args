@@ -5,7 +5,7 @@
 +prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
 +rdcycle=1
 +incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
-+define+prog0
++define+prog0+FSDB_ALL
 +access+r
 +nc64bit
 +notimingcheck

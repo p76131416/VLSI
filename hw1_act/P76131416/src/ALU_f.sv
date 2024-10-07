@@ -57,7 +57,7 @@ always_comb begin
     x8 = 32'd0;
     x9 = 32'd0;
     x10 = 32'd0;
-    x11 = 24'd0;
+    x11 = 8'd0;
     carry = 1'b0;
     G_bit = 1'b0;
     R_bit = 1'b0;

@@ -15,6 +15,9 @@ wire dm_web;
 wire [31:0] dm_bweb;
 wire [31:0] dm_addr;    //dont drive any object
 wire [31:0] dm_di;
+wire [13:0] imaddr;
+wire [13:0] dmaddr;
+
 
 CPU cpu(
 .clk(clk),
@@ -30,13 +33,17 @@ CPU cpu(
 .DM_DI(dm_di)
 );
 
+assign imaddr = pc[15:2];
+assign dmaddr = dm_addr[15:2];
+
 SRAM_wrapper IM1(
 .CLK(~clk),
 .RST(rst),
 .CEB(1'b0),
 .WEB(1'b1),
 .BWEB(32'b11111111111111111111111111111111),
-.A(pc[15:2]),
+// .A(pc[15:2]),
+.A(imaddr),
 .DI(32'b0),
 
 .DO(instr)
@@ -48,7 +55,8 @@ SRAM_wrapper DM1(
 .CEB(1'b0),
 .WEB(dm_web),
 .BWEB(dm_bweb),
-.A(dm_addr[15:2]),
+// .A(dm_addr[15:2]),
+.A(dmaddr),
 .DI(dm_di),
 
 .DO(memory_data)

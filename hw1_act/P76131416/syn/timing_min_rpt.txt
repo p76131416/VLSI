@@ -7,7 +7,7 @@ Report : timing
         -sort_by group
 Design : top
 Version: O-2018.06
-Date   : Thu Sep 26 18:20:15 2024
+Date   : Mon Oct  7 12:53:16 2024
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -15,9 +15,9 @@ Date   : Thu Sep 26 18:20:15 2024
 Operating Conditions: ff0p88v125c   Library: N16ADFP_StdCellff0p88v125c
 Wire Load Model Mode: segmented
 
-  Startpoint: cpu/IDEXE_pipe/EXE_funct3_reg_2_
+  Startpoint: cpu/IDEXE_pipe/EXE_RegWrite_reg
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: cpu/EXEMEM_pipe/MEM_funct3_reg_2_
+  Endpoint: cpu/EXEMEM_pipe/MEM_RegWrite_reg
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: min
@@ -31,34 +31,33 @@ Wire Load Model Mode: segmented
   Program_counter    ZeroWireload          N16ADFP_StdCellss0p72vm40c
   top                ZeroWireload          N16ADFP_StdCellss0p72vm40c
   CPU                ZeroWireload          N16ADFP_StdCellss0p72vm40c
-  ALUCtrl            ZeroWireload          N16ADFP_StdCellss0p72vm40c
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.2000     0.2000
-  cpu/IDEXE_pipe/EXE_funct3_reg_2_/CP (DFCNQD2BWP16P90LVT)
+  cpu/IDEXE_pipe/EXE_RegWrite_reg/CP (DFCNQD2BWP16P90LVT)
                                                         0.0000     0.2000 r
-  cpu/IDEXE_pipe/EXE_funct3_reg_2_/Q (DFCNQD2BWP16P90LVT)
-                                                        0.0666     0.2666 f
-  cpu/IDEXE_pipe/EXE_funct3[2] (IDEXE_reg)              0.0000     0.2666 f
-  cpu/EXEMEM_pipe/EXE_funct3[2] (EXEMEM_reg)            0.0000     0.2666 f
-  cpu/EXEMEM_pipe/MEM_funct3_reg_2_/D (DFCNQD2BWP16P90)
-                                                        0.0000     0.2666 f
-  data arrival time                                                0.2666
+  cpu/IDEXE_pipe/EXE_RegWrite_reg/Q (DFCNQD2BWP16P90LVT)
+                                                        0.0623     0.2623 f
+  cpu/IDEXE_pipe/EXE_RegWrite (IDEXE_reg)               0.0000     0.2623 f
+  cpu/EXEMEM_pipe/EXE_RegWrite (EXEMEM_reg)             0.0000     0.2623 f
+  cpu/EXEMEM_pipe/MEM_RegWrite_reg/D (DFCNQD2BWP16P90LVT)
+                                                        0.0000     0.2623 f
+  data arrival time                                                0.2623
 
   clock clk (rise edge)                                 0.0000     0.0000
   clock network delay (ideal)                           0.2000     0.2000
   clock uncertainty                                     0.0200     0.2200
-  cpu/EXEMEM_pipe/MEM_funct3_reg_2_/CP (DFCNQD2BWP16P90)
+  cpu/EXEMEM_pipe/MEM_RegWrite_reg/CP (DFCNQD2BWP16P90LVT)
                                                         0.0000     0.2200 r
-  library hold time                                     0.0434     0.2634
-  data required time                                               0.2634
+  library hold time                                     0.0293     0.2493
+  data required time                                               0.2493
   --------------------------------------------------------------------------
-  data required time                                               0.2634
-  data arrival time                                               -0.2666
+  data required time                                               0.2493
+  data arrival time                                               -0.2623
   --------------------------------------------------------------------------
-  slack (MET)                                                      0.0032
+  slack (MET)                                                      0.0130
 
 
 1

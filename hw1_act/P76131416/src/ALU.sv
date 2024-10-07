@@ -27,11 +27,11 @@ always_comb begin
             zero = 1'd0;
         end
         5'd3 : begin 
-            out = ($signed(in1) < $signed(in2)) ? 1'b1 : 1'b0;
+            out = ($signed(in1) < $signed(in2)) ? 32'd1 : 32'd0;
             zero = 1'd0;
         end
         5'd4 : begin 
-            out = ($unsigned(in1) < $unsigned(in2)) ? 1'b1 : 1'b0;
+            out = ($unsigned(in1) < $unsigned(in2)) ? 32'd1 : 32'd0;
             zero = 1'd0;
         end
         5'd5 : begin 

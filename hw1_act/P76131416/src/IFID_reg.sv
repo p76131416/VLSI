@@ -13,8 +13,8 @@ module IFID_reg (
     output  [4:0] write_addr,
     output  [31:0] immediate,
     output  [2:0] funct3,
-    output  [6:0] funct7,
-    output is_float
+    output  [6:0] funct7
+    // output is_float
 );
 
 logic [31:0] instr;
@@ -26,7 +26,7 @@ assign write_addr = instr[11:7];
 assign immediate = instr;
 assign funct3 = instr[14:12];
 assign funct7 = instr[31:25];
-assign is_float = (instr[6:0] == 7'b0000111 || instr[6:0] == 7'b0100111 || instr[6:0] == 7'b1010011) ? 1'b1 : 1'b0;
+// assign is_float = (instr[6:0] == 7'b0000111 || instr[6:0] == 7'b0100111 || instr[6:0] == 7'b1010011) ? 1'b1 : 1'b0;
 
 always_ff @( posedge clk or posedge reset) begin
     if(reset)begin

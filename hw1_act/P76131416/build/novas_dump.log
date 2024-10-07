@@ -33,6 +33,7 @@ PWD=/home/WangYanTing/VLSI/hw1_act/P76131416/build
 LOGNAME=WangYanTing
 XDG_SESSION_TYPE=tty
 MANPATH=:/home/nfs_cad/synopsys/synthesis/cur/doc/syn/man
+MAKEOVERRIDES=${-*-command-variables-*-}
 MGC_TMPDIR=/tmp
 OA_HOME=/usr/cad/cadence/INNOVUS/cur/oa
 MOTD_SHOWN=pam
@@ -45,8 +46,9 @@ LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd
 SYNTHESIS=/home/nfs_cad/synopsys/synthesis/cur
 SSH_CONNECTION=192.168.102.22 59278 140.116.245.124 22
 MFLAGS=
+FSDB=2
 LESSCLOSE=/usr/bin/lesspipe %s %s
-MAKEFLAGS=
+MAKEFLAGS= -- FSDB=2
 XDG_SESSION_CLASS=user
 TERM=xterm
 LC_IDENTIFICATION=lzh_TW
@@ -84,9 +86,9 @@ Runtime command line arguments:
 argv[0]=irun
 argv[1]=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
 argv[2]=+incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
-argv[3]=+define+prog0
+argv[3]=+define+prog0+FSDB_ALL
 argv[4]=-define
-argv[5]=CYCLE=1.0
+argv[5]=CYCLE=1.4
 argv[6]=-define
 argv[7]=MAX=100000
 argv[8]=+access+r
@@ -94,14 +96,66 @@ argv[9]=+nc64bit
 argv[10]=+prog_path=/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/prog0
 argv[11]=+rdcycle=1
 argv[12]=+notimingcheck
-96 profile - 100
-          CPU/Mem usage: 0.090 sys,  0.030 user,  93.14M sys,  0.00M vm
-97 VC callback profile - scalar:0 vector:0
-98 Fri Sep 27 21:35:02 2024
-99 pliAppInit
-100 FSDB_GATE is disabled.
-101 Enable Parallel Dumping.
-102 pliAppMiscSet: New Sim Round
-103 pliEntryInit
-104 LIBSSCORE=found /home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
-105 Sim process exit
+98 profile - 100
+          CPU/Mem usage: 0.070 sys,  0.040 user,  93.10M sys,  0.00M vm
+99 VC callback profile - scalar:0 vector:0
+100 Mon Oct  7 22:57:41 2024
+101 pliAppInit
+102 FSDB_GATE is disabled.
+103 Enable Parallel Dumping.
+104 pliAppMiscSet: New Sim Round
+105 pliEntryInit
+106 LIBSSCORE=found /home/nfs_cad/synopsys/verdi/cur/share/PLI/IUS/linux64/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
+107 argv[0]: top.fsdb
+108 argv[0]: +struct
+109 argv[1]: +mda
+110 argv[2]: (handle)0x54df6f8 top_tb.TOP
+111 FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
+112 (C) 1996 - 2020 by Synopsys, Inc.
+113 sps_call_fsdbDumpfile at 0 : /home/WangYanTing/VLSI/hw1_act/P76131416/sim/top_tb.sv(113)
+114 argv[0]: top.fsdb
+115 *Verdi* : Create FSDB file 'top.fsdb'
+116 sps_call_fsdbDumpvars at 0 : /home/WangYanTing/VLSI/hw1_act/P76131416/sim/top_tb.sv(114)
+117 argv[0]: +struct
+118 argv[1]: +mda
+119 argv[2]: (handle)0x54df6d8 top_tb.TOP
+120 *Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+121 *Verdi* : Enable +struct and +mda dumping.
+122 Cell instance `top_tb.TOP.IM1.i_SRAM'.
+123 *Verdi* : End of traversing.
+124 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.100 sys,  0.680 user,  203.11M sys,  0.00M vm
+                   incr: 0.030 sys,  0.630 user,  26.84M sys,  0.00M vm
+                   accu: 0.030 sys,  0.630 user,  26.84M sys,  0.00M vm
+              accu incr: 0.030 sys,  0.630 user,  26.84M sys,  0.00M vm
+
+          Count usage: 132681 var,  131917 idcode,  131925 callback
+                 incr: 132681 var,  131917 idcode,  131925 callback
+                 accu: 132681 var,  131917 idcode,  131925 callback
+            accu incr: 132681 var,  131917 idcode,  131925 callback
+125 VC callback profile - scalar:0 vector:0
+126 Mon Oct  7 22:57:42 2024
+127 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.110 sys,  1.080 user,  212.53M sys,  0.00M vm
+                   incr: 0.010 sys,  0.400 user,  9.42M sys,  0.00M vm
+                   accu: 0.040 sys,  1.030 user,  36.26M sys,  0.00M vm
+              accu incr: 0.010 sys,  0.400 user,  9.42M sys,  0.00M vm
+
+          Count usage: 132681 var,  131917 idcode,  131925 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 132681 var,  131917 idcode,  131925 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+128 VC callback profile - scalar:598 vector:131319
+129 Mon Oct  7 22:57:42 2024
+130 End of simulation at 10375400
+131 VC callback profile - scalar:948774 vector:699426
+132 Mon Oct  7 22:57:42 2024
+133 Begin FSDB profile info:
+134 FSDB Writer : bc1(948774) bcn(699426) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.294327) io wait(0.000000) theadpool wait(0.000000)
+FSDB Writer cpu time : MT Compression : 0
+135 End FSDB profile info
+136 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:8 BlockUsed:11
+137                        ProduceTime:1.849537266 ConsumerTime:0.247634290 Buffer:64MB
+138 SimExit
+139 Sim process exit

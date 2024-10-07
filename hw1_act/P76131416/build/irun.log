@@ -1,10 +1,10 @@
 irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s084: Started on Sep 27, 2024 at 21:34:59 CST
+TOOL:	irun(64)	15.20-s084: Started on Oct 07, 2024 at 22:57:39 CST
 irun
 	/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
 	+incdir+/home/WangYanTing/VLSI/hw1_act/P76131416/./src+/home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI+/home/WangYanTing/VLSI/hw1_act/P76131416/./include+/home/WangYanTing/VLSI/hw1_act/P76131416/./sim
-	+define+prog0
-	-define CYCLE=1.0
+	+define+prog0+FSDB_ALL
+	-define CYCLE=1.4
 	-define MAX=100000
 	+access+r
 	+nc64bit
@@ -18,14 +18,12 @@ irun
 
 ncvlog: *W,NOTIND: unable to access -INCDIR /home/WangYanTing/VLSI/hw1_act/P76131416/./src/AXI (No such file or directory).
 file: /home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv
-`define CYCLE 1.0 // Cycle time
+`define CYCLE 1.4 // Cycle time
                                |
 ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,2|31): The text macro 'CYCLE' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
 `define MAX 100000 // Max cycle number
                                       |
 ncvlog: *W,MACNDF (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,3|38): The text macro 'MAX' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
-	module worklib.ForwardingUnit:sv
-		errors: 0, warnings: 0
     $value$plusargs("prog_path=%s", prog_path);
                   |
 ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,43|18): System function '$value$plusargs' invoked as a task. Return value will be ignored.
@@ -35,6 +33,8 @@ ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,44|1
       $fscanf(gf, "%h\n", GOLDEN[num]);
             |
 ncvlog: *W,NOSYST (/home/WangYanTing/VLSI/hw1_act/P76131416/./sim/top_tb.sv,63|12): System function '$fscanf' invoked as a task. Return value will be ignored.
+	module worklib.top_tb:sv
+		errors: 0, warnings: 3
 ncvlog: *W,SPDUSD: Include directory /home/WangYanTing/VLSI/hw1_act/P76131416/./include given but not used.
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 4
@@ -57,60 +57,8 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,49|52): $readmem default memory order incomp
 ncelab: *W,MEMODR (../sim/top_tb.sv,50|52): $readmem default memory order incompatible with IEEE1364.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.ALU:sv <0x555cb559>
-			streams:   1, words:  9225
-		worklib.ALUCtrl:sv <0x59e7ebb5>
-			streams:   1, words:  3799
-		worklib.ALU_f:sv <0x15ea7027>
-			streams:   2, words: 15258
-		worklib.Adder:sv <0x336df1a9>
-			streams:   1, words:   283
-		worklib.Adder:sv <0x4d15b90f>
-			streams:   1, words:   221
-		worklib.BranchCtrl:sv <0x4db70e89>
-			streams:   1, words:   853
-		worklib.CPU:sv <0x3418d9f2>
-			streams:   7, words:  1275
-		worklib.ControlUnit:sv <0x35a57e84>
-			streams:   1, words: 20795
-		worklib.EXEMEM_reg:sv <0x39f7ab1a>
-			streams:   6, words:  6062
-		worklib.ForwardingUnit:sv <0x4c93fdef>
-			streams:   4, words:  2520
-		worklib.HazardDetectUnit:sv <0x13580af8>
-			streams:   1, words:  2064
-		worklib.IDEXE_reg:sv <0x152807d4>
-			streams:   7, words: 12615
-		worklib.IFID_reg:sv <0x63853681>
-			streams:   4, words:  2371
-		worklib.ImmGen:sv <0x42025b84>
-			streams:   1, words:  2240
-		worklib.MEMWB_reg:sv <0x77dceb4e>
-			streams:   5, words:  3778
-		worklib.Mux2to1:sv <0x2c6ae757>
-			streams:   1, words:   234
-		worklib.Mux2to1:sv <0x7ff0bcd3>
-			streams:   1, words:   234
-		worklib.Mux3to1:sv <0x0f033f1b>
-			streams:   1, words:   322
-		worklib.Mux3to1:sv <0x3aee8948>
-			streams:   1, words:   322
-		worklib.Program_counter:sv <0x18993d37>
-			streams:   2, words:   535
-		worklib.Regfile:sv <0x5968fa12>
-			streams:   5, words:  9897
-		worklib.Regfile_f:sv <0x17e17950>
-			streams:   5, words:  9861
-		worklib.SRAM_wrapper:sv <0x2ee46843>
-			streams:   1, words:   236
-		worklib.TS1N16ADFPCLLLVTA512X45M4SWSHOD:sv <0x5a5b2004>
-			streams: 122, words: 124081
-		worklib.TS1N16ADFPCLLLVTA512X45M4SWSHOD:sv <0x5f9e68cd>
-			streams: 122, words: 122457
-		worklib.top:sv <0x570e7bd6>
-			streams:   3, words:   597
-		worklib.top_tb:sv <0x04464726>
-			streams:   8, words: 32517
+		worklib.top_tb:sv <0x4a0b6bb9>
+			streams:   8, words: 32821
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -118,13 +66,13 @@ ncelab: *W,MEMODR (../sim/top_tb.sv,50|52): $readmem default memory order incomp
 		Modules:                36      23
 		Primitives:            242       2
 		Timing outputs:         66      65
-		Registers:             434     286
-		Scalar wires:          159       -
-		Expanded wires:        264      12
-		Vectored wires:         80       -
+		Registers:             426     278
+		Scalar wires:          155       -
+		Expanded wires:        228      12
+		Vectored wires:         77       -
 		Always blocks:         209     113
 		Initial blocks:          4       3
-		Cont. assignments:      54      40
+		Cont. assignments:      56      41
 		Pseudo assignments:     11      10
 		Timing checks:         752       -
 		Simulation timescale:  1ps
@@ -134,6 +82,12 @@ ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 *Verdi* Loading libsscore_ius152.so
 ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
 ncsim> run
+FSDB Dumper for IUS, Release Verdi_Q-2020.03, Linux x86_64/64bit, 02/09/2020
+(C) 1996 - 2020 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.TOP), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
 
 Done
 
@@ -209,7 +163,7 @@ your total cycle is 7394.000000
         ****************************   \m___m__|_|
 
 
-Simulation complete via $finish(1) at time 7411 NS + 2
+Simulation complete via $finish(1) at time 10375400 PS + 2
 ../sim/top_tb.sv:94     $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s084: Exiting on Sep 27, 2024 at 21:35:02 CST  (total: 00:00:03)
+TOOL:	irun(64)	15.20-s084: Exiting on Oct 07, 2024 at 22:57:43 CST  (total: 00:00:04)

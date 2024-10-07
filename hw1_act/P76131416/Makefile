@@ -320,8 +320,6 @@
 # 	make -C $(sim_dir)/prog5/ clean; \
 # 	make -C $(sim_dir)/prog6/ clean; \
 
-
-
 root_dir := $(PWD)
 src_dir := ./src
 syn_dir := ./syn
