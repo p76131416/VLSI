@@ -101,7 +101,7 @@
 # 	cd $(bld_dir); \
 # 	vcs -R -sverilog $(root_dir)/$(sim_dir)/top_tb.sv -debug_access+all -full64  \
 # 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
-# 	+define+prog5$(FSDB_DEF) \
+# 	+define+prog5$(FSDB_DEF)
 # 	+prog_path=$(root_dir)/$(sim_dir)/prog5 \
 # 	+notimingcheck
 
