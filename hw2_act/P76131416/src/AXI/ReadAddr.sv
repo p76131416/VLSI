@@ -78,8 +78,6 @@ assign ARLEN_S2 = ARLEN;
 assign ARSIZE_S2 = ARSIZE;
 assign ARBURST_S2 = ARBURST;
 
-
-
 Arbiter RA_Arbiter{
     .clk                 (clk),
     .rst                 (rst),
@@ -117,14 +115,14 @@ Arbiter RA_Arbiter{
 
 Decoder RA_Decoder{
     .ADDR(ARADDR),
-    .VALID(ARVALID),              //the address correctness
-    .READY(ARREADY),              //slave take the address
+    .VALID(ARVALID),
+    .READY(ARREADY),
     .READY_S0(ARREADY_S0),
     .READY_S1(ARREADY_S1),
     .READY_S2(ARREADY_S2),
-    .VALID_S0(),           //axi ready to transfer address to slave
-    .VALID_S1(),
-    .VALID_S2()
+    .VALID_S0(ARVALID_S0),          //differ
+    .VALID_S1(ARVALID_S1),
+    .VALID_S2(ARVALID_S2)
 };
 
 endmodule

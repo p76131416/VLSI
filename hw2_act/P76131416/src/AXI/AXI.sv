@@ -16,7 +16,8 @@
 // 	Version:		1.0	    								   		//
 //////////////////////////////////////////////////////////////////////
 `include "AXI_define.svh"
-
+`include "CPU_wrapper.sv"
+`include "SRAM_wrapper.sv"
 module AXI(
 
 	input ACLK,
