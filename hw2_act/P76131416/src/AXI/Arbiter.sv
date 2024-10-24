@@ -67,10 +67,10 @@ end
 
 always_comb begin           //since M1 > M0 in priority
     if((VALID_M1 & ~lock_M0) | lock_M1) begin
-        stage = 2'b01;
+        stage = 2'b10;
     end
     else if(VALID_M0 | lock_M0) begin
-        stage = 2'b10;
+        stage = 2'b01;
     end
     else 
         stage = 2'b00;

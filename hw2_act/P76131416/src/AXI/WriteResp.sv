@@ -40,7 +40,7 @@ logic [3:0] slave;
 assign BID_M1 = BID;
 assign RRESP_M1 = BRESP;
 
-always_ff @( posedge clk or negedge rst ) begin
+always_ff @( posedge clk or posedge rst) begin
     if(~rst)begin
         lock_S0 <= 1'b0;
         lock_S1 <= 1'b0;

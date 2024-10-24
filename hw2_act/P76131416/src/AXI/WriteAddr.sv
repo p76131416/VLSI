@@ -1,8 +1,6 @@
 `include "AXI_define.svh"
-`include "Arbiter.sv"
-`include "Decoder.sv"
 
-module WriteAdddr (
+module WriteAddr (
     input                               clk,
     input                               rst,
 
@@ -40,7 +38,7 @@ module WriteAdddr (
 	output logic [`AXI_SIZE_BITS-1:0] AWSIZE_S2,
 	output logic [1:0] AWBURST_S2,
 	output logic AWVALID_S2,
-	input AWREADY_S2,
+	input AWREADY_S2
 );
 
 logic [`AXI_ID_BITS-1:0]     AWID_M0;
@@ -83,7 +81,7 @@ assign AWLEN_S2 = AWLEN;
 assign AWSIZE_S2 = AWSIZE;
 assign AWBURST_S2 = AWBURST;
 
-Arbiter WA_Arbiter{
+Arbiter WAArbiter(
     .clk                 (clk),
     .rst                 (rst),
 
@@ -116,9 +114,9 @@ Arbiter WA_Arbiter{
 	.VALID_S             (AWVALID),
 
 	.READY_S             (AWREADY)
-};
+);
 
-Decoder WA_Decoder{
+Decoder WADecoder(
     .ADDR(AWADDR),
     .VALID(AWVALID),              //the address correctness
     .READY(AWREADY),              //slave take the address
@@ -128,7 +126,7 @@ Decoder WA_Decoder{
     .VALID_S0(AWVALID_S0),           //axi ready to transfer address to slave
     .VALID_S1(AWVALID_S1),
     .VALID_S2(AWVALID_S2)
-};
+);
 
 endmodule
 

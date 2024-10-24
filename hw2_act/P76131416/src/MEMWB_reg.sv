@@ -10,8 +10,8 @@ module MEMWB_reg (//float control signal not yet
     input MEM_RegWrite,
     input MEM_MemtoReg,
     input MEM_f_RegWrite,
-    input IM_stall,
-    input DM_stall,
+    input im_stall,
+    input dm_stall,
     // input MEM_is_float,
 
     output logic [31:0] WB_rd_data,
@@ -25,8 +25,8 @@ module MEMWB_reg (//float control signal not yet
     // output logic WB_is_float
 );
 
-always_ff @( posedge clk or posedge reset ) begin
-    if(reset)begin
+always_ff @( posedge clk or negedge reset) begin
+    if(~reset)begin
         WB_rd_data <= 32'h0;
         WB_data_memory <= 32'h0;
         WB_write_addr <= 5'd0;

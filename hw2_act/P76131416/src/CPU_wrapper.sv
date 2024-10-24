@@ -1,6 +1,6 @@
 `include "../include/AXI_define.svh"
 `include "Master.sv"
-
+`include "CPU.sv"
 module CPU_wrapper (
     input                                   clk            ,
     input                                   rst            ,
@@ -86,51 +86,57 @@ module CPU_wrapper (
 );
 
 //WRITE ADDRESS
-logic [`AXI_ID_BITS-1:0]         AWID_M0        ,
-logic [`AXI_ADDR_BITS-1:0]       AWADDR_M0      ,
-logic [`AXI_LEN_BITS-1:0]        AWLEN_M0       ,
-logic [`AXI_SIZE_BITS-1:0]       AWSIZE_M0      ,
-logic [1:0]                      AWBURST_M0     ,
-logic                            AWVALID_M0     ,
-logic                            AWREADY_M0     ,
+logic [`AXI_ID_BITS-1:0]         AWID_M0;
+logic [`AXI_ADDR_BITS-1:0]       AWADDR_M0;
+logic [`AXI_LEN_BITS-1:0]        AWLEN_M0;
+logic [`AXI_SIZE_BITS-1:0]       AWSIZE_M0;
+logic [1:0]                      AWBURST_M0;
+logic                            AWVALID_M0;
+logic                            AWREADY_M0;
 
 //WRITE DATA
-logic [`AXI_DATA_BITS-1:0]       WDATA_M0       ,
-logic [`AXI_STRB_BITS-1:0]       WSTRB_M0       ,
-logic                            WLAST_M0       ,
-logic                            WVALID_M0      ,
-logic                            WREADY_M0      ,
+logic [`AXI_DATA_BITS-1:0]       WDATA_M0;
+logic [`AXI_STRB_BITS-1:0]       WSTRB_M0;
+logic                            WLAST_M0;
+logic                            WVALID_M0;
+logic                            WREADY_M0;
 
 //WRITE RESPONSE
-logic [`AXI_ID_BITS-1:0]         BID_M0         ,
-logic [1:0]                      BRESP_M0       ,
-logic                            BVALID_M0      ,
-logic                            BREADY_M0      ,
+logic [`AXI_ID_BITS-1:0]         BID_M0;
+logic [1:0]                      BRESP_M0;
+logic                            BVALID_M0;
+logic                            BREADY_M0;
 
 logic w_read, w_write, w_im_stall, w_dm_stall;
 logic [`AXI_STRB_BITS-1:0] w_write_type;
 logic [`AXI_ADDR_BITS-1:0] w_addr, w_im_addr;
 logic [`AXI_DATA_BITS-1:0] w_data_in, w_data_out, w_im_data_out;
 
+assign AWREADY_M0 = 1'b0;
+assign WREADY_M0 = 1'b0;
+assign BREADY_M0 = 1'b0;
+
 CPU cpu(
-    .clk(clk),
-    .rst(rst),
+.clk(clk),
+.rst(rst),
 
-    //IF out
-    .IM_instr(w_im_data_out),
-    .progcnt_out(w_im_addr),
-    
-    //MEM out
-    input [31:0] .DM_DO(w_data_out),
-    output .DM_WEB(),
-    output [3:0] .DM_BWEB(w_write_type),
-    output [31:0] .DM_addr(w_addr),
-    output [31:0] .DM_DI(w_data_in),
+//IF out
+.IM_instr(w_im_data_out),
+.progcnt_out(w_im_addr),
 
-    //stall
-    .IM_stall(w_im_stall),
-    .DM_stall(w_dm_stall)
+//MEM out
+.DM_DO(w_data_out),
+.DM_WEB(w_read),
+.DM_BWEB(w_write_type),
+.DM_addr(w_addr),
+.DM_DI(w_data_in),
+
+//stall
+.IM_stall(w_im_stall),
+.DM_stall(w_dm_stall)
 );
+
+assign w_write = (w_write_type != 4'hf) ? 1'b0 : 1'b1;
 
 Master M0(                          //IM
     .clk(clk)                   ,

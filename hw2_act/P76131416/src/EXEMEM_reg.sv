@@ -36,8 +36,8 @@ module EXEMEM_reg (
     // output logic MEM_is_float
 );
 
-always_ff @( posedge clk or posedge reset) begin
-    if(reset)begin
+always_ff @( posedge clk or negedge reset) begin
+    if(~reset)begin
         MEM_ALU_out <= 32'h0;
         MEM_R_ALUout <= 32'h0;
         MEM_write_addr <= 5'd0;
@@ -68,7 +68,6 @@ always_ff @( posedge clk or posedge reset) begin
         MEM_MemRead <= MEM_MemRead;
         MEM_RegWrite <= MEM_RegWrite;
         MEM_f_RegWrite <= MEM_f_RegWrite;
-    end
     end else begin
         if(EXE_MenWrite)begin                   //store 需要手動將資料移到對應位置
             case(EXE_funct3)
@@ -132,5 +131,4 @@ always_ff @( posedge clk or posedge reset) begin
         // MEM_is_float <= EXE_is_float;
     end
 end
-
 endmodule

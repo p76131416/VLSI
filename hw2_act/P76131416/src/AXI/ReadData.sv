@@ -66,7 +66,7 @@ logic lock_S0, lock_S1, lock_S2;
 logic [3:0] master;
 logic [2:0] slave;
 
-always_ff @( posedge clk or negedge rst ) begin
+always_ff @( posedge clk or negedge rst) begin
     if(~rst)begin
         lock_S0 <= 1'b0;
         lock_S1 <= 1'b0;

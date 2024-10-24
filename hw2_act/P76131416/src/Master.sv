@@ -5,15 +5,15 @@ module Master (
     input                                   reset        ,
 
     //from cpu
-    input logic                             READ         ;
-    input logic                             WRITE        ;
-    input logic [`AXI_STRB_BITS-1:0]        WRITE_TYPE   ;
-    input logic [`AXI_ADDR_BITS-1:0]        ADDR_IN      ;
-    input logic [`AXI_DATA_BITS-1:0]        DATA_IN      ;
+    input                                   READ         ,
+    input                                   WRITE        ,
+    input       [`AXI_STRB_BITS-1:0]        WRITE_TYPE   ,
+    input       [`AXI_ADDR_BITS-1:0]        ADDR_IN      ,
+    input       [`AXI_DATA_BITS-1:0]        DATA_IN      ,
 
     //to cpu
-    output logic [`AXI_DATA_BITS-1:0]       DATA_OUT     ;
-    output logic                            STALL        ;
+    output logic [`AXI_DATA_BITS-1:0]       DATA_OUT     ,
+    output logic                            STALL        ,
 
     // Read address
     output logic [`AXI_ID_BITS-1:0]         ARID         ,
@@ -22,13 +22,13 @@ module Master (
     output logic [`AXI_SIZE_BITS-1:0]       ARSIZE       ,
     output logic [1:0]                      ARBURST      ,
     output logic                            ARVALID      ,
-    input logic                             ARREADY      ,
+    input                                   ARREADY      ,
     // Read data
-    input logic [`AXI_ID_BITS-1:0]          RID          ,
-    input logic [`AXI_DATA_BITS-1:0]        RDATA        ,
-    input logic [1:0]                       RRESP        ,
-    input logic                             RLAST        ,
-    input logic                             RVALID       ,
+    input       [`AXI_ID_BITS-1:0]          RID          ,
+    input       [`AXI_DATA_BITS-1:0]        RDATA        ,
+    input       [1:0]                       RRESP        ,
+    input                                   RLAST        ,
+    input                                   RVALID       ,
     output logic                            RREADY       ,
 
     //Write address
@@ -38,28 +38,28 @@ module Master (
     output logic [`AXI_SIZE_BITS-1:0]       AWSIZE       ,
     output logic [1:0]                      AWBURST      ,
     output logic                            AWVALID      ,
-    input logic                             AWREADY      ,
+    input                                   AWREADY      ,
     // Write data
     output logic [`AXI_DATA_BITS-1:0]       WDATA        ,
     output logic [`AXI_STRB_BITS-1:0]       WSTRB        ,
     output logic                            WLAST        ,
     output logic                            WVALID       ,
-    input logic                             WREADY       ,
+    input                                   WREADY       ,
 
     // Write Response
-    input logic [`AXI_ID_BITS-1:0]          BID          ,
-    input logic [1:0]                       BRESP        ,
-    input logic                             BVALID       ,
+    input       [`AXI_ID_BITS-1:0]          BID          ,
+    input       [1:0]                       BRESP        ,
+    input                                   BVALID       ,
     output logic                            BREADY       
 );
 
 logic [`AXI_DATA_BITS-1:0] DATA_BUF;
 logic [2:0] master_stage, next_stage;
-localparam  idle = 3'd0;
-            read_address = 3'd1;
-            read_data = 3'd2;
-            write_address = 3'd3;
-            write_data = 3'd4;
+localparam  idle = 3'd0,
+            read_address = 3'd1,
+            read_data = 3'd2,
+            write_address = 3'd3,
+            write_data = 3'd4,
             write_response = 3'd5;
 
 //Read address
@@ -89,8 +89,8 @@ always_comb begin       //make sure DATA_OUT will always get last data
 end
 
 //make sure read data won't disappear 
-always_ff @( posedge clk or negedge reset ) begin 
-    if(!reset)
+always_ff @( posedge clk or negedge reset) begin 
+    if(~reset)
         DATA_BUF <= `AXI_DATA_BITS'h0;
     else if(RVALID & RREADY)
         DATA_BUF <= RDATA;
@@ -211,7 +211,7 @@ always_comb begin       //stage behavior
     endcase
 end
 
-always_ff @( posedge clk or negedge reset ) begin
+always_ff @( posedge clk or negedge reset) begin
     if(~reset)
         master_stage <= idle;
     else

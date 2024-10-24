@@ -28,8 +28,8 @@ assign funct3 = instr[14:12];
 assign funct7 = instr[31:25];
 // assign is_float = (instr[6:0] == 7'b0000111 || instr[6:0] == 7'b0100111 || instr[6:0] == 7'b1010011) ? 1'b1 : 1'b0;
 
-always_ff @( posedge clk or posedge reset) begin
-    if(reset)begin
+always_ff @( posedge clk or negedge reset) begin
+    if(~reset)begin
         ID_pc_out <= 32'h0;
         instr <= 32'h0;
     end

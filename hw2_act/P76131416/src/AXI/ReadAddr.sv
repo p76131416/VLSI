@@ -1,8 +1,7 @@
 `include "AXI_define.svh"
 `include "Arbiter.sv"
 `include "Decoder.sv"
-
-module ReadAdddr (
+module ReadAddr (
     input                               clk,
     input                               rst,
 
@@ -78,42 +77,42 @@ assign ARLEN_S2 = ARLEN;
 assign ARSIZE_S2 = ARSIZE;
 assign ARBURST_S2 = ARBURST;
 
-Arbiter RA_Arbiter{
-    .clk                 (clk),
-    .rst                 (rst),
+Arbiter RAarbiter(
+    .clk(clk),
+    .rst(rst),
 
     //M0 
-    .ID_M0               (ARID_M0),
-	.ADDR_M0             (ARADDR_M0),
-	.LEN_M0              (ARLEN_M0),
-	.SIZE_M0             (ARSIZE_M0),
-	.BURST_M0            (ARBURST_M0),
-	.VALID_M0            (ARVALID_M0),
+    .ID_M0(ARID_M0),
+	.ADDR_M0(ARADDR_M0),
+	.LEN_M0(ARLEN_M0),
+	.SIZE_M0(ARSIZE_M0),
+	.BURST_M0(ARBURST_M0),
+	.VALID_M0(ARVALID_M0),
 
-    .READY_M0            (ARREADY_M0),
+    .READY_M0(ARREADY_M0),
 
     //M1
-    .ID_M1               (ARID_M1),
-	.ADDR_M1             (ARADDR_M1),
-	.LEN_M1              (ARLEN_M1),
-	.SIZE_M1             (ARSIZE_M1),
-	.BURST_M1            (ARBURST_M1),
-	.VALID_M1            (ARVALID_M1),
+    .ID_M1(ARID_M1),
+	.ADDR_M1(ARADDR_M1),
+	.LEN_M1 (ARLEN_M1),
+	.SIZE_M1(ARSIZE_M1),
+	.BURST_M1(ARBURST_M1),
+	.VALID_M1(ARVALID_M1),
 
-	.READY_M1            (ARREADY_M1),
+	.READY_M1(ARREADY_M1),
 
     //S
-    .ID_S                (ARID),
-	.ADDR_S              (ARADDR),
-	.LEN_S               (ARLEN),
-	.SIZE_S              (ARSIZE),
-	.BURST_S             (ARBURST),
-	.VALID_S             (ARVALID),
+    .ID_S(ARID),
+	.ADDR_S(ARADDR),
+	.LEN_S(ARLEN),
+	.SIZE_S(ARSIZE),
+	.BURST_S(ARBURST),
+	.VALID_S(ARVALID),
 
-	.READY_S             (ARREADY)
-};
+	.READY_S(ARREADY)
+);
 
-Decoder RA_Decoder{
+Decoder RADecoder(
     .ADDR(ARADDR),
     .VALID(ARVALID),
     .READY(ARREADY),
@@ -123,7 +122,7 @@ Decoder RA_Decoder{
     .VALID_S0(ARVALID_S0),          //differ
     .VALID_S1(ARVALID_S1),
     .VALID_S2(ARVALID_S2)
-};
+);
 
 endmodule
 

@@ -24,7 +24,7 @@ module CPU (
     input [31:0] IM_instr,
     input [31:0] DM_DO,
     input IM_stall,
-    input DM_stall,         //unwrite
+    input DM_stall,
 
     output [31:0] progcnt_out,
     output DM_WEB,
@@ -120,7 +120,7 @@ wire [31:0] mem_rd_data;
 
 wire mem_RDSrc;
 wire mem_MemtoReg;
-wire [31:0] mem_MemWrite;
+wire [3:0] mem_MemWrite;
 wire mem_MemRead;
 wire mem_RegWrite;
 wire mem_f_RegWrite;
@@ -211,7 +211,7 @@ wire [63:0] w_cycle;
 //ID stage 
 
 Regfile_f Register_file_float(
-.clk(~clk),
+.clk(clk),
 .reset(rst),
 .frd_reg1_addr(rd_r1),
 .frd_reg2_addr(rd_r2),
@@ -225,7 +225,7 @@ Regfile_f Register_file_float(
 
 
 Regfile Regster_file(
-.clk(~clk),
+.clk(clk),
 .reset(rst),
 .rd_reg1_addr(rd_r1),
 .rd_reg2_addr(rd_r2),
@@ -590,8 +590,8 @@ MEMWB_reg MEMWB_pipe(
 .MEM_RegWrite(mem_RegWrite),
 .MEM_f_RegWrite(mem_f_RegWrite),
 .MEM_MemtoReg(mem_MemtoReg),
-.IM_stall(im_stall),
-.DM_stall(dm_stall),
+.im_stall(IM_stall),
+.dm_stall(DM_stall),
 // .MEM_is_float(mem_is_float),
 
 .WB_rd_data(wb_rd_data),

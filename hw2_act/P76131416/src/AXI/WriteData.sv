@@ -19,6 +19,7 @@ module WriteData (
 	input WREADY_S0,
 
     //S1
+	input AWVALID_S1,
     output logic [`AXI_DATA_BITS-1:0] WDATA_S1,
 	output logic [`AXI_STRB_BITS-1:0] WSTRB_S1,
 	output logic WLAST_S1,
@@ -26,6 +27,7 @@ module WriteData (
 	input WREADY_S1,
 
     //S2
+	input AWVALID_S2,
     output logic [`AXI_DATA_BITS-1:0] WDATA_S2,
 	output logic [`AXI_STRB_BITS-1:0] WSTRB_S2,
 	output logic WLAST_S2,

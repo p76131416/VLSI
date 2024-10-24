@@ -66,8 +66,8 @@ module IDEXE_reg (
     // output logic EXE_is_float
 );
 
-always_ff @(posedge clk or posedge reset) begin
-    if(reset)begin
+always_ff @(posedge clk or negedge reset) begin
+    if(~reset)begin
         EXE_pc_out <= 32'h0;
         EXE_rd_reg1_data <= 32'h0;
         EXE_rd_reg2_data <= 32'h0;
