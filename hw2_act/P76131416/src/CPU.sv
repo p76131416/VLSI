@@ -170,6 +170,8 @@ IFID_reg IFID_pipe(
 .instruction(IM_instr),
 .pc(progcnt_out),
 .IFID_write(IFID_write),
+.im_stall(IM_stall),
+.dm_stall(DM_stall),
 
 .ID_pc_out(id_pc),
 .read_reg1(rd_r1),

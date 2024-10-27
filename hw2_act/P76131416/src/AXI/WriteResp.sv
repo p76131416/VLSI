@@ -94,7 +94,7 @@ always_comb begin
             BREADY_S2 = 1'b0;
         end
         3'b010 : begin
-            master = BID_S2[`AXI_IDS_BITS-1:`AXI_ID_BITS];
+            master = BID_S1[`AXI_IDS_BITS-1:`AXI_ID_BITS];
             BRESP_M1 = BRESP_S1;
             BID = BID_S1;
             BRESP = BRESP_S1;

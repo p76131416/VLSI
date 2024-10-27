@@ -114,7 +114,7 @@ logic [`AXI_DATA_BITS-1:0] w_data_in, w_data_out, w_im_data_out;
 
 assign AWREADY_M0 = 1'b0;
 assign WREADY_M0 = 1'b0;
-assign BREADY_M0 = 1'b0;
+assign BVALID_M0 = 1'b0;
 
 CPU cpu(
 .clk(clk),
@@ -136,7 +136,7 @@ CPU cpu(
 .DM_stall(w_dm_stall)
 );
 
-assign w_write = (w_write_type != 4'hf) ? 1'b0 : 1'b1;
+assign w_write = (w_write_type == 4'hf) ? 1'b0 : 1'b1;
 
 Master M0(                          //IM
     .clk(clk)                   ,
@@ -190,7 +190,7 @@ Master M0(                          //IM
     .BID(BID_M0)                ,
     .BRESP(BRESP_M0)            ,
     .BVALID(BVALID_M0)          ,
-    .BREADY(BREAD)       
+    .BREADY(BREADY_M0)       
 );
     
 

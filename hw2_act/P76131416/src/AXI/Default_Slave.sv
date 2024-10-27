@@ -38,7 +38,7 @@ module Default_Slave (
 	output logic 						WREADY_S2,
 	
 	//WRITE RESPONSE
-	output logic [`AXI_ID_BITS-1:0] 	BID_S2,
+	output logic [`AXI_IDS_BITS-1:0] 	BID_S2,
 	output logic [1:0] 					BRESP_S2,
 	output logic 						BVALID_S2,
 	input 								BREADY_S2
@@ -53,6 +53,7 @@ localparam  idle = 2'b00,
 assign RRESP_S2 = `AXI_RESP_DECERR;
 assign RDATA_S2 = `AXI_ADDR_BITS'b0;
 assign RID_S2 = (ARVALID_S2 & ARREADY_S2) ? ARID_S2 : RID_S2;
+assign RLAST_S2 = (RVALID_S2 & RREADY_S2) ? 1'b1 : 1'b0;
 
 assign BRESP_S2 = `AXI_RESP_DECERR;
 assign BID_S2 = (BVALID_S2 & BREADY_S2) ? AWVALID_S2 : BID_S2;
@@ -71,6 +72,8 @@ always_comb begin
                 next_stage <= read_data;
             else if(AWVALID_S2 & AWREADY_S2)
                 next_stage <= write_data;
+            else 
+                next_stage <= idle;
         end
         read_data : begin
             if(RVALID_S2 & RREADY_S2 & RLAST_S2)

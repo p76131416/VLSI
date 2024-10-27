@@ -47,8 +47,8 @@ logic CEB;
 logic WEB;
 logic [31:0] BWEB;
 logic [13:0] A, address;
-logic [31:0] DI;
-logic [31:0] DO;
+logic [`AXI_DATA_BITS-1:0] DI;
+logic [`AXI_DATA_BITS-1:0] DO, DO_temp;
 
 assign CEB = 1'b0;
 assign DI = WDATA;
@@ -67,7 +67,7 @@ logic [`AXI_LEN_BITS-1:0] len;
 logic [`AXI_LEN_BITS-1:0] counter;
 
 assign RID = (ARVALID & ARREADY) ? ARID : RID;
-assign RDATA = DO;
+assign RDATA = (RVALID & RREADY) ? DO : DO_temp;
 assign RRESP = `AXI_RESP_OKAY;
 assign RLAST = ((stage == read_data) & (counter == len)) ? 1'b1 : 1'b0; 
 
@@ -80,6 +80,13 @@ always_comb begin
         len = ARLEN;
     else if(AWVALID & AWREADY)
         len = AWLEN;
+end
+
+always_ff @( posedge clk or negedge rst ) begin 
+    if(~rst)
+        DO_temp <= `AXI_DATA_BITS'b0;
+    else 
+        DO_temp <= (RVALID & RREADY) ? DO : DO_temp;
 end
 
 always_ff @( posedge clk or negedge rst ) begin
@@ -184,12 +191,12 @@ end
 always_comb begin
     case (stage)
         idle : begin
-            ARREADY = 1'b1;         //?
+            ARREADY = ~AWVALID;         //I change here then prog1 become right
             RVALID = 1'b0;
             AWREADY = 1'b1;
             WREADY = 1'b0;
             BVALID = 1'b0;
-            A = (ARVALID) ? ARADDR[15:2] : AWADDR[15:2];
+            A = (ARVALID) ? ARADDR[15:2] : (AWVALID) ? AWADDR[15:2] : address;
         end
         read_data : begin
             ARREADY = 1'b0;
@@ -223,22 +230,22 @@ always_comb begin
     WEB = 1'b0;
     case (WSTRB)
         `AXI_STRB_BITS'b1110 :          //1110
-            BWEB = 32'hfff0;
+            BWEB = 32'hffffff00;
         `AXI_STRB_BITS'b1101 :         //1101
-            BWEB = 32'hff0f;
+            BWEB = 32'hffff00ff;
         `AXI_STRB_BITS'b1011 :          //1011
-            BWEB = 32'hf0ff;
+            BWEB = 32'hff00ffff;
         `AXI_STRB_BITS'b0111 :
-            BWEB = 32'h0fff;
+            BWEB = 32'h00ffffff;
         `AXI_STRB_BITS'b0011 :
-            BWEB = 32'h00ff;
+            BWEB = 32'h0000ffff;
         `AXI_STRB_BITS'b1100 :
-            BWEB = 32'hff00;
+            BWEB = 32'hffff0000;
         `AXI_STRB_BITS'b0000 :
-            BWEB = 32'h0000;
+            BWEB = 32'h00000000;
         default : begin
             WEB = 1'b1;
-            BWEB = 32'hffff;
+            BWEB = 32'hffffffff;
         end
     endcase
 end
@@ -248,7 +255,7 @@ end
     .DSLP(1'b0),
     .SD(1'b0),
     .PUDELAY(),
-    .CLK(clk),
+    .CLK(~clk),
 	.CEB(CEB),
 	.WEB(WEB),
     .A(A),

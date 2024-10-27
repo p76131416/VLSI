@@ -47,15 +47,17 @@ always_ff @( posedge clk or negedge reset) begin
         MEM_memory_in <= 32'd0;
         MEM_RDSrc <= 1'b0;
         MEM_MemtoReg <= 1'b0;
-        MEM_MemWrite <= 4'd0;
+        MEM_MemWrite <= 4'hf;
         MEM_MemRead <= 1'b0;
         MEM_RegWrite <= 1'b0;
         MEM_f_RegWrite <= 1'b0;
         // MEM_is_float <= 1'b0;
-    end else if(im_stall  & !dm_stall) begin
+    end 
+    else if(im_stall  & !dm_stall) begin
         MEM_MemRead <= 1'b0;
-        MEM_MemWrite <= 4'd0;
-    end else if(im_stall | dm_stall) begin
+        MEM_MemWrite <= 4'hf;
+    end 
+    else if(im_stall | dm_stall) begin
         MEM_ALU_out <= MEM_ALU_out;
         MEM_R_ALUout <= MEM_R_ALUout;
         MEM_write_addr <= MEM_write_addr;
@@ -68,7 +70,8 @@ always_ff @( posedge clk or negedge reset) begin
         MEM_MemRead <= MEM_MemRead;
         MEM_RegWrite <= MEM_RegWrite;
         MEM_f_RegWrite <= MEM_f_RegWrite;
-    end else begin
+    end 
+    else begin
         if(EXE_MenWrite)begin                   //store 需要手動將資料移到對應位置
             case(EXE_funct3)
                 3'b000 : begin      //SB

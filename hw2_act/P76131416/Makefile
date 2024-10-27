@@ -411,7 +411,8 @@ rtl0: | $(bld_dir)
 	+access+r \
 	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog0 \
-
+	+rdcycle=1 \
+	+notimingcheck
 
 rtl1: | $(bld_dir)
 	@if [ $$(echo $(CYCLE) '>' 10.0 | bc -l) -eq 1 ]; then \
@@ -420,7 +421,7 @@ rtl1: | $(bld_dir)
 	fi; \
 	make -C $(sim_dir)/prog1/; \
 	cd $(bld_dir); \
-	irun $(root_dir)/$(sim_dir)/top_tb.sv\
+	irun $(root_dir)/$(sim_dir)/top_tb.sv \
 	+incdir+$(root_dir)/$(src_dir)+$(root_dir)/$(src_dir)/AXI+$(root_dir)/$(inc_dir)+$(root_dir)/$(sim_dir) \
     +define+prog1$(FSDB_DEF) \
 	+define+CYCLE=$(CYCLE) \
@@ -428,6 +429,8 @@ rtl1: | $(bld_dir)
 	+access+r \
 	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog1 \
+	+rdcycle=1 \
+	+notimingcheck
 	
 
 rtl2: | $(bld_dir)
@@ -445,6 +448,8 @@ rtl2: | $(bld_dir)
 	+access+r \
 	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog2 \
+	+rdcycle=1 \
+	+notimingcheck
 	
 
 rtl3: | $(bld_dir)
@@ -462,6 +467,8 @@ rtl3: | $(bld_dir)
 	+access+r \
 	+nc64bit \
 	+prog_path=$(root_dir)/$(sim_dir)/prog3 \
+	+rdcycle=1 \
+	+notimingcheck
 	
 
 rtl4: | $(bld_dir)

@@ -201,9 +201,10 @@ StickSet-TextColor = black
 [FSM_Dlg-Print]
 Orientation = Landscape
 [FileBrowser]
-nWaveOpenFsdbDirHistory = "\"/home/WangYanTing/VLSI/hw1_act/P76131416/build/top.fsdb\""
+nWaveOpenFsdbDirHistory = "\"/home/WangYanTing/VLSI/hw1_act/P76131416/build/top.fsdb\"" "\"/home/WangYanTing/VLSI/hw2_act/P76131416/build/top.fsdb\""
 [Form]
 version = Verdi_Q-2020.03
+openfile.fm = 100,100,723,532
 [General]
 autoSaveSession = FALSE
 TclAutoSource = 
@@ -326,12 +327,24 @@ FileName = test.ps
 PaperSize = A4 - 210x297 (mm)
 ColorPrint = FALSE
 [QtDialog]
-QwWarnMsgDlg = 650,375,600,250
-QwUserAskDlg = 788,378,324,142
-SearchValueDialog = 790,479,339,105
-searchConsDialog = 731,462,457,138
-qWaveSignalDialog = 503,321,800,479
-openFileDlg = 238,299,759,617
+QwInfoMsgDlg = 575,375,750,250
+QwUserAskDlg = 788,378,324,134
+QwWarnMsgDlg = 437,331,600,250
+ExpressionDialog_AppendLogicalExpression = 230,307,590,340
+ActiveFileDialog = 733,395,453,272
+qWaveSignalDialog = 397,177,1117,668
+ExpandBusDialog = 316,422,407,117
+ExpressionDialog = 146,271,778,493
+EventWindow = 553,338,829,402
+gridOptionsDialog = 356,399,422,269
+SearchValueDialog = 465,541,339,105
+searchConsDialog = 371,454,457,138
+ToggleCoverageDialog = 249,183,407,593
+SetWindowTimeUnitDialog = 751,496,433,86
+CompareOptionsDialog = 222,224,546,529
+comparisonDialog = 301,317,542,276
+openFileDlg = 580,223,759,617
+QwShortcutDialog = 558,199,800,600
 [Session Cache]
 1 = string (session file name)
 2 = string (session file name)
@@ -545,8 +558,7 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 503 321 800 479 298 381 256 89
-viewPort = 0 23 1920 1017 287 197
+viewPort = 0 25 1920 939 217 280
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -819,7 +831,8 @@ curveWindow_Drag&Drop_Mode = TRUE
 hspiceIncOpenMode = TRUE
 pcSelectMode = TRUE
 hierarchyDelimiter = /
-RecentFile1 = "\"/home/WangYanTing/VLSI/hw1_act/P76131416/build/top.fsdb\""
+RecentFile1 = "\"/home/WangYanTing/VLSI/hw2_act/P76131416/build/top.fsdb\""
+RecentFile2 = "\"/home/WangYanTing/VLSI/hw1_act/P76131416/build/top.fsdb\""
 open_file_time_range = FALSE
 value_window_aligment = Right
 signal_window_alignment = Auto
@@ -859,6 +872,7 @@ displayHorizontalRuler = FALSE
 displayVerticalGrid = FALSE
 displayHorizontalGrid = FALSE
 waveClickMemberNode = FALSE
+getSignalForm = 397 177 1117 668 467 570 404 137
 [cov_hier_name_column]
 justify = TRUE
 [coverageColors]
@@ -970,11 +984,11 @@ options = NULL
 libPath = NULL
 libDir = NULL
 [nCompare]
-ErrorViewport = 80 180 800 550
-EditorViewport = 409 287 676 475
-EditorHeightWidth = 802 380
 WaveCommand = "novas"
 WaveArgs = "-nWave"
+EditorHeightWidth = 1902 190
+ErrorViewport = 0 25 1920 939
+EditorViewport = 409 287 676 475
 [nCompare.Wnd0]
 ViewByHier = FALSE
 [nMemory]
