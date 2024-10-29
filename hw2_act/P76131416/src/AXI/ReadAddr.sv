@@ -1,6 +1,5 @@
-`include "AXI_define.svh"
-`include "Arbiter.sv"
-`include "Decoder.sv"
+`include "../include/AXI_define.svh"
+
 module ReadAddr (
     input                               clk,
     input                               rst,

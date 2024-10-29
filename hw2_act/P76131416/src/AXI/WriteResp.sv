@@ -1,4 +1,4 @@
-`include "AXI_define.svh"
+`include "../include/AXI_define.svh"
 
 module WriteResp (
     input clk,
@@ -40,7 +40,7 @@ logic [3:0] slave;
 assign BID_M1 = BID;
 assign RRESP_M1 = BRESP;
 
-always_ff @( posedge clk or posedge rst) begin
+always_ff @( posedge clk or negedge rst) begin
     if(~rst)begin
         lock_S0 <= 1'b0;
         lock_S1 <= 1'b0;
@@ -86,7 +86,7 @@ always_comb begin
         3'b001 : begin
             master = BID_S0[`AXI_IDS_BITS-1:`AXI_ID_BITS];
             BRESP_M1 = BRESP_S0;
-            BID = BID_S0;
+            BID = BID_S0[`AXI_ID_BITS-1:0];
             BRESP = BRESP_S0;
             BVALID = BVALID_S0;
             BREADY_S0 = BVALID_S0 & BREADY;
@@ -96,7 +96,7 @@ always_comb begin
         3'b010 : begin
             master = BID_S1[`AXI_IDS_BITS-1:`AXI_ID_BITS];
             BRESP_M1 = BRESP_S1;
-            BID = BID_S1;
+            BID = BID_S1[`AXI_ID_BITS-1:0];
             BRESP = BRESP_S1;
             BVALID = BVALID_S1;
             BREADY_S0 = 1'b0;
@@ -106,7 +106,7 @@ always_comb begin
         3'b100 : begin
             master = BID_S2[`AXI_IDS_BITS-1:`AXI_ID_BITS];
             BRESP_M1 = BRESP_S2;
-            BID = BID_S2;
+            BID = BID_S2[`AXI_ID_BITS-1:0];
             BRESP = BRESP_S2;
             BVALID = BVALID_S2;
             BREADY_S0 = 1'b0;

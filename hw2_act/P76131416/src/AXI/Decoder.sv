@@ -1,8 +1,8 @@
-`include "AXI_define.svh"
+`include "../include/AXI_define.svh"
 
 //decode address to which slave (read address and write address)
 
-module Decoder (
+module Decoder(
     input [`AXI_ADDR_BITS-1:0] 			ADDR,
     input                               VALID,              //the address correctness
     output logic                        READY,              //slave take the address

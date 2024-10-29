@@ -16,8 +16,8 @@
 // 	Date:			2024/09/28								   		//
 // 	Version:		1.0	    								   		//
 //////////////////////////////////////////////////////////////////////
-
-
+`include "../../include/AXI_define.svh"
+`include "../../src/SRAM_wrapper.sv"
 module top #(parameter bit COVERAGE_ON = 0) ();
 
     // user defined AXI parameters

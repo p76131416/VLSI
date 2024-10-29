@@ -52,7 +52,7 @@ module Master (
     input                                   BVALID       ,
     output logic                            BREADY       
 );
-
+logic rst, read_reg, write_reg;
 logic [`AXI_DATA_BITS-1:0] DATA_BUF;
 logic [2:0] master_stage, next_stage;
 localparam  idle = 3'd0,
@@ -80,6 +80,16 @@ assign AWBURST = `AXI_BURST_INC;
 assign WDATA = DATA_IN;
 assign WSTRB = WRITE_TYPE;
 assign WLAST = 1'b1;
+
+always_ff @( posedge clk or negedge reset ) begin           //fulfill vip
+    if(~reset)
+        rst <= 1'b0;
+    else 
+        rst <= 1'b1;
+end
+
+assign read_reg = (READ & rst);
+assign write_reg = (WRITE & rst);
 
 always_comb begin       //make sure DATA_OUT will always get last data
     if(RVALID & RREADY)
@@ -153,10 +163,10 @@ end
 always_comb begin       //stage behavior
     case (master_stage)
         idle : begin
-            STALL = READ | WRITE;
-            ARVALID = READ;         //may exist problem
+            STALL = read_reg | write_reg;
+            ARVALID = read_reg;         //may exist problem
             RREADY = 1'b0;
-            AWVALID = WRITE;        //may exist problem
+            AWVALID = write_reg;        //may exist problem
             WVALID = 1'b0;
             BREADY = 1'b0;
         end
@@ -193,7 +203,7 @@ always_comb begin       //stage behavior
             BREADY = 1'b0;
         end
         write_response : begin
-            STALL = (READ | WRITE);
+            STALL = (read_reg | write_reg);
             ARVALID = 1'b0;
             RREADY = 1'b0;
             AWVALID = 1'b0;

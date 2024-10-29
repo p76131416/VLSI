@@ -1,10 +1,10 @@
-`include "AXI_define.svh"
-`include "ReadAddr.sv"
-`include "ReadData.sv"
-`include "WriteAddr.sv"
-`include "WriteData.sv"
-`include "WriteResp.sv"
-`include "Default_Slave.sv"
+`include "../include/AXI_define.svh"
+`include "./AXI/ReadAddr.sv"
+`include "./AXI/ReadData.sv"
+`include "./AXI/WriteAddr.sv"
+`include "./AXI/WriteData.sv"
+`include "./AXI/WriteResp.sv"
+`include "./AXI/Default_Slave.sv"
 module AXI(
 
 	input ACLK,

@@ -2,8 +2,8 @@
 `include "Master.sv"
 `include "CPU.sv"
 module CPU_wrapper (
-    input                                   clk            ,
-    input                                   rst            ,
+    input                                   ACLK            ,
+    input                                   ARESETn         ,
 
     // //WRITE ADDRESS
     // output logic [`AXI_ID_BITS-1:0]         AWID_M0        ,
@@ -111,14 +111,22 @@ logic w_read, w_write, w_im_stall, w_dm_stall;
 logic [`AXI_STRB_BITS-1:0] w_write_type;
 logic [`AXI_ADDR_BITS-1:0] w_addr, w_im_addr;
 logic [`AXI_DATA_BITS-1:0] w_data_in, w_data_out, w_im_data_out;
+logic late_reset;
 
 assign AWREADY_M0 = 1'b0;
 assign WREADY_M0 = 1'b0;
 assign BVALID_M0 = 1'b0;
 
+always_ff @( posedge ACLK or negedge ARESETn ) begin        //fulfill vip
+    if(~ARESETn)
+        late_reset <= ARESETn;
+    else 
+        late_reset <= ARESETn;
+end
+
 CPU cpu(
-.clk(clk),
-.rst(rst),
+.clk(ACLK),
+.rst(late_reset),
 
 //IF out
 .IM_instr(w_im_data_out),
@@ -139,8 +147,8 @@ CPU cpu(
 assign w_write = (w_write_type == 4'hf) ? 1'b0 : 1'b1;
 
 Master M0(                          //IM
-    .clk(clk)                   ,
-    .reset(rst)                 ,
+    .clk(ACLK)                   ,
+    .reset(ARESETn)                 ,
 
     //from cpu
     .READ(1'b1)                 ,
@@ -195,8 +203,8 @@ Master M0(                          //IM
     
 
 Master M1(                          //DM
-    .clk(clk)                   ,
-    .reset(rst)                 ,
+    .clk(ACLK)                   ,
+    .reset(ARESETn)                 ,
 
     //from cpu
     .READ(w_read)               ,

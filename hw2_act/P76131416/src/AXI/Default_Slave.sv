@@ -1,4 +1,4 @@
-`include "AXI_define.svh"
+`include "../include/AXI_define.svh"
 
 module Default_Slave (
 	input 								clk,

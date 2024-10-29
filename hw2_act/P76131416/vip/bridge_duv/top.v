@@ -17,8 +17,8 @@
 // 	Version:		1.0	    								   		//
 // 		!!!----------DO NOT MODIFY THIS FILE-------------!!! 		//
 //////////////////////////////////////////////////////////////////////
-
-
+`include "../../include/AXI_define.svh"
+`include "../../src/AXI/AXI.sv"
 module top #(parameter bit COVERAGE_ON = 0) ();
    
     
