@@ -113,9 +113,9 @@ logic [`AXI_ADDR_BITS-1:0] w_addr, w_im_addr;
 logic [`AXI_DATA_BITS-1:0] w_data_in, w_data_out, w_im_data_out;
 logic late_reset;
 
-assign AWREADY_M0 = 1'b0;
-assign WREADY_M0 = 1'b0;
 assign BVALID_M0 = 1'b0;
+assign BRESP_M0 = 2'b0;
+assign BID_M0 = `AXI_ID_BITS'b0;
 
 always_ff @( posedge ACLK or negedge ARESETn ) begin        //fulfill vip
     if(~ARESETn)
@@ -138,13 +138,13 @@ CPU cpu(
 .DM_BWEB(w_write_type),
 .DM_addr(w_addr),
 .DM_DI(w_data_in),
-
+.DM_write(w_write),
 //stall
 .IM_stall(w_im_stall),
 .DM_stall(w_dm_stall)
 );
 
-assign w_write = (w_write_type == 4'hf) ? 1'b0 : 1'b1;
+// assign w_write = (w_write_type == 4'hf) ? 1'b0 : 1'b1;
 
 Master M0(                          //IM
     .clk(ACLK)                   ,

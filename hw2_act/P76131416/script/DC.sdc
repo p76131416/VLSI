@@ -4,7 +4,7 @@
 # Setting Clock freq & some parameter
 #=====================================================================
 
-set clk_period 10
+set clk_period 2.0
 set input_max   [expr {double(round(1000*$clk_period * 0.6))/1000}]
 set input_min   [expr {double(round(1000*$clk_period * 0.0))/1000}]
 set output_max  [expr {double(round(1000*$clk_period * 0.1))/1000}]
@@ -34,7 +34,7 @@ set_driving_cell -library N16ADFP_StdCellss0p72vm40c -lib_cell BUFFD4BWP16P90LVT
 set_driving_cell -library N16ADFP_StdCellss0p72vm40c -lib_cell DFQD1BWP16P90LVT  -pin {Q} [remove_from_collection [all_inputs] [get_ports clk]]
 #set_load [load_of "N16ADFP_StdCellss0p72vm40c/DFQD1BWP16P90LVT/D"] [all_outputs]
 
-set_input_delay  -clock clk  -max $input_max   [remove_from_collection [all_inputs] [get_ports clk]]
+set_input_delay  -clock clk  -max 1.0   [remove_from_collection [all_inputs] [get_ports clk]]
 set_input_delay  -clock clk  -min $input_min   [remove_from_collection [all_inputs] [get_ports clk]]
 
 set_output_delay -clock clk  -max $output_max [all_outputs]

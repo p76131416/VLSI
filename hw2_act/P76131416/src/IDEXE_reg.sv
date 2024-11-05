@@ -100,7 +100,7 @@ always_ff @(posedge clk or negedge reset) begin
     end
     else begin
         cycle <= cycle + 64'd1;
-        if(cycle > 64'd4 & ~im_stall & ~dm_stall)begin
+        if(cycle > 64'd3 & ~im_stall & ~dm_stall)begin
             case(CSR_type)
                 2'd0 : instr_cnt <= instr_cnt - 64'd1;          //jump stall
                 2'd1 : instr_cnt <= instr_cnt;                  //load-use stall

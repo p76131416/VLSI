@@ -1,10 +1,10 @@
 `include "../include/AXI_define.svh"
-`include "./AXI/ReadAddr.sv"
-`include "./AXI/ReadData.sv"
-`include "./AXI/WriteAddr.sv"
-`include "./AXI/WriteData.sv"
-`include "./AXI/WriteResp.sv"
-`include "./AXI/Default_Slave.sv"
+`include "../src/AXI/ReadAddr.sv"
+`include "../src/AXI/ReadData.sv"
+`include "../src/AXI/WriteAddr.sv"
+`include "../src/AXI/WriteData.sv"
+`include "../src/AXI/WriteResp.sv"
+`include "../src/AXI/Default_Slave.sv"
 module AXI(
 
 	input ACLK,
@@ -396,7 +396,7 @@ WriteData write_data(
 .WREADY_S1(WREADY_S1),
 
     //S2
-.AWVALID_S2(w_ARVALID_S2),
+.AWVALID_S2(w_AWVALID_S2),
 .WDATA_S2(w_WDATA_S2),
 .WSTRB_S2(w_WSTRB_S2),
 .WLAST_S2(w_WLAST_S2),

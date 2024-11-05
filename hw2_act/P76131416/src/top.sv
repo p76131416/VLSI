@@ -142,18 +142,18 @@ logic w_RLAST_S1;
 logic w_RVALID_S1;
 logic w_RREADY_S1;
 
-logic late_reset;
+// logic late_reset;
 
-always_ff @( posedge clk or posedge rst ) begin 
-	if(rst)
-		late_reset <= rst;
-	else 
-		late_reset <= rst;
-end
+// always_ff @( posedge clk or posedge rst ) begin 
+// 	if(rst)
+// 		late_reset <= rst;
+// 	else 
+// 		late_reset <= rst;
+// end
 
 CPU_wrapper CPU(
 .ACLK(clk),
-.ARESETn(~late_reset),
+.ARESETn(~rst),
 
     // //WRITE ADDRESS
     // output logic [`AXI_ID_BITS-1:0]         AWID_M0        ,
@@ -237,7 +237,7 @@ CPU_wrapper CPU(
 
 SRAM_wrapper IM1(
 .ACLK(clk),
-.ARESETn(~late_reset),
+.ARESETn(~rst),
 
 	//READ ADDRESS1
 .ARID_S(w_ARID_S0),
@@ -281,7 +281,7 @@ SRAM_wrapper IM1(
 
 SRAM_wrapper DM1(
 .ACLK(clk),
-.ARESETn(~late_reset),
+.ARESETn(~rst),
 
 	//READ ADDRESS1
 .ARID_S(w_ARID_S1),
@@ -326,7 +326,7 @@ SRAM_wrapper DM1(
 AXI axi(
 
 .ACLK(clk),
-.ARESETn(~late_reset),
+.ARESETn(~rst),
 
 	//SLAVE INTERFACE FOR MASTERS
 	

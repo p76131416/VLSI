@@ -1,5 +1,5 @@
 `include "../include/AXI_define.svh"
-`include "./AXI/Decoder.sv"
+`include "../src/AXI/Decoder.sv"
 module WriteAddr (
     input                               clk,
     input                               rst,

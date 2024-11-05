@@ -26,11 +26,12 @@ module CPU (
     input IM_stall,
     input DM_stall,
 
-    output [31:0] progcnt_out,
-    output DM_WEB,
-    output [3:0] DM_BWEB,
-    output [31:0] DM_addr,
-    output [31:0] DM_DI
+    output logic [31:0] progcnt_out,
+    output logic DM_WEB,
+    output logic [3:0] DM_BWEB,
+    output logic [31:0] DM_addr,
+    output logic [31:0] DM_DI,
+    output logic DM_write
 );
 
 //IF wire
@@ -558,6 +559,7 @@ EXEMEM_reg EXEMEM_pipe(
 .MEM_RDSrc(mem_RDSrc),
 .MEM_MemtoReg(mem_MemtoReg),
 .MEM_MemWrite(mem_MemWrite),
+.MEM_write_signal(DM_write),
 .MEM_MemRead(mem_MemRead),
 .MEM_RegWrite(mem_RegWrite),
 .MEM_f_RegWrite(mem_f_RegWrite)

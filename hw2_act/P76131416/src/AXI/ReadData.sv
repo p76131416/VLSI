@@ -1,5 +1,5 @@
 `include "../include/AXI_define.svh"
-`include "./AXI/Arbiter.sv"
+`include "../src/AXI/Arbiter.sv"
 
 module ReadData (
     input clk,

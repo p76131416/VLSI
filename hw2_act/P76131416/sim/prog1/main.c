@@ -16,6 +16,7 @@ void bubble_sort(int array[], int n, int test[]){
 				tmp = array[j];
 				array[j] = array[j+1];
 				array[j+1] = tmp;
+				// swap(&array[j], &array[j+1]);
 			}
 		}
 	}

@@ -1,2 +1,184 @@
-Error: Current design is not defined. (UID-4)
-0
+Warning: The trip points for the library named SRAM_ss0p72v0p72vm40c_100a differ from those in the library named N16ADFP_StdCellss0p72vm40c. (TIM-164)
+Information: Updating design information... (UID-85)
+Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : top
+Version: O-2018.06
+Date   : Tue Nov  5 12:15:20 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p72vm40c   Library: N16ADFP_StdCellss0p72vm40c
+Wire Load Model Mode: segmented
+
+  Startpoint: CPU/cpu/EXEMEM_pipe/MEM_write_addr_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: CPU/cpu/PC/pc_out_reg_31_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Arbiter_0          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  SRAM_wrapper_0     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Master_0           ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Arbiter_1          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  MEMWB_reg          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  EXEMEM_reg         ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  IDEXE_reg          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Regfile            ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Regfile_f          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  IFID_reg           ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Program_counter    ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  WriteResp          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  WriteData          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  WriteAddr          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ReadData           ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ReadAddr           ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Default_Slave      ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Master_1           ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  CPU                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  AXI                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  SRAM_wrapper_1     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  top                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  CPU_wrapper        ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ForwardingUnit     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Mux3to1_1          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW_mult_uns_0  ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW_mult_tc_1   ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW01_add_0     ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  ALU_DW_mult_tc_0   ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Mux2to1_2          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Mux3to1_4          ZeroWireload          N16ADFP_StdCellss0p72vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  CPU/cpu/EXEMEM_pipe/MEM_write_addr_reg_1_/CP (DFCNQD2BWP16P90LVT)
+                                                        0.0000 #   0.2000 r
+  CPU/cpu/EXEMEM_pipe/MEM_write_addr_reg_1_/Q (DFCNQD2BWP16P90LVT)
+                                                        0.0651     0.2651 f
+  CPU/cpu/EXEMEM_pipe/MEM_write_addr[1] (EXEMEM_reg)    0.0000     0.2651 f
+  CPU/cpu/Forwarding/MEM_write_addr[1] (ForwardingUnit)
+                                                        0.0000     0.2651 f
+  CPU/cpu/Forwarding/U41/Z (XOR2D1BWP16P90LVT)          0.0192     0.2843 f
+  CPU/cpu/Forwarding/U42/ZN (NR3D1BWP16P90LVT)          0.0111     0.2954 r
+  CPU/cpu/Forwarding/U28/Z (AN3D1BWP16P90LVT)           0.0180     0.3134 r
+  CPU/cpu/Forwarding/U18/Z (AN2D2BWP16P90LVT)           0.0178     0.3312 r
+  CPU/cpu/Forwarding/forwarding_r1_sel[0] (ForwardingUnit)
+                                                        0.0000     0.3312 r
+  CPU/cpu/rs1_mux3/sel[0] (Mux3to1_1)                   0.0000     0.3312 r
+  CPU/cpu/rs1_mux3/U42/ZN (CKND1BWP16P90LVT)            0.0105     0.3417 f
+  CPU/cpu/rs1_mux3/U12/Z (AN2D2BWP16P90LVT)             0.0138     0.3556 f
+  CPU/cpu/rs1_mux3/U13/Z (BUFFD4BWP16P90LVT)            0.0155     0.3710 f
+  CPU/cpu/rs1_mux3/U67/ZN (AOI22D1BWP16P90LVT)          0.0128     0.3839 r
+  CPU/cpu/rs1_mux3/U3/ZN (IOA21D1BWP16P90LVT)           0.0078     0.3916 f
+  CPU/cpu/rs1_mux3/D[8] (Mux3to1_1)                     0.0000     0.3916 f
+  CPU/cpu/alu/in1[8] (ALU)                              0.0000     0.3916 f
+  CPU/cpu/alu/U759/ZN (CKND1BWP16P90LVT)                0.0136     0.4052 r
+  CPU/cpu/alu/U23/ZN (INVD4BWP16P90LVT)                 0.0124     0.4176 f
+  CPU/cpu/alu/mult_97/a[8] (ALU_DW_mult_tc_1)           0.0000     0.4176 f
+  CPU/cpu/alu/mult_97/U2075/ZN (INVD4BWP16P90LVT)       0.0089     0.4264 r
+  CPU/cpu/alu/mult_97/U2074/ZN (CKND8BWP16P90LVT)       0.0094     0.4359 f
+  CPU/cpu/alu/mult_97/U2014/Z (XOR2D2BWP16P90)          0.0365     0.4724 r
+  CPU/cpu/alu/mult_97/U2176/ZN (ND2D1BWP16P90LVT)       0.0101     0.4824 f
+  CPU/cpu/alu/mult_97/U1999/Z (BUFFD2BWP16P90LVT)       0.0155     0.4979 f
+  CPU/cpu/alu/mult_97/U2219/ZN (OAI222D1BWP16P90LVT)    0.0145     0.5125 r
+  CPU/cpu/alu/mult_97/U2533/Z (XOR2D1BWP16P90)          0.0339     0.5463 f
+  CPU/cpu/alu/mult_97/U629/CO (HA1D2BWP16P90LVT)        0.0145     0.5608 f
+  CPU/cpu/alu/mult_97/U627/CO (HA1D2BWP16P90LVT)        0.0121     0.5729 f
+  CPU/cpu/alu/mult_97/U624/CO (FA1D1BWP16P90LVT)        0.0243     0.5972 f
+  CPU/cpu/alu/mult_97/U621/CO (FA1D1BWP16P90LVT)        0.0265     0.6237 f
+  CPU/cpu/alu/mult_97/U618/CO (FA1D1BWP16P90LVT)        0.0265     0.6503 f
+  CPU/cpu/alu/mult_97/U614/CO (FA1D1BWP16P90LVT)        0.0265     0.6768 f
+  CPU/cpu/alu/mult_97/U610/CO (FA1D1BWP16P90LVT)        0.0265     0.7033 f
+  CPU/cpu/alu/mult_97/U606/CO (FA1D1BWP16P90LVT)        0.0265     0.7298 f
+  CPU/cpu/alu/mult_97/U601/CO (FA1D1BWP16P90LVT)        0.0265     0.7563 f
+  CPU/cpu/alu/mult_97/U596/CO (FA1D1BWP16P90LVT)        0.0265     0.7828 f
+  CPU/cpu/alu/mult_97/U591/CO (FA1D1BWP16P90LVT)        0.0265     0.8094 f
+  CPU/cpu/alu/mult_97/U585/CO (FA1D1BWP16P90LVT)        0.0265     0.8359 f
+  CPU/cpu/alu/mult_97/U579/CO (FA1D1BWP16P90LVT)        0.0265     0.8624 f
+  CPU/cpu/alu/mult_97/U573/CO (FA1D1BWP16P90LVT)        0.0265     0.8889 f
+  CPU/cpu/alu/mult_97/U566/CO (FA1D1BWP16P90LVT)        0.0265     0.9154 f
+  CPU/cpu/alu/mult_97/U559/CO (FA1D1BWP16P90LVT)        0.0265     0.9420 f
+  CPU/cpu/alu/mult_97/U552/CO (FA1D1BWP16P90LVT)        0.0265     0.9685 f
+  CPU/cpu/alu/mult_97/U544/CO (FA1D1BWP16P90LVT)        0.0265     0.9950 f
+  CPU/cpu/alu/mult_97/U536/CO (FA1D1BWP16P90LVT)        0.0265     1.0215 f
+  CPU/cpu/alu/mult_97/U528/CO (FA1D1BWP16P90LVT)        0.0265     1.0480 f
+  CPU/cpu/alu/mult_97/U519/CO (FA1D1BWP16P90LVT)        0.0265     1.0745 f
+  CPU/cpu/alu/mult_97/U510/CO (FA1D1BWP16P90LVT)        0.0265     1.1011 f
+  CPU/cpu/alu/mult_97/U501/CO (FA1D1BWP16P90LVT)        0.0265     1.1276 f
+  CPU/cpu/alu/mult_97/U491/CO (FA1D1BWP16P90LVT)        0.0265     1.1541 f
+  CPU/cpu/alu/mult_97/U481/CO (FA1D1BWP16P90LVT)        0.0265     1.1806 f
+  CPU/cpu/alu/mult_97/U471/CO (FA1D1BWP16P90LVT)        0.0265     1.2071 f
+  CPU/cpu/alu/mult_97/U2168/S (FA1D1BWP16P90LVT)        0.0416     1.2488 r
+  CPU/cpu/alu/mult_97/U460/S (FA1D1BWP16P90LVT)         0.0388     1.2876 f
+  CPU/cpu/alu/mult_97/U2011/CO (FA1D2BWP16P90LVT)       0.0226     1.3102 f
+  CPU/cpu/alu/mult_97/U2130/CO (FA1D1BWP16P90LVT)       0.0254     1.3355 f
+  CPU/cpu/alu/mult_97/U2292/CO (FA1D1BWP16P90LVT)       0.0265     1.3620 f
+  CPU/cpu/alu/mult_97/U2293/CO (FA1D1BWP16P90LVT)       0.0265     1.3886 f
+  CPU/cpu/alu/mult_97/U2297/CO (FA1D1BWP16P90LVT)       0.0265     1.4151 f
+  CPU/cpu/alu/mult_97/U2304/CO (FA1D1BWP16P90LVT)       0.0265     1.4416 f
+  CPU/cpu/alu/mult_97/U254/CO (FA1D1BWP16P90LVT)        0.0265     1.4681 f
+  CPU/cpu/alu/mult_97/U2285/CO (FA1D1BWP16P90LVT)       0.0265     1.4946 f
+  CPU/cpu/alu/mult_97/U2283/CO (FA1D1BWP16P90LVT)       0.0265     1.5212 f
+  CPU/cpu/alu/mult_97/U2288/CO (FA1D1BWP16P90LVT)       0.0265     1.5477 f
+  CPU/cpu/alu/mult_97/U2294/CO (FA1D1BWP16P90LVT)       0.0265     1.5742 f
+  CPU/cpu/alu/mult_97/U2298/CO (FA1D1BWP16P90LVT)       0.0265     1.6007 f
+  CPU/cpu/alu/mult_97/U2289/CO (FA1D1BWP16P90LVT)       0.0265     1.6272 f
+  CPU/cpu/alu/mult_97/U2303/CO (FA1D1BWP16P90LVT)       0.0265     1.6538 f
+  CPU/cpu/alu/mult_97/U2287/CO (FA1D1BWP16P90LVT)       0.0265     1.6803 f
+  CPU/cpu/alu/mult_97/U245/CO (FA1D1BWP16P90LVT)        0.0265     1.7068 f
+  CPU/cpu/alu/mult_97/U2295/CO (FA1D1BWP16P90LVT)       0.0265     1.7333 f
+  CPU/cpu/alu/mult_97/U2299/CO (FA1D1BWP16P90LVT)       0.0265     1.7598 f
+  CPU/cpu/alu/mult_97/U2290/CO (FA1D1BWP16P90LVT)       0.0265     1.7863 f
+  CPU/cpu/alu/mult_97/U2296/CO (FA1D1BWP16P90LVT)       0.0265     1.8129 f
+  CPU/cpu/alu/mult_97/U2300/CO (FA1D1BWP16P90LVT)       0.0265     1.8394 f
+  CPU/cpu/alu/mult_97/U2291/CO (FA1D1BWP16P90LVT)       0.0265     1.8659 f
+  CPU/cpu/alu/mult_97/U2131/CO (FA1D1BWP16P90LVT)       0.0265     1.8924 f
+  CPU/cpu/alu/mult_97/U2128/CO (FA1D1BWP16P90LVT)       0.0265     1.9189 f
+  CPU/cpu/alu/mult_97/U2129/CO (FA1D1BWP16P90LVT)       0.0265     1.9455 f
+  CPU/cpu/alu/mult_97/U2132/CO (FA1D1BWP16P90LVT)       0.0265     1.9720 f
+  CPU/cpu/alu/mult_97/U2133/CO (FA1D1BWP16P90LVT)       0.0265     1.9985 f
+  CPU/cpu/alu/mult_97/U2134/CO (FA1D1BWP16P90LVT)       0.0265     2.0250 f
+  CPU/cpu/alu/mult_97/U2135/CO (FA1D1BWP16P90LVT)       0.0265     2.0515 f
+  CPU/cpu/alu/mult_97/U2301/CO (FA1D1BWP16P90LVT)       0.0221     2.0736 f
+  CPU/cpu/alu/mult_97/U2265/Z (XOR3D1BWP16P90LVT)       0.0394     2.1130 r
+  CPU/cpu/alu/mult_97/product[63] (ALU_DW_mult_tc_1)    0.0000     2.1130 r
+  CPU/cpu/alu/U809/ZN (AOI22D1BWP16P90LVT)              0.0094     2.1224 f
+  CPU/cpu/alu/U808/ZN (ND4D1BWP16P90LVT)                0.0077     2.1301 r
+  CPU/cpu/alu/U806/ZN (IND4D1BWP16P90LVT)               0.0147     2.1449 r
+  CPU/cpu/alu/out[31] (ALU)                             0.0000     2.1449 r
+  CPU/cpu/IF_pc_mux3/C[31] (Mux3to1_4)                  0.0000     2.1449 r
+  CPU/cpu/IF_pc_mux3/U74/ZN (AOI22D1BWP16P90LVT)        0.0107     2.1556 f
+  CPU/cpu/IF_pc_mux3/U15/ZN (IOA21D1BWP16P90LVT)        0.0068     2.1624 r
+  CPU/cpu/IF_pc_mux3/D[31] (Mux3to1_4)                  0.0000     2.1624 r
+  CPU/cpu/PC/pc_in[31] (Program_counter)                0.0000     2.1624 r
+  CPU/cpu/PC/U33/Z (AO22D1BWP16P90LVT)                  0.0128     2.1752 r
+  CPU/cpu/PC/pc_out_reg_31_/D (DFCNQD1BWP16P90LVT)      0.0000     2.1752 r
+  data arrival time                                                2.1752
+
+  clock clk (rise edge)                                 2.0000     2.0000
+  clock network delay (ideal)                           0.2000     2.2000
+  clock uncertainty                                    -0.0200     2.1800
+  CPU/cpu/PC/pc_out_reg_31_/CP (DFCNQD1BWP16P90LVT)     0.0000     2.1800 r
+  library setup time                                   -0.0043     2.1757
+  data required time                                               2.1757
+  --------------------------------------------------------------------------
+  data required time                                               2.1757
+  data arrival time                                               -2.1752
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0005
+
+
+1

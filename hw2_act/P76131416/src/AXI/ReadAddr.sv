@@ -58,6 +58,31 @@ logic [1:0]                  ARBURST;
 logic                        ARVALID;
 logic                        ARREADY;
 
+logic arvalid_s0t, arvalid_s1t, arvalid_s2t;
+logic busy0, busy1, busy2;
+logic readys0, readys1, readys2;
+
+assign busy0 = readys0 & ~ARREADY_S0;
+assign busy1 = readys1 & ~ARREADY_S1;
+assign busy2 = readys2 & ~ARREADY_S2;
+
+assign ARVALID_S0 = busy0 ? 1'b0 : arvalid_s0t;
+assign ARVALID_S1 = busy1 ? 1'b0 : arvalid_s1t;
+assign ARVALID_S2 = busy2 ? 1'b0 : arvalid_s2t;
+
+always_ff @( posedge clk or negedge rst ) begin 
+	if(~rst)begin
+		readys0 <= 1'b0;
+		readys1 <= 1'b0;
+		readys2 <= 1'b0;
+	end
+	else begin
+		readys0 <= ARREADY_S0 ? 1'b1 : readys0;
+		readys1 <= ARREADY_S1 ? 1'b1 : readys1;
+		readys2 <= ARREADY_S2 ? 1'b1 : readys2;
+	end
+end
+
 assign ARID_S0 = ARID;
 assign ARADDR_S0 = ARADDR;
 assign ARLEN_S0 = ARLEN;
@@ -118,9 +143,9 @@ Decoder RADecoder(
     .READY_S0(ARREADY_S0),
     .READY_S1(ARREADY_S1),
     .READY_S2(ARREADY_S2),
-    .VALID_S0(ARVALID_S0),          //differ
-    .VALID_S1(ARVALID_S1),
-    .VALID_S2(ARVALID_S2)
+    .VALID_S0(arvalid_s0t),          //differ
+    .VALID_S1(arvalid_s1t),
+    .VALID_S2(arvalid_s2t)
 );
 
 endmodule

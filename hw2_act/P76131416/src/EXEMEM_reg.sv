@@ -31,6 +31,7 @@ module EXEMEM_reg (
     output logic MEM_MemtoReg,
     output logic [3:0] MEM_MemWrite,
     output logic MEM_MemRead,
+    output logic MEM_write_signal,
     output logic MEM_RegWrite,
     output logic MEM_f_RegWrite
     // output logic MEM_is_float
@@ -47,13 +48,15 @@ always_ff @( posedge clk or negedge reset) begin
         MEM_memory_in <= 32'd0;
         MEM_RDSrc <= 1'b0;
         MEM_MemtoReg <= 1'b0;
-        MEM_MemWrite <= 4'hf;
+        MEM_MemWrite <= 4'h0;
+        MEM_write_signal <= 1'b0;
         MEM_MemRead <= 1'b0;
         MEM_RegWrite <= 1'b0;
         MEM_f_RegWrite <= 1'b0;
         // MEM_is_float <= 1'b0;
     end 
     else if(im_stall  & !dm_stall) begin
+        MEM_write_signal <= 1'b0;
         MEM_MemRead <= 1'b0;
         MEM_MemWrite <= 4'hf;
     end 
@@ -68,11 +71,13 @@ always_ff @( posedge clk or negedge reset) begin
         MEM_MemtoReg <= MEM_MemtoReg;
         MEM_MemWrite <= MEM_MemWrite;
         MEM_MemRead <= MEM_MemRead;
+        MEM_write_signal <= MEM_write_signal;
         MEM_RegWrite <= MEM_RegWrite;
         MEM_f_RegWrite <= MEM_f_RegWrite;
     end 
     else begin
         if(EXE_MenWrite)begin                   //store 需要手動將資料移到對應位置
+        MEM_write_signal <= 1'b1;
             case(EXE_funct3)
                 3'b000 : begin      //SB
                     case(ALU_out[1:0])
@@ -117,6 +122,7 @@ always_ff @( posedge clk or negedge reset) begin
             endcase
         end
         else begin
+            MEM_write_signal <= 1'b0;
             MEM_MemWrite <= 4'b1111;
             MEM_memory_in <= EXE_memory_in;
         end
