@@ -34,11 +34,11 @@ logic [1:0] BRESP;
 logic BVALID;
 logic BREADY;
 logic lock_S0, lock_S1, lock_S2;
-logic [2:0] master;
-logic [3:0] slave;
+logic [3:0] master;
+logic [2:0] slave;
 
 assign BID_M1 = BID;
-assign RRESP_M1 = BRESP;
+assign BRESP_M1 = BRESP;
 
 always_ff @( posedge clk or negedge rst) begin
     if(~rst)begin
@@ -78,14 +78,14 @@ always_comb begin
     else if(BVALID_S0 | lock_S0)
         slave = 3'b001;
     else
-        slave = 3'b0;
+        slave = 3'b000;
 end
 
 always_comb begin
     case (slave)
         3'b001 : begin
             master = BID_S0[`AXI_IDS_BITS-1:`AXI_ID_BITS];
-            BRESP_M1 = BRESP_S0;
+            BRESP = BRESP_S0;
             BID = BID_S0[`AXI_ID_BITS-1:0];
             BRESP = BRESP_S0;
             BVALID = BVALID_S0;
@@ -95,7 +95,7 @@ always_comb begin
         end
         3'b010 : begin
             master = BID_S1[`AXI_IDS_BITS-1:`AXI_ID_BITS];
-            BRESP_M1 = BRESP_S1;
+            BRESP = BRESP_S1;
             BID = BID_S1[`AXI_ID_BITS-1:0];
             BRESP = BRESP_S1;
             BVALID = BVALID_S1;
@@ -105,7 +105,7 @@ always_comb begin
         end
         3'b100 : begin
             master = BID_S2[`AXI_IDS_BITS-1:`AXI_ID_BITS];
-            BRESP_M1 = BRESP_S2;
+            BRESP = BRESP_S2;
             BID = BID_S2[`AXI_ID_BITS-1:0];
             BRESP = BRESP_S2;
             BVALID = BVALID_S2;
@@ -115,9 +115,9 @@ always_comb begin
         end
         default : begin
             master = 4'b0;
-            BRESP_M1 = 2'b0;
+            BRESP = 2'b0;
             BID = `AXI_ID_BITS'b0;
-            BRESP = 1'b0;
+            BRESP = 2'b0;
             BVALID = 1'b0;
             BREADY_S0 = 1'b0;
             BREADY_S1 = 1'b0;

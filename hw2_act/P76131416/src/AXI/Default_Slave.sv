@@ -122,29 +122,29 @@ always_comb begin
     case (stage)
         idle : begin
             if(ARVALID_S2 & ARREADY_S2)
-                next_stage <= read_data;
+                next_stage = read_data;
             else if(AWVALID_S2 & AWREADY_S2)
-                next_stage <= write_data;
+                next_stage = write_data;
             else 
-                next_stage <= idle;
+                next_stage = idle;
         end
         read_data : begin
             if(RVALID_S2 & RREADY_S2 & RLAST_S2)
-                next_stage <= idle;
+                next_stage = idle;
             else 
-                next_stage <= read_data;
+                next_stage = read_data;
         end
         write_data : begin
             if(WVALID_S2 & WREADY_S2 & WLAST_S2)
-                next_stage <= write_response;
+                next_stage = write_response;
             else 
-                next_stage <= write_data;
+                next_stage = write_data;
         end
         write_response : begin
             if(BVALID_S2 & BREADY_S2)
-                next_stage <= idle;
+                next_stage = idle;
             else 
-                next_stage <= write_response;
+                next_stage = write_response;
         end
     endcase
 end
